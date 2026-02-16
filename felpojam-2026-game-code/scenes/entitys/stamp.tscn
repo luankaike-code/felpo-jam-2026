@@ -10,6 +10,7 @@
 radius = 56.0357
 
 [node name="Stamp" type="Area2D" unique_id=769955536]
+z_index = 1000
 script = ExtResource("1_f45sb")
 metadata/_custom_type_script = "uid://cofhru7hxcyx6"
 

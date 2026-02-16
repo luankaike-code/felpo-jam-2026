@@ -3,10 +3,16 @@
 [ext_resource type="Script" uid="uid://k15peup8tfo6" path="res://scripts/entitys/stamp_stand.gd" id="1_bcuhn"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_bgdd2"]
 
-[node name="StampStand" type="Node2D" unique_id=1343315064]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgdd2"]
+radius = 65.0
+
+[node name="StampStand" type="Area2D" unique_id=1046151446]
 script = ExtResource("1_bcuhn")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1878416951]
 modulate = Color(1, 0, 1, 1)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_bgdd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504517714]
+shape = SubResource("CircleShape2D_bgdd2")
