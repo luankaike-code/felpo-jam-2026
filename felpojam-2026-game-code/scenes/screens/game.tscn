@@ -4,33 +4,28 @@
 [ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="2_clfej"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
 [ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
+[ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="5_ln6eb"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
 metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
-[node name="Control" type="Control" parent="." unique_id=161529205]
-process_mode = 4
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1163.0
-offset_bottom = 640.0
-
-[node name="Label" type="Label" parent="Control" unique_id=1488617018]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 88.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 64
-text = "GAME"
-horizontal_alignment = 1
-
 [node name="StampSet" parent="." unique_id=296592520 instance=ExtResource("2_clfej")]
-position = Vector2(1080, 471)
+position = Vector2(447, 817)
 
 [node name="InkStand" parent="." unique_id=1766316694 instance=ExtResource("3_mu8e5")]
-position = Vector2(871, 287)
+position = Vector2(-419, 785)
 
 [node name="Paper" parent="." unique_id=449771312 instance=ExtResource("4_o78e0")]
-position = Vector2(471, 410)
+position = Vector2(-10, 767)
+
+[node name="CameraInGame" parent="." unique_id=1323592690 instance=ExtResource("5_ln6eb")]
+
+[node name="StampSet2" parent="." unique_id=640357785 instance=ExtResource("2_clfej")]
+position = Vector2(468, 220)
+
+[node name="InkStand2" parent="." unique_id=920137688 instance=ExtResource("3_mu8e5")]
+position = Vector2(-398, 188)
+
+[node name="Paper2" parent="." unique_id=1957066266 instance=ExtResource("4_o78e0")]
+position = Vector2(11, 170)

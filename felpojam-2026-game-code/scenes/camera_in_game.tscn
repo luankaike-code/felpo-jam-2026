@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://u8y44k7yvr7j"]
+
+[ext_resource type="Script" uid="uid://cug2pk6ysrsl5" path="res://scripts/camera_in_game.gd" id="1_7sk07"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="2_yubta"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="3_uvsb3"]
+[ext_resource type="Script" uid="uid://y0x1lhyb4sq4" path="res://scripts/states/camera_in_game/UpDown.gd" id="4_v480j"]
+
+[node name="CameraInGame" type="Camera2D" unique_id=1323592690]
+script = ExtResource("1_7sk07")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1573676425 node_paths=PackedStringArray("current_state")]
+script = ExtResource("2_yubta")
+current_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1825781336]
+script = ExtResource("3_uvsb3")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Up" type="Node" parent="StateMachine" unique_id=1972576356]
+script = ExtResource("4_v480j")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Down" type="Node" parent="StateMachine" unique_id=1494527136]
+script = ExtResource("4_v480j")
+offset_y_per_percentage = 1
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
