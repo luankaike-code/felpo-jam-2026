@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cntug0yitbsgv"]
+
+[ext_resource type="Script" uid="uid://dkq45ist47qcn" path="res://scripts/entitys/rune.gd" id="1_qid84"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_sjsi6"]
+
+[node name="FireRune" type="Node2D" unique_id=1962596322]
+script = ExtResource("1_qid84")
+metadata/_custom_type_script = "uid://dkq45ist47qcn"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=688697464]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_sjsi6")

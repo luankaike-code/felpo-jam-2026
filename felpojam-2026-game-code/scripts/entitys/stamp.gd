@@ -3,8 +3,12 @@ class_name Stamp extends Draggable
 @onready var sprite := $Sprite as Sprite2D
 @onready var state_machine := $StateMachine as StateMachine
 
+@export var packed_rune: PackedScene
 @export var defult_stand: Stand
 var current_stand := defult_stand
+
+var current_paper: Paper
+
 var has_ink := false :
 	set(new):
 		has_ink = new
@@ -21,19 +25,29 @@ func _finish_drag() -> void:
 	state_machine.change_state("Dropping")
 
 func on_area_entered(body: Area2D) -> void:
-	print("adsad", body)
 	if body is Stand:
-		print(body, current_stand)
 		current_stand = body
+	elif body is Paper:
+		current_paper = body
 
-func get_stand_into_area() -> Stand:
-	var bodies = get_overlapping_bodies()
-	for body in bodies:
-		if !body is Stand:
-			return body
+func get_overlapping_stand() -> Stand:
+	var areas := get_overlapping_areas()
+	for area in areas:
+		if area is Stand:
+			return area
+	return
+
+func get_overlapping_paper() -> Paper:
+	var areas := get_overlapping_areas()
+	for area in areas:
+		if area is Paper:
+			return area
 	return
 
 func on_area_exited(body: Area2D) -> void:
 	if body is Stand:
-		var stand_into_area = get_stand_into_area()
-		current_stand = stand_into_area if stand_into_area else defult_stand
+		var stand = get_overlapping_stand()
+		current_stand = stand if stand else defult_stand
+	elif body is Paper:
+		var paper = get_overlapping_paper()
+		current_paper = paper if paper else null

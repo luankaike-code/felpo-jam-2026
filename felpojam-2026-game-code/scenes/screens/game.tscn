@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
 [ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="2_clfej"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
+[ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -30,3 +31,6 @@ position = Vector2(1080, 471)
 
 [node name="InkStand" parent="." unique_id=1766316694 instance=ExtResource("3_mu8e5")]
 position = Vector2(871, 287)
+
+[node name="Paper" parent="." unique_id=449771312 instance=ExtResource("4_o78e0")]
+position = Vector2(471, 410)
