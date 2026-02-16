@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cfhwbdh08sm3b"]
 
 [ext_resource type="Script" uid="uid://c452jsn7y4xwo" path="res://scripts/screens/root_game.gd" id="1_o1fpv"]
+[ext_resource type="PackedScene" uid="uid://ddq8efmsvwyac" path="res://scenes/screens/transition.tscn" id="2_1sjs4"]
 
 [node name="RootGame" type="Node" unique_id=659041742]
 script = ExtResource("1_o1fpv")
+
+[node name="Transition" parent="." unique_id=1199339763 instance=ExtResource("2_1sjs4")]

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ddq8efmsvwyac"]
+
+[ext_resource type="Script" uid="uid://bafnffjnikxbx" path="res://scripts/screens/transition.gd" id="1_g5ka2"]
+
+[sub_resource type="Animation" id="Animation_g5ka2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1615.9999, 809.99994)]
+}
+
+[sub_resource type="Animation" id="Animation_2dip4"]
+resource_name = "enter"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-373, 107), Vector2(824, -579)]
+}
+
+[sub_resource type="Animation" id="Animation_etmc5"]
+resource_name = "exit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1615.9999, 809.99994), Vector2(-372.99997, 107)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2dip4"]
+_data = {
+&"RESET": SubResource("Animation_g5ka2"),
+&"enter": SubResource("Animation_2dip4"),
+&"exit": SubResource("Animation_etmc5")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ka2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Transition" type="CanvasLayer" unique_id=1199339763]
+layer = 3
+script = ExtResource("1_g5ka2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1376863726]
+libraries/ = SubResource("AnimationLibrary_2dip4")
+
+[node name="Panel" type="Panel" parent="." unique_id=2094870541]
+offset_left = -1615.9999
+offset_top = 809.99994
+offset_right = -135.94019
+offset_bottom = 2146.0002
+rotation = -0.5235988
+theme_override_styles/panel = SubResource("StyleBoxFlat_g5ka2")
