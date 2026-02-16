@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://1k0kuud16688"]
+
+[ext_resource type="Script" uid="uid://cofhru7hxcyx6" path="res://scripts/entitys/draggable.gd" id="1_cwh08"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_lk7om"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6lubp"]
+radius = 66.0
+
+[node name="ItemDraggableTest" type="Area2D" unique_id=774893826]
+script = ExtResource("1_cwh08")
+metadata/_custom_type_script = "uid://cofhru7hxcyx6"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=723427171]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lk7om")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1311858195]
+shape = SubResource("CircleShape2D_6lubp")

@@ -8,6 +8,7 @@ func _pop_mensage(mensage: PopUpMensage):
 	elif mensage is PopUpMensageChangeScreen:
 		change_screen.emit(mensage.screen_name)
 
-func _input(event: InputEvent) -> void:
+@warning_ignore("unused_parameter")
+func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel") and !has_pop_up():
 		factory_pop_up(packed_menu_in_game.instantiate())
