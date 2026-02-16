@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c1y7icenhs8e3"]
 
-[ext_resource type="Script" uid="uid://d0vm1uhnct55o" path="res://scripts/screens/screen.gd" id="1_oiy5i"]
+[ext_resource type="Script" uid="uid://mcke7bu8ox2b" path="res://scripts/screens/configurations.gd" id="1_lpiss"]
 [ext_resource type="PackedScene" uid="uid://casr4dl7ga1gi" path="res://scenes/HUD/tabs_item/tab_item_config_screen.tscn" id="2_lpiss"]
 
 [node name="Configurations" type="Node2D" unique_id=226870408]
-script = ExtResource("1_oiy5i")
+script = ExtResource("1_lpiss")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=424333819]
