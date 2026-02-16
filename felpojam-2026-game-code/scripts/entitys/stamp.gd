@@ -5,6 +5,10 @@ class_name Stamp extends Draggable
 
 @export var defult_stand: Stand
 var current_stand := defult_stand
+var has_ink := false :
+	set(new):
+		has_ink = new
+		modulate = Color(1.0, 1.0, 0.0, 1.0) if has_ink else Color(1.0, 1.0, 1.0, 1.0)
 
 func _ready() -> void:
 	area_entered.connect(on_area_entered)
