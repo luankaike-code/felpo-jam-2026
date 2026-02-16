@@ -14,10 +14,14 @@ func create_defult_screen():
 	new_screen = get_scene(default_screen)
 	toggle_screen()
 
+func quit():
+	get_tree().quit() # WARING: can not work in mobile
+
 func get_scene(screen_name: ScreenData.names) -> Screen:
 	var packed_screen = ScreenData.packeds[screen_name]
 	var screen = packed_screen.instantiate() as Screen
 	screen.change_screen.connect(change_screen)
+	screen.quit.connect(quit)
 	return screen
 
 func change_screen(screen_name: ScreenData.names) -> void:
