@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7i0kp4136dqi"]
 
 [ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
-[ext_resource type="PackedScene" uid="uid://1k0kuud16688" path="res://scenes/entitys/item_draggable_test.tscn" id="2_clfej"]
+[ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="2_clfej"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -24,5 +24,5 @@ theme_override_font_sizes/font_size = 64
 text = "GAME"
 horizontal_alignment = 1
 
-[node name="ItemDraggableTest" parent="." unique_id=774893826 instance=ExtResource("2_clfej")]
-position = Vector2(571, 371)
+[node name="StampSet" parent="." unique_id=296592520 instance=ExtResource("2_clfej")]
+position = Vector2(1080, 471)

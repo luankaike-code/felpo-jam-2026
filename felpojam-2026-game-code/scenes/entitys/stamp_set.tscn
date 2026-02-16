@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://fyym3qkeufgw"]
+
+[ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="1_3w75d"]
+[ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="2_wkfv4"]
+
+[node name="StampSet" type="Node2D" unique_id=296592520]
+
+[node name="StampStand" parent="." unique_id=1343315064 instance=ExtResource("2_wkfv4")]
+
+[node name="Stamp" parent="." unique_id=769955536 node_paths=PackedStringArray("stand") instance=ExtResource("1_3w75d")]
+stand = NodePath("../StampStand")

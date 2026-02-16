@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c4f10pbt1cpd7"]
+
+[ext_resource type="Script" uid="uid://k15peup8tfo6" path="res://scripts/entitys/stamp_stand.gd" id="1_bcuhn"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_bgdd2"]
+
+[node name="StampStand" type="Node2D" unique_id=1343315064]
+script = ExtResource("1_bcuhn")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1878416951]
+modulate = Color(1, 0, 1, 1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_bgdd2")

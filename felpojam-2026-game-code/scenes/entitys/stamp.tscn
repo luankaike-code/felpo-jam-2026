@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ftl38bpii8ag"]
+
+[ext_resource type="Script" uid="uid://wecskt8a2l36" path="res://scripts/entitys/stamp.gd" id="1_f45sb"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_f45sb"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_6f7w4"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="4_0v15b"]
+[ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="5_0v15b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t5bq3"]
+radius = 56.0357
+
+[node name="Stamp" type="Area2D" unique_id=769955536]
+script = ExtResource("1_f45sb")
+metadata/_custom_type_script = "uid://cofhru7hxcyx6"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=251825953]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f45sb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632221205]
+shape = SubResource("CircleShape2D_t5bq3")
+
+[node name="StateMachine" type="Node" parent="." unique_id=893631172 node_paths=PackedStringArray("current_state")]
+script = ExtResource("3_6f7w4")
+current_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1696680882]
+script = ExtResource("4_0v15b")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Dragging" type="Node" parent="StateMachine" unique_id=980761097]
+script = ExtResource("4_0v15b")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Dropping" type="Node" parent="StateMachine" unique_id=1112166230]
+script = ExtResource("5_0v15b")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
