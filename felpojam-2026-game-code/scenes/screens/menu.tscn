@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d167n2rwnu5an"]
+
+[ext_resource type="Script" uid="uid://ddhseqxbod6mu" path="res://scripts/screens/menu.gd" id="1_ju8qk"]
+
+[node name="Menu" type="Node2D" unique_id=844590214]
+script = ExtResource("1_ju8qk")
+metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+
+[node name="Control" type="Control" parent="." unique_id=1775808483]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="Control" unique_id=624105630]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "MENU"
+horizontal_alignment = 1

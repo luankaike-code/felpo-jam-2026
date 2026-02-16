@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://7i0kp4136dqi"]
+
+[ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
+
+[node name="Game" type="Node2D" unique_id=622303679]
+script = ExtResource("1_iwlfa")
+metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+
+[node name="Control" type="Control" parent="." unique_id=161529205]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1488617018]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "GAME"
+horizontal_alignment = 1
