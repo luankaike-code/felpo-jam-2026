@@ -46,6 +46,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Iniciar"
 
+[node name="ConfigsBtn" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=444469672]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Configurações"
+
 [node name="QuitBtn" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=617177380]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40

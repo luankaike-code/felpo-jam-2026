@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c1y7icenhs8e3"]
+
+[ext_resource type="Script" uid="uid://d0vm1uhnct55o" path="res://scripts/screens/screen.gd" id="1_oiy5i"]
+[ext_resource type="PackedScene" uid="uid://casr4dl7ga1gi" path="res://scenes/HUD/tabs_item/tab_item_config_screen.tscn" id="2_lpiss"]
+
+[node name="Configurations" type="Node2D" unique_id=226870408]
+script = ExtResource("1_oiy5i")
+metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=424333819]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=245334904]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=593718236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=1563077621]
+layout_mode = 2
+current_tab = 0
+
+[node name="Tela" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=2014896234 instance=ExtResource("2_lpiss")]
+layout_mode = 2
+
+[node name="Som" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=1448469704]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Teclado" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=561020038]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Controle" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=1507798310]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Acessibilidade" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=1605692674]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4

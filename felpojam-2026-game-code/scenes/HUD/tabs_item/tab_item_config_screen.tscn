@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://casr4dl7ga1gi"]
+
+[ext_resource type="PackedScene" uid="uid://bxcp8tykb7pbj" path="res://scenes/HUD/tabs_item/tab_item.tscn" id="1_oxwp0"]
+[ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_00ejy"]
+[ext_resource type="Script" uid="uid://hulwq1eihojr" path="res://scripts/HUD/tabs_item/tab_item_config_screen.gd" id="2_ic0pe"]
+
+[node name="TabItemConfigScreen" unique_id=2014896234 instance=ExtResource("1_oxwp0")]
+script = ExtResource("2_ic0pe")
+
+[node name="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer" parent_id_path=PackedInt32Array(667868278) index="0" unique_id=432698625]
+size_flags_horizontal = 3
+
+[node name="ScreenResolution" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" index="1" unique_id=502982208 instance=ExtResource("2_00ejy")]
+layout_mode = 2
+label_text = "Resolução da tela"
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=660520254]
+layout_mode = 2
+size_flags_horizontal = 10
