@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dxss5osuht3wq"]
+
+[ext_resource type="Script" uid="uid://6irpj01uo625" path="res://scripts/pop_ups/pop_up_configs_in_game.gd" id="1_opmg5"]
+
+[node name="PopUpConfigsInGame" type="Node2D" unique_id=2109827692]
+script = ExtResource("1_opmg5")
+metadata/_custom_type_script = "uid://m741nhr6vpsv"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2023531850]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1985789682]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=888622832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control2" unique_id=1686795530]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -278.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/MarginContainer" unique_id=1223443734]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="ControlsBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=1519948626]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "controles"
+alignment = 0
+
+[node name="GraphicsBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=239879367]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "graficos"
+alignment = 0
+
+[node name="BackBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=1818699090]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Voltar
+"
+alignment = 0

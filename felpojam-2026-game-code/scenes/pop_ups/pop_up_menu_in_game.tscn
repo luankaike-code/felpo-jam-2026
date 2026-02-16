@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ll6rgn74hd8h"]
+
+[ext_resource type="Script" uid="uid://cyok2m5pck43j" path="res://scripts/pop_ups/pop_up_menu_in_game.gd" id="1_33b1c"]
+
+[node name="PopUpMenuInGame" type="Node2D" unique_id=732963777]
+script = ExtResource("1_33b1c")
+metadata/_custom_type_script = "uid://m741nhr6vpsv"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=876074673]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2144215029]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=675729439]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control2" unique_id=490939906]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/MarginContainer" unique_id=1878249064]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="GotoGameBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=975221697]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Voltar por jogo"
+alignment = 0
+
+[node name="ConfigsBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=94237501]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Configurações"
+alignment = 0
+
+[node name="GotoMenuBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=1748710033]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ir para o menu"
+alignment = 0

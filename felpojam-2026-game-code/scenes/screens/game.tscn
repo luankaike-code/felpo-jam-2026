@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
 
-[node name="Game" type="Node2D" unique_id=622303679]
+[node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
-metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
 [node name="Control" type="Control" parent="." unique_id=161529205]
 layout_mode = 3
