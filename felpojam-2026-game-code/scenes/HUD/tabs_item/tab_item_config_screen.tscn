@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bxcp8tykb7pbj" path="res://scenes/HUD/tabs_item/tab_item.tscn" id="1_oxwp0"]
 [ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_00ejy"]
 [ext_resource type="Script" uid="uid://hulwq1eihojr" path="res://scripts/HUD/tabs_item/tab_item_config_screen.gd" id="2_ic0pe"]
+[ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="4_hsmpo"]
+[ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="5_pvw2m"]
+[ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="6_qvsno"]
 
 [node name="TabItemConfigScreen" unique_id=2014896234 instance=ExtResource("1_oxwp0")]
 script = ExtResource("2_ic0pe")
@@ -17,3 +20,12 @@ label_text = "Resolução da tela"
 [node name="Resolutions" type="OptionButton" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=660520254]
 layout_mode = 2
 size_flags_horizontal = 10
+
+[node name="StampSet" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution/Resolutions" index="1" unique_id=296592520 instance=ExtResource("4_hsmpo")]
+position = Vector2(447, 817)
+
+[node name="InkStand" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution/Resolutions" index="2" unique_id=920137688 instance=ExtResource("5_pvw2m")]
+position = Vector2(-419, 785)
+
+[node name="Paper" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution/Resolutions" index="3" unique_id=449771312 instance=ExtResource("6_qvsno")]
+position = Vector2(-10, 767)

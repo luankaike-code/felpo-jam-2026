@@ -3,9 +3,11 @@ extends TabBar
 @onready var resolution_drop_menu := $MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution/Resolutions as OptionButton
 
 var resolutions: Dictionary[String, Vector2i] = {
-	"1920X1080": Vector2i(1920, 1080),
-	"1440X900": Vector2i(1440, 900),
-	"400X200": Vector2i(400, 200),
+	"3840X2160(16:9)": Vector2i(3840, 2160),
+	"1920X1080(16:9)": Vector2i(1920, 1080),
+	"1440X900(16:10)": Vector2i(1440, 900),
+	"1290X720(16:9)": Vector2i(1290, 720),
+	"648X648(1:1)": Vector2i(648, 648),
 }
 
 func _ready() -> void:
@@ -19,5 +21,7 @@ func populate_resolution_drop_menu() -> void:
 func resolution_selected(resolution_index: int) -> void:
 	var resolution_key: String = resolutions.keys()[resolution_index]
 	var resolution := resolutions[resolution_key]
-	print(resolution, resolution_index, resolution_drop_menu.get_item_text(resolution_index))
-	DisplayServer.window_set_size(resolution)
+
+	get_window().size = resolution
+	get_window().content_scale_size = resolution
+	#DisplayServer.window_set_size(resolution)
