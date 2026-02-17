@@ -24,4 +24,3 @@ func resolution_selected(resolution_index: int) -> void:
 
 	get_window().size = resolution
 	get_window().content_scale_size = resolution
-	#DisplayServer.window_set_size(resolution)
