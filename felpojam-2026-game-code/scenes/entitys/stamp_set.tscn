@@ -6,7 +6,8 @@
 
 [node name="StampSet" type="Node2D" unique_id=296592520]
 
-[node name="StampStand" parent="." unique_id=1343315064 instance=ExtResource("2_wkfv4")]
+[node name="StampStand" parent="." unique_id=1343315064 node_paths=PackedStringArray("linked_stamp") instance=ExtResource("2_wkfv4")]
+linked_stamp = NodePath("../Stamp")
 
 [node name="Stamp" parent="." unique_id=769955536 node_paths=PackedStringArray("default_stand") instance=ExtResource("1_3w75d")]
 packed_rune = ExtResource("3_1r2dn")
