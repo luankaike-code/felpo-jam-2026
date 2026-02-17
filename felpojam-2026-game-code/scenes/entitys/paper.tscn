@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dn0xy2d56orj6"]
 
-[ext_resource type="Script" uid="uid://cfp54i0lipwwp" path="res://scripts/entitys/paper.gd" id="1_memgj"]
+[ext_resource type="Script" uid="uid://cfp54i0lipwwp" path="res://scripts/entitys/paper/paper.gd" id="1_memgj"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_n4o0a"]
+[ext_resource type="Script" uid="uid://bswhr0g6h4tp7" path="res://scripts/entitys/paper/RunesSpots.gd" id="2_yj7eo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4o0a"]
 size = Vector2(167, 270)
@@ -10,7 +11,11 @@ size = Vector2(167, 270)
 z_index = 500
 script = ExtResource("1_memgj")
 
+[node name="Spots" type="Node2D" parent="." unique_id=748870184]
+script = ExtResource("2_yj7eo")
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=220479855]
+z_index = -400
 scale = Vector2(1.4238287, 2.2832034)
 texture = ExtResource("2_n4o0a")
 
