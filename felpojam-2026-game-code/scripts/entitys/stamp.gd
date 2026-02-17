@@ -4,8 +4,8 @@ class_name Stamp extends Draggable
 @onready var state_machine := $StateMachine as StateMachine
 
 @export var packed_rune: PackedScene
-@export var defult_stand: Stand
-var current_stand := defult_stand
+@export var default_stand: Stand
+var current_stand := default_stand
 
 var current_paper: Paper
 
@@ -47,7 +47,7 @@ func get_overlapping_paper() -> Paper:
 func on_area_exited(body: Area2D) -> void:
 	if body is Stand:
 		var stand = get_overlapping_stand()
-		current_stand = stand if stand else defult_stand
+		current_stand = stand if stand else default_stand
 	elif body is Paper:
 		var paper = get_overlapping_paper()
 		current_paper = paper if paper else null
