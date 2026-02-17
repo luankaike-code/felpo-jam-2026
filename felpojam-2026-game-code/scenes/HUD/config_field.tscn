@@ -2,15 +2,31 @@
 
 [ext_resource type="Script" uid="uid://dewqg3lvg5y7s" path="res://scripts/HUD/config_field.gd" id="1_c6nmi"]
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_c6nmi"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+color = Color(0.9336415, 0, 0.2246106, 1)
+grow_begin = 2.0
+grow_end = 2.0
+thickness = 3
+vertical = true
+
 [node name="HBoxContainer" type="HBoxContainer" unique_id=502982208]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
 size_flags_vertical = 0
 script = ExtResource("1_c6nmi")
 
 [node name="Label" type="Label" parent="." unique_id=806196624]
-custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 text = "Resolução da tela"
 
 [node name="OptionButton2" type="VSeparator" parent="." unique_id=732974346]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/separator = SubResource("StyleBoxLine_c6nmi")

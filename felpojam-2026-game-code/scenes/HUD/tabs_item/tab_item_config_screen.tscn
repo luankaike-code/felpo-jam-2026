@@ -12,8 +12,9 @@ size_flags_horizontal = 3
 
 [node name="ScreenResolution" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" index="1" unique_id=502982208 instance=ExtResource("2_00ejy")]
 layout_mode = 2
-label_text = "Resolução da tela"
+alignment = 1
+label_text = "teste da tela"
 
 [node name="Resolutions" type="OptionButton" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=660520254]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
