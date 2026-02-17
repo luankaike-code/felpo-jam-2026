@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="5_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
+[ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -42,3 +43,7 @@ linked_teleporter = NodePath("../PaperTeleporter2")
 [node name="PaperTeleporter2" parent="." unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
 position = Vector2(470, -165)
 linked_teleporter = NodePath("../PaperTeleporter")
+
+[node name="RunesBook" parent="." unique_id=1322508017 instance=ExtResource("8_kauht")]
+z_index = 400
+position = Vector2(244, 712)

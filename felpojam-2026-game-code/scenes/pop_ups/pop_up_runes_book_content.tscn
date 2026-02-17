@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cxefrbtyhj036"]
+
+[ext_resource type="Script" uid="uid://j1f2povy54b7" path="res://scripts/pop_ups/pop_up_runes_book_content.gd" id="1_mneh7"]
+
+[node name="PopUpRunesBookContent" type="Node2D" unique_id=1903235367]
+script = ExtResource("1_mneh7")
+metadata/_custom_type_script = "uid://m741nhr6vpsv"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=445064562]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=588388932]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=108109897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=1448091430]
+layout_mode = 2
+current_tab = 1
+
+[node name="pag 1" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=858867472]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 1" unique_id=411762270]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 1/MarginContainer" unique_id=700241627]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Pag. 1"
+
+[node name="pag 2" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=1792896792]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 2" unique_id=1708707253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 2/MarginContainer" unique_id=777097954]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Pag. 2"
+
+[node name="pag 3" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=1775413359]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 3" unique_id=1318826695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 3/MarginContainer" unique_id=1424286833]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Pag. 3"
+
+[node name="pag 4" type="TabBar" parent="CanvasLayer/Control/MarginContainer/TabContainer" unique_id=968087411]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 4" unique_id=806547186]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/TabContainer/pag 4/MarginContainer" unique_id=1614294770]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Pag. 4"

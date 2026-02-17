@@ -1,7 +1,15 @@
 extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
+var packed_runes_book_content := preload("res://scenes/pop_ups/pop_up_runes_book_content.tscn") as PackedScene
 @onready var camera_in_game := $CameraInGame as CameraInGame
+@onready var runes_book := $RunesBook as RunesBook
+
+func _ready() -> void:
+	runes_book.open.connect(open_runes_book)
+
+func open_runes_book():
+	factory_pop_up(packed_runes_book_content.instantiate())
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:
