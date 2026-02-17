@@ -18,33 +18,24 @@ metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
 [node name="Local" parent="." unique_id=421576266 instance=ExtResource("9_yruvw")]
 
-[node name="StampSet2" parent="Local" unique_id=640357785 instance=ExtResource("2_clfej")]
-position = Vector2(468, 220)
-
-[node name="InkStand2" parent="Local" unique_id=920137688 instance=ExtResource("3_mu8e5")]
-position = Vector2(-398, 188)
-
-[node name="Paper2" parent="Local" unique_id=1957066266 instance=ExtResource("4_o78e0")]
-position = Vector2(11, 170)
-
 [node name="PaperTeleporter2" parent="Local" unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
-position = Vector2(470, -165)
+position = Vector2(-449, -48)
 linked_teleporter = NodePath("../../Local2/PaperTeleporter")
 
 [node name="Local2" parent="." unique_id=564590170 instance=ExtResource("9_yruvw")]
-position = Vector2(0, 851)
+position = Vector2(1087, -5)
 
 [node name="StampSet" parent="Local2" unique_id=296592520 instance=ExtResource("2_clfej")]
 position = Vector2(470, 283)
 
 [node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
-position = Vector2(-396, 251)
+position = Vector2(-349, 261)
 
 [node name="Paper" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
-position = Vector2(13, 233)
+position = Vector2(0, 171)
 
 [node name="Trash" parent="Local2" unique_id=220787020 instance=ExtResource("6_4ji0l")]
-position = Vector2(-485, -10)
+position = Vector2(-540, -10)
 
 [node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
 position = Vector2(504, -9)
