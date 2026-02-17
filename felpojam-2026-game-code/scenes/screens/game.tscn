@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
 [ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="5_ln6eb"]
+[ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -29,3 +30,6 @@ position = Vector2(-398, 188)
 
 [node name="Paper2" parent="." unique_id=1957066266 instance=ExtResource("4_o78e0")]
 position = Vector2(11, 170)
+
+[node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
+position = Vector2(-508, 524)

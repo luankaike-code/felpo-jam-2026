@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bir3pakybp2iq"]
+
+[ext_resource type="Script" uid="uid://c0jfhxkl04x56" path="res://scripts/entitys/trash.gd" id="1_71v7v"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_7we12"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkyib"]
+radius = 83.02409
+
+[node name="Trash" type="Area2D" unique_id=220787020]
+script = ExtResource("1_71v7v")
+metadata/_custom_type_script = "uid://2p33g122efmh"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1037757991]
+modulate = Color(0, 0, 1, 1)
+texture = ExtResource("2_7we12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=536955975]
+shape = SubResource("CircleShape2D_qkyib")
