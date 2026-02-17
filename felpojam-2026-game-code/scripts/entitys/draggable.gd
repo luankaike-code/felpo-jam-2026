@@ -14,6 +14,7 @@ var is_dragging := false :
 var is_draggable := true
 
 func _ready() -> void:
+	add_to_group("draggables")
 	input_event.connect(_on_input_event)
 	area_entered.connect(_on_area_entered_base_event)
 	area_exited.connect(_on_area_exited_base_event)
@@ -34,7 +35,14 @@ func _physics_process(delta: float) -> void:
 func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton || !is_draggable:
 		return
-	elif event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+	
+	if !is_dragging:
+		var draggables = get_tree().get_nodes_in_group("draggables")
+		for draggable in draggables:
+			if draggable.is_dragging:
+				return
+
+	if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
 		is_dragging = true
 	elif event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
 		is_dragging = false
