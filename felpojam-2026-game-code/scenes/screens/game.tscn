@@ -8,42 +8,48 @@
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="9_yruvw"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
 metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
-[node name="StampSet" parent="." unique_id=296592520 instance=ExtResource("2_clfej")]
-position = Vector2(447, 817)
-
-[node name="InkStand" parent="." unique_id=1766316694 instance=ExtResource("3_mu8e5")]
-position = Vector2(-419, 785)
-
-[node name="Paper" parent="." unique_id=449771312 instance=ExtResource("4_o78e0")]
-position = Vector2(-10, 767)
-
 [node name="CameraInGame" parent="." unique_id=1323592690 instance=ExtResource("5_ln6eb")]
 
-[node name="StampSet2" parent="." unique_id=640357785 instance=ExtResource("2_clfej")]
+[node name="Local" parent="." unique_id=421576266 instance=ExtResource("9_yruvw")]
+
+[node name="StampSet2" parent="Local" unique_id=640357785 instance=ExtResource("2_clfej")]
 position = Vector2(468, 220)
 
-[node name="InkStand2" parent="." unique_id=920137688 instance=ExtResource("3_mu8e5")]
+[node name="InkStand2" parent="Local" unique_id=920137688 instance=ExtResource("3_mu8e5")]
 position = Vector2(-398, 188)
 
-[node name="Paper2" parent="." unique_id=1957066266 instance=ExtResource("4_o78e0")]
+[node name="Paper2" parent="Local" unique_id=1957066266 instance=ExtResource("4_o78e0")]
 position = Vector2(11, 170)
 
-[node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
-position = Vector2(-508, 524)
-
-[node name="PaperTeleporter" parent="." unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
-position = Vector2(481, 525)
-linked_teleporter = NodePath("../PaperTeleporter2")
-
-[node name="PaperTeleporter2" parent="." unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
+[node name="PaperTeleporter2" parent="Local" unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
 position = Vector2(470, -165)
-linked_teleporter = NodePath("../PaperTeleporter")
+linked_teleporter = NodePath("../../Local2/PaperTeleporter")
 
-[node name="RunesBook" parent="." unique_id=1322508017 instance=ExtResource("8_kauht")]
+[node name="Local2" parent="." unique_id=564590170 instance=ExtResource("9_yruvw")]
+position = Vector2(0, 851)
+
+[node name="StampSet" parent="Local2" unique_id=296592520 instance=ExtResource("2_clfej")]
+position = Vector2(470, 283)
+
+[node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
+position = Vector2(-396, 251)
+
+[node name="Paper" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
+position = Vector2(13, 233)
+
+[node name="Trash" parent="Local2" unique_id=220787020 instance=ExtResource("6_4ji0l")]
+position = Vector2(-485, -10)
+
+[node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
+position = Vector2(504, -9)
+linked_teleporter = NodePath("../../Local/PaperTeleporter2")
+
+[node name="RunesBook" parent="Local2" unique_id=1322508017 instance=ExtResource("8_kauht")]
 z_index = 400
-position = Vector2(244, 712)
+position = Vector2(267, 178)
