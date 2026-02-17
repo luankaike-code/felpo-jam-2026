@@ -47,14 +47,10 @@ func get_overlapping_stand() -> Stand:
 	return
 
 func _on_area_entered_base_event(body: Area2D) -> void:
-	print(body)
 	if body is Stand:
 		current_stand = body
-	print("aqui: ", current_stand)
 
 func _on_area_exited_base_event(body: Area2D) -> void:
-	print(body)
 	if body is Stand:
 		var stand = get_overlapping_stand()
 		current_stand = stand if stand else default_stand
-	print("aqui 2: ", current_stand)

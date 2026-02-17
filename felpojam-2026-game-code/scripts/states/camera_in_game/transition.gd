@@ -10,7 +10,7 @@ func enter(host_: CameraInGame) -> void:
 	var to = host_.target.global_position
 	tween.tween_property(host_, "global_position", to, 0.2)
 	tween.tween_callback(to_idle)
-	
+
 func exit() -> void:
 	if tween:
 		tween.stop()
