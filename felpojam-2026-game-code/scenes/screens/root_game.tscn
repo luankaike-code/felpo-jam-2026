@@ -7,3 +7,4 @@
 script = ExtResource("1_o1fpv")
 
 [node name="Transition" parent="." unique_id=1199339763 instance=ExtResource("2_1sjs4")]
+visible = false
