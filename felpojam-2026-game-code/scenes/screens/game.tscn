@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="5_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
+[ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -33,3 +34,11 @@ position = Vector2(11, 170)
 
 [node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
 position = Vector2(-508, 524)
+
+[node name="PaperTeleporter" parent="." unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
+position = Vector2(481, 525)
+linked_teleporter = NodePath("../PaperTeleporter2")
+
+[node name="PaperTeleporter2" parent="." unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
+position = Vector2(470, -165)
+linked_teleporter = NodePath("../PaperTeleporter")
