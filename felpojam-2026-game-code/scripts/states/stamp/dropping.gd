@@ -12,7 +12,7 @@ func handle_current_paper():
 func enter(host_: Stamp) -> void:
 	host = host_
 	handle_current_paper()
-	var res = host.current_stand.place_item(host)
+	var res := host.current_stand.place_item(host)
 	if !res:
 		host.default_stand.place_item(host)
 	change_state.emit("Idle")

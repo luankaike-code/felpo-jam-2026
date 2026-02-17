@@ -14,6 +14,7 @@ var is_dragging := false :
 var is_draggable := true
 
 func _ready() -> void:
+	input_event.connect(_on_input_event)
 	area_entered.connect(_on_area_entered_base_event)
 	area_exited.connect(_on_area_exited_base_event)
 
@@ -30,15 +31,13 @@ func _physics_process(delta: float) -> void:
 		global_position = get_global_mouse_position()
 
 @warning_ignore("unused_parameter")
-func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton || !is_draggable:
 		return
 	elif event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
 		is_dragging = true
 	elif event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
 		is_dragging = false
-	elif !event.button_index == MOUSE_BUTTON_LEFT:
-		return
 
 func get_overlapping_stand() -> Stand:
 	var areas := get_overlapping_areas()
