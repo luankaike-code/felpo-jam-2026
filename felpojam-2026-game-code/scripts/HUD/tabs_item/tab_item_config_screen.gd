@@ -16,15 +16,12 @@ var screen_modes: Dictionary[String, Window.Mode] = {
 	"janela": Window.MODE_WINDOWED,
 }
 
-var current_resolution: int
-
 func _ready() -> void:
 	resolution_drop_menu.item_selected.connect(resolution_selected)
 	screen_mode_drop_menu.item_selected.connect(screen_mode_selected)
 	
 	populate_drop_menu_with_dict(resolution_drop_menu, resolutions)
 	populate_drop_menu_with_dict(screen_mode_drop_menu, screen_modes)
-
 
 func populate_drop_menu_with_dict(drop_menu: OptionButton, dict: Dictionary) -> void:
 	for key in dict.keys():
@@ -36,25 +33,24 @@ func populate_drop_menus() -> void:
 	for resolution in resolutions.keys():
 		resolution_drop_menu.add_item(resolution)
 
-func resolution_selected(resolution_index: int) -> void:
-	current_resolution = resolution_index
-	var resolution_key: String = resolutions.keys()[resolution_index]
-	var resolution := resolutions[resolution_key]
-
+func set_resolution(resolution: Vector2i):
 	var window := get_window()
 	window.size = resolution
 	window.content_scale_size = resolution
+
+func resolution_selected(resolution_index: int) -> void:
+	var resolution_key: String = resolutions.keys()[resolution_index]
+	var resolution := resolutions[resolution_key]
+	Global.current_resolution = resolution
+	set_resolution(resolution)
+	
 
 func screen_mode_selected(screen_mode_index: int) -> void:
 	var screen_mode_key: String = screen_modes.keys()[screen_mode_index]
 	var screen_mode := screen_modes[screen_mode_key]
 	
 	var window := get_window()
-	window.content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
 	window.mode = screen_mode
 	
-	resolution_selected(current_resolution)
-	
-	
-	
+	set_resolution(Global.current_resolution)
 	
