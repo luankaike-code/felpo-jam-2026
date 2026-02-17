@@ -8,15 +8,13 @@ var is_dragging := false :
 		else: 
 			_finish_drag()
 
-func _ready() -> void:
-	pass
-	#input_event.connect(on_input_event)
+var is_draggable := true
 
 func _start_drag():
-	print("start_drag")
+	pass
 
 func _finish_drag():
-	print("finish_drag")
+	pass
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
@@ -25,8 +23,7 @@ func _physics_process(delta: float) -> void:
 
 @warning_ignore("unused_parameter")
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
-	# offset = mouse_gpos - gpos
-	if !event is InputEventMouseButton:
+	if !event is InputEventMouseButton || !is_draggable:
 		return
 	elif event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
 		is_dragging = true
