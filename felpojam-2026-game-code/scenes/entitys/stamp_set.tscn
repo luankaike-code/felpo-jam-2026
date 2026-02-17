@@ -8,6 +8,6 @@
 
 [node name="StampStand" parent="." unique_id=1343315064 instance=ExtResource("2_wkfv4")]
 
-[node name="Stamp" parent="." unique_id=769955536 node_paths=PackedStringArray("defult_stand") instance=ExtResource("1_3w75d")]
+[node name="Stamp" parent="." unique_id=769955536 node_paths=PackedStringArray("default_stand") instance=ExtResource("1_3w75d")]
 packed_rune = ExtResource("3_1r2dn")
-defult_stand = NodePath("../StampStand")
+default_stand = NodePath("../StampStand")

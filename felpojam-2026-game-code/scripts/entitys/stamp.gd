@@ -4,8 +4,6 @@ class_name Stamp extends Draggable
 @onready var state_machine := $StateMachine as StateMachine
 
 @export var packed_rune: PackedScene
-@export var default_stand: Stand
-var current_stand := default_stand
 
 var current_paper: Paper
 
@@ -15,6 +13,7 @@ var has_ink := false :
 		modulate = Color(1.0, 1.0, 0.0, 1.0) if has_ink else Color(1.0, 1.0, 1.0, 1.0)
 
 func _ready() -> void:
+	super()
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
 
@@ -25,17 +24,8 @@ func _finish_drag() -> void:
 	state_machine.change_state("Dropping")
 
 func on_area_entered(body: Area2D) -> void:
-	if body is Stand:
-		current_stand = body
-	elif body is Paper:
+	if body is Paper:
 		current_paper = body
-
-func get_overlapping_stand() -> Stand:
-	var areas := get_overlapping_areas()
-	for area in areas:
-		if area is Stand:
-			return area
-	return
 
 func get_overlapping_paper() -> Paper:
 	var areas := get_overlapping_areas()
@@ -45,9 +35,6 @@ func get_overlapping_paper() -> Paper:
 	return
 
 func on_area_exited(body: Area2D) -> void:
-	if body is Stand:
-		var stand = get_overlapping_stand()
-		current_stand = stand if stand else default_stand
-	elif body is Paper:
+	if body is Paper:
 		var paper = get_overlapping_paper()
 		current_paper = paper if paper else null

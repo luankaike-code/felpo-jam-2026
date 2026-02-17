@@ -1,5 +1,8 @@
 class_name Draggable extends Area2D
 
+@export var default_stand: Stand
+var current_stand := default_stand
+
 var is_dragging := false :
 	set(new):
 		is_dragging = new
@@ -10,11 +13,16 @@ var is_dragging := false :
 
 var is_draggable := true
 
+func _ready() -> void:
+	area_entered.connect(_on_area_entered_base_event)
+	area_exited.connect(_on_area_exited_base_event)
+
 func _start_drag():
 	pass
 
 func _finish_drag():
-	pass
+	if current_stand:
+		current_stand.place_item(self)
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
@@ -31,3 +39,23 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 		is_dragging = false
 	elif !event.button_index == MOUSE_BUTTON_LEFT:
 		return
+
+func get_overlapping_stand() -> Stand:
+	var areas := get_overlapping_areas()
+	for area in areas:
+		if area is Stand:
+			return area
+	return
+
+func _on_area_entered_base_event(body: Area2D) -> void:
+	print(body)
+	if body is Stand:
+		current_stand = body
+	print("aqui: ", current_stand)
+
+func _on_area_exited_base_event(body: Area2D) -> void:
+	print(body)
+	if body is Stand:
+		var stand = get_overlapping_stand()
+		current_stand = stand if stand else default_stand
+	print("aqui 2: ", current_stand)
