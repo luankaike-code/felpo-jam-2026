@@ -7,6 +7,7 @@ var current_screen: Screen
 var default_screen = ScreenData.names.menu
 
 func _ready() -> void:
+	HelperWindow.set_to_appropriate_resolution()
 	create_defult_screen()
 	transition.exit_transition_finished.connect(toggle_screen)
 
