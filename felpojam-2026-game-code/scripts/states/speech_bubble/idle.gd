@@ -8,7 +8,6 @@ func enter(host_) -> void:
 	timer.timeout.connect(to_typing)
 
 func to_typing():
-	print(host.current_dialog_index < host.dialogs.size(), host.current_dialog_index, " ", host.dialogs.size())
 	if host.current_dialog_index < host.dialogs.size()-1:
 		host.current_dialog_index  += 1
 		change_state.emit("Typing")
