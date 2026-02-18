@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mcke7bu8ox2b" path="res://scripts/screens/configurations.gd" id="1_lpiss"]
 [ext_resource type="PackedScene" uid="uid://dltgpug32yo3i" path="res://scenes/HUD/sections/config/section_screen_config.tscn" id="2_lpiss"]
+[ext_resource type="PackedScene" uid="uid://cbaumx6f7mufr" path="res://scenes/HUD/sections/config/section_sound_config.tscn" id="3_qw20t"]
 
 [node name="Configurations" type="Node2D" unique_id=226870408]
 script = ExtResource("1_lpiss")
@@ -51,4 +52,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="SectionScreenConfig" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1213679984 instance=ExtResource("2_lpiss")]
+layout_mode = 2
+
+[node name="SectionSoundConfig" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=416386563 instance=ExtResource("3_qw20t")]
 layout_mode = 2

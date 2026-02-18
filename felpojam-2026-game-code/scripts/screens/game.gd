@@ -28,3 +28,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("ui_accept") and !has_pop_up():
 		current_local += 1
 		camera_in_game.to(locals[current_local%locals.size()])
+	elif Input.is_action_just_pressed("ui_down"):
+		Sound.play_sound(SoundData.names.stamping)
+	elif Input.is_action_just_pressed("ui_up"):
+		Sound.play_sound(SoundData.names.transition)
+	elif Input.is_action_just_pressed("ui_right"):
+		Sound.play_sound(SoundData.names.ink_splash)

@@ -16,6 +16,7 @@ script = ExtResource("2_yj7eo")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=220479855]
 z_index = -400
+position = Vector2(0, -160)
 scale = Vector2(1.4238287, 2.2832034)
 texture = ExtResource("2_n4o0a")
 
