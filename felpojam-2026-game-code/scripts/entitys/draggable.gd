@@ -12,6 +12,7 @@ var is_dragging := false :
 			_finish_drag()
 
 var is_draggable := true
+var was_clicked := false
 
 func _ready() -> void:
 	add_to_group("draggables")
@@ -35,17 +36,23 @@ func _physics_process(delta: float) -> void:
 func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton || !is_draggable:
 		return
-	
+
 	if !is_dragging:
 		var draggables = get_tree().get_nodes_in_group("draggables")
 		for draggable in draggables:
-			if draggable.is_dragging:
+			if draggable.is_dragging || draggable.was_clicked:
 				return
 
-	if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
-		is_dragging = true
-	elif event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
-		is_dragging = false
+	if Global.drag_mode == ControlData.drag_mode.hold:
+		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+			is_dragging = true
+		elif event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
+			is_dragging = false
+	else:
+		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+			was_clicked = true
+			set_deferred("was_clicked", false)
+			is_dragging = !is_dragging
 
 func get_overlapping_stand() -> Stand:
 	var areas := get_overlapping_areas()
