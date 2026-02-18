@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_nr2cd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_knte8"]
-radius = 79.0
-height = 276.0
+radius = 57.0
+height = 190.0
 
 [node name="RunesBook" type="Area2D" unique_id=1322508017]
 script = ExtResource("1_uhnbf")
@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://cofhru7hxcyx6"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=2000990164]
 modulate = Color(1, 1, 0, 1)
-scale = Vector2(1.2890625, 2.1328125)
+scale = Vector2(0.856631, 1.3810008)
 texture = ExtResource("2_nr2cd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1584945089]

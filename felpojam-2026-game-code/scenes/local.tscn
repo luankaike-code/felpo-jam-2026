@@ -6,5 +6,5 @@
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1443372050]
 modulate = Color(1, 1, 1, 0.29803923)
-scale = Vector2(8, 5)
+scale = Vector2(5.045841, 2.8755436)
 texture = ExtResource("1_bl8qx")

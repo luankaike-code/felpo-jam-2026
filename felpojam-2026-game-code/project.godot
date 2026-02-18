@@ -28,6 +28,10 @@ window/size/viewport_height=720
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

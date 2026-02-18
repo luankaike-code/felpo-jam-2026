@@ -3,15 +3,17 @@
 [ext_resource type="Script" uid="uid://bv2i3d2jleaat" path="res://scripts/entitys/paper_teleporter.gd" id="1_jx251"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_2o0tp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1mhjd"]
-radius = 90.199776
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jx251"]
+radius = 44.0
+height = 158.0
 
 [node name="PaperTeleporter" type="Area2D" unique_id=1105482110]
 script = ExtResource("1_jx251")
 metadata/_custom_type_script = "uid://2p33g122efmh"
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1144581794]
+scale = Vector2(0.82812494, 1.390625)
 texture = ExtResource("2_2o0tp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108123832]
-shape = SubResource("CircleShape2D_1mhjd")
+shape = SubResource("CapsuleShape2D_jx251")

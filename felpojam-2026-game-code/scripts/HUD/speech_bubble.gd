@@ -12,3 +12,7 @@ var typing_velocity := 0.1
 
 func _ready() -> void:
 	state_machine.change_state("Typing")
+
+func setup(dialogs_: Array[String], pos: Vector2):
+	dialogs = dialogs_
+	global_position = pos

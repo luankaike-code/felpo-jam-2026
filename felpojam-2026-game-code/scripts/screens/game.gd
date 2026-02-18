@@ -5,12 +5,22 @@ var packed_runes_book_content := preload("res://scenes/pop_ups/pop_up_runes_book
 
 @onready var camera_in_game := $CameraInGame as CameraInGame
 @onready var runes_book := $Local2/RunesBook as RunesBook
-
+@onready var speech_bubble_manager := $SpeechBubbleManager as SpeechBubbleManager
 @onready var locals := [$Local, $Local2]
 var current_local := 0
 
 func _ready() -> void:
 	runes_book.open.connect(open_runes_book)
+	
+
+func open_dialog():
+	speech_bubble_manager.create_speech_bubble([
+		"teste de dialogo, aqui fu escrevo",
+		"ou falo? tanto faz na real, um dialogo pode ser tanto escrito quanto falado",
+		"e como esse é um um texto de teste que se dane se ele tá certo ou não",
+		"é cabou o dialogo de teste, cambio",
+		"*trsit (como é o som de rádio mesmo?)"
+	], get_global_mouse_position())
 
 func open_runes_book():
 	factory_pop_up(packed_runes_book_content.instantiate())
@@ -34,3 +44,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		Sound.play_sound(SoundData.names.transition)
 	elif Input.is_action_just_pressed("ui_right"):
 		Sound.play_sound(SoundData.names.ink_splash)
+	elif Input.is_action_just_pressed("ui_home"):
+		open_dialog()
