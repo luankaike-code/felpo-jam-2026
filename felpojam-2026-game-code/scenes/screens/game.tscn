@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="9_yruvw"]
+[ext_resource type="PackedScene" uid="uid://dqgpfoti51p2e" path="res://scenes/HUD/speech_bubble.tscn" id="10_vsgdc"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -44,3 +45,10 @@ linked_teleporter = NodePath("../../Local/PaperTeleporter2")
 [node name="RunesBook" parent="Local2" unique_id=1322508017 instance=ExtResource("8_kauht")]
 z_index = 400
 position = Vector2(267, 178)
+
+[node name="SpeechBubble" parent="." unique_id=1045248266 instance=ExtResource("10_vsgdc")]
+offset_left = -43.0
+offset_top = -30.0
+offset_right = 21.0
+offset_bottom = -17.0
+dialogs = Array[String](["Meu nome é luan kaike mack santos...", "e eu to só desenvolvendo esse joguinho...", "mó divertido né?"])

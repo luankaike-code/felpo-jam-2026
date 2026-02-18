@@ -16,7 +16,8 @@ func find_state(state_name: String) -> State:
 func change_state(state_name: String) -> void:
 	var new_state = find_state(state_name)
 	
-	current_state.exit()
+	if current_state:
+		current_state.exit()
 	current_state = new_state
 	current_state.enter(get_parent())
 

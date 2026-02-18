@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dqgpfoti51p2e"]
+
+[ext_resource type="Texture2D" uid="uid://bmaxq32uopw40" path="res://assets/speech_bubble.png" id="1_3j60d"]
+[ext_resource type="Script" uid="uid://dggtt4nc4r4l8" path="res://scripts/HUD/speech_bubble.gd" id="1_bhfoy"]
+[ext_resource type="FontFile" uid="uid://pl6s2y6bce4c" path="res://assets/Tiny5-Regular.ttf" id="2_b5rqg"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="4_nol6i"]
+[ext_resource type="Script" uid="uid://bbb8h8lmo8ixp" path="res://scripts/states/speech_bubble/typing.gd" id="5_ews8o"]
+[ext_resource type="Script" uid="uid://lpsw8gsek0c8" path="res://scripts/states/speech_bubble/idle.gd" id="6_564ic"]
+
+[node name="SpeechBubble" type="MarginContainer" unique_id=1045248266]
+anchors_preset = -1
+anchor_right = 0.05
+anchor_bottom = 0.029000001
+offset_right = -12.0
+offset_bottom = 0.11999893
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_bhfoy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1141819692]
+layout_mode = 2
+texture = ExtResource("1_3j60d")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 2
+patch_margin_bottom = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=770600381]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=950545125]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_b5rqg")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
+
+[node name="StateMachine" type="Node" parent="." unique_id=1445949223]
+script = ExtResource("4_nol6i")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Typing" type="Node" parent="StateMachine" unique_id=919114865]
+script = ExtResource("5_ews8o")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1065372176]
+script = ExtResource("6_564ic")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
