@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dltgpug32yo3i"]
+
+[ext_resource type="PackedScene" uid="uid://br4140hu022dp" path="res://scenes/HUD/sections/section.tscn" id="1_ed6pf"]
+[ext_resource type="Script" uid="uid://wpyeisp11jiy" path="res://scripts/HUD/sections/config/section_screen_config.gd" id="2_osfrk"]
+[ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_v6j37"]
+
+[node name="SectionScreenConfig" unique_id=1213679984 instance=ExtResource("1_ed6pf")]
+script = ExtResource("2_osfrk")
+
+[node name="Label" parent="." index="0" unique_id=130990419]
+text = "Tela"
+
+[node name="ScreenResolution" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=502982208 instance=ExtResource("2_v6j37")]
+layout_mode = 2
+label_text = "Resolução da Janela"
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=972668148]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="SreenMode" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="2" unique_id=290738729 instance=ExtResource("2_v6j37")]
+layout_mode = 2
+alignment = 1
+label_text = "Modo da Janela"
+
+[node name="ScreenModes" type="OptionButton" parent="MarginContainer/VBoxContainer/SreenMode" index="2" unique_id=2130893843]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VSync" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="3" unique_id=74489987 instance=ExtResource("2_v6j37")]
+layout_mode = 2
+alignment = 1
+label_text = "V-Sync"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VSync" index="2" unique_id=1566601491]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/VSync/Control" index="0" unique_id=992025368]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+grow_horizontal = 0
+grow_vertical = 2

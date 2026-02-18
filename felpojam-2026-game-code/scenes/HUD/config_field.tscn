@@ -24,7 +24,7 @@ script = ExtResource("1_c6nmi")
 [node name="Label" type="Label" parent="." unique_id=806196624]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Resolução da tela"
+text = "Nome do Campo"
 
 [node name="OptionButton2" type="VSeparator" parent="." unique_id=732974346]
 layout_mode = 2

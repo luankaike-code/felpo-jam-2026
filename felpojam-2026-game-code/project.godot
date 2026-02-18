@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 HelperWindow="*uid://dtvi7hflcucsq"
 Global="*uid://dv0lrskrgc0se"
+Audio="*uid://li0iapgwddw7"
 
 [display]
 
