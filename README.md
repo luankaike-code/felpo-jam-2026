@@ -1,4 +1,4 @@
-# NOME DO JOGO ( a jam ainda não começou >w< )
+# NOME DO JOGO ( não temos ideia :v )
 
 ![felpojam 2026](./assets/logo-felpo-jam-2026.png)
 
