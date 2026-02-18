@@ -12,7 +12,6 @@ var current_local := 0
 func _ready() -> void:
 	runes_book.open.connect(open_runes_book)
 	
-
 func open_dialog():
 	speech_bubble_manager.create_speech_bubble([
 		"teste de dialogo, aqui fu escrevo",
