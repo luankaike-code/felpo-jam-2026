@@ -6,16 +6,12 @@ extends VBoxContainer
 @onready var v_sync_checkbox := $MarginContainer/VBoxContainer/VSync/Control/CheckBox as CheckBox
 
 func _ready() -> void:
-	populate_drop_menu_with_dict(resolution_drop_menu, WindowData.resolutions)
-	populate_drop_menu_with_dict(screen_mode_drop_menu, WindowData.screen_modes)
+	Helpers.populate_drop_menu_with_dict(resolution_drop_menu, WindowData.resolutions)
+	Helpers.populate_drop_menu_with_dict(screen_mode_drop_menu, WindowData.screen_modes)
 	
 	set_current_values()
 	
 	connected_signals()
-	
-func populate_drop_menu_with_dict(drop_menu: OptionButton, dict: Dictionary) -> void:
-	for key in dict.keys():
-		drop_menu.add_item(key)
 
 func set_current_values():
 	v_sync_checkbox.button_pressed = HelperWindow.get_v_sync()

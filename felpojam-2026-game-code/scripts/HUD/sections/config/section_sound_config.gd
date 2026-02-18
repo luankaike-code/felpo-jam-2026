@@ -26,7 +26,7 @@ func connect_signals() -> void:
 	sound_effects_volume.value_changed.connect(func (x): 
 		change_type_volume(SoundData.types.sound_effect, x)
 	)
-	ambient_volume.value_changed.connect(func (x): 
+	music_volume.value_changed.connect(func (x): 
 		change_type_volume(SoundData.types.music, x)
 	)
 

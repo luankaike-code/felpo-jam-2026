@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bwsjjchinufk"]
+
+[ext_resource type="PackedScene" uid="uid://br4140hu022dp" path="res://scenes/HUD/sections/section.tscn" id="1_jqron"]
+[ext_resource type="Script" uid="uid://dnm3h6g3wc65p" path="res://scripts/HUD/sections/config/section_control_config.gd" id="2_7j1mm"]
+[ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_tbxjl"]
+
+[node name="SectionControlConfig" unique_id=1213679984 instance=ExtResource("1_jqron")]
+script = ExtResource("2_7j1mm")
+
+[node name="Label" parent="." index="0" unique_id=130990419]
+text = "Controles"
+
+[node name="HBoxContainer" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=502982208 instance=ExtResource("2_tbxjl")]
+layout_mode = 2
+label_text = "Modo de arraste"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=323097605]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
