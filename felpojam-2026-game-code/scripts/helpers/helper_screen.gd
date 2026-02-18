@@ -13,9 +13,21 @@ func set_to_appropriate_resolution():
 			if this_appropriate_factor == 0:
 				break
 	
+	Global.current_resolution = appropriate_resolution
 	set_resolution(appropriate_resolution)
 
+func get_v_sync() -> bool:
+	return DisplayServer.window_get_vsync_mode() == DisplayServer.VSYNC_ENABLED
+
+func set_v_sync(v_sync: bool):
+	var v_sync_mode := DisplayServer.VSYNC_ENABLED if v_sync else DisplayServer.VSYNC_DISABLED
+	DisplayServer.window_set_vsync_mode(v_sync_mode)
+
+func set_window_mode(window_mode: Window.Mode):
+	get_window().mode = window_mode
+
 func set_resolution(resolution: Vector2i):
+	Global.current_resolution = resolution
 	var window := get_window()
 	window.size = resolution
 	window.content_scale_size = resolution

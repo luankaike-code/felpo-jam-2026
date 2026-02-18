@@ -17,14 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://dv0lrskrgc0se"
 HelperWindow="*uid://dtvi7hflcucsq"
+Global="*uid://dv0lrskrgc0se"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 

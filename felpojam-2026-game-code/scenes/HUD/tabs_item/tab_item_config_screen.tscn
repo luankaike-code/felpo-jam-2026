@@ -28,3 +28,22 @@ label_text = "Modo de tela"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+
+[node name="SreenMode2" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" index="3" unique_id=1463385593 instance=ExtResource("2_00ejy")]
+layout_mode = 2
+alignment = 1
+label_text = "Sincronização Vertical"
+
+[node name="Control" type="Control" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/SreenMode2" index="2" unique_id=1653059577]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer/SreenMode2/Control" index="0" unique_id=1309470054]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+grow_horizontal = 0
+grow_vertical = 2
