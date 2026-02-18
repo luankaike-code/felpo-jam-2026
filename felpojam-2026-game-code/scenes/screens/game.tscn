@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="9_yruvw"]
+[ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="11_e0wmo"]
+[ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="12_xrk1x"]
+[ext_resource type="PackedScene" uid="uid://daa3bayphv4yc" path="res://scenes/entitys/runes/water_rune.tscn" id="13_xrk1x"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -36,13 +39,13 @@ linked_teleporter = NodePath("../../Local2/PaperTeleporter")
 position = Vector2(660, 0)
 
 [node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
-position = Vector2(157, 94)
+position = Vector2(149, -94)
 
 [node name="Paper" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
 position = Vector2(12, 82)
 
 [node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
-position = Vector2(253, -81)
+position = Vector2(252, -89)
 linked_teleporter = NodePath("../../Local/PaperTeleporter2")
 
 [node name="RunesBook" parent="Local2" unique_id=1322508017 instance=ExtResource("8_kauht")]
@@ -51,3 +54,13 @@ position = Vector2(-124, 78)
 
 [node name="StampSet" parent="Local2" unique_id=296592520 instance=ExtResource("2_clfej")]
 position = Vector2(243, 99)
+
+[node name="StampSet1" type="Node2D" parent="Local2" unique_id=62506683]
+position = Vector2(137, 103)
+
+[node name="StampStand" parent="Local2/StampSet1" unique_id=1046151446 node_paths=PackedStringArray("linked_stamp") instance=ExtResource("11_e0wmo")]
+linked_stamp = NodePath("../Stamp")
+
+[node name="Stamp" parent="Local2/StampSet1" unique_id=769955536 node_paths=PackedStringArray("default_stand") instance=ExtResource("12_xrk1x")]
+packed_rune = ExtResource("13_xrk1x")
+default_stand = NodePath("../StampStand")

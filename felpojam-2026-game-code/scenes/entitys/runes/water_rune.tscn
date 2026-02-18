@@ -1,20 +1,6 @@
 [gd_scene format=3 uid="uid://daa3bayphv4yc"]
 
-[ext_resource type="Script" uid="uid://dkq45ist47qcn" path="res://scripts/entitys/rune.gd" id="1_tl6rj"]
-[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_61voi"]
+[ext_resource type="PackedScene" uid="uid://cuasnk30g4do1" path="res://scenes/entitys/runes/rune.tscn" id="1_mtq7l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl6rj"]
-size = Vector2(62, 62)
-
-[node name="WaterRune" type="Area2D" unique_id=140041643]
-script = ExtResource("1_tl6rj")
-type = 1
-metadata/_custom_type_script = "uid://dkq45ist47qcn"
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=688697464]
-modulate = Color(0.2784314, 1, 0.8117647, 1)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_61voi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=862070302]
-shape = SubResource("RectangleShape2D_tl6rj")
+[node name="WaterRune" unique_id=1790087535 instance=ExtResource("1_mtq7l")]
+rune_name = 1

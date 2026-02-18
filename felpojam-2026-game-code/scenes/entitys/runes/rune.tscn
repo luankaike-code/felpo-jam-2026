@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cuasnk30g4do1"]
+
+[ext_resource type="Script" uid="uid://dkq45ist47qcn" path="res://scripts/entitys/rune.gd" id="1_vvspm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvspm"]
+radius = 36.013885
+
+[node name="Rune" type="Area2D" unique_id=1790087535]
+script = ExtResource("1_vvspm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2003300725]
+shape = SubResource("CircleShape2D_vvspm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=286010679]

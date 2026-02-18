@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="1_3w75d"]
 [ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="2_wkfv4"]
-[ext_resource type="PackedScene" uid="uid://cntug0yitbsgv" path="res://scenes/entitys/runes/fire_rune.tscn" id="3_1r2dn"]
+[ext_resource type="PackedScene" uid="uid://kdh0fmgkwwnn" path="res://scenes/entitys/runes/fire_rune.tscn" id="3_1r2dn"]
 
 [node name="StampSet" type="Node2D" unique_id=296592520]
 

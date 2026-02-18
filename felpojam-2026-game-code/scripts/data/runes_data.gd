@@ -27,7 +27,12 @@ static var colors: Dictionary[names, Color] = {
 	names.order: Color(0.87, 0.639, 0.139),
 }
 
-var packed: Dictionary[names, PackedScene] = {
+static var packed: Dictionary[names, PackedScene] = {
 	names.fire: load("res://scenes/entitys/runes/fire_rune.tscn"),
 	names.water: load("res://scenes/entitys/runes/fire_rune.tscn")
+}
+
+static var textures: Dictionary[names, CompressedTexture2D] = {
+	names.fire: preload("res://assets/fire rune.png"),
+	names.water: preload("res://assets/water rune.png"),
 }
