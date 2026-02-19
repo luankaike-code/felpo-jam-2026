@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ftl38bpii8ag"]
 
 [ext_resource type="Script" uid="uid://wecskt8a2l36" path="res://scripts/entitys/stamp.gd" id="1_f45sb"]
+[ext_resource type="Texture2D" uid="uid://bwv4tb86wvig0" path="res://assets/images/stamp.png" id="2_0v15b"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_6f7w4"]
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="4_0v15b"]
 [ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="5_0v15b"]
@@ -16,6 +17,7 @@ metadata/_custom_type_script = "uid://cofhru7hxcyx6"
 [node name="Sprite" type="Sprite2D" parent="." unique_id=251825953]
 position = Vector2(0, -11)
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0v15b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632221205]
 shape = SubResource("CircleShape2D_t5bq3")
