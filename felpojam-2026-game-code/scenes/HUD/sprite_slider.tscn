@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://xlbjxqngl1qn"]
+
+[ext_resource type="Texture2D" uid="uid://b177o355ot0nu" path="res://assets/images/slider.png" id="1_h4on8"]
+[ext_resource type="Script" uid="uid://d782n0keki0n" path="res://scripts/HUD/sprite_slider.gd" id="1_vnbr1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnbr1"]
+atlas = ExtResource("1_h4on8")
+region = Rect2(0, 32, 16, 16)
+
+[node name="SpriteSlider" type="Control" unique_id=971108514]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 3
+anchor_right = 0.022000002
+anchor_bottom = 0.022000002
+offset_right = 4.8399982
+offset_bottom = 0.1599989
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_vnbr1")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=425991554]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h4on8")
+region_rect = Rect2(0, 0, 48, 16)
+patch_margin_left = 5
+patch_margin_top = 3
+patch_margin_right = 5
+patch_margin_bottom = 3
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=2056634506]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h4on8")
+region_rect = Rect2(0, 16, 48, 16)
+patch_margin_left = 5
+patch_margin_top = 3
+patch_margin_right = 5
+patch_margin_bottom = 3
+
+[node name="SliderIcon" type="TextureRect" parent="." unique_id=968790681]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vnbr1")

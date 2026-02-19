@@ -3,8 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://br4140hu022dp" path="res://scenes/HUD/sections/section.tscn" id="1_jqron"]
 [ext_resource type="Script" uid="uid://dnm3h6g3wc65p" path="res://scripts/HUD/sections/config/section_control_config.gd" id="2_7j1mm"]
 [ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_tbxjl"]
+[ext_resource type="PackedScene" uid="uid://xlbjxqngl1qn" path="res://scenes/HUD/sprite_slider.tscn" id="4_7j1mm"]
 
 [node name="SectionControlConfig" unique_id=1213679984 instance=ExtResource("1_jqron")]
+anchors_preset = -1
+anchor_right = 0.38900003
+anchor_bottom = 0.25300002
+offset_right = 0.079956055
+offset_bottom = -0.16001892
 script = ExtResource("2_7j1mm")
 
 [node name="Label" parent="." index="0" unique_id=130990419]
@@ -15,5 +21,13 @@ layout_mode = 2
 label_text = "Modo de arrastes"
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=323097605]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="2" unique_id=468759244 instance=ExtResource("2_tbxjl")]
+layout_mode = 2
+label_text = "Teste isso ai"
+
+[node name="SpriteSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2" index="2" unique_id=971108514 instance=ExtResource("4_7j1mm")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2

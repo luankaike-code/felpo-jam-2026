@@ -8,7 +8,7 @@ var default_screen = ScreenData.names.menu
 @onready var camera_in_game := $CameraInGame as CameraInGame
 
 func _ready() -> void:
-	HelperWindow.set_window_mode(Window.MODE_FULLSCREEN)
+	HelperWindow.set_window_mode(Window.MODE_WINDOWED)
 	HelperWindow.call_deferred("set_to_appropriate_resolution")
 	
 	create_defult_screen()
