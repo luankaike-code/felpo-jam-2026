@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://ckpsmscigpqim"]
+
+[ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="1_4yvjy"]
+
+[resource]
+font = ExtResource("1_4yvjy")

@@ -1,8 +1,8 @@
 extends VBoxContainer
 
-@onready var ambient_volume: HSlider = $MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Control/Ambient
-@onready var sound_effects_volume: HSlider = $MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/Control/SoundEffects
-@onready var music_volume: HSlider = $MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3/Control/Music
+@onready var ambient_volume := $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/Control/Ambient as HSlider
+@onready var sound_effects_volume := $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Control/SoundEffects as HSlider
+@onready var music_volume := $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Control/Music as HSlider
 
 var relation_slider_sound_type: Dictionary[SoundData.types, HSlider] = {
 	SoundData.types.ambient: ambient_volume,

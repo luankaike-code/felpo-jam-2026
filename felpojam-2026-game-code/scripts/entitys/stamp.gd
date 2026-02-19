@@ -7,6 +7,8 @@ class_name Stamp extends Draggable
 
 var current_paper: Paper
 
+var rune_name: RunesData.names
+
 var has_ink := false :
 	set(new):
 		has_ink = new
@@ -14,8 +16,13 @@ var has_ink := false :
 
 func _ready() -> void:
 	super()
+	
+	rune_name = packed_rune.instantiate().rune_name
+	sprite.texture = StampData.textures[rune_name]
+	
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
+	
 
 func _start_drag() -> void:
 	state_machine.change_state("Dragging")

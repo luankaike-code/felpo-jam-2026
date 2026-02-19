@@ -12,7 +12,7 @@ text = "Controles"
 
 [node name="HBoxContainer" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=502982208 instance=ExtResource("2_tbxjl")]
 layout_mode = 2
-label_text = "Modo de arraste"
+label_text = "Modo de arrastes"
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=323097605]
 custom_minimum_size = Vector2(200, 0)

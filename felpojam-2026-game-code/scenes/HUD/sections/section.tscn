@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://br4140hu022dp"]
 
 [ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="1_f7r6j"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="2_yl2c7"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_fwpnj"]
 content_margin_left = 4.0
@@ -22,6 +23,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_f7r6j")
 theme_override_font_sizes/font_size = 24
 text = "Title"
+label_settings = ExtResource("2_yl2c7")
 
 [node name="HSeparator" type="HSeparator" parent="." unique_id=431356415]
 custom_minimum_size = Vector2(300, 0)

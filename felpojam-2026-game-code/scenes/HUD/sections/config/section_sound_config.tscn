@@ -10,26 +10,18 @@ script = ExtResource("2_qojhr")
 [node name="Label" parent="." index="0" unique_id=130990419]
 text = "Sons"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=1153364865]
-layout_mode = 2
-text = "Volumes"
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="2" unique_id=736083072]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer" index="0" unique_id=422665061]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=422665061]
 layout_mode = 2
 
-[node name="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" index="0" unique_id=502982208 instance=ExtResource("2_qtf1h")]
+[node name="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" index="0" unique_id=502982208 instance=ExtResource("2_qtf1h")]
 layout_mode = 2
 label_text = "Ambiente"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=1063266665]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" index="2" unique_id=1063266665]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Ambient" type="HSlider" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Control" index="0" unique_id=1980387941]
+[node name="Ambient" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/Control" index="0" unique_id=1980387941]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,15 +33,15 @@ size_flags_vertical = 4
 max_value = 2.0
 step = 0.1
 
-[node name="HBoxContainer2" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" index="1" unique_id=433170829 instance=ExtResource("2_qtf1h")]
+[node name="HBoxContainer2" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1" unique_id=433170829 instance=ExtResource("2_qtf1h")]
 layout_mode = 2
 label_text = "Efeitos Sonoros"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" index="2" unique_id=118498276]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" index="2" unique_id=118498276]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="SoundEffects" type="HSlider" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/Control" index="0" unique_id=1641037177]
+[node name="SoundEffects" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Control" index="0" unique_id=1641037177]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,15 +53,15 @@ size_flags_vertical = 4
 max_value = 2.0
 step = 0.1
 
-[node name="HBoxContainer3" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" index="2" unique_id=823173631 instance=ExtResource("2_qtf1h")]
+[node name="HBoxContainer3" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2" unique_id=823173631 instance=ExtResource("2_qtf1h")]
 layout_mode = 2
 label_text = "Musica"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3" index="2" unique_id=1790496881]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" index="2" unique_id=1790496881]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Music" type="HSlider" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3/Control" index="0" unique_id=1107222763]
+[node name="Music" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Control" index="0" unique_id=1107222763]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

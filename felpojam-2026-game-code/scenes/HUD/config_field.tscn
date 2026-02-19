@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8duy5yc6rwku"]
 
 [ext_resource type="Script" uid="uid://dewqg3lvg5y7s" path="res://scripts/HUD/config_field.gd" id="1_c6nmi"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="2_ja441"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_c6nmi"]
 content_margin_left = 0.0
@@ -24,7 +25,7 @@ script = ExtResource("1_c6nmi")
 [node name="Label" type="Label" parent="." unique_id=806196624]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Nome do Campo"
+label_settings = ExtResource("2_ja441")
 
 [node name="OptionButton2" type="VSeparator" parent="." unique_id=732974346]
 layout_mode = 2
