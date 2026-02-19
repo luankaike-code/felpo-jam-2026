@@ -3,18 +3,22 @@ class_name TransitionDrawer extends Node2D
 signal finish_normal_animation
 signal finish_reverse_animation
 
-var duration := 7
+var duration := 0.6
 var playing := false
 var current_radius := 0.0
 var start_point: Vector2
 var radius_max: float
 var direction := 1
+var current_radius_step: float
 
+func _ready() -> void:
+	finish_normal_animation.connect(func(): print("normal"))
+	finish_reverse_animation.connect(func(): print("reverse"))
 
 func _draw() -> void:
 	if !playing:
 		return
-	elif current_radius >= radius_max:
+	if current_radius >= radius_max && direction > 0:
 		direction = -1
 		finish_normal_animation.emit()
 	elif direction < 0 && current_radius <= 0:
@@ -23,9 +27,14 @@ func _draw() -> void:
 		return
 	
 	draw_circle(start_point, current_radius, Color.BLACK)
-	current_radius += (radius_max / duration/2) * direction
+	current_radius += current_radius_step
+
+func _process(delta: float) -> void:
+	if !playing:
+		return
 	
-	get_tree().create_timer(0.01).timeout.connect(queue_redraw)
+	current_radius_step = (radius_max / (duration/2)) * direction * delta
+	queue_redraw()
 
 func reset_animation_vars():
 	playing = false
@@ -36,7 +45,7 @@ func get_viewport_infos():
 	var viewport = get_viewport()
 	
 	start_point = viewport.get_mouse_position()
-	radius_max = viewport.get_visible_rect().size.x * 1.5
+	radius_max = viewport.get_visible_rect().size.x
 
 func play():
 	if playing:
