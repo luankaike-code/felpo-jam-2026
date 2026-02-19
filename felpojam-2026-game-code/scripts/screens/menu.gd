@@ -1,12 +1,13 @@
 extends Screen
 
-@onready var start_btn := $CanvasLayer/Control/MarginContainer/VBoxContainer/StartBtn as Button
-@onready var configs_btn :=  $CanvasLayer/Control/MarginContainer/VBoxContainer/ConfigsBtn as Button
-@onready var quit_btn := $CanvasLayer/Control/MarginContainer/VBoxContainer/QuitBtn as Button
+@onready var start_btn := $Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/StartBtn as SpriteButton
+@onready var configuration_btn := $Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ConfigurationBtn as SpriteButton
+@onready var quit_btn := $Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/QuitBtn as SpriteButton
 
 func _ready() -> void:
+	camera.global_position = global_position
 	start_btn.button_up.connect(to_game)
-	configs_btn.button_up.connect(to_configurations)
+	configuration_btn.button_up.connect(to_configurations)
 	quit_btn.button_up.connect(quit.emit)
 
 func to_configurations():

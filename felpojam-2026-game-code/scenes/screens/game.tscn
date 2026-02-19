@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="3_ggwlb"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
 [ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
-[ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="5_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
@@ -17,9 +16,6 @@
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
 metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
-
-[node name="CameraInGame" parent="." unique_id=1323592690 instance=ExtResource("5_ln6eb")]
-zoom = Vector2(2, 2)
 
 [node name="SpeechBubbleManager" type="Node2D" parent="." unique_id=535693246]
 z_index = 4000

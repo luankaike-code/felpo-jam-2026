@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c452jsn7y4xwo" path="res://scripts/screens/root_game.gd" id="1_o1fpv"]
 [ext_resource type="PackedScene" uid="uid://ddq8efmsvwyac" path="res://scenes/screens/transition.tscn" id="2_1sjs4"]
+[ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="2_nb4e5"]
 
 [node name="RootGame" type="Node" unique_id=659041742]
 script = ExtResource("1_o1fpv")
+
+[node name="CameraInGame" parent="." unique_id=1323592690 instance=ExtResource("2_nb4e5")]
+zoom = Vector2(2, 2)
 
 [node name="Transition" parent="." unique_id=1199339763 instance=ExtResource("2_1sjs4")]
 visible = false

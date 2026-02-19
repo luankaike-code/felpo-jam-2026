@@ -5,6 +5,8 @@ extends Node
 var new_screen: Screen
 var current_screen: Screen
 var default_screen = ScreenData.names.menu
+@onready var camera_in_game := $CameraInGame as CameraInGame
+
 
 func _ready() -> void:
 	HelperWindow.set_window_mode(Window.MODE_FULLSCREEN)
@@ -23,6 +25,7 @@ func quit():
 func get_scene(screen_name: ScreenData.names) -> Screen:
 	var packed_screen = ScreenData.packeds[screen_name]
 	var screen = packed_screen.instantiate() as Screen
+	screen.setup(camera_in_game)
 	screen.change_screen.connect(change_screen)
 	screen.quit.connect(quit)
 	return screen

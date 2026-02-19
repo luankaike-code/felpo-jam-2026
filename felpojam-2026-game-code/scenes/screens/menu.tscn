@@ -1,58 +1,74 @@
 [gd_scene format=3 uid="uid://d167n2rwnu5an"]
 
 [ext_resource type="Script" uid="uid://ddhseqxbod6mu" path="res://scripts/screens/menu.gd" id="1_ju8qk"]
+[ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="2_5qq83"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="2_vkuer"]
+[ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="3_sh0hy"]
 
 [node name="Menu" type="Node2D" unique_id=844590214]
 script = ExtResource("1_ju8qk")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1480279459]
+[node name="Local" parent="." unique_id=564590170 instance=ExtResource("2_vkuer")]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1775808483]
+[node name="Control" type="Control" parent="." unique_id=1775808483]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -323.0
+offset_top = -193.0
+offset_right = 321.0
+offset_bottom = 176.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1257093309]
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1257093309]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_top = 64
-theme_override_constants/margin_right = 64
-theme_override_constants/margin_bottom = 64
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer" unique_id=624105630]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1278935592]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer2" unique_id=624105630]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 64
-text = "PAPERS, PLEASE 2"
+theme_override_fonts/font = ExtResource("3_sh0hy")
+theme_override_font_sizes/font_size = 20
+text = "Runas Mágicas"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=59511946]
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2" unique_id=583437695]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 70
+size_flags_vertical = 6
+theme_override_constants/margin_left = 16
 
-[node name="StartBtn" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1712982551]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=59511946]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="StartBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1302535036 instance=ExtResource("2_5qq83")]
+layout_mode = 2
+size_flags_horizontal = 0
 text = "Iniciar"
 
-[node name="ConfigsBtn" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=444469672]
+[node name="ConfigurationBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1657631145 instance=ExtResource("2_5qq83")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+size_flags_horizontal = 0
 text = "Configurações"
 
-[node name="QuitBtn" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=617177380]
+[node name="QuitBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=478698652 instance=ExtResource("2_5qq83")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Sair
-"
+size_flags_horizontal = 0
+text = "Sair"

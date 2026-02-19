@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://br4140hu022dp"]
 
+[ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="1_f7r6j"]
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_fwpnj"]
 content_margin_left = 4.0
 content_margin_top = 0.0
@@ -17,7 +19,8 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=130990419]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("1_f7r6j")
+theme_override_font_sizes/font_size = 24
 text = "Title"
 
 [node name="HSeparator" type="HSeparator" parent="." unique_id=431356415]

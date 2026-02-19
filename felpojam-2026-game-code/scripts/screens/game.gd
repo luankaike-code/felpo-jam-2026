@@ -3,7 +3,6 @@ extends ScreenWithPopUp
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 var packed_runes_book_content := preload("res://scenes/pop_ups/pop_up_runes_book_content.tscn") as PackedScene
 
-@onready var camera_in_game := $CameraInGame as CameraInGame
 @onready var runes_book := $Local2/RunesBook as RunesBook
 @onready var speech_bubble_manager := $SpeechBubbleManager as SpeechBubbleManager
 @onready var locals := [$Local, $Local2]
@@ -36,7 +35,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		factory_pop_up(packed_menu_in_game.instantiate())
 	elif Input.is_action_just_pressed("ui_accept") and !has_pop_up():
 		current_local += 1
-		camera_in_game.to(locals[current_local%locals.size()])
+		camera.to(locals[current_local%locals.size()])
 	elif Input.is_action_just_pressed("ui_down"):
 		Sound.play_sound(SoundData.names.stamping)
 	elif Input.is_action_just_pressed("ui_up"):

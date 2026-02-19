@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1y7icenhs8e3"]
 
 [ext_resource type="Script" uid="uid://mcke7bu8ox2b" path="res://scripts/screens/configurations.gd" id="1_lpiss"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="2_eurlg"]
 [ext_resource type="PackedScene" uid="uid://dltgpug32yo3i" path="res://scenes/HUD/sections/config/section_screen_config.tscn" id="2_lpiss"]
 [ext_resource type="PackedScene" uid="uid://cbaumx6f7mufr" path="res://scenes/HUD/sections/config/section_sound_config.tscn" id="3_qw20t"]
 [ext_resource type="PackedScene" uid="uid://bwsjjchinufk" path="res://scenes/HUD/sections/config/section_control_config.tscn" id="4_c21w6"]
@@ -9,18 +10,17 @@
 script = ExtResource("1_lpiss")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=424333819]
-follow_viewport_enabled = true
+[node name="Local" parent="." unique_id=564590170 instance=ExtResource("2_eurlg")]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=245334904]
+[node name="Control" type="Control" parent="." unique_id=245334904]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = -327.0
+offset_top = -190.0
+offset_right = 319.0
+offset_bottom = 190.0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=593718236]
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=593718236]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,31 +32,31 @@ theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 64
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=503990890]
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer" unique_id=503990890]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=956196633]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer" unique_id=956196633]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/MarginContainer/ScrollContainer" unique_id=74722378]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer" unique_id=1989105034]
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/ScrollContainer" unique_id=74722378]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
-[node name="SectionScreenConfig" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1213679984 instance=ExtResource("2_lpiss")]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer" unique_id=1989105034]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SectionScreenConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1213679984 instance=ExtResource("2_lpiss")]
 layout_mode = 2
 
-[node name="SectionSoundConfig" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=416386563 instance=ExtResource("3_qw20t")]
+[node name="SectionSoundConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=416386563 instance=ExtResource("3_qw20t")]
 layout_mode = 2
 
-[node name="SectionControlConfig" parent="CanvasLayer/Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=15938412 instance=ExtResource("4_c21w6")]
+[node name="SectionControlConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=15938412 instance=ExtResource("4_c21w6")]
 layout_mode = 2
