@@ -24,6 +24,6 @@ static var packed: Dictionary[names, PackedScene] = {
 }
 
 static var textures: Dictionary[names, CompressedTexture2D] = {
-	names.fire: preload("res://assets/fire rune.png"),
-	names.water: preload("res://assets/water rune.png"),
+	names.fire: preload("res://assets/images/fire rune.png"),
+	names.water: preload("res://assets/images/water rune.png"),
 }

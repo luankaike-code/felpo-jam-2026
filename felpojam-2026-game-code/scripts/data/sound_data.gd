@@ -19,7 +19,7 @@ static var relation_name_type: Dictionary[names, types] = {
 }
 
 static var streams: Dictionary[names, AudioStreamMP3] = {
-	names.ink_splash: preload("res://assets/ink_splash.mp3"),
-	names.stamping: preload("res://assets/stamping.mp3"),
-	names.transition: preload("res://assets/transition.mp3"),
+	names.ink_splash: preload("res://assets/sounds/ink_splash.mp3"),
+	names.stamping: preload("res://assets/sounds/stamping.mp3"),
+	names.transition: preload("res://assets/sounds/transition.mp3"),
 }

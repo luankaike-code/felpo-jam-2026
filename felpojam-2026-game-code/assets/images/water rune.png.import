@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gng3mm5ji4s"
-path="res://.godot/imported/fire rune.png-af5578129e7ffd506c6afccc2a556d12.ctex"
+uid="uid://diu1qmrd0qgp8"
+path="res://.godot/imported/water rune.png-f434b8b9ab5971035701d4cedc45825c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fire rune.png"
-dest_files=["res://.godot/imported/fire rune.png-af5578129e7ffd506c6afccc2a556d12.ctex"]
+source_file="res://assets/images/water rune.png"
+dest_files=["res://.godot/imported/water rune.png-f434b8b9ab5971035701d4cedc45825c.ctex"]
 
 [params]
 
