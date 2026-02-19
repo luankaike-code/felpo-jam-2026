@@ -14,5 +14,4 @@ signal button_up
 
 func _ready() -> void:
 	label.text = text
-	button_up.connect(func(): print("teste"))
 	button.button_up.connect(button_up.emit)

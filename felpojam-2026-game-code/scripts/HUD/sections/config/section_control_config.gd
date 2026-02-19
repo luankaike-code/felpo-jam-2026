@@ -16,4 +16,3 @@ func connected_signals():
 
 func drag_mode_item_selected(item_index: int):
 	Global.drag_mode = ControlData.str_drag_mode.values()[item_index]
-	print(ControlData.str_drag_mode.values()[item_index], Global.drag_mode, item_index)

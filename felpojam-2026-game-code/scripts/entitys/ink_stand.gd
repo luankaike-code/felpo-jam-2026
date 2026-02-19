@@ -14,6 +14,5 @@ func place_item(item: Node2D) -> bool:
 	return false
 
 func on_area_exited(area: Area2D):
-	print(current_item, area, current_item == area)
 	if current_item == area:
 		current_item = null
