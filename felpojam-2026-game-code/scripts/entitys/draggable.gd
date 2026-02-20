@@ -1,5 +1,8 @@
 class_name Draggable extends Area2D
 
+signal start_drag()
+signal finish_drag()
+
 @export var default_stand: Stand
 var current_stand := default_stand
 
@@ -7,18 +10,30 @@ var is_dragging := false :
 	set(new):
 		is_dragging = new
 		if is_dragging:
+			start_drag.emit()
 			_start_drag()
 		else: 
+			finish_drag.emit()
 			_finish_drag()
 
 var is_draggable := true
 var was_clicked := false
+var _old_z_index: int
 
 func _ready() -> void:
 	add_to_group("draggables")
+	
 	input_event.connect(_on_input_event)
 	area_entered.connect(_on_area_entered_base_event)
 	area_exited.connect(_on_area_exited_base_event)
+	
+	start_drag.connect(func():
+		_old_z_index = z_index
+		z_index = 4000
+	)
+	finish_drag.connect(func():
+		z_index = _old_z_index
+	)
 
 func _start_drag():
 	pass
