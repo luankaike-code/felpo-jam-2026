@@ -37,7 +37,10 @@ position = Vector2(660, 0)
 [node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
 position = Vector2(149, -94)
 
-[node name="Paper" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
+[node name="Paper2" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
+position = Vector2(-5, -30)
+
+[node name="Paper" parent="Local2" unique_id=626873613 instance=ExtResource("4_o78e0")]
 position = Vector2(12, 82)
 
 [node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]

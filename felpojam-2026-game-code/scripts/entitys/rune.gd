@@ -10,7 +10,7 @@ func _ready() -> void:
 	area_entered.connect(liked_other_rune)
 
 func liked_other_rune(area: Area2D):
-	if !area is Rune:
+	if !area is Rune || area.get_parent() != get_parent():
 		return
 	if area.rune_name == rune_name || (area.link && area.link != self) || link:
 		return
