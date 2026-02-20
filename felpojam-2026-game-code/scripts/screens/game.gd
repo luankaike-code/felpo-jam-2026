@@ -19,7 +19,10 @@ func _pop_mensage(mensage: PopUpMensage):
 		factory_pop_up(mensage.pop_up_scene)
 	elif mensage is PopUpMensageChangeScreen:
 		change_screen.emit(mensage.screen_name)
-
+	elif mensage is PopUpMensagePause:
+		for local in locals:
+			local.process_mode = Node.PROCESS_MODE_INHERIT if mensage.pause else Node.PROCESS_MODE_DISABLED
+		
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel") and !has_pop_up():

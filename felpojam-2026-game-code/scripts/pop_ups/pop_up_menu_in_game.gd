@@ -9,7 +9,7 @@ extends PopUp
 var packed_pop_up_configs_in_game := load("res://scenes/pop_ups/pop_up_configs_in_game.tscn") as PackedScene
 
 func _ready() -> void:
-	send_pause_mensage(true)
+	send_pause_mensage(false)
 	
 	goto_game_btn.button_up.connect(goto_game)
 	configs_btn.button_up.connect(open_configs_in_game)
