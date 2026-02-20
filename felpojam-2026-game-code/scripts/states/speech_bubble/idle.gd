@@ -11,6 +11,7 @@ func to_typing():
 		host.current_dialog_index  += 1
 		change_state.emit("Typing")
 	else:
+		host.finish_all_dialogs.emit()
 		host.queue_free()
 
 func handle_over_input(event: InputEvent) -> void:
