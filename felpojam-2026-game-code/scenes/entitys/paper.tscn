@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dn0xy2d56orj6"]
 
 [ext_resource type="Script" uid="uid://cfp54i0lipwwp" path="res://scripts/entitys/paper/paper.gd" id="1_memgj"]
-[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_n4o0a"]
+[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="2_n4o0a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4o0a"]
-size = Vector2(86, 144)
+[sub_resource type="CircleShape2D" id="CircleShape2D_yj7eo"]
+radius = 30.0
 
 [node name="Paper" type="Area2D" unique_id=449771312]
 z_index = 500
@@ -12,8 +12,7 @@ script = ExtResource("1_memgj")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=220479855]
 z_index = -400
-scale = Vector2(0.796875, 1.2778417)
 texture = ExtResource("2_n4o0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041061041]
-shape = SubResource("RectangleShape2D_n4o0a")
+shape = SubResource("CircleShape2D_yj7eo")
