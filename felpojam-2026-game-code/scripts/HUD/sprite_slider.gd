@@ -40,10 +40,8 @@ func get_slider_icon_pos_using_value() -> float:
 	var value_int := int(value*100)
 	var step_value_int := int(step_value*100)
 	var rest := float(value_int%step_value_int)/100.0
-	print(value_int, " ", value_int, " ", rest, " ", rest)
 	value -= rest
 	var step_index := value/(1.0/steps)
-	print(step_index, " ", step_index * step_value)
 	
 	return step_index * step_value * size.x
 

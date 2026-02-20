@@ -11,10 +11,6 @@ var radius_max: float
 var direction := 1
 var current_radius_step: float
 
-func _ready() -> void:
-	finish_normal_animation.connect(func(): print("normal"))
-	finish_reverse_animation.connect(func(): print("reverse"))
-
 func _draw() -> void:
 	if !playing:
 		return
