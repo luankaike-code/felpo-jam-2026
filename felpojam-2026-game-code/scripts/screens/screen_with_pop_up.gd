@@ -8,6 +8,7 @@ func has_pop_up() -> bool:
 
 func factory_pop_up(pop_up_scene: PopUp) -> PopUp:
 	pop_up_scene.send_mensage.connect(_pop_mensage)
+	pop_up_scene.global_position = camera.global_position
 	add_child(pop_up_scene)
 	return pop_up_scene
 

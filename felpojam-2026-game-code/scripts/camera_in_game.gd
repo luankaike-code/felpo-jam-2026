@@ -9,6 +9,7 @@ func _ready() -> void:
 	get_viewport().size_changed.connect(update_zoom)
 
 func update_zoom():
+	print("resimendionei galera")
 	var viewport_size = get_viewport_rect().size
 	
 	zoom.x = default_zoom.x * viewport_size.x / 1440

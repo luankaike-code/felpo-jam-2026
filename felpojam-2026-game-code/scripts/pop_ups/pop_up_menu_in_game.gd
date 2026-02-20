@@ -1,8 +1,10 @@
 extends PopUp
 
-@onready var goto_game_btn := $CanvasLayer/Control2/MarginContainer/VBoxContainer/GotoGameBtn as Button
-@onready var configs_btn := $CanvasLayer/Control2/MarginContainer/VBoxContainer/ConfigsBtn as Button
-@onready var goto_menu_btn := $CanvasLayer/Control2/MarginContainer/VBoxContainer/GotoMenuBtn as Button
+@onready var goto_game_btn := $Control2/MarginContainer/VBoxContainer/GotoGameBtn2 as SpriteButton
+@onready var configs_btn := $Control2/MarginContainer/VBoxContainer/ConfigsBtn2 as SpriteButton
+@onready var goto_menu_btn := $Control2/MarginContainer/VBoxContainer/GotoMenuBtn2 as SpriteButton
+@onready var local := $Local as Node2D
+
 
 var packed_pop_up_configs_in_game := load("res://scenes/pop_ups/pop_up_configs_in_game.tscn") as PackedScene
 

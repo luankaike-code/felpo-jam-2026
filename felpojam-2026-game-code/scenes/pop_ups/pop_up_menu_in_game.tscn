@@ -1,60 +1,52 @@
 [gd_scene format=3 uid="uid://ll6rgn74hd8h"]
 
 [ext_resource type="Script" uid="uid://cyok2m5pck43j" path="res://scripts/pop_ups/pop_up_menu_in_game.gd" id="1_33b1c"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="3_rml08"]
+[ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="4_7sxeg"]
 
 [node name="PopUpMenuInGame" type="Node2D" unique_id=732963777]
 script = ExtResource("1_33b1c")
 metadata/_custom_type_script = "uid://m741nhr6vpsv"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=876074673]
+[node name="Local" parent="." unique_id=564590170 instance=ExtResource("3_rml08")]
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2144215029]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Control2" type="Control" parent="CanvasLayer" unique_id=675729439]
+[node name="Control2" type="Control" parent="." unique_id=675729439]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control2" unique_id=490939906]
+[node name="MarginContainer" type="MarginContainer" parent="Control2" unique_id=490939906]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -147.0
+offset_right = -42.0
+offset_bottom = 147.0
 grow_vertical = 2
-theme_override_constants/margin_left = 64
+theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 64
-theme_override_constants/margin_right = 64
+theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 64
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control2/MarginContainer" unique_id=1878249064]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2/MarginContainer" unique_id=1878249064]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="GotoGameBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=975221697]
-custom_minimum_size = Vector2(150, 50)
+[node name="GotoGameBtn2" parent="Control2/MarginContainer/VBoxContainer" unique_id=1657631145 instance=ExtResource("4_7sxeg")]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Voltar por jogo"
-alignment = 0
+size_flags_horizontal = 0
+text = "Voltar para o jogo"
 
-[node name="ConfigsBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=94237501]
-custom_minimum_size = Vector2(150, 50)
+[node name="ConfigsBtn2" parent="Control2/MarginContainer/VBoxContainer" unique_id=249245119 instance=ExtResource("4_7sxeg")]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 text = "Configurações"
-alignment = 0
 
-[node name="GotoMenuBtn" type="Button" parent="CanvasLayer/Control2/MarginContainer/VBoxContainer" unique_id=1748710033]
-custom_minimum_size = Vector2(150, 50)
+[node name="GotoMenuBtn2" parent="Control2/MarginContainer/VBoxContainer" unique_id=2066531619 instance=ExtResource("4_7sxeg")]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Ir para o menu"
-alignment = 0
+size_flags_horizontal = 0
+text = "Voltar para o menu"
