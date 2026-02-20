@@ -3,4 +3,6 @@
 [ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="1_4yvjy"]
 
 [resource]
+line_spacing = 0.0
 font = ExtResource("1_4yvjy")
+font_color = Color(0, 0, 0, 1)

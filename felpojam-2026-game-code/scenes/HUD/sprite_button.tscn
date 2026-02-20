@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dgoled4de2qeq" path="res://assets/images/button.png" id="1_6s3wx"]
 [ext_resource type="Script" uid="uid://dd84rauav7tdk" path="res://scripts/HUD/sprite_button.gd" id="1_jtmg5"]
 [ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="2_ll7c4"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="4_nh7yj"]
 
 [node name="SpriteButton" type="MarginContainer" unique_id=1657631145]
 anchors_preset = -1
@@ -30,9 +31,9 @@ theme_override_constants/margin_bottom = 6
 
 [node name="Label" type="Label" parent="MarginContainer" unique_id=1776598154]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ll7c4")
-theme_override_font_sizes/font_size = 10
+text = "isso é util?"
+label_settings = ExtResource("4_nh7yj")
 
 [node name="Button" type="TextureButton" parent="." unique_id=1458037410]
 layout_mode = 2

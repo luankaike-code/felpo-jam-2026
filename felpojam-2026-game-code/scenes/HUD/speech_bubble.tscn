@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bmaxq32uopw40" path="res://assets/images/speech_bubble.png" id="1_3j60d"]
 [ext_resource type="Script" uid="uid://dggtt4nc4r4l8" path="res://scripts/HUD/speech_bubble.gd" id="1_bhfoy"]
-[ext_resource type="FontFile" uid="uid://pl6s2y6bce4c" path="res://assets/Tiny5-Regular.ttf" id="2_b5rqg"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="3_564ic"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="4_nol6i"]
 [ext_resource type="Script" uid="uid://bbb8h8lmo8ixp" path="res://scripts/states/speech_bubble/typing.gd" id="5_ews8o"]
 [ext_resource type="Script" uid="uid://lpsw8gsek0c8" path="res://scripts/states/speech_bubble/idle.gd" id="6_564ic"]
@@ -35,12 +35,10 @@ theme_override_constants/margin_bottom = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="MarginContainer" unique_id=950545125]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("2_b5rqg")
-theme_override_font_sizes/font_size = 8
+text = "É um prazer conhece-lo runista,"
+label_settings = ExtResource("3_564ic")
 autowrap_mode = 2
 
 [node name="StateMachine" type="Node" parent="." unique_id=1445949223]
