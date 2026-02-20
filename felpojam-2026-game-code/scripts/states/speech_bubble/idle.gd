@@ -3,9 +3,8 @@ extends State
 var host: SpeechBubble
 
 func enter(host_) -> void:
+	set_process_over_input.emit(true)
 	host = host_
-	var timer = get_tree().create_timer(0.1)
-	timer.timeout.connect(to_typing)
 
 func to_typing():
 	if host.current_dialog_index < host.dialogs.size()-1:
@@ -13,3 +12,7 @@ func to_typing():
 		change_state.emit("Typing")
 	else:
 		host.queue_free()
+
+func handle_over_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_home"):
+		to_typing()

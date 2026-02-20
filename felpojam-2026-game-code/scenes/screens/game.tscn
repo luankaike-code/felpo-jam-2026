@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
 [ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="2_clfej"]
-[ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="3_ggwlb"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
+[ext_resource type="PackedScene" uid="uid://c2liuyeax0kjk" path="res://scenes/locals/client_local.tscn" id="3_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
-[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="9_yruvw"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="9_yruvw"]
 [ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="11_e0wmo"]
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="12_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://daa3bayphv4yc" path="res://scenes/entitys/runes/water_rune.tscn" id="13_xrk1x"]
@@ -17,21 +17,13 @@
 script = ExtResource("1_iwlfa")
 metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
-[node name="SpeechBubbleManager" type="Node2D" parent="." unique_id=535693246]
-z_index = 4000
-script = ExtResource("3_ggwlb")
-metadata/_custom_type_script = "uid://b22ark22c86p4"
+[node name="ClientLocal" parent="." unique_id=564590170 instance=ExtResource("3_xrk1x")]
 
-[node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
-position = Vector2(331, 117)
+[node name="PaperTeleporter2" parent="." unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
+position = Vector2(-263, 118)
+linked_teleporter = NodePath("../Local2/PaperTeleporter")
 
-[node name="Local" parent="." unique_id=421576266 instance=ExtResource("9_yruvw")]
-
-[node name="PaperTeleporter2" parent="Local" unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
-position = Vector2(-242, -78)
-linked_teleporter = NodePath("../../Local2/PaperTeleporter")
-
-[node name="Local2" parent="." unique_id=564590170 instance=ExtResource("9_yruvw")]
+[node name="Local2" parent="." unique_id=522202926 instance=ExtResource("9_yruvw")]
 position = Vector2(660, 0)
 
 [node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
@@ -45,11 +37,11 @@ position = Vector2(12, 82)
 
 [node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
 position = Vector2(252, -89)
-linked_teleporter = NodePath("../../Local/PaperTeleporter2")
+linked_teleporter = NodePath("../../PaperTeleporter2")
 
 [node name="RunesBook" parent="Local2" unique_id=1322508017 instance=ExtResource("8_kauht")]
 z_index = 400
-position = Vector2(-124, 78)
+position = Vector2(-172, 79)
 
 [node name="StampSet" parent="Local2" unique_id=296592520 instance=ExtResource("2_clfej")]
 position = Vector2(243, 99)
@@ -63,3 +55,6 @@ linked_stamp = NodePath("../Stamp")
 [node name="Stamp" parent="Local2/StampSet1" unique_id=769955536 node_paths=PackedStringArray("default_stand") instance=ExtResource("12_xrk1x")]
 packed_rune = ExtResource("13_xrk1x")
 default_stand = NodePath("../StampStand")
+
+[node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
+position = Vector2(331, 117)

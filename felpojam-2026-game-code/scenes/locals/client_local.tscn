@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c2liuyeax0kjk"]
+
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="1_vig35"]
+[ext_resource type="Script" uid="uid://f23l5pvhm3bj" path="res://scripts/locals/client_local.gd" id="2_qqkxa"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="3_qqkxa"]
+[ext_resource type="Script" uid="uid://dq0ohngooga3a" path="res://scripts/entitys/character_sprite.gd" id="4_pp4ci"]
+[ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="5_pp4ci"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="6_6kv1h"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="7_c2ecf"]
+[ext_resource type="Script" uid="uid://dcu03w3wuqsy1" path="res://scripts/states/client_local/new_client.gd" id="7_geiil"]
+
+[node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
+script = ExtResource("2_qqkxa")
+
+[node name="CharacterSprite" type="Sprite2D" parent="." index="1" unique_id=12098601]
+position = Vector2(-140, 3)
+script = ExtResource("4_pp4ci")
+
+[node name="Table" type="Sprite2D" parent="." index="2" unique_id=56828278]
+position = Vector2(4.0000005, 171)
+scale = Vector2(5.1015625, 0.6640625)
+texture = ExtResource("3_qqkxa")
+
+[node name="SpeechBubbleManager" type="Node2D" parent="." index="3" unique_id=1053634050]
+z_index = 4000
+script = ExtResource("5_pp4ci")
+metadata/_custom_type_script = "uid://b22ark22c86p4"
+
+[node name="StateMachine" type="Node" parent="." index="4" unique_id=420485562]
+script = ExtResource("6_6kv1h")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="NewClient" type="Node" parent="StateMachine" index="0" unique_id=1148953202]
+script = ExtResource("7_geiil")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="IdleClient" type="Node" parent="StateMachine" index="1" unique_id=1139976208]
+script = ExtResource("7_c2ecf")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="ExitClient" type="Node" parent="StateMachine" index="2" unique_id=1572576924]
+script = ExtResource("7_c2ecf")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"

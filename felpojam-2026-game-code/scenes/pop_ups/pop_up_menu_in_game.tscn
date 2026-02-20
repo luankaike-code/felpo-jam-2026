@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ll6rgn74hd8h"]
 
 [ext_resource type="Script" uid="uid://cyok2m5pck43j" path="res://scripts/pop_ups/pop_up_menu_in_game.gd" id="1_33b1c"]
-[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/local.tscn" id="3_rml08"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="3_rml08"]
 [ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="4_7sxeg"]
 
 [node name="PopUpMenuInGame" type="Node2D" unique_id=732963777]
