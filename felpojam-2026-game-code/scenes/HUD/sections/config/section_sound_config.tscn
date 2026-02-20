@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://br4140hu022dp" path="res://scenes/HUD/sections/section.tscn" id="1_x2w4y"]
 [ext_resource type="Script" uid="uid://cljnsn3mapqlr" path="res://scripts/HUD/sections/config/section_sound_config.gd" id="2_qojhr"]
 [ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_qtf1h"]
+[ext_resource type="PackedScene" uid="uid://xlbjxqngl1qn" path="res://scenes/HUD/sprite_slider.tscn" id="4_fi112"]
 
 [node name="SectionSoundConfig" unique_id=1213679984 instance=ExtResource("1_x2w4y")]
 script = ExtResource("2_qojhr")
@@ -21,17 +22,20 @@ label_text = "Ambiente"
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Ambient" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/Control" index="0" unique_id=1980387941]
+[node name="Ambient2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/Control" index="0" unique_id=971108514 instance=ExtResource("4_fi112")]
+custom_minimum_size = Vector2(200, 16)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-max_value = 2.0
-step = 0.1
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -8.0
+offset_right = 0.0
+offset_bottom = 8.0
+grow_horizontal = 0
+value_scale = 2
 
 [node name="HBoxContainer2" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1" unique_id=433170829 instance=ExtResource("2_qtf1h")]
 layout_mode = 2
@@ -41,17 +45,20 @@ label_text = "Efeitos Sonoros"
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="SoundEffects" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Control" index="0" unique_id=1641037177]
+[node name="SoundEffects2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Control" index="0" unique_id=582038145 instance=ExtResource("4_fi112")]
+custom_minimum_size = Vector2(200, 16)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-max_value = 2.0
-step = 0.1
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -8.0
+offset_right = 0.0
+offset_bottom = 8.0
+grow_horizontal = 0
+value_scale = 2
 
 [node name="HBoxContainer3" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2" unique_id=823173631 instance=ExtResource("2_qtf1h")]
 layout_mode = 2
@@ -61,14 +68,17 @@ label_text = "Musica"
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Music" type="HSlider" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Control" index="0" unique_id=1107222763]
+[node name="Music2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Control" index="0" unique_id=2061618001 instance=ExtResource("4_fi112")]
+custom_minimum_size = Vector2(200, 16)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-max_value = 2.0
-step = 0.1
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -8.0
+offset_right = 0.0
+offset_bottom = 8.0
+grow_horizontal = 0
+value_scale = 2

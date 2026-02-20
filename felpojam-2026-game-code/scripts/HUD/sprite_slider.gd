@@ -1,15 +1,16 @@
-extends Control
+class_name SpriteSlider extends Control
 
 @onready var slider_icon: TextureRect = $SliderIcon
 @onready var bar_actived: NinePatchRect = $NinePatchRect2
 
-signal value_change(value :float)
+signal value_changed(value :float)
 
+@export var value_scale := 1
 var steps := 20
 var value: float :
 	set(new):
 		value = new
-		value_change.emit()
+		value_changed.emit(value*value_scale)
 
 var is_dragging := false
 var min_x := 0
@@ -29,7 +30,7 @@ func _process(delta: float) -> void:
 	update_bar_actived()
 
 func set_value(new_value: float):
-	value = new_value
+	value = new_value/value_scale
 	slider_icon.position.x = get_slider_icon_pos_using_value()
 	update_bar_actived()
 
