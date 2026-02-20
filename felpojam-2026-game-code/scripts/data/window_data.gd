@@ -1,4 +1,4 @@
-class_name WindowData extends Node
+class_name WindowData extends Resource
 
 static var resolutions: Dictionary[String, Vector2i] = {
 	"3840X2160": Vector2i(3840, 2160),

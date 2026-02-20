@@ -1,4 +1,4 @@
-class_name ControlData extends Node
+class_name ControlData extends Resource
 
 enum drag_mode {
 	hold,

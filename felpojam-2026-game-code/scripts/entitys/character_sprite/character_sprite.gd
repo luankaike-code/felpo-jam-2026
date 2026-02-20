@@ -1,15 +1,15 @@
 class_name CharacterSprite extends Sprite2D
 
 var current_character_name: CharacterData.names
-@onready var stand_character_sprite: StandCharacterSprite = $StandCharacterSprite
+@onready var stand_character_sprite := $StandCharacterSprite as StandCharacterSprite
 
 signal entered
 signal exited
-signal receive_runes
+signal receive_parchments(parchments: Array[Rune])
 
 func _ready() -> void:
 	modulate = Color(0, 0, 0, 0)
-	stand_character_sprite.receive_runes.connect(receive_runes.emit)
+	stand_character_sprite.receives_parchments.connect(receive_parchments.emit)
 
 func enter(character_name: CharacterData.names):
 	var tween := get_tree().create_tween()

@@ -1,16 +1,26 @@
-class_name SpeechsData extends Node
+class_name SpeechsData extends Resource
 
 enum names {
-	Concubine
+	concubine,
+	concubine_result_positive,
+	concubine_result_ok,
+	concubine_result_negative
 }
 
 static var speechs: Dictionary[names, Array] = {
-	names.Concubine: [
-		"Meu nome é... Concubine?",
-		"Sinto que não...",
-		"Sinto que essa é a minha profissão.",
-		"O que será que uma concubine faz?...",
-		"Não sei dizer...",
-		"Tô sem internet para pesquisar"
+	names.concubine: [
+		"É um prazer conhecê-lo Runista,",
+		"me chamo Romã e eu cheguei a pouco tempo,",
+		"mas já estou ansiosa para cumprir com meus deveres com vossa majestade...",
+		"Gostaria de aumentar a minha fertilidade",
+	],
+	names.concubine_result_positive: [
+		"Esse pergaminho foi muito util !!! amei !!!",
+	],
+	names.concubine_result_ok: [
+		"Obrigada pelo pergaminho",
+	],
+	names.concubine_result_negative: [
+		"Horrivel !!! Meu utero doeu muito >:[ !!!",
 	]
 }

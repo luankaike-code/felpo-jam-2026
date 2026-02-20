@@ -1,15 +1,14 @@
 class_name StandCharacterSprite extends Stand
 
-signal receive_runes
+signal receives_parchments
 
 var is_actived = false
-var runes: Array[Rune]
-		
+var parchments: Array[Paper]
 
 func place_item(item: Node2D) -> bool:
 	if item is Paper && item.runes.size() > 0 && is_actived:
-		runes = item.runes
-		receive_runes.emit()
+		parchments.push_front(item)
+		receives_parchments.emit(parchments)
 		item.queue_free()
 		return true
 	return false

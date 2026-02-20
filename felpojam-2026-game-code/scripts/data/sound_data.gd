@@ -1,4 +1,4 @@
-class_name SoundData extends Node
+class_name SoundData extends Resource
 
 enum names {
 	ink_splash,

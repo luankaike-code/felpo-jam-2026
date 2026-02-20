@@ -1,4 +1,4 @@
-class_name CharacterData extends Node
+class_name CharacterData extends Resource
 
 enum names {
 	concubine

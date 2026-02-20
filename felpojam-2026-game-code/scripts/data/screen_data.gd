@@ -1,4 +1,4 @@
-class_name ScreenData extends Node
+class_name ScreenData extends Resource
 
 enum names {
 	menu,

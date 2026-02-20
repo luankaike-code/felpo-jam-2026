@@ -1,4 +1,4 @@
-class_name RunesData extends Node
+class_name RunesData extends Resource
 
 enum names {
 	fire,
