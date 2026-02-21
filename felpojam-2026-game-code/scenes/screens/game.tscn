@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://fyym3qkeufgw" path="res://scenes/entitys/stamp_set.tscn" id="2_clfej"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="3_mu8e5"]
 [ext_resource type="PackedScene" uid="uid://c2liuyeax0kjk" path="res://scenes/locals/client_local.tscn" id="3_xrk1x"]
-[ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter.tscn" id="7_0q6jn"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="8_kauht"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="9_yruvw"]
 [ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="11_e0wmo"]
+[ext_resource type="PackedScene" uid="uid://cj4k5fngr2dev" path="res://scenes/entitys/stack_papers.tscn" id="12_e0wmo"]
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="12_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://daa3bayphv4yc" path="res://scenes/entitys/runes/water_rune.tscn" id="13_xrk1x"]
 
@@ -28,12 +28,6 @@ position = Vector2(660, 0)
 
 [node name="InkStand" parent="Local2" unique_id=1766316694 instance=ExtResource("3_mu8e5")]
 position = Vector2(149, -94)
-
-[node name="Paper2" parent="Local2" unique_id=449771312 instance=ExtResource("4_o78e0")]
-position = Vector2(-5, -30)
-
-[node name="Paper" parent="Local2" unique_id=626873613 instance=ExtResource("4_o78e0")]
-position = Vector2(12, 82)
 
 [node name="PaperTeleporter" parent="Local2" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
 position = Vector2(252, -89)
@@ -58,3 +52,6 @@ default_stand = NodePath("../StampStand")
 
 [node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
 position = Vector2(331, 117)
+
+[node name="StackPapers" parent="." unique_id=117007281 instance=ExtResource("12_e0wmo")]
+position = Vector2(473, -98)
