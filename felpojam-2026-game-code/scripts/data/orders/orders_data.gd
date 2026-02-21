@@ -1,7 +1,8 @@
 class_name OrdersData extends Resource
 
 enum names {
-	more_fetility
+	more_fetility,
+	infernal_fire
 }
 
 static var orders: Dictionary[names, OrderObj] = {
@@ -12,6 +13,15 @@ static var orders: Dictionary[names, OrderObj] = {
 		ParchmentObj.new([
 			RuneObj.new(RunesData.names.water, 2),
 			RuneObj.new(RunesData.names.fire, 2),
+		]),
+	]),
+	names.infernal_fire: OrderObj.new([
+		ParchmentObj.new([
+			RuneObj.new(RunesData.names.fire, 2),
+		]),
+		ParchmentObj.new([
+			RuneObj.new(RunesData.names.water, 1),
+			RuneObj.new(RunesData.names.water, 1),
 		]),
 	])
 }
