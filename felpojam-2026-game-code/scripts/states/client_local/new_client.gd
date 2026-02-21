@@ -12,8 +12,11 @@ func enter(host_) -> void:
 	host.client = ClientData.client[client_name]
 	
 	host.current_speech_name = host.client.speech
-	Sound.play_sound(SoundData.names.character_enter, enter_client)
-	
+	Sound.play_sound(SoundData.names.open_door, func():
+		Sound.play_sound(SoundData.names.close_door)
+		Sound.play_sound(SoundData.names.little_bell).add_event(0.2, enter_client)
+	)
+
 func enter_client():
 	host.character_sprite.enter(host.client.character_name)
 

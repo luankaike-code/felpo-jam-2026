@@ -29,6 +29,7 @@ func _get_player() -> SoundPlayer:
 	
 	for player in players:
 		if !player.audio_stream_player.playing && player.loop_count == 0:
+			player.reset()
 			return player
 
 	return _create_temp_player()
