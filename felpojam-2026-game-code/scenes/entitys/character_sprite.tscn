@@ -1,18 +1,6 @@
 [gd_scene format=3 uid="uid://bus65tqh6i83b"]
 
 [ext_resource type="Script" uid="uid://dq0ohngooga3a" path="res://scripts/entitys/character_sprite/character_sprite.gd" id="2_wla8a"]
-[ext_resource type="Script" uid="uid://wub57rrl0fhg" path="res://scripts/entitys/character_sprite/stand_character_sprite.gd" id="3_x1y4o"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy4ls"]
-size = Vector2(216, 238)
 
 [node name="CharacterSprite" type="Sprite2D" unique_id=934250755]
 script = ExtResource("2_wla8a")
-
-[node name="StandCharacterSprite" type="Area2D" parent="." unique_id=1424463748]
-script = ExtResource("3_x1y4o")
-metadata/_custom_type_script = "uid://2p33g122efmh"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StandCharacterSprite" unique_id=1077764378]
-position = Vector2(10, -16)
-shape = SubResource("RectangleShape2D_xy4ls")

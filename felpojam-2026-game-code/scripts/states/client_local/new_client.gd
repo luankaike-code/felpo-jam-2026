@@ -1,28 +1,26 @@
 extends State
 
 var host: ClientLocal
+var already_connect_with_character_sprite := false
 
 func enter(host_) -> void:
 	host = host_
 	
-	if !host.character_sprite.entered.is_connected(start_dialog):
+	if !already_connect_with_character_sprite:
 		host.character_sprite.entered.connect(start_dialog)
+		already_connect_with_character_sprite = true
 	
-	var client_name := ClientData.order[host.current_client_order_index]
-	host.client = ClientData.client[client_name]
-	
-	host.current_speech_name = host.client.speech
 	Sound.play_sound(SoundData.names.open_door, func():
 		Sound.play_sound(SoundData.names.close_door)
 		Sound.play_sound(SoundData.names.little_bell).add_event(0.2, enter_client)
 	)
 
 func enter_client():
-	host.character_sprite.enter(host.client.character_name)
+	host.character_sprite.enter(host.current_client_data.character_name)
 
 func start_dialog():
-	var speech := SpeechsData.speechs[host.client.speech]
-	var pos := host.character_sprite.global_position
+	var speech := SpeechsData.speechs[host.current_client_data.speech]
+	var pos := host.delivery_bubble.global_position
 	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
 	speech_bubble.finish_all_dialogs.connect(to_idle_client)
 

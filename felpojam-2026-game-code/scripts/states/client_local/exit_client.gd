@@ -7,9 +7,10 @@ func enter(host_) -> void:
 	host = host_
 	var pos := host.character_sprite.global_position
 	
-	var order = OrdersData.orders[host.client.order]
-	var o := OrderObj.new(host.character_sprite.stand_character_sprite.parchments)
+	var order = OrdersData.orders[host.current_client_data.order]
+	var o := OrderObj.new(host.delivery_bubble.get_fields_content())
 	order_quality =  Calc.calc_order_obj_proximity(order, o)
+	host.close_delivery_bubble()
 	
 	var client_name := ClientData.order[host.current_client_order_index]
 	var results := ClientData.client_result[client_name]

@@ -29,7 +29,10 @@ z_index = 4000
 script = ExtResource("5_pp4ci")
 metadata/_custom_type_script = "uid://b22ark22c86p4"
 
-[node name="StateMachine" type="Node" parent="." index="4" unique_id=420485562 node_paths=PackedStringArray("current_state")]
+[node name="DeliveryBubble" parent="." index="4" unique_id=557448253 instance=ExtResource("10_aedb0")]
+position = Vector2(-98, -134)
+
+[node name="StateMachine" type="Node" parent="." index="5" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")
 current_state = NodePath("ExitClient")
 metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
@@ -45,6 +48,3 @@ metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 [node name="ExitClient" type="Node" parent="StateMachine" index="2" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
-
-[node name="DeliveryBubble" parent="." index="5" unique_id=557448253 instance=ExtResource("10_aedb0")]
-position = Vector2(-310, 110)
