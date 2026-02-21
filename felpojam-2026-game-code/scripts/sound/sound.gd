@@ -12,9 +12,10 @@ var volumes: Dictionary[SoundData.types, float] = {
 func set_volume(sound_type: SoundData.types, new_volume: float) -> void:
 	volumes[sound_type] = new_volume
 
-func play_sound(audio_name: SoundData.names, callable: Callable=func(): return) -> void:
+func play_sound(audio_name: SoundData.names, callable: Callable=func(): return) -> SoundPlayer:
 	var player := _configure_player(_get_player(), audio_name)
 	player.play(callable)
+	return player
 
 func _configure_player(player: SoundPlayer, audio_name: SoundData.names) -> SoundPlayer:
 	player.audio_stream_player.stream = SoundData.streams[audio_name]
@@ -27,14 +28,14 @@ func _get_player() -> SoundPlayer:
 		return _create_player()
 	
 	for player in players:
-		if !player.playing:
+		if !player.audio_stream_player.playing && player.loop_count == 0:
 			return player
 
 	return _create_temp_player()
 
 func _create_temp_player() -> SoundPlayer:
 	var player := SoundPlayer.new()
-	player.finished.connect(func(): player.call_deferred("queue_free"))
+	player.finished.connect(func(): if player.loop_count == 0: player.call_deferred("queue_free"))
 	add_child(player)
 	return player
 

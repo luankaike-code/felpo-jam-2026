@@ -55,3 +55,5 @@ position = Vector2(331, 117)
 
 [node name="StackPapers" parent="." unique_id=117007281 instance=ExtResource("12_e0wmo")]
 position = Vector2(473, -98)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1219690073]
