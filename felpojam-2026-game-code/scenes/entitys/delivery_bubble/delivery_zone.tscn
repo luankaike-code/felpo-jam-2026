@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwe81rnwpk8gs"]
+
+[ext_resource type="Script" uid="uid://c3sg2yow12u1s" path="res://scripts/entitys/delivery_bubble/delivery_zone.gd" id="1_d1iex"]
+[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="2_d1iex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1iex"]
+size = Vector2(116, 116)
+
+[node name="delivery_zone" type="Area2D" unique_id=1330716735]
+script = ExtResource("1_d1iex")
+metadata/_custom_type_script = "uid://2p33g122efmh"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=856399396]
+modulate = Color(0.5772, 0.65156, 0.78, 1)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_d1iex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1485833125]
+shape = SubResource("RectangleShape2D_d1iex")

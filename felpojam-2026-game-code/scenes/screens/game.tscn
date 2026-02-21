@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 [node name="ClientLocal" parent="." unique_id=564590170 instance=ExtResource("3_xrk1x")]
 
 [node name="PaperTeleporter2" parent="." unique_id=1691328122 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_0q6jn")]
-position = Vector2(-263, 118)
+position = Vector2(173, 125)
 linked_teleporter = NodePath("../Local2/PaperTeleporter")
 
 [node name="Local2" parent="." unique_id=522202926 instance=ExtResource("9_yruvw")]

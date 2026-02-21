@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqlbykpw7ass8"]
+
+[ext_resource type="Texture2D" uid="uid://bmaxq32uopw40" path="res://assets/images/speech_bubble.png" id="1_8iyho"]
+[ext_resource type="Script" uid="uid://gbj3t23qgwk1" path="res://scripts/entitys/delivery_bubble/delivery_bubble.gd" id="1_vr8ht"]
+
+[node name="DeliveryBubble" type="Node2D" unique_id=557448253]
+script = ExtResource("1_vr8ht")
+
+[node name="Bubble" type="NinePatchRect" parent="." unique_id=2021849464]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8iyho")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 4

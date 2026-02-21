@@ -4,17 +4,20 @@
 [ext_resource type="Script" uid="uid://f23l5pvhm3bj" path="res://scripts/locals/client_local.gd" id="2_qqkxa"]
 [ext_resource type="PackedScene" uid="uid://bus65tqh6i83b" path="res://scenes/entitys/character_sprite.tscn" id="3_geiil"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="3_qqkxa"]
+[ext_resource type="Texture2D" uid="uid://tww13gt4mlxq" path="res://assets/images/concubine.png" id="4_ph3mh"]
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="5_pp4ci"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="6_6kv1h"]
 [ext_resource type="Script" uid="uid://dcu03w3wuqsy1" path="res://scripts/states/client_local/new_client.gd" id="7_geiil"]
 [ext_resource type="Script" uid="uid://8vbt8kvjfppn" path="res://scripts/states/client_local/idle_client.gd" id="8_geiil"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
+[ext_resource type="PackedScene" uid="uid://bqlbykpw7ass8" path="res://scenes/entitys/delivery_bubble/delivery_bubble.tscn" id="10_aedb0"]
 
 [node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
 script = ExtResource("2_qqkxa")
 
 [node name="CharacterSprite" parent="." index="1" unique_id=934250755 instance=ExtResource("3_geiil")]
 position = Vector2(-140, 3)
+texture = ExtResource("4_ph3mh")
 
 [node name="Table" type="Sprite2D" parent="." index="2" unique_id=56828278]
 position = Vector2(4.0000005, 171)
@@ -42,3 +45,6 @@ metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 [node name="ExitClient" type="Node" parent="StateMachine" index="2" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="DeliveryBubble" parent="." index="5" unique_id=557448253 instance=ExtResource("10_aedb0")]
+position = Vector2(-310, 110)
