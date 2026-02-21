@@ -21,7 +21,7 @@ func _pop_mensage(mensage: PopUpMensage):
 		change_screen.emit(mensage.screen_name)
 	elif mensage is PopUpMensagePause:
 		for local in locals:
-			local.process_mode = Node.PROCESS_MODE_INHERIT if mensage.pause else Node.PROCESS_MODE_DISABLED
+			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT
 		
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:
