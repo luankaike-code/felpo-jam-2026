@@ -5,7 +5,7 @@ var current_character_name: CharacterData.names
 
 signal entered
 signal exited
-signal receive_parchments(parchments: Array[Rune])
+signal receive_parchments(parchments: Array[ParchmentObj])
 
 func _ready() -> void:
 	modulate = Color(0, 0, 0, 0)
