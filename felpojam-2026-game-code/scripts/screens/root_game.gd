@@ -13,6 +13,9 @@ func _ready() -> void:
 	
 	create_defult_screen()
 	transition.exit_transition_finished.connect(toggle_screen)
+	
+	#var order := OrdersData.names.more_fetility
+	#Calc.calc_order_obj_proximity(OrdersData.orders[order], OrdersData.orders[order])
 
 func create_defult_screen():
 	new_screen = get_scene(default_screen)

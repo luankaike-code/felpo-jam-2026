@@ -6,7 +6,7 @@ var data: ParchmentObj :
 	get():
 		var rune_objs: Array[RuneObj]
 		for rune in runes:
-			rune_objs.push_front(rune.data)
+			rune_objs.push_back(rune.data)
 		return ParchmentObj.new(rune_objs)
 
 func add_rune(rune_scene: Rune, rune_global_position: Vector2) -> void:

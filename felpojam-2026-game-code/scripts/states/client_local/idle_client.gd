@@ -10,7 +10,7 @@ func enter(host_) -> void:
 	host.character_sprite.toogle_area_actived(true)
 	order = OrdersData.orders[host.client.order]
 	
-	if !host.character_sprite.receive_parchments.is_connected(to_exit_client):
+	if !host.character_sprite.receive_parchments.is_connected(_on_receive_parchments):
 		host.character_sprite.receive_parchments.connect(_on_receive_parchments)	
 
 func _on_receive_parchments(parchment_runes: Array[ParchmentObj]):

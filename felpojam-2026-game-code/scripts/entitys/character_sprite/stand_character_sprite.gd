@@ -7,7 +7,7 @@ var parchments: Array[ParchmentObj]
 
 func place_item(item: Node2D) -> bool:
 	if item is Paper && item.runes.size() > 0 && is_actived:
-		parchments.push_front(item.data)
+		parchments.push_back(item.data)
 		receives_parchments.emit(parchments)
 		
 		item.is_draggable = false
