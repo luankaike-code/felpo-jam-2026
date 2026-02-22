@@ -22,7 +22,6 @@ func _ready() -> void:
 	
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
-	
 
 func _start_drag() -> void:
 	state_machine.change_state("Dragging")
@@ -32,6 +31,8 @@ func _finish_drag() -> void:
 
 func on_area_entered(body: Area2D) -> void:
 	if body is Paper:
+		if current_paper && current_paper.z_index > body.z_index:
+			return
 		current_paper = body
 
 func get_overlapping_paper() -> Paper:
