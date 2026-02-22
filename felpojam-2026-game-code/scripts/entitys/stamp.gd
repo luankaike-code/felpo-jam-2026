@@ -22,11 +22,9 @@ func _ready() -> void:
 	
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
+	state_machine.change_state("Idle")
 
-func _start_drag() -> void:
-	state_machine.change_state("Dragging")
-
-func _finish_drag() -> void:
+func _finish_drag() -> void:	
 	state_machine.change_state("Dropping")
 
 func on_area_entered(body: Area2D) -> void:
