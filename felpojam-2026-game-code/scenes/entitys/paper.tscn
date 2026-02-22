@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cfp54i0lipwwp" path="res://scripts/entitys/paper/paper.gd" id="1_memgj"]
 [ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="2_n4o0a"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_rx5oc"]
+[ext_resource type="Script" uid="uid://canvcgol6iwwg" path="res://scripts/states/animations/animation_shaking.gd" id="4_g1hnd"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="5_nq4it"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4o0a"]
 size = Vector2(76, 78)
@@ -16,3 +19,18 @@ texture = ExtResource("2_n4o0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041061041]
 shape = SubResource("RectangleShape2D_n4o0a")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1228904403]
+script = ExtResource("3_rx5oc")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1450479678]
+script = ExtResource("5_nq4it")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="AnimationShaking" type="Node" parent="StateMachine" unique_id=1271637404]
+script = ExtResource("4_g1hnd")
+default_force = Vector2(30, 0)
+next_scene = "Idle"
+weight = 10.0
+metadata/_custom_type_script = "uid://canvcgol6iwwg"

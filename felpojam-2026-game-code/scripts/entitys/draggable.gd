@@ -19,6 +19,7 @@ var is_dragging := false :
 var is_draggable := true
 var was_clicked := false
 var _old_z_index: int
+var tween: Tween
 
 func _ready() -> void:
 	add_to_group("draggables")

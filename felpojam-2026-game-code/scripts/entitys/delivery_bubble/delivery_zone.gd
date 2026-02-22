@@ -8,6 +8,8 @@ signal receive_paper
 
 func place_item(item: Node2D) -> bool:
 	if item is Paper && !current_paper:
+		if !item.data.content:
+			return false
 		item.global_position = global_position
 		item.start_drag.connect(_on_start_drag)
 		current_paper = item
