@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://d05in2yrkn5mk"]
 
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="1_bl8qx"]
+[ext_resource type="Script" uid="uid://86ht7a2uk683" path="res://scripts/local.gd" id="1_tbocu"]
 
-[node name="Local" type="Node2D" unique_id=564590170]
+[node name="Local" type="Node2D" unique_id=1423880516]
+script = ExtResource("1_tbocu")
+metadata/_custom_type_script = "uid://86ht7a2uk683"
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1443372050]
 modulate = Color(1, 1, 1, 0.29803923)

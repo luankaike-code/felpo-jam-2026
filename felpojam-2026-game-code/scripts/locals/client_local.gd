@@ -1,4 +1,4 @@
-class_name ClientLocal extends Node2D
+class_name ClientLocal extends Local
 
 @onready var character_sprite := $CharacterSprite as CharacterSprite
 @onready var speech_bubble_manager := $SpeechBubbleManager as SpeechBubbleManager

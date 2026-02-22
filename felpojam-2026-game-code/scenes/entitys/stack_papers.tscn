@@ -7,14 +7,17 @@
 script = ExtResource("1_6olps")
 
 [node name="Paper" type="Sprite2D" parent="." unique_id=1594401642]
+modulate = Color(0.76, 0.76, 0.76, 1)
+texture = ExtResource("1_im8di")
+
+[node name="Paper3" type="Sprite2D" parent="." unique_id=1528360386]
+modulate = Color(0.76, 0.76, 0.76, 1)
+position = Vector2(-1.9999981, 12.000002)
+rotation = 1.3754456
 texture = ExtResource("1_im8di")
 
 [node name="Paper2" type="Sprite2D" parent="." unique_id=1246545788]
+modulate = Color(0.76, 0.76, 0.76, 1)
 position = Vector2(11, -7)
 rotation = 0.54817235
-texture = ExtResource("1_im8di")
-
-[node name="Paper2" type="Sprite2D" parent="Paper2" unique_id=1528360386]
-position = Vector2(-1.1937804, 22.990757)
-rotation = 0.82727325
 texture = ExtResource("1_im8di")

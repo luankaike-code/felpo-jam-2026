@@ -10,11 +10,11 @@
 size = Vector2(76, 78)
 
 [node name="Paper" type="Area2D" unique_id=449771312]
-z_index = 500
+z_index = 400
+z_as_relative = false
 script = ExtResource("1_memgj")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=220479855]
-z_index = -400
 texture = ExtResource("2_n4o0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041061041]

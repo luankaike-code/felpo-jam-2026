@@ -18,22 +18,23 @@ var is_dragging := false :
 
 var is_draggable := true
 var was_clicked := false
-var _old_z_index: int
-var tween: Tween
 
 func _ready() -> void:
 	add_to_group("draggables")
+	z_as_relative = false
 	
 	input_event.connect(_on_input_event)
 	area_entered.connect(_on_area_entered_base_event)
 	area_exited.connect(_on_area_exited_base_event)
 	
 	start_drag.connect(func():
-		_old_z_index = z_index
-		z_index = 4000
-	)
-	finish_drag.connect(func():
-		z_index = _old_z_index
+		z_index = 200
+		print("oi: ", self, z_index)
+		for draggable in get_tree().get_nodes_in_group("draggables"):
+			if draggable == self:
+				continue
+			draggable.z_index = 0
+			print(draggable, " ", draggable.z_index)
 	)
 
 func _start_drag():

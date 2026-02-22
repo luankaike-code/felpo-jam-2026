@@ -1,21 +1,18 @@
 extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
-var packed_runes_book_content := preload("res://scenes/pop_ups/pop_up_runes_book_content.tscn") as PackedScene
 
-@onready var runes_book := $Local2/RunesBook as RunesBook
-@onready var locals := [$ClientLocal, $Local2]
+@onready var locals := [$ClientLocal, $CraftLocal]
 var current_local := 0
 var music_player: SoundPlayer
 
 func _ready() -> void:
-	runes_book.open.connect(open_runes_book)
+	for local in locals:
+		print(local is ClientLocal, local is Local)
+		local.open_pop_up.connect(factory_pop_up)
 	
 	music_player = Sound.play_sound(SoundData.names.shop_music)
 	music_player.loop_count = -1
-
-func open_runes_book():
-	factory_pop_up(packed_runes_book_content.instantiate())
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:
