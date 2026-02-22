@@ -15,3 +15,4 @@ signal button_up
 func _ready() -> void:
 	label.text = text
 	button.button_up.connect(button_up.emit)
+	button.button_down.connect(func(): Sound.play_sound(SoundData.names.pressed_button))

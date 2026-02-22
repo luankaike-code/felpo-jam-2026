@@ -46,6 +46,7 @@ func play(callable: Callable=func(): return) -> void:
 func reset() -> void:
 	events = []
 	loop_count = 1
+	audio_stream_player.pitch_scale = 1
 
 func add_event(time_percentage: float, callable: Callable):
 	var sound_size := audio_stream_player.stream.get_length()

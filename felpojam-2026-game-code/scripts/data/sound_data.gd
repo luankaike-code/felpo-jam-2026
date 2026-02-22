@@ -10,11 +10,13 @@ enum names {
 	
 	dropper_1,
 	dropper_2,
+	error,
 	gain_money,
 	little_bell,
 	paper_1,
 	paper_2,
 	paper_3,
+	pressed_button,
 	stamp_ink,
 	stamp_stand,
 }
@@ -35,11 +37,13 @@ static var relation_name_type: Dictionary[names, types] = {
 	
 	names.dropper_1: types.sound_effect,
 	names.dropper_2: types.sound_effect,
+	names.error: types.sound_effect,
 	names.gain_money: types.sound_effect,
 	names.little_bell: types.sound_effect,
 	names.paper_1: types.sound_effect,
 	names.paper_2: types.sound_effect,
 	names.paper_3: types.sound_effect,
+	names.pressed_button: types.sound_effect,
 	names.stamp_ink: types.sound_effect,
 	names.stamp_stand: types.sound_effect,
 }
@@ -54,11 +58,13 @@ static var streams: Dictionary[names, AudioStreamMP3] = {
 	
 	names.dropper_1: preload("res://assets/sounds_effects/dropper_1.mp3"),
 	names.dropper_2: preload("res://assets/sounds_effects/dropper_2.mp3"),
+	names.error: preload("res://assets/sounds_effects/error.mp3"),
 	names.gain_money: preload("res://assets/sounds_effects/gain_money.mp3"),
 	names.little_bell: preload("res://assets/sounds_effects/little_bell.mp3"),
 	names.paper_1: preload("res://assets/sounds_effects/paper_1.mp3"),
 	names.paper_2: preload("res://assets/sounds_effects/paper_2.mp3"),
 	names.paper_3: preload("res://assets/sounds_effects/paper_3.mp3"),
+	names.pressed_button: preload("res://assets/sounds_effects/pressed_button.mp3"),
 	names.stamp_ink: preload("res://assets/sounds_effects/stamp_ink.mp3"),
 	names.stamp_stand: preload("res://assets/sounds_effects/stamp_stand.mp3"),
 }

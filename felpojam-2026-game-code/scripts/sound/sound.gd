@@ -14,6 +14,8 @@ func set_volume(sound_type: SoundData.types, new_volume: float) -> void:
 
 func play_sound(audio_name: SoundData.names, callable: Callable=func(): return) -> SoundPlayer:
 	var player := _configure_player(_get_player(), audio_name)
+	if SoundData.relation_name_type[audio_name] == SoundData.types.sound_effect:
+		player.audio_stream_player.pitch_scale = randf_range(0.9, 1.1)
 	player.play(callable)
 	return player
 

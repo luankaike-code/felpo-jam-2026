@@ -10,6 +10,7 @@ func place_item(item: Node2D) -> bool:
 		item.has_ink = true
 		item.global_position = global_position
 		current_item = item
+		Sound.play_sound(SoundData.names.stamp_ink)
 		return true
 	return false
 
