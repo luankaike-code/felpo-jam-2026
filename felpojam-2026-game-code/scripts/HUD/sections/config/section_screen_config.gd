@@ -3,7 +3,7 @@ extends VBoxContainer
 
 @onready var resolution_drop_menu := $MarginContainer/VBoxContainer/ScreenResolution/SpriteDropMenu as SpriteDropMenu
 @onready var screen_mode_drop_menu := $MarginContainer/VBoxContainer/SreenMode/SpriteDropMenu as SpriteDropMenu
-@onready var v_sync_checkbox := $MarginContainer/VBoxContainer/VSync/Control/CheckBox as CheckBox
+@onready var v_sync_checkbox := $MarginContainer/VBoxContainer/VSync/SpriteCheckBox as SpriteCheckBox
 
 func _ready() -> void:
 	Helpers.populate_sprite_drop_menu_with_dict(resolution_drop_menu, WindowData.resolutions)
@@ -14,7 +14,7 @@ func _ready() -> void:
 	connected_signals()
 
 func set_current_values():
-	v_sync_checkbox.button_pressed = HelperWindow.get_v_sync()
+	v_sync_checkbox.value = HelperWindow.get_v_sync()
 	
 	var resolution_index = Helpers.get_dict_index_with_value(WindowData.resolutions, get_window().content_scale_size)
 	resolution_drop_menu.select(resolution_index)
@@ -26,7 +26,7 @@ func connected_signals() -> void:
 	resolution_drop_menu.item_selected.connect(resolution_selected)
 	screen_mode_drop_menu.item_selected.connect(screen_mode_selected)
 
-	v_sync_checkbox.toggled.connect(HelperWindow.set_v_sync)
+	v_sync_checkbox.changed.connect(HelperWindow.set_v_sync)
 
 func resolution_selected(resolution_index: int) -> void:
 	var resolution: Vector2i = WindowData.resolutions.values()[resolution_index]
