@@ -6,8 +6,9 @@ func handle_current_paper():
 	if !host.current_paper || !host.has_ink:
 		return
 
-	host.current_paper.add_rune(host.packed_rune.instantiate(), host.global_position)
-	host.has_ink = false
+	var rune = host.packed_rune.instantiate()
+	var result = host.current_paper.add_rune(rune, host.global_position)
+	host.has_ink = !result
 
 func enter(host_: Stamp) -> void:
 	host = host_

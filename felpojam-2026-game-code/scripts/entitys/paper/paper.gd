@@ -20,13 +20,14 @@ func play_paper_drag_sound():
 	var variants := [SoundData.names.paper_1, SoundData.names.paper_2, SoundData.names.paper_3]
 	Sound.play_sound(variants.pick_random())
 
-func add_rune(rune_scene: Rune, rune_global_position: Vector2) -> void:
+func add_rune(rune_scene: Rune, rune_global_position: Vector2) -> bool:
 	if runes.size() >= 2:
-		return
+		return false
 		
 	rune_scene.position = to_local(rune_global_position)
 	add_child(rune_scene)
 	runes.push_front(rune_scene)
+	return true
 
 func _finish_drag():
 	if current_stand:
