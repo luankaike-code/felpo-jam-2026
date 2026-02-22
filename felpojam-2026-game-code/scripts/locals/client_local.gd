@@ -25,5 +25,5 @@ func close_delivery_bubble():
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_copy"):
-		if state_machine.current_state.name == "ExitClient":
+		if state_machine.current_state.name == "Idle":
 			new_client()

@@ -26,3 +26,9 @@ func enter(host_) -> void:
 	var speech := SpeechsData.speechs[current_result.speech]
 	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
 	speech_bubble.finish_all_dialogs.connect(host.character_sprite.exit)
+	
+	change_state.emit("Idle")
+
+func exit():
+	host.current_client_order_index += 1
+	host.current_client_order_index %= ClientData.order.size()

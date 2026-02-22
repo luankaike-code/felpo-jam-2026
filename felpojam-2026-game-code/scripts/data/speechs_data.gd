@@ -4,7 +4,12 @@ enum names {
 	concubine,
 	concubine_result_positive,
 	concubine_result_ok,
-	concubine_result_negative
+	concubine_result_negative,
+	
+	king,
+	king_result_positive,
+	king_result_ok,
+	king_result_negative,
 }
 
 static var speechs: Dictionary[names, Array] = {
@@ -22,5 +27,22 @@ static var speechs: Dictionary[names, Array] = {
 	],
 	names.concubine_result_negative: [
 		"Horrivel !!! Meu utero doeu muito >:[ !!!",
-	]
+	],
+	
+	names.king: [
+		"Meu querido feiticeiro, seu humilde Rei está muito fraco ",
+		"para governar, pois fui amaldiçoado, ",
+		"se me libertar das amarras dessa maldição",
+		"e lhe garanto o seu maior desejo"
+	],
+	names.king_result_positive: [
+		"Esse pergaminho foi muito bom"
+	],
+	names.king_result_ok: [
+		"Esse pergaminho foi ok"
+	],
+	names.king_result_negative: [
+		"Esse pergaminho é um lixo",
+		"Guardas o matem"
+	],
 }

@@ -1,11 +1,13 @@
 class_name ClientData extends Resource
 
 enum names {
-	concubine
+	concubine,
+	king
 }
 
 static var order: Array[names] = [
-	names.concubine
+	names.concubine,
+	names.king
 ]
 
 static var client: Dictionary[names, ClientObj] = {
@@ -13,6 +15,11 @@ static var client: Dictionary[names, ClientObj] = {
 		CharacterData.names.concubine, 
 		SpeechsData.names.concubine, 
 		OrdersData.names.more_fetility
+	),
+	names.king: ClientObj.new(
+		CharacterData.names.king, 
+		SpeechsData.names.king, 
+		OrdersData.names.infernal_fire
 	)
 }
 
@@ -21,5 +28,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		ClientResult.new(SpeechsData.names.concubine_result_positive, 50.0),
 		ClientResult.new(SpeechsData.names.concubine_result_ok, 25.0),
 		ClientResult.new(SpeechsData.names.concubine_result_negative, -50.0)
+	),
+	names.king: ClientResultPossibility.new(
+		ClientResult.new(SpeechsData.names.king_result_positive, 50.0),
+		ClientResult.new(SpeechsData.names.king_result_ok, 25.0),
+		ClientResult.new(SpeechsData.names.king_result_negative, -50.0)
 	)
 }

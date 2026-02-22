@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="6_6kv1h"]
 [ext_resource type="Script" uid="uid://dcu03w3wuqsy1" path="res://scripts/states/client_local/new_client.gd" id="7_geiil"]
 [ext_resource type="Script" uid="uid://8vbt8kvjfppn" path="res://scripts/states/client_local/idle_client.gd" id="8_geiil"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="9_gd4ri"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
 [ext_resource type="PackedScene" uid="uid://bqlbykpw7ass8" path="res://scenes/entitys/delivery_bubble/delivery_bubble.tscn" id="10_aedb0"]
 
@@ -34,17 +35,21 @@ position = Vector2(-98, -134)
 
 [node name="StateMachine" type="Node" parent="." index="5" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")
-current_state = NodePath("ExitClient")
+current_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
 
-[node name="NewClient" type="Node" parent="StateMachine" index="0" unique_id=1148953202]
+[node name="Idle" type="Node" parent="StateMachine" index="0" unique_id=1420155105]
+script = ExtResource("9_gd4ri")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="NewClient" type="Node" parent="StateMachine" index="1" unique_id=1148953202]
 script = ExtResource("7_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 
-[node name="IdleClient" type="Node" parent="StateMachine" index="1" unique_id=1139976208]
+[node name="IdleClient" type="Node" parent="StateMachine" index="2" unique_id=1139976208]
 script = ExtResource("8_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 
-[node name="ExitClient" type="Node" parent="StateMachine" index="2" unique_id=1572576924]
+[node name="ExitClient" type="Node" parent="StateMachine" index="3" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
