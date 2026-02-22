@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwhvvkj40wdmv"]
+
+[ext_resource type="Script" uid="uid://2e3ws5ntfbvu" path="res://scripts/entitys/dropper.gd" id="1_6pl4n"]
+[ext_resource type="Texture2D" uid="uid://bwv4tb86wvig0" path="res://assets/images/stamp.png" id="2_6pl4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pl4n"]
+radius = 21.023796
+
+[node name="Dropper" type="Area2D" unique_id=392739461]
+script = ExtResource("1_6pl4n")
+metadata/_custom_type_script = "uid://cofhru7hxcyx6"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=581116380]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_6pl4n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1389712713]
+shape = SubResource("CircleShape2D_6pl4n")

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c4f10pbt1cpd7" path="res://scenes/entitys/stamp_stand.tscn" id="7_r17h8"]
 [ext_resource type="PackedScene" uid="uid://kdh0fmgkwwnn" path="res://scenes/entitys/runes/fire_rune.tscn" id="7_u7af2"]
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="8_edtm0"]
+[ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="9_umv4u"]
 
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
 script = ExtResource("2_xt3nh")
@@ -83,3 +84,6 @@ linked_stamp = NodePath("../Stamp")
 [node name="Stamp" parent="StampSet6" index="1" unique_id=1459383177 node_paths=PackedStringArray("default_stand") instance=ExtResource("8_edtm0")]
 packed_rune = ExtResource("7_u7af2")
 default_stand = NodePath("../StampStand")
+
+[node name="Dropper" parent="." index="11" unique_id=392739461 instance=ExtResource("9_umv4u")]
+position = Vector2(-8, -106)
