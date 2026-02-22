@@ -1,9 +1,9 @@
 extends VBoxContainer
 
-@onready var drag_mode := $MarginContainer/VBoxContainer/HBoxContainer/OptionButton as OptionButton
+@onready var drag_mode :=  $MarginContainer/VBoxContainer/HBoxContainer/SpriteDropMenu as SpriteDropMenu
 
 func _ready() -> void:
-	Helpers.populate_drop_menu_with_dict(drag_mode, ControlData.str_drag_mode)
+	Helpers.populate_sprite_drop_menu_with_dict(drag_mode, ControlData.str_drag_mode)
 	set_values()
 	connected_signals()
 

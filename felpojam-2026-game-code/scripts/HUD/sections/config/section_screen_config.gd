@@ -1,13 +1,13 @@
 extends VBoxContainer
 
 
-@onready var resolution_drop_menu := $MarginContainer/VBoxContainer/ScreenResolution/Resolutions as OptionButton
-@onready var screen_mode_drop_menu := $MarginContainer/VBoxContainer/SreenMode/ScreenModes as OptionButton
+@onready var resolution_drop_menu := $MarginContainer/VBoxContainer/ScreenResolution/SpriteDropMenu as SpriteDropMenu
+@onready var screen_mode_drop_menu := $MarginContainer/VBoxContainer/SreenMode/SpriteDropMenu as SpriteDropMenu
 @onready var v_sync_checkbox := $MarginContainer/VBoxContainer/VSync/Control/CheckBox as CheckBox
 
 func _ready() -> void:
-	Helpers.populate_drop_menu_with_dict(resolution_drop_menu, WindowData.resolutions)
-	Helpers.populate_drop_menu_with_dict(screen_mode_drop_menu, WindowData.screen_modes)
+	Helpers.populate_sprite_drop_menu_with_dict(resolution_drop_menu, WindowData.resolutions)
+	Helpers.populate_sprite_drop_menu_with_dict(screen_mode_drop_menu, WindowData.screen_modes)
 	
 	set_current_values()
 	

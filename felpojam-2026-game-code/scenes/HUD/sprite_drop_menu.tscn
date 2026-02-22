@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c23mvjo5g2y4g"]
+
+[ext_resource type="Script" uid="uid://c4g7hsm6rvssj" path="res://scripts/HUD/sprite_drop_menu.gd" id="1_1xoxo"]
+[ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="2_cnu2w"]
+
+[node name="SpriteDropMenu" type="VBoxContainer" unique_id=543618024]
+anchors_preset = -1
+anchor_right = 0.156
+anchor_bottom = 0.044000003
+offset_right = 0.31999207
+offset_bottom = 0.3199978
+size_flags_horizontal = 4
+script = ExtResource("1_1xoxo")
+
+[node name="MainSpriteButton" parent="." unique_id=1657631145 instance=ExtResource("2_cnu2w")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Selecione"
+
+[node name="OptionsConteiner" type="VBoxContainer" parent="." unique_id=1990302820]
+top_level = true
+layout_mode = 2

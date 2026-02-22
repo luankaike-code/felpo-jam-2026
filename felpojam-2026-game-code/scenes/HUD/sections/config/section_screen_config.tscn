@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://br4140hu022dp" path="res://scenes/HUD/sections/section.tscn" id="1_ed6pf"]
 [ext_resource type="Script" uid="uid://wpyeisp11jiy" path="res://scripts/HUD/sections/config/section_screen_config.gd" id="2_osfrk"]
 [ext_resource type="PackedScene" uid="uid://8duy5yc6rwku" path="res://scenes/HUD/config_field.tscn" id="2_v6j37"]
+[ext_resource type="PackedScene" uid="uid://c23mvjo5g2y4g" path="res://scenes/HUD/sprite_drop_menu.tscn" id="4_dkiqj"]
 
 [node name="SectionScreenConfig" unique_id=1213679984 instance=ExtResource("1_ed6pf")]
 script = ExtResource("2_osfrk")
@@ -14,20 +15,16 @@ text = "Tela"
 layout_mode = 2
 label_text = "Resolução da Janela"
 
-[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=972668148]
-custom_minimum_size = Vector2(200, 0)
+[node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/ScreenResolution" index="2" unique_id=543618024 instance=ExtResource("4_dkiqj")]
 layout_mode = 2
-size_flags_horizontal = 8
 
 [node name="SreenMode" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="2" unique_id=290738729 instance=ExtResource("2_v6j37")]
 layout_mode = 2
 alignment = 1
 label_text = "Modo da Janela"
 
-[node name="ScreenModes" type="OptionButton" parent="MarginContainer/VBoxContainer/SreenMode" index="2" unique_id=2130893843]
-custom_minimum_size = Vector2(200, 0)
+[node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/SreenMode" index="2" unique_id=2102347847 instance=ExtResource("4_dkiqj")]
 layout_mode = 2
-size_flags_horizontal = 8
 
 [node name="VSync" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="3" unique_id=74489987 instance=ExtResource("2_v6j37")]
 layout_mode = 2

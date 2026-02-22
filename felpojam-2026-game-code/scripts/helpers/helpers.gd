@@ -7,3 +7,7 @@ static func get_dict_index_with_value(dict: Dictionary, value) -> int:
 static func populate_drop_menu_with_dict(drop_menu: OptionButton, dict: Dictionary) -> void:
 	for key in dict.keys():
 		drop_menu.add_item(key)
+
+static func populate_sprite_drop_menu_with_dict(drop_menu: SpriteDropMenu, dict: Dictionary) -> void:
+	for key in dict.keys():
+		drop_menu.add_item(key)
