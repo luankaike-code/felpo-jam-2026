@@ -5,6 +5,9 @@ var current_callable := func(): print("tá usando o default")
 var loop_count := 1
 var events: Array[SoundEvent]
 
+var current_sound_name: SoundData.names
+var current_sound_type
+
 signal finished
 
 func _init() -> void:
@@ -33,6 +36,15 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	add_child(audio_stream_player)
+
+func configure(sound_name: SoundData.names) -> void:
+	current_sound_name = sound_name
+	audio_stream_player.stream = SoundData.streams[current_sound_name]
+	current_sound_type = SoundData.relation_name_type[current_sound_name]
+	reset()
+
+func update_volume(volumes: Dictionary[SoundData.types, float]):
+	audio_stream_player.volume_linear = volumes[current_sound_type]
 
 func play(callable: Callable=func(): return) -> void:
 	if audio_stream_player.finished.is_connected(current_callable):

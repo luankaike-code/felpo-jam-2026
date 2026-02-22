@@ -11,11 +11,17 @@ var volumes: Dictionary[SoundData.types, float] = {
 
 func set_volume(sound_type: SoundData.types, new_volume: float) -> void:
 	volumes[sound_type] = new_volume
+	for player in players:
+		player.update_volume(volumes)
 
 func play_sound(audio_name: SoundData.names, callable: Callable=func(): return) -> SoundPlayer:
-	var player := _configure_player(_get_player(), audio_name)
-	if SoundData.relation_name_type[audio_name] == SoundData.types.sound_effect:
+	var player := _get_player()
+	player.configure(audio_name)
+	player.update_volume(volumes)
+	
+	if player.current_sound_type == SoundData.types.sound_effect:
 		player.audio_stream_player.pitch_scale = randf_range(0.9, 1.1)
+
 	player.play(callable)
 	return player
 

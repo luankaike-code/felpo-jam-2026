@@ -20,15 +20,13 @@ func set_default_value():
 	music_volume.set_value(Sound.volumes[SoundData.types.music])
 
 func connect_signals() -> void:
-	ambient_volume.value_changed.connect(func (x): 
-		change_type_volume(SoundData.types.ambient, x)
+	ambient_volume.value_changed.connect(func (x):
+		Sound.set_volume(SoundData.types.ambient, x)
 	)
-	sound_effects_volume.value_changed.connect(func (x): 
-		change_type_volume(SoundData.types.sound_effect, x)
+	sound_effects_volume.value_changed.connect(func (x):
+		Sound.set_volume(SoundData.types.sound_effect, x)
 	)
-	music_volume.value_changed.connect(func (x): 
-		change_type_volume(SoundData.types.music, x)
+	music_volume.value_changed.connect(func (x):
+		Sound.set_volume(SoundData.types.music, x)
 	)
-
-func change_type_volume(type: SoundData.types, new_volume: float) -> void:
-	Sound.volumes[type] = new_volume
+	
