@@ -5,7 +5,7 @@ signal finish_drag()
 @warning_ignore("unused_signal")
 signal spawn_node(node: Node2D)
 
-@export var default_stand: Stand
+var default_stand: Stand
 var current_stand := default_stand
 
 var is_dragging := false :

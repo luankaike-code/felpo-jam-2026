@@ -5,10 +5,10 @@ class_name Stamp extends Draggable
 
 @export var packed_rune: PackedScene
 
+var packed_stand_stamp := preload("res://scenes/entitys/stamp_stand.tscn") as PackedScene
+
 var current_paper: Paper
-
 var rune_name: RunesData.names
-
 var has_ink := false :
 	set(new):
 		has_ink = new
@@ -23,6 +23,15 @@ func _ready() -> void:
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
 	state_machine.change_state("Idle")
+	
+	var stand := packed_stand_stamp.instantiate() as StampStand
+	stand.setup(self)
+	stand.position = position
+	default_stand = stand
+	call_deferred("spaw_stand")
+
+func spaw_stand():
+	spawn_node.emit(default_stand)
 
 func _finish_drag() -> void:	
 	state_machine.change_state("Dropping")
