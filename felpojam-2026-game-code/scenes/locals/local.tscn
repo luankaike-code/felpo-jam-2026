@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://d05in2yrkn5mk"]
 
-[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="1_bl8qx"]
 [ext_resource type="Script" uid="uid://86ht7a2uk683" path="res://scripts/local.gd" id="1_tbocu"]
+[ext_resource type="Texture2D" uid="uid://d4a7d3bn184ph" path="res://assets/images/bg_teste.png" id="2_tbocu"]
 
 [node name="Local" type="Node2D" unique_id=1423880516]
 script = ExtResource("1_tbocu")
 metadata/_custom_type_script = "uid://86ht7a2uk683"
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1443372050]
-modulate = Color(1, 1, 1, 0.29803923)
 z_index = -4000
-scale = Vector2(5.045841, 2.8755436)
-texture = ExtResource("1_bl8qx")
+texture = ExtResource("2_tbocu")

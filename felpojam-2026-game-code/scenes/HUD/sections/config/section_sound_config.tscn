@@ -18,9 +18,10 @@ layout_mode = 2
 layout_mode = 2
 label_text = "Ambiente"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" index="2" unique_id=1063266665]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" index="1" unique_id=1063266665]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
+size_flags_horizontal = 10
 
 [node name="Ambient2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/Control" index="0" unique_id=971108514 instance=ExtResource("4_fi112")]
 custom_minimum_size = Vector2(200, 16)
@@ -41,9 +42,10 @@ value_scale = 2
 layout_mode = 2
 label_text = "Efeitos Sonoros"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" index="2" unique_id=118498276]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2" index="1" unique_id=118498276]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
+size_flags_horizontal = 10
 
 [node name="SoundEffects2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2/Control" index="0" unique_id=582038145 instance=ExtResource("4_fi112")]
 custom_minimum_size = Vector2(200, 16)
@@ -64,9 +66,10 @@ value_scale = 2
 layout_mode = 2
 label_text = "Musica"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" index="2" unique_id=1790496881]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3" index="1" unique_id=1790496881]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
+size_flags_horizontal = 10
 
 [node name="Music2" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer3/Control" index="0" unique_id=2061618001 instance=ExtResource("4_fi112")]
 custom_minimum_size = Vector2(200, 16)

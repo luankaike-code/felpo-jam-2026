@@ -14,7 +14,7 @@ func update_zoom():
 	
 	zoom.x = default_zoom.x * viewport_size.x / 1440
 	zoom.y = zoom.x
-
+	
 func to(target_: Node2D):
 	target = target_
 	state_machine.change_state("Transition")

@@ -54,9 +54,12 @@ size_flags_vertical = 3
 
 [node name="SectionScreenConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1213679984 instance=ExtResource("2_lpiss")]
 layout_mode = 2
+size_flags_horizontal = 1
 
 [node name="SectionSoundConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=416386563 instance=ExtResource("3_qw20t")]
 layout_mode = 2
+size_flags_horizontal = 1
 
 [node name="SectionControlConfig" parent="Control/MarginContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=15938412 instance=ExtResource("4_c21w6")]
 layout_mode = 2
+size_flags_horizontal = 1

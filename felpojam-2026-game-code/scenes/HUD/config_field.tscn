@@ -14,4 +14,5 @@ script = ExtResource("1_c6nmi")
 [node name="Label" type="Label" parent="." unique_id=806196624]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 label_settings = ExtResource("2_ja441")

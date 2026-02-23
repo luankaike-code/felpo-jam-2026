@@ -20,5 +20,6 @@ text = "Controles"
 layout_mode = 2
 label_text = "Modo de arrastes"
 
-[node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=543618024 instance=ExtResource("4_7j1mm")]
+[node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1" unique_id=543618024 instance=ExtResource("4_7j1mm")]
 layout_mode = 2
+size_flags_horizontal = 10
