@@ -23,6 +23,10 @@ func liked_other_rune(area: Area2D):
 
 	move_to_link()
 
+func level_up():
+	data.level += 1
+	modulate = Color(0.15*data.level, 0.83, 0.773, 1.0)
+
 func move_to_link():
 	var half_distance = (link.position - position) / 2
 	var to = position + half_distance
