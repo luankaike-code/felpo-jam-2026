@@ -7,6 +7,7 @@ var frame_size: Vector2
 var value: bool :
 	set(new):
 		value = new
+		print(self, value)
 		_update_value()
 
 signal changed

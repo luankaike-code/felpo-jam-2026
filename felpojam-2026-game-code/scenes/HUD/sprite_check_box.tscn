@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://drlq8kuf2wbtx" path="res://assets/images/checkbox.png" id="1_rfem7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_421ck"]
+resource_local_to_scene = true
 atlas = ExtResource("1_rfem7")
 region = Rect2(0, 0, 16, 16)
 
 [node name="SpriteCheckBox" type="MarginContainer" unique_id=1760397641]
-anchors_preset = -1
 offset_right = 16.0
 offset_bottom = 16.0
 grow_horizontal = 0

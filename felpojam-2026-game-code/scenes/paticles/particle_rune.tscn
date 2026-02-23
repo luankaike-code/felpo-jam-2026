@@ -19,7 +19,8 @@ particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 30.0
 gravity = Vector3(0, -40, 0)
-scale_max = 2.0
+scale_min = 3.0
+scale_max = 6.0
 scale_curve = SubResource("CurveTexture_psepm")
 
 [node name="ParticleRune" unique_id=253174399 instance=ExtResource("1_c7ioe")]
@@ -28,6 +29,7 @@ script = ExtResource("2_25q3a")
 [node name="CPUParticles2D" parent="." index="0" unique_id=1752043906]
 amount = 5
 lifetime = 0.5
+fixed_fps = 30
 emission_shape = 1
 emission_sphere_radius = 30.0
 gravity = Vector2(0, -40)

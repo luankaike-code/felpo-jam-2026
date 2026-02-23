@@ -10,7 +10,7 @@
 script = ExtResource("2_osfrk")
 
 [node name="Label" parent="." index="0" unique_id=130990419]
-text = "Tela"
+text = "Gráficos"
 
 [node name="ScreenResolution" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="1" unique_id=502982208 instance=ExtResource("2_v6j37")]
 layout_mode = 2
@@ -27,10 +27,32 @@ label_text = "Modo da Janela"
 [node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/SreenMode" index="2" unique_id=2102347847 instance=ExtResource("4_dkiqj")]
 layout_mode = 2
 
-[node name="VSync" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="3" unique_id=74489987 instance=ExtResource("2_v6j37")]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="3" unique_id=626641263]
+layout_mode = 2
+
+[node name="Particles" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="4" unique_id=1378757026 instance=ExtResource("2_v6j37")]
+layout_mode = 2
+alignment = 1
+label_text = "Particulas"
+
+[node name="SpriteCheckBox" parent="MarginContainer/VBoxContainer/Particles" index="2" unique_id=1760397641 instance=ExtResource("5_wlk1c")]
+layout_mode = 2
+
+[node name="ParticleMode" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="5" unique_id=154210531 instance=ExtResource("2_v6j37")]
+layout_mode = 2
+alignment = 1
+label_text = "Modo de particulas"
+
+[node name="SpriteDropMenu" parent="MarginContainer/VBoxContainer/ParticleMode" index="2" unique_id=1569557759 instance=ExtResource("4_dkiqj")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="6" unique_id=513786531]
+layout_mode = 2
+
+[node name="VSync" parent="MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1628588) index="7" unique_id=74489987 instance=ExtResource("2_v6j37")]
 layout_mode = 2
 alignment = 1
 label_text = "V-Sync"
 
-[node name="SpriteCheckBox" parent="MarginContainer/VBoxContainer/VSync" index="2" unique_id=1760397641 instance=ExtResource("5_wlk1c")]
+[node name="SpriteCheckBox" parent="MarginContainer/VBoxContainer/VSync" index="2" unique_id=191376901 instance=ExtResource("5_wlk1c")]
 layout_mode = 2
