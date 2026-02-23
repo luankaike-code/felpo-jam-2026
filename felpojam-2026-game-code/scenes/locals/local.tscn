@@ -2,11 +2,26 @@
 
 [ext_resource type="Script" uid="uid://86ht7a2uk683" path="res://scripts/local.gd" id="1_tbocu"]
 [ext_resource type="Texture2D" uid="uid://d4a7d3bn184ph" path="res://assets/images/bg_teste.png" id="2_tbocu"]
+[ext_resource type="Texture2D" uid="uid://c50ympa6qd2fl" path="res://assets/images/image.png" id="2_vpo2k"]
 
 [node name="Local" type="Node2D" unique_id=1423880516]
 script = ExtResource("1_tbocu")
 metadata/_custom_type_script = "uid://86ht7a2uk683"
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=33390413]
+texture_repeat = 2
+position = Vector2(0, 465)
+texture = ExtResource("2_vpo2k")
+region_enabled = true
+region_rect = Rect2(0, 0, 720, 480)
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=1443372050]
 z_index = -4000
 texture = ExtResource("2_tbocu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1015827000]
+texture_repeat = 2
+position = Vector2(0, -465)
+texture = ExtResource("2_vpo2k")
+region_enabled = true
+region_rect = Rect2(0, 0, 720, 480)
