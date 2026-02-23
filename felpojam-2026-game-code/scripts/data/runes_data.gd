@@ -9,13 +9,9 @@ enum names {
 	order
 }
 
-static var names_str: Dictionary[names, String] = {
-	names.fire: "Fogo",
-	names.water: "Água",
-	names.air: "Ar",
-	names.earth: "Terra",
-	names.chaos: "Caos",
-	names.order: "Ordem"
+static var colors: Dictionary[names, Color] = {
+	names.fire: Color(1.0, 0.0, 0.0, 1.0),
+	names.water: Color(0.0, 1.0, 1.0, 1.0)
 }
 
 static var packed: Dictionary[names, PackedScene] = {

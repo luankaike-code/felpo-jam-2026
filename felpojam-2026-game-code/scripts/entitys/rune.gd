@@ -8,9 +8,12 @@ var link: Rune
 var data: RuneObj
 
 func _ready() -> void:
-	data = RuneObj.new(rune_name, 1)
-	particle_rune.set_radius(30)
+	data = RuneObj.new(rune_name, 0)
 	sprite.texture = RunesData.textures[rune_name]
+	
+	particle_rune.set_radius(30)
+	particle_rune.set_color(RunesData.colors[rune_name])
+	
 	area_entered.connect(liked_other_rune)
 
 func liked_other_rune(area: Area2D):
@@ -20,15 +23,24 @@ func liked_other_rune(area: Area2D):
 		return
 	
 	link = area
+	
+	if data.level > 0:
+		link.level_up()
+	elif link.data.level > 0:
+		level_up()
+	
 	if !link.link:
 		link.liked_other_rune(self)
 
 	move_to_link()
 
 func level_up():
-	data.level += 1
+	if data.level > 0:
+		return
+	data.level = 1
 	particle_rune.set_emitting(true)
-	modulate = Color(0.15*data.level, 0.83, 0.773, 1.0)
+	if link && link.data.level < 1:
+		link.level_up()
 
 func move_to_link():
 	var half_distance = (link.position - position) / 2
