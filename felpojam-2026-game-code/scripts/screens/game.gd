@@ -5,14 +5,12 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 @onready var locals := [$ClientLocal, $CraftLocal]
 
 var current_local := 0
-var music_player: SoundPlayer
 
 func _ready() -> void:
 	for local in locals:
 		local.open_pop_up.connect(factory_pop_up)
 	
-	music_player = Sound.play_sound(SoundData.names.shop_music)
-	music_player.loop_count = -1
+	play_music.emit(SoundData.names.shop_music)
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:

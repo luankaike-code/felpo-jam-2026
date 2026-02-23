@@ -56,6 +56,7 @@ func play(callable: Callable=func(): return) -> void:
 	audio_stream_player.play()
 
 func reset() -> void:
+	audio_stream_player.stop()
 	events = []
 	loop_count = 1
 	audio_stream_player.pitch_scale = 1

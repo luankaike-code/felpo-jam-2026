@@ -1,11 +1,12 @@
 extends Node
 
 @onready var transition := $Transition as Transition
+@onready var camera_in_game := $CameraInGame as CameraInGame
+@onready var music_manager: MusicManager = $MusicManager
 
 var new_screen: Screen
 var current_screen: Screen
 var default_screen = ScreenData.names.menu
-@onready var camera_in_game := $CameraInGame as CameraInGame
 
 func _ready() -> void:
 	HelperWindow.set_window_mode(Window.MODE_WINDOWED)
@@ -13,9 +14,6 @@ func _ready() -> void:
 	
 	create_defult_screen()
 	transition.exit_transition_finished.connect(toggle_screen)
-	
-	#var order := OrdersData.names.more_fetility
-	#Calc.calc_order_obj_proximity(OrdersData.orders[order], OrdersData.orders[order])
 
 func create_defult_screen():
 	new_screen = get_scene(default_screen)
@@ -28,7 +26,10 @@ func get_scene(screen_name: ScreenData.names) -> Screen:
 	var packed_screen = ScreenData.packeds[screen_name]
 	var screen = packed_screen.instantiate() as Screen
 	screen.setup(camera_in_game)
+	
 	screen.change_screen.connect(change_screen)
+	screen.play_music.connect(music_manager.play_music)
+	
 	screen.quit.connect(quit)
 	return screen
 
