@@ -10,4 +10,4 @@ position = Vector2(0, -146)
 texture = ExtResource("2_6k8aq")
 
 [node name="BubblePos" parent="." index="1" unique_id=2144655565]
-position = Vector2(49, -256)
+position = Vector2(49, -255)

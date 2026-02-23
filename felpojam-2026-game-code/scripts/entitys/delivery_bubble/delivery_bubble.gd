@@ -46,8 +46,8 @@ func _all_fields_was_filled():
 		all_fields_filled.emit()
 
 func _resize_bubble(dz_size: Vector2):
-	bubble.size.x = ((dz_size.x + delivery_zone_gap) * delivery_zones.size())
-	bubble.size.y = dz_size.y if dz_size.y > bubble.size.y else bubble.size.y
+	bubble.size.x = ((dz_size.x + delivery_zone_gap*30) * delivery_zones.size())
+	bubble.size.y = dz_size.y*1.2 if dz_size.y > bubble.size.y else bubble.size.y
 	bubble.position.y = bubble.size.y / -2
 
 func get_fields_content() -> Array[ParchmentObj]:

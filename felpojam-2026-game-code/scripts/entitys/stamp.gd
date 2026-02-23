@@ -3,12 +3,11 @@ class_name Stamp extends Draggable
 @onready var sprite := $Sprite as Sprite2D
 @onready var state_machine := $StateMachine as StateMachine
 
-@export var packed_rune: PackedScene
+@export var rune_name: RunesData.names
 
 var packed_stand_stamp := preload("res://scenes/entitys/stamp_stand.tscn") as PackedScene
 
 var current_paper: Paper
-var rune_name: RunesData.names
 var has_ink := false :
 	set(new):
 		has_ink = new
@@ -17,7 +16,6 @@ var has_ink := false :
 func _ready() -> void:
 	super()
 	
-	rune_name = packed_rune.instantiate().rune_name
 	sprite.texture = StampData.textures[rune_name]
 	
 	area_entered.connect(on_area_entered)

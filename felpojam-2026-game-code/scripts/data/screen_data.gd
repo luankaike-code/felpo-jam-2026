@@ -7,7 +7,7 @@ enum names {
 }
 
 static var packeds: Dictionary[names, PackedScene] = {
-	names.menu: load("res://scenes/screens/menu.tscn"),
-	names.game: load("res://scenes/screens/game.tscn"),
-	names.configurations: load("res://scenes/screens/configurations.tscn")
+	names.menu: preload("res://scenes/screens/menu.tscn"),
+	names.game: preload("res://scenes/screens/game.tscn"),
+	names.configurations: preload("res://scenes/screens/configurations.tscn")
 }

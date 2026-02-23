@@ -8,9 +8,8 @@ func handle_current_paper():
 			Sound.play_sound(SoundData.names.stamp_ink)
 		return
 
-	var rune = host.packed_rune.instantiate()
 	Sound.play_sound(SoundData.names.stamp_stand)
-	var result = host.current_paper.add_rune(rune, host.global_position)
+	var result = host.current_paper.add_rune(host.rune_name, host.global_position)
 	host.has_ink = !result
 
 func enter(host_: Stamp) -> void:

@@ -7,6 +7,9 @@ class_name Rune extends Area2D
 var link: Rune
 var data: RuneObj
 
+func setup(rune_name_: RunesData.names) -> void:
+	rune_name = rune_name_
+
 func _ready() -> void:
 	data = RuneObj.new(rune_name, 0)
 	sprite.texture = RunesData.textures[rune_name]

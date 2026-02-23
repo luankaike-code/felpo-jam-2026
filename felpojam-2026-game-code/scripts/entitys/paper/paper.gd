@@ -3,6 +3,8 @@ class_name Paper extends Draggable
 @onready var state_machine := $StateMachine as StateMachine
 @onready var sprite: Sprite2D = $Sprite
 
+var packed_rune := preload("res://scenes/entitys/rune.tscn") as PackedScene
+
 var runes: Array[Rune]
 
 var data: ParchmentObj :
@@ -21,10 +23,12 @@ func play_paper_drag_sound():
 	var variants := [SoundData.names.paper_1, SoundData.names.paper_2, SoundData.names.paper_3]
 	Sound.play_sound(variants.pick_random())
 
-func add_rune(rune_scene: Rune, rune_global_position: Vector2) -> bool:
+func add_rune(rune_name: RunesData.names, rune_global_position: Vector2) -> bool:
 	if runes.size() >= 2:
 		return false
 	
+	var rune_scene := packed_rune.instantiate() as Rune
+	rune_scene.setup(rune_name)
 	rune_scene.position = to_local(rune_global_position)
 	sprite.add_child(rune_scene)
 	runes.push_front(rune_scene)

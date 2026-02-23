@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://daa3bayphv4yc"]
-
-[ext_resource type="PackedScene" uid="uid://cuasnk30g4do1" path="res://scenes/entitys/runes/rune.tscn" id="1_mtq7l"]
-
-[node name="WaterRune" unique_id=1790087535 instance=ExtResource("1_mtq7l")]
-rune_name = 1
