@@ -20,7 +20,9 @@ func _finish_drag() -> void:
 		current_rune.level_up()
 
 	if current_stand:
-		current_stand.place_item(self)
+		var result = current_stand.place_item(self)
+		if !result:
+			default_stand.place_item(self)
 
 func spawn_stand():
 	spawn_node.emit(default_stand)
