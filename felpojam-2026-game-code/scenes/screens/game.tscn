@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ljam17ytk8dx" path="res://scripts/screens/game.gd" id="1_iwlfa"]
 [ext_resource type="PackedScene" uid="uid://c2liuyeax0kjk" path="res://scenes/locals/client_local.tscn" id="3_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://dnvx87pnj4fgh" path="res://scenes/locals/craft_local.tscn" id="4_ln6eb"]
-[ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="6_4ji0l"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -13,6 +12,3 @@ metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
 [node name="CraftLocal" parent="." unique_id=356713384 instance=ExtResource("4_ln6eb")]
 position = Vector2(716, 17)
-
-[node name="Trash" parent="." unique_id=220787020 instance=ExtResource("6_4ji0l")]
-position = Vector2(331, 117)

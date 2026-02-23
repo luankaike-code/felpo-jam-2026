@@ -1,18 +1,30 @@
 class_name ClientLocal extends Local
 
-@onready var character_sprite := $CharacterSprite as CharacterSprite
+@onready var character_sprite_pos: Node2D = $CharacterSpritePos
 @onready var speech_bubble_manager := $SpeechBubbleManager as SpeechBubbleManager
 @onready var state_machine := $StateMachine as StateMachine
 @onready var delivery_bubble := $DeliveryBubble as DeliveryBubble
 
 var current_client_order_index: int
 var current_client_data: ClientObj
+var character_sprite: CharacterSprite
 
 func new_client():
 	var client_name := ClientData.order[current_client_order_index]
 	current_client_data = ClientData.client[client_name]
 	
 	state_machine.change_state("NewClient")
+
+func add_character_sprite(character_name: CharacterData.names):
+	var packed_character_sprite := CharacterData.packeds[character_name]
+	character_sprite = packed_character_sprite.instantiate()
+	
+	character_sprite.position = character_sprite_pos.position
+	character_sprite.z_index = character_sprite_pos.z_index
+	add_child(character_sprite)
+	
+	speech_bubble_manager.global_position = character_sprite.get_bubble_position()
+	delivery_bubble.global_position = character_sprite.get_bubble_position()
 
 func open_delivery_bubble():
 	delivery_bubble.open()

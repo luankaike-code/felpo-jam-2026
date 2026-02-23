@@ -33,7 +33,7 @@ func handle_client_result_mensage():
 
 func enter(host_) -> void:
 	host = host_
-	var pos := host.character_sprite.global_position
+	var pos := host.character_sprite.get_bubble_position()
 	
 	var order_quality :=  get_order_quality()
 	host.close_delivery_bubble()

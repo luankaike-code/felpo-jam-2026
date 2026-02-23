@@ -10,6 +10,11 @@ enum names {
 	king_result_positive,
 	king_result_ok,
 	king_result_negative,
+	
+	warlord,
+	warlord_result_positive,
+	warlord_result_ok,
+	warlord_result_negative,
 }
 
 static var speechs: Dictionary[names, Array] = {
@@ -36,13 +41,27 @@ static var speechs: Dictionary[names, Array] = {
 		"e lhe garanto o seu maior desejo"
 	],
 	names.king_result_positive: [
-		"Esse pergaminho foi muito bom"
+		"Esse pergaminho foi muito bom",
 	],
 	names.king_result_ok: [
-		"Esse pergaminho foi ok"
+		"Esse pergaminho foi ok",
 	],
 	names.king_result_negative: [
 		"Esse pergaminho é um lixo",
 		"Guardas o matem"
+	],
+	
+	names.warlord: [
+		"Sou o chefe de guerra",
+	],
+	names.warlord_result_positive: [
+		"Esse pergaminho foi muito bom",
+	],
+	names.warlord_result_ok: [
+		"Esse pergaminho foi ok",
+	],
+	names.warlord_result_negative: [
+		"Esse pergaminho é um lixo",
+		"Seu bosta",
 	],
 }

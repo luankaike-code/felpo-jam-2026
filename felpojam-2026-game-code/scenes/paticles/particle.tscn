@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bj8ujame1fctx"]
+
+[ext_resource type="Script" uid="uid://d0xu6hvynwqek" path="res://scripts/particles/particle.gd" id="1_pethk"]
+
+[node name="Particle" type="Node2D" unique_id=253174399]
+script = ExtResource("1_pethk")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1752043906]
+emitting = false
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1705297793]
+emitting = false

@@ -2,12 +2,14 @@ class_name Rune extends Area2D
 
 @export var rune_name: RunesData.names 
 @onready var sprite := $Sprite2D as Sprite2D
+@onready var particle_rune: ParticleRune = $ParticleRune
+
 var link: Rune
 var data: RuneObj
 
 func _ready() -> void:
-	#rotation_degrees = randf_range(-45, 45)
 	data = RuneObj.new(rune_name, 1)
+	particle_rune.set_radius(30)
 	sprite.texture = RunesData.textures[rune_name]
 	area_entered.connect(liked_other_rune)
 
@@ -25,6 +27,7 @@ func liked_other_rune(area: Area2D):
 
 func level_up():
 	data.level += 1
+	particle_rune.set_emitting(true)
 	modulate = Color(0.15*data.level, 0.83, 0.773, 1.0)
 
 func move_to_link():

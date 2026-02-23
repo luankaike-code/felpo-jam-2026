@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dt4blvv8ojmqp"]
+
+[ext_resource type="PackedScene" uid="uid://bj8ujame1fctx" path="res://scenes/paticles/particle.tscn" id="1_c7ioe"]
+[ext_resource type="Script" uid="uid://ctli6qpuj3euw" path="res://scripts/particles/particle_rune.gd" id="2_25q3a"]
+
+[sub_resource type="Curve" id="Curve_25q3a"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.29863226), -1.7, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_vujhf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), -1.7, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_psepm"]
+curve = SubResource("Curve_vujhf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_utw0e"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 30.0
+gravity = Vector3(0, -40, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_psepm")
+
+[node name="ParticleRune" unique_id=253174399 instance=ExtResource("1_c7ioe")]
+script = ExtResource("2_25q3a")
+
+[node name="CPUParticles2D" parent="." index="0" unique_id=1752043906]
+amount = 5
+lifetime = 0.5
+emission_shape = 1
+emission_sphere_radius = 30.0
+gravity = Vector2(0, -40)
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_25q3a")
+
+[node name="GPUParticles2D" parent="." index="1" unique_id=1705297793]
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_utw0e")

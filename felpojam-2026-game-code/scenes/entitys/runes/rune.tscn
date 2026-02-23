@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuasnk30g4do1"]
 
 [ext_resource type="Script" uid="uid://dkq45ist47qcn" path="res://scripts/entitys/rune.gd" id="1_vvspm"]
+[ext_resource type="PackedScene" uid="uid://dt4blvv8ojmqp" path="res://scenes/paticles/particle_rune.tscn" id="2_uwly6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vvspm"]
 radius = 36.013885
@@ -12,3 +13,5 @@ script = ExtResource("1_vvspm")
 shape = SubResource("CircleShape2D_vvspm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=286010679]
+
+[node name="ParticleRune" parent="." unique_id=253174399 instance=ExtResource("2_uwly6")]

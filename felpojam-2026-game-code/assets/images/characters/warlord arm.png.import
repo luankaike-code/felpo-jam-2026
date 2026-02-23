@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tww13gt4mlxq"
-path="res://.godot/imported/concubine.png-e464a1c0918e72e855e8c54f33320e7d.ctex"
+uid="uid://ddmhaty3e05o0"
+path="res://.godot/imported/warlord arm.png-eb7cc55700e02b5438e1fc3e37049a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/concubine.png"
-dest_files=["res://.godot/imported/concubine.png-e464a1c0918e72e855e8c54f33320e7d.ctex"]
+source_file="res://assets/images/characters/warlord arm.png"
+dest_files=["res://.godot/imported/warlord arm.png-eb7cc55700e02b5438e1fc3e37049a07.ctex"]
 
 [params]
 

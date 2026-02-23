@@ -1,22 +1,18 @@
 extends State
 
 var host: ClientLocal
-var already_connect_with_character_sprite := false
 
 func enter(host_) -> void:
 	host = host_
 	
-	if !already_connect_with_character_sprite:
-		host.character_sprite.entered.connect(start_dialog)
-		already_connect_with_character_sprite = true
+	host.add_character_sprite(host.current_client_data.character_name)
+	
+	host.character_sprite.entered.connect(start_dialog)
 	
 	Sound.play_sound(SoundData.names.open_door, func():
 		Sound.play_sound(SoundData.names.close_door)
-		Sound.play_sound(SoundData.names.little_bell).add_event(0.2, enter_client)
+		Sound.play_sound(SoundData.names.little_bell).add_event(0.2, host.character_sprite.enter)
 	)
-
-func enter_client():
-	host.character_sprite.enter(host.current_client_data.character_name)
 
 func start_dialog():
 	var speech := SpeechsData.speechs[host.current_client_data.speech]

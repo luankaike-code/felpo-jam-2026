@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cs578fyagrqb0"]
+
+[ext_resource type="Script" uid="uid://dq0ohngooga3a" path="res://scripts/entitys/character_sprite/character_sprite.gd" id="1_g7sij"]
+
+[node name="CharacterSprite" type="Node2D" unique_id=1678707481]
+script = ExtResource("1_g7sij")
+
+[node name="BubblePos" type="Node2D" parent="." unique_id=2144655565]
+position = Vector2(0, -274)

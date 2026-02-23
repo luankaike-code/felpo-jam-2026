@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r2r3adbp52if"
-path="res://.godot/imported/big guy.png-865e050beec4c8142e084bde60896f73.ctex"
+uid="uid://tww13gt4mlxq"
+path="res://.godot/imported/concubine.png-1b14b0490930f6ecbbdf90cdef798840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/big guy.png"
-dest_files=["res://.godot/imported/big guy.png-865e050beec4c8142e084bde60896f73.ctex"]
+source_file="res://assets/images/characters/concubine.png"
+dest_files=["res://.godot/imported/concubine.png-1b14b0490930f6ecbbdf90cdef798840.ctex"]
 
 [params]
 
