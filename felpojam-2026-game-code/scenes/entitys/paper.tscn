@@ -14,7 +14,8 @@ z_index = 400
 z_as_relative = false
 script = ExtResource("1_memgj")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=220479855]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=220479855]
+clip_children = 2
 texture = ExtResource("2_n4o0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041061041]

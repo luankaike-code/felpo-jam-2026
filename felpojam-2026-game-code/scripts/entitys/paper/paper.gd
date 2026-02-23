@@ -1,6 +1,7 @@
 class_name Paper extends Draggable
 
 @onready var state_machine := $StateMachine as StateMachine
+@onready var sprite: Sprite2D = $Sprite
 
 var runes: Array[Rune]
 
@@ -23,9 +24,9 @@ func play_paper_drag_sound():
 func add_rune(rune_scene: Rune, rune_global_position: Vector2) -> bool:
 	if runes.size() >= 2:
 		return false
-		
+	
 	rune_scene.position = to_local(rune_global_position)
-	add_child(rune_scene)
+	sprite.add_child(rune_scene)
 	runes.push_front(rune_scene)
 	return true
 
