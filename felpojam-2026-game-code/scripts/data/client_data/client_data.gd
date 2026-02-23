@@ -25,13 +25,31 @@ static var client: Dictionary[names, ClientObj] = {
 
 static var client_result: Dictionary[names, ClientResultPossibility] = {
 	names.concubine: ClientResultPossibility.new(
-		ClientResult.new(SpeechsData.names.concubine_result_positive, 50.0),
-		ClientResult.new(SpeechsData.names.concubine_result_ok, 25.0),
-		ClientResult.new(SpeechsData.names.concubine_result_negative, -50.0)
+		ClientResult.new(
+			SpeechsData.names.concubine_result_positive, 
+			ClientResultMensageMoney.new(50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.concubine_result_ok, 
+			ClientResultMensageMoney.new(25.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.concubine_result_negative, 
+			ClientResultMensageMoney.new(-50.0)
+		)
 	),
 	names.king: ClientResultPossibility.new(
-		ClientResult.new(SpeechsData.names.king_result_positive, 50.0),
-		ClientResult.new(SpeechsData.names.king_result_ok, 25.0),
-		ClientResult.new(SpeechsData.names.king_result_negative, -50.0)
+		ClientResult.new(
+			SpeechsData.names.king_result_positive, 
+			ClientResultMensageMoney.new(50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.king_result_ok, 
+			ClientResultMensageMoney.new(25.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.king_result_negative, 
+			ClientResultMensageMoney.new(-50.0)
+		)
 	)
 }

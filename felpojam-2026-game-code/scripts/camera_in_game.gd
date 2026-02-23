@@ -3,6 +3,7 @@ class_name CameraInGame extends Camera2D
 @onready var state_machine := $StateMachine as StateMachine
 
 var target: Node2D
+var statics: Array
 @onready var default_zoom := zoom
 
 func _ready() -> void:
@@ -17,3 +18,4 @@ func update_zoom():
 func to(target_: Node2D):
 	target = target_
 	state_machine.change_state("Transition")
+	

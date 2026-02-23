@@ -6,7 +6,7 @@ signal entered
 signal exited
 
 func _ready() -> void:
-	modulate = Color(0, 0, 0, 0)
+	modulate = Color(0.0, 0.0, 0.0, 0.0)
 
 func enter(character_name: CharacterData.names):
 	var tween := get_tree().create_tween()

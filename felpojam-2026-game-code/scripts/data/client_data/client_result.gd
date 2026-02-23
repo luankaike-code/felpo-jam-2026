@@ -1,8 +1,8 @@
 class_name ClientResult extends Resource
 
-var money: float
+var mensage: ClientResultMensage
 var speech: SpeechsData.names
 
-func _init(speech_: SpeechsData.names, money_: float) -> void:
+func _init(speech_: SpeechsData.names, mensage_: ClientResultMensage) -> void:
 	speech = speech_
-	money = money_
+	mensage = mensage_

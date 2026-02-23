@@ -9,45 +9,54 @@
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="8_edtm0"]
 [ext_resource type="PackedScene" uid="uid://daa3bayphv4yc" path="res://scenes/entitys/runes/water_rune.tscn" id="9_3hllw"]
 [ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="9_umv4u"]
+[ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="10_00w25"]
+[ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="11_wwimg"]
 
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
 script = ExtResource("2_xt3nh")
 
-[node name="StackPapers" parent="." index="1" unique_id=117007281 instance=ExtResource("5_mvwp7")]
-position = Vector2(-240, -103)
+[node name="Carpet" type="Sprite2D" parent="." index="1" unique_id=1746305780]
+position = Vector2(-61, 70)
+texture = ExtResource("11_wwimg")
 
-[node name="InkStand" parent="." index="2" unique_id=920137688 instance=ExtResource("2_00w25")]
+[node name="StackPapers" parent="." index="2" unique_id=117007281 instance=ExtResource("5_mvwp7")]
+position = Vector2(-116, -119)
+
+[node name="InkStand" parent="." index="3" unique_id=920137688 instance=ExtResource("2_00w25")]
 position = Vector2(229, -110)
 
-[node name="InkStand2" parent="." index="3" unique_id=1137657733 instance=ExtResource("2_00w25")]
+[node name="InkStand2" parent="." index="4" unique_id=1137657733 instance=ExtResource("2_00w25")]
 position = Vector2(144, -110)
 
-[node name="RunesBook" parent="." index="4" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
-position = Vector2(-205, 80)
+[node name="RunesBook" parent="." index="5" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
+position = Vector2(-269, 83)
 
-[node name="Dropper" parent="." index="5" unique_id=392739461 instance=ExtResource("9_umv4u")]
-position = Vector2(-8, -106)
+[node name="Dropper" parent="." index="6" unique_id=392739461 instance=ExtResource("9_umv4u")]
+position = Vector2(65, -146)
 
-[node name="Stamp" parent="." index="6" unique_id=769955536 instance=ExtResource("8_edtm0")]
+[node name="Stamp" parent="." index="7" unique_id=769955536 instance=ExtResource("8_edtm0")]
 position = Vector2(120, 15)
 packed_rune = ExtResource("7_u7af2")
 
-[node name="Stamp2" parent="." index="7" unique_id=1815245524 instance=ExtResource("8_edtm0")]
+[node name="Stamp2" parent="." index="8" unique_id=1815245524 instance=ExtResource("8_edtm0")]
 position = Vector2(116, 81)
 packed_rune = ExtResource("9_3hllw")
 
-[node name="Stamp3" parent="." index="8" unique_id=2013902919 instance=ExtResource("8_edtm0")]
+[node name="Stamp3" parent="." index="9" unique_id=2013902919 instance=ExtResource("8_edtm0")]
 position = Vector2(117, 148)
 packed_rune = ExtResource("9_3hllw")
 
-[node name="Stamp4" parent="." index="9" unique_id=1428336526 instance=ExtResource("8_edtm0")]
+[node name="Stamp4" parent="." index="10" unique_id=1428336526 instance=ExtResource("8_edtm0")]
 position = Vector2(230, 11)
 packed_rune = ExtResource("9_3hllw")
 
-[node name="Stamp5" parent="." index="10" unique_id=351989747 instance=ExtResource("8_edtm0")]
+[node name="Stamp5" parent="." index="11" unique_id=351989747 instance=ExtResource("8_edtm0")]
 position = Vector2(226, 77)
 packed_rune = ExtResource("9_3hllw")
 
-[node name="Stamp6" parent="." index="11" unique_id=618230820 instance=ExtResource("8_edtm0")]
+[node name="Stamp6" parent="." index="12" unique_id=618230820 instance=ExtResource("8_edtm0")]
 position = Vector2(227, 144)
 packed_rune = ExtResource("9_3hllw")
+
+[node name="Trash" parent="Stamp6" index="3" unique_id=220787020 instance=ExtResource("10_00w25")]
+position = Vector2(-484, -233)

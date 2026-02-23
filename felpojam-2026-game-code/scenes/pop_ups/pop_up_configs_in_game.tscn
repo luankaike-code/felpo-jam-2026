@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1y7icenhs8e3" path="res://scenes/screens/configurations.tscn" id="2_w1lo2"]
 
 [node name="PopUpConfigsInGame" type="Node2D" unique_id=2109827692]
+z_index = 4000
 script = ExtResource("1_opmg5")
 metadata/_custom_type_script = "uid://m741nhr6vpsv"
 

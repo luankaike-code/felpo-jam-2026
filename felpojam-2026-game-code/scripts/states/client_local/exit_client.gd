@@ -1,17 +1,14 @@
 extends State
 
 var host: ClientLocal
-var order_quality: float
+var order_result: ClientResult
 
-func enter(host_) -> void:
-	host = host_
-	var pos := host.character_sprite.global_position
-	
+func get_order_quality() -> float:
 	var order = OrdersData.orders[host.current_client_data.order]
 	var o := OrderObj.new(host.delivery_bubble.get_fields_content())
-	order_quality =  Calc.calc_order_obj_proximity(order, o)
-	host.close_delivery_bubble()
-	
+	return Calc.calc_order_obj_proximity(order, o)
+
+func get_order_result(order_quality: float) -> ClientResult:
 	var client_name := ClientData.order[host.current_client_order_index]
 	var results := ClientData.client_result[client_name]
 	var current_result: ClientResult
@@ -23,11 +20,28 @@ func enter(host_) -> void:
 	else:
 		current_result = results.negative
 	
-	var speech := SpeechsData.speechs[current_result.speech]
-	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
-	speech_bubble.finish_all_dialogs.connect(host.character_sprite.exit)
-	
+	return current_result
+
+func _on_finish_all_dialogs():
+	handle_client_result_mensage()
 	change_state.emit("Idle")
+
+func handle_client_result_mensage():
+	if order_result.mensage is ClientResultMensageMoney:
+		Global.money += order_result.mensage.money
+	host.character_sprite.exit()
+
+func enter(host_) -> void:
+	host = host_
+	var pos := host.character_sprite.global_position
+	
+	var order_quality :=  get_order_quality()
+	host.close_delivery_bubble()
+	order_result = get_order_result(order_quality)
+	
+	var speech := SpeechsData.speechs[order_result.speech]
+	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
+	speech_bubble.finish_all_dialogs.connect(_on_finish_all_dialogs)
 
 func exit():
 	host.current_client_order_index += 1

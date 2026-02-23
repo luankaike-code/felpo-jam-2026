@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://m47ar852hngx"]
+
+[ext_resource type="Script" uid="uid://cp2n0wa8iaaxi" path="res://scripts/entitys/money_bag.gd" id="1_n11ck"]
+[ext_resource type="Texture2D" uid="uid://dxay7l75fc2t8" path="res://assets/images/money_bag.png" id="1_uoguk"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_y5ep4"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="4_n138l"]
+[ext_resource type="Script" uid="uid://dtrto5333oj1m" path="res://scripts/states/money_bag/gain_money.gd" id="5_n138l"]
+[ext_resource type="Script" uid="uid://b6nt4irn1tcon" path="res://scripts/states/money_bag/lost_money.gd" id="6_ui3yj"]
+
+[node name="MoneyBag" type="Node2D" unique_id=51547907]
+script = ExtResource("1_n11ck")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944073872]
+scale = Vector2(3, 3)
+texture = ExtResource("1_uoguk")
+hframes = 2
+frame = 1
+
+[node name="StateMachine" type="Node" parent="." unique_id=1230519366 node_paths=PackedStringArray("current_state")]
+script = ExtResource("3_y5ep4")
+current_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=461014876]
+script = ExtResource("4_n138l")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="GainMoney" type="Node" parent="StateMachine" unique_id=1315788251]
+script = ExtResource("5_n138l")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="LostMoney" type="Node" parent="StateMachine" unique_id=674133665]
+script = ExtResource("6_ui3yj")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"

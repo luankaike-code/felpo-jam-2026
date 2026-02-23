@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://f23l5pvhm3bj" path="res://scripts/locals/client_local.gd" id="2_qqkxa"]
 [ext_resource type="PackedScene" uid="uid://bus65tqh6i83b" path="res://scenes/entitys/character_sprite.tscn" id="3_geiil"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="3_qqkxa"]
-[ext_resource type="Texture2D" uid="uid://tww13gt4mlxq" path="res://assets/images/concubine.png" id="4_ph3mh"]
+[ext_resource type="Texture2D" uid="uid://r2r3adbp52if" path="res://assets/images/big guy.png" id="4_e681v"]
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="5_pp4ci"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="6_6kv1h"]
 [ext_resource type="Script" uid="uid://dcu03w3wuqsy1" path="res://scripts/states/client_local/new_client.gd" id="7_geiil"]
@@ -12,13 +12,14 @@
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="9_gd4ri"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
 [ext_resource type="PackedScene" uid="uid://bqlbykpw7ass8" path="res://scenes/entitys/delivery_bubble/delivery_bubble.tscn" id="10_aedb0"]
+[ext_resource type="PackedScene" uid="uid://m47ar852hngx" path="res://scenes/entitys/money_bag.tscn" id="13_e681v"]
 
 [node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
 script = ExtResource("2_qqkxa")
 
 [node name="CharacterSprite" parent="." index="1" unique_id=934250755 instance=ExtResource("3_geiil")]
 position = Vector2(-140, 3)
-texture = ExtResource("4_ph3mh")
+texture = ExtResource("4_e681v")
 
 [node name="Table" type="Sprite2D" parent="." index="2" unique_id=56828278]
 position = Vector2(4.0000005, 171)
@@ -33,7 +34,11 @@ metadata/_custom_type_script = "uid://b22ark22c86p4"
 [node name="DeliveryBubble" parent="." index="4" unique_id=557448253 instance=ExtResource("10_aedb0")]
 position = Vector2(-98, -134)
 
-[node name="StateMachine" type="Node" parent="." index="5" unique_id=420485562 node_paths=PackedStringArray("current_state")]
+[node name="MoneyBag" parent="." index="5" unique_id=51547907 node_paths=PackedStringArray("node_ref") instance=ExtResource("13_e681v")]
+position = Vector2(173, 115)
+node_ref = NodePath("../CharacterSprite")
+
+[node name="StateMachine" type="Node" parent="." index="6" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")
 current_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://c8bo8naw8qjrt"

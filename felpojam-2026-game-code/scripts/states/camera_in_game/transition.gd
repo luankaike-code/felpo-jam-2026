@@ -1,6 +1,7 @@
 extends State
 
 var tween: Tween
+var statics_tweens: Array[Tween]
 
 func to_idle():
 	change_state.emit("Idle")
