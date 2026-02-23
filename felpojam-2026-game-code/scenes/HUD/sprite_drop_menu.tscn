@@ -20,4 +20,5 @@ text = "Selecione"
 
 [node name="OptionsConteiner" type="VBoxContainer" parent="." unique_id=1990302820]
 top_level = true
+z_index = 4001
 layout_mode = 2
