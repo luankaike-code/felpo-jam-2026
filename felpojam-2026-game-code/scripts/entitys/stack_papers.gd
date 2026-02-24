@@ -9,7 +9,7 @@ signal spawn_node(node: Node2D)
 func _ready() -> void:
 	call_deferred("spawn_paper")
 
-func spawn_paper() -> void:	
+func spawn_paper() -> void:
 	var paper_scene = packed_paper.instantiate() as Paper
 	paper_scene.start_drag.connect(_on_paper_start_drag)
 	paper_scene.position = position

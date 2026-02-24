@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://2xmkj4xthcpj"]
+
+[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="1_sf5qw"]
+[ext_resource type="Script" uid="uid://cyne607er0ohn" path="res://scripts/HUD/delivery_zone_interface.gd" id="2_3d5wf"]
+[ext_resource type="PackedScene" uid="uid://dwe81rnwpk8gs" path="res://scenes/entitys/delivery_bubble/delivery_zone.tscn" id="3_6inol"]
+
+[node name="DeliveryZoneInterface" type="TextureRect" unique_id=1086462754]
+modulate = Color(0.7666196, 0.76661956, 0.76661944, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(497, -169)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_sf5qw")
+script = ExtResource("2_3d5wf")
+
+[node name="DeliveryZone" parent="." unique_id=1330716735 instance=ExtResource("3_6inol")]

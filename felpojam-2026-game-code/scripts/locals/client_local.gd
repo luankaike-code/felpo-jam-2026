@@ -3,11 +3,12 @@ class_name ClientLocal extends Local
 @onready var character_sprite_pos: Node2D = $CharacterSpritePos
 @onready var speech_bubble_manager := $SpeechBubbleManager as SpeechBubbleManager
 @onready var state_machine := $StateMachine as StateMachine
-@onready var delivery_bubble := $DeliveryBubble as DeliveryBubble
 
 var current_client_order_index: int
 var current_client_data: ClientObj
 var character_sprite: CharacterSprite
+
+var current_order: OrderObj
 
 func new_client():
 	var client_name := ClientData.order[current_client_order_index]
@@ -24,15 +25,6 @@ func add_character_sprite(character_name: CharacterData.names):
 	add_child(character_sprite)
 	
 	speech_bubble_manager.global_position = character_sprite.get_bubble_position()
-	delivery_bubble.global_position = character_sprite.get_bubble_position()
-
-func open_delivery_bubble():
-	delivery_bubble.open()
-	for i in OrdersData.orders[current_client_data.order].parchments:
-		delivery_bubble.add_delivery_zone()
-
-func close_delivery_bubble():
-	delivery_bubble.close()
 
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:

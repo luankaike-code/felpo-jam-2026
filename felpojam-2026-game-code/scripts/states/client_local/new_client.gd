@@ -16,8 +16,7 @@ func enter(host_) -> void:
 
 func start_dialog():
 	var speech := SpeechsData.speechs[host.current_client_data.speech]
-	var pos := host.delivery_bubble.global_position
-	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
+	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech)
 	speech_bubble.finish_all_dialogs.connect(to_idle_client)
 
 func to_idle_client():

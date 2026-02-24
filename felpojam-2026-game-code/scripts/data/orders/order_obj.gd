@@ -4,3 +4,6 @@ var parchments: Array[ParchmentObj]
 
 func _init(parchments_: Array[ParchmentObj]) -> void:
 	parchments = parchments_
+
+func size() -> int:
+	return parchments.size()

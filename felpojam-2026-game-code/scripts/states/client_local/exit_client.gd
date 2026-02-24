@@ -5,8 +5,7 @@ var order_result: ClientResult
 
 func get_order_quality() -> float:
 	var order = OrdersData.orders[host.current_client_data.order]
-	var o := OrderObj.new(host.delivery_bubble.get_fields_content())
-	return Calc.calc_order_obj_proximity(order, o)
+	return Calc.calc_order_obj_proximity(order, host.current_order)
 
 func get_order_result(order_quality: float) -> ClientResult:
 	var client_name := ClientData.order[host.current_client_order_index]
@@ -33,14 +32,12 @@ func handle_client_result_mensage():
 
 func enter(host_) -> void:
 	host = host_
-	var pos := host.character_sprite.get_bubble_position()
 	
 	var order_quality :=  get_order_quality()
-	host.close_delivery_bubble()
 	order_result = get_order_result(order_quality)
 	
 	var speech := SpeechsData.speechs[order_result.speech]
-	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech, pos)
+	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech)
 	speech_bubble.finish_all_dialogs.connect(_on_finish_all_dialogs)
 
 func exit():

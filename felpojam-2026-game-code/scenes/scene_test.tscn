@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://crqpv2j7fejs6"]
+
+[ext_resource type="PackedScene" uid="uid://dqgpfoti51p2e" path="res://scenes/HUD/speech_bubble.tscn" id="1_qjyi6"]
+[ext_resource type="Script" uid="uid://bm8tmg773ugd3" path="res://scripts/scene_test.gd" id="1_x8lw6"]
+[ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="2_1o0ef"]
+[ext_resource type="PackedScene" uid="uid://dn0xy2d56orj6" path="res://scenes/entitys/paper.tscn" id="3_gw0ce"]
+[ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="4_x8lw6"]
+
+[node name="SceneTest" type="Node2D" unique_id=2009411661]
+script = ExtResource("1_x8lw6")
+
+[node name="SpeechBubble" parent="." unique_id=1045248266 instance=ExtResource("1_qjyi6")]
+offset_left = -132.0
+offset_top = -145.0
+offset_right = 128.0
+offset_bottom = -33.0
+dialogs = ["blaõ de teste", "olá os deliverys abaixo"]
+delivery_zone_count = 3
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=865486547]
+zoom = Vector2(2, 2)
+
+[node name="Stamp" parent="." unique_id=769955536 instance=ExtResource("2_1o0ef")]
+position = Vector2(258, 112)
+
+[node name="Paper" parent="." unique_id=449771312 instance=ExtResource("3_gw0ce")]
+position = Vector2(-247, 113)
+
+[node name="Paper2" parent="." unique_id=33180320 instance=ExtResource("3_gw0ce")]
+position = Vector2(-138, 114)
+
+[node name="Paper3" parent="." unique_id=1701592729 instance=ExtResource("3_gw0ce")]
+position = Vector2(-245, 7)
+
+[node name="Paper4" parent="." unique_id=943203515 instance=ExtResource("3_gw0ce")]
+position = Vector2(-245, -113)
+
+[node name="InkStand" parent="." unique_id=920137688 instance=ExtResource("4_x8lw6")]
+position = Vector2(257, 28)
