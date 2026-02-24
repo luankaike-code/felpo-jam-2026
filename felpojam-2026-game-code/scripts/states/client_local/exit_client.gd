@@ -32,6 +32,7 @@ func handle_client_result_mensage():
 
 func enter(host_) -> void:
 	host = host_
+	host.exit_client.emit()
 	
 	var order_quality :=  get_order_quality()
 	order_result = get_order_result(order_quality)

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="5_pp4ci"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="6_6kv1h"]
 [ext_resource type="Script" uid="uid://dcu03w3wuqsy1" path="res://scripts/states/client_local/new_client.gd" id="7_geiil"]
+[ext_resource type="Script" uid="uid://b486mdcokj7w6" path="res://scripts/states/client_local/craft_time.gd" id="8_aedb0"]
 [ext_resource type="Script" uid="uid://8vbt8kvjfppn" path="res://scripts/states/client_local/idle_client.gd" id="8_geiil"]
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="9_gd4ri"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
@@ -42,10 +43,14 @@ metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 script = ExtResource("7_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 
-[node name="IdleClient" type="Node" parent="StateMachine" index="2" unique_id=1139976208]
+[node name="CraftTime" type="Node" parent="StateMachine" index="2" unique_id=575668358]
+script = ExtResource("8_aedb0")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="ClientWaitOrder" type="Node" parent="StateMachine" index="3" unique_id=1139976208]
 script = ExtResource("8_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 
-[node name="ExitClient" type="Node" parent="StateMachine" index="3" unique_id=1572576924]
+[node name="ExitClient" type="Node" parent="StateMachine" index="4" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"

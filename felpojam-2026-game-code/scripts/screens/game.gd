@@ -2,15 +2,26 @@ extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 
-@onready var locals := [$ClientLocal, $CraftLocal]
+@onready var client_local: ClientLocal = $ClientLocal
+@onready var craft_local: CraftLocal = $CraftLocal
+
+@onready var locals := [client_local, craft_local]
 
 var current_local := 0
 
 func _ready() -> void:
 	for local in locals:
 		local.open_pop_up.connect(factory_pop_up)
+
+	client_local.client_wait_order.connect(func(): freeze_all_craft_items(true))
+	client_local.exit_client.connect(func(): freeze_all_craft_items(false))
 	
 	play_music.emit(SoundData.names.shop_music)
+
+func freeze_all_craft_items(value: bool):
+	for draggable in get_tree().get_nodes_in_group("draggables"):
+		if draggable is Stamp || draggable is Dropper:
+			draggable.is_freeze = value
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:

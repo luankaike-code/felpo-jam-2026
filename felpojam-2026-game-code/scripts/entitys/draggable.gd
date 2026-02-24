@@ -17,6 +17,7 @@ var is_dragging := false :
 		else: 
 			finish_drag.emit()
 			_finish_drag()
+var is_freeze := false
 
 var is_draggable := true
 var was_clicked := false
@@ -64,15 +65,17 @@ func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> v
 				return
 
 	if Global.drag_mode == ControlData.drag_mode.hold:
-		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed() && !is_freeze:
 			is_dragging = true
 		elif event.button_index == MOUSE_BUTTON_LEFT && !event.is_pressed():
 			is_dragging = false
 	else:
-		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_LEFT && event.is_pressed() && !is_freeze:
 			was_clicked = true
 			set_deferred("was_clicked", false)
 			is_dragging = !is_dragging
+		elif is_freeze:
+			is_dragging = false
 
 func get_overlapping_stand() -> Stand:
 	var areas := get_overlapping_areas()

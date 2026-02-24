@@ -10,6 +10,11 @@ var character_sprite: CharacterSprite
 
 var current_order: OrderObj
 
+@warning_ignore("unused_signal")
+signal client_wait_order
+@warning_ignore("unused_signal")
+signal exit_client
+
 func new_client():
 	var client_name := ClientData.order[current_client_order_index]
 	current_client_data = ClientData.client[client_name]
@@ -25,6 +30,19 @@ func add_character_sprite(character_name: CharacterData.names):
 	add_child(character_sprite)
 	
 	speech_bubble_manager.global_position = character_sprite.get_bubble_position()
+
+func enter_character():
+	Sound.play_sound(SoundData.names.open_door, func():
+		Sound.play_sound(SoundData.names.close_door)
+		Sound.play_sound(SoundData.names.little_bell).add_event(0.2, character_sprite.enter)
+	)
+	
+func exit_character():
+	character_sprite.exit()
+	Sound.play_sound(SoundData.names.open_door, func():
+		Sound.play_sound(SoundData.names.close_door)
+		Sound.play_sound(SoundData.names.little_bell)
+	)
 
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:
