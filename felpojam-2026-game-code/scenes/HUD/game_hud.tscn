@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dxr7kr6t64oid"]
+
+[ext_resource type="Script" uid="uid://da527j4ft7nq0" path="res://scripts/HUD/game_hud.gd" id="1_1geg4"]
+[ext_resource type="PackedScene" uid="uid://dqgpfoti51p2e" path="res://scenes/HUD/speech_bubble.tscn" id="2_8vgd5"]
+[ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_c4sub"]
+[ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="4_kixb8"]
+
+[node name="GameHud" type="Control" unique_id=1329675360]
+custom_minimum_size = Vector2(720, 450)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1geg4")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1308647903]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Control2" type="Control" parent="MarginContainer" unique_id=637803293]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control2" unique_id=1493797194]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="DickBubble" parent="MarginContainer/Control2/HBoxContainer" unique_id=1045248266 instance=ExtResource("2_8vgd5")]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+dialogs = ["A dick é"]
+
+[node name="Clock" type="TextureRect" parent="MarginContainer/Control2/HBoxContainer" unique_id=2132065394]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_c4sub")
+
+[node name="Control" type="Control" parent="MarginContainer" unique_id=960035302]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control" unique_id=1328541034]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ArrowLeft" type="TextureRect" parent="MarginContainer/Control/HBoxContainer" unique_id=212700544]
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("2_c4sub")
+script = ExtResource("4_kixb8")
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="ArrowRight" type="TextureRect" parent="MarginContainer/Control/HBoxContainer" unique_id=1631663697]
+layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("2_c4sub")
+script = ExtResource("4_kixb8")
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"

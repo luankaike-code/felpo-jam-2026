@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0hsi3ltxhoua" path="res://assets/images/wood.png" id="3_o78e0"]
 [ext_resource type="PackedScene" uid="uid://c2liuyeax0kjk" path="res://scenes/locals/client_local.tscn" id="3_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://dnvx87pnj4fgh" path="res://scenes/locals/craft_local.tscn" id="4_ln6eb"]
+[ext_resource type="PackedScene" uid="uid://dxr7kr6t64oid" path="res://scenes/HUD/game_hud.tscn" id="5_ln6eb"]
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -14,3 +15,5 @@ metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 [node name="CraftLocal" parent="." unique_id=1460891692 instance=ExtResource("4_ln6eb")]
 position = Vector2(720, 0)
 bg_texture = ExtResource("3_o78e0")
+
+[node name="GameHud" parent="." unique_id=1329675360 instance=ExtResource("5_ln6eb")]
