@@ -1,10 +1,12 @@
 class_name CameraInGame extends Camera2D
 
 @onready var state_machine := $StateMachine as StateMachine
+@onready var default_zoom := zoom
+@onready var old_global_pos := position
 
 var target: Node2D
 var statics: Array
-@onready var default_zoom := zoom
+var interfaces: Array[Node2D]
 
 func _ready() -> void:
 	get_viewport().size_changed.connect(update_zoom)
@@ -14,7 +16,10 @@ func update_zoom():
 	
 	zoom.x = default_zoom.x * viewport_size.x / 1440
 	zoom.y = zoom.x
-	
+
+func add_interface(node: Node2D) -> void:
+	interfaces.push_back(node)
+
 func to(target_: Node2D):
 	target = target_
 	state_machine.change_state("Transition")

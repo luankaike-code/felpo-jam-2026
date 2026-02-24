@@ -17,3 +17,4 @@ position = Vector2(720, 0)
 bg_texture = ExtResource("3_o78e0")
 
 [node name="GameHud" parent="." unique_id=1329675360 instance=ExtResource("5_ln6eb")]
+z_index = 3800

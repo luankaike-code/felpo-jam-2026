@@ -2,7 +2,7 @@ extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 
-@onready var game_hud: GameHud = $GameHud
+@onready var game_hud: Node2D = $GameHud
 
 @onready var client_local: ClientLocal = $ClientLocal
 @onready var craft_local: CraftLocal = $CraftLocal
@@ -11,13 +11,15 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 
 var current_local := 0 :
 	set(new):
-		current_local = new
+		current_local = new % locals.size()
 		update_arrow_enabled()
 
 func _ready() -> void:
 	for local in locals:
 		local.open_pop_up.connect(factory_pop_up)
-
+	
+	camera.add_interface(game_hud)
+	
 	client_local.client_wait_order.connect(func(): freeze_all_craft_items(true))
 	client_local.exit_client.connect(func(): freeze_all_craft_items(false))
 	
@@ -56,4 +58,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		factory_pop_up(packed_menu_in_game.instantiate())
 	elif Input.is_action_just_pressed("ui_accept") and !has_pop_up():
 		current_local += 1
-		camera.to(locals[current_local%locals.size()])
+		camera.to(locals[current_local])
