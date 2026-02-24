@@ -18,7 +18,6 @@ func _ready() -> void:
 	main_sprite_button.button_up.connect(_toggle_option_visibility)
 
 func _toggle_option_visibility():
-	print(options_is_open)
 	if options_is_open:
 		_close_options()
 	else:

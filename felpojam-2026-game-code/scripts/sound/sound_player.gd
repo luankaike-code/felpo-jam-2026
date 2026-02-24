@@ -1,7 +1,7 @@
 class_name SoundPlayer extends Node
 
 var audio_stream_player: AudioStreamPlayer
-var current_callable := func(): print("tá usando o default")
+var current_callable := func(): return
 var loop_count := 1
 var events: Array[SoundEvent]
 

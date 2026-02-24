@@ -37,7 +37,6 @@ func add_rune(rune_name: RunesData.names, rune_global_position: Vector2) -> bool
 func _finish_drag():
 	if current_stand:
 		var result = current_stand.place_item(self)
-		print(current_stand is DeliveryZone, result, self)
 		if current_stand is DeliveryZone && !result:
 			Sound.play_sound(SoundData.names.error)
 			state_machine.change_state("AnimationShaking")

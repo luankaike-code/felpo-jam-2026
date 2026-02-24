@@ -11,7 +11,6 @@ func create_speech_bubble(dialogs: Array, delivery_zone_count := 0, automatic_de
 	return speech_bubble
 
 func connect_signals_to_automatic_destroy(speech_bubble: SpeechBubble):
-	print("aaaaaaaa")
 	var has_delivery_zone := speech_bubble.delivery_zone_count > 0
 	if has_delivery_zone:
 		@warning_ignore("unused_parameter")

@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://8vbt8kvjfppn" path="res://scripts/states/client_local/idle_client.gd" id="8_geiil"]
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="9_gd4ri"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
-[ext_resource type="PackedScene" uid="uid://m47ar852hngx" path="res://scenes/entitys/money_bag.tscn" id="13_e681v"]
 
 [node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
 script = ExtResource("2_qqkxa")
@@ -30,10 +29,7 @@ z_index = 10
 script = ExtResource("5_pp4ci")
 metadata/_custom_type_script = "uid://b22ark22c86p4"
 
-[node name="MoneyBag" parent="." index="4" unique_id=51547907 instance=ExtResource("13_e681v")]
-position = Vector2(173, 115)
-
-[node name="StateMachine" type="Node" parent="." index="5" unique_id=420485562 node_paths=PackedStringArray("current_state")]
+[node name="StateMachine" type="Node" parent="." index="4" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")
 current_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://c8bo8naw8qjrt"

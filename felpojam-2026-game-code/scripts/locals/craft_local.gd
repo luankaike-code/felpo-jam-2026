@@ -7,7 +7,4 @@ func _ready() -> void:
 	super()
 	
 	runes_book.open.connect(open_pop_up.emit)
-	stack_papers.spawn_node.connect(func(x): 
-		print("porra: ", x)
-		add_child(x)
-	)
+	stack_papers.spawn_node.connect(func(x): add_child(x))

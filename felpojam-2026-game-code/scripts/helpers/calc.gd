@@ -13,8 +13,6 @@ static func calc_order_obj_proximity(order1: OrderObj, order2: OrderObj) -> floa
 	if size_difference > 0:
 		result /= 1.2*size_difference
 	
-	print(result)
-	
 	return result
 
 static func calc_parchment_obj_proximity(parchment1: ParchmentObj, parchment2: ParchmentObj) -> float:
