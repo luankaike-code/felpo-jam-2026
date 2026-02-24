@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c2edwa3dfa3s1"]
+
+[ext_resource type="Script" uid="uid://djoo3m24qly77" path="res://scripts/screens/tutorial.gd" id="1_hkmfp"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_2y6gk"]
+[ext_resource type="Texture2D" uid="uid://ds56xecvrsf44" path="res://assets/images/table.png" id="3_2h4tw"]
+[ext_resource type="Texture2D" uid="uid://b0hsi3ltxhoua" path="res://assets/images/wood.png" id="4_yx86u"]
+[ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="5_2pmk5"]
+[ext_resource type="PackedScene" uid="uid://cj4k5fngr2dev" path="res://scenes/entitys/stack_papers.tscn" id="6_1vsev"]
+[ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="7_8wpgk"]
+[ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="8_830j8"]
+[ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="9_6oe0h"]
+[ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="10_1vsev"]
+
+[node name="Tutorial" type="Node2D" unique_id=1632460734]
+script = ExtResource("1_hkmfp")
+metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+
+[node name="ClientLocal" parent="." unique_id=1423880516 instance=ExtResource("2_2y6gk")]
+
+[node name="Table" type="Sprite2D" parent="ClientLocal" unique_id=574937759]
+position = Vector2(0, 185)
+rotation = 3.1415927
+texture = ExtResource("3_2h4tw")
+region_enabled = true
+region_rect = Rect2(0, 0, 720, 80)
+
+[node name="CraftLocal" parent="." unique_id=242342429 instance=ExtResource("2_2y6gk")]
+position = Vector2(720, 0)
+bg_texture = ExtResource("4_yx86u")
+
+[node name="Carpet" type="Sprite2D" parent="CraftLocal" unique_id=1855716032]
+position = Vector2(50, 35)
+texture = ExtResource("5_2pmk5")
+
+[node name="StackPapers" parent="CraftLocal" unique_id=117007281 instance=ExtResource("6_1vsev")]
+position = Vector2(-236, -103)
+
+[node name="InkStand2" parent="CraftLocal" unique_id=920137688 instance=ExtResource("7_8wpgk")]
+position = Vector2(251, -117)
+
+[node name="Dropper" parent="CraftLocal" unique_id=392739461 instance=ExtResource("8_830j8")]
+position = Vector2(295, 115)
+
+[node name="Stamp" parent="CraftLocal" unique_id=769955536 instance=ExtResource("9_6oe0h")]
+position = Vector2(298, -37)
+
+[node name="Stamp2" parent="CraftLocal" unique_id=1009167012 instance=ExtResource("9_6oe0h")]
+position = Vector2(297, 42)
+rune_name = 1
+
+[node name="RunesBook" parent="CraftLocal" unique_id=1322508017 instance=ExtResource("10_1vsev")]
+position = Vector2(-240, 108)

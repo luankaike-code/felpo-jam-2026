@@ -14,7 +14,7 @@
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
 script = ExtResource("2_xt3nh")
 
-[node name="Icon" parent="." index="1" unique_id=1443372050]
+[node name="Bg" parent="." index="1" unique_id=1443372050]
 texture_repeat = 2
 texture = ExtResource("10_wwimg")
 region_enabled = true
@@ -28,10 +28,10 @@ texture = ExtResource("11_wwimg")
 position = Vector2(-116, -119)
 
 [node name="InkStand" parent="." index="4" unique_id=920137688 instance=ExtResource("2_00w25")]
-position = Vector2(225, -23)
+position = Vector2(217, -157)
 
 [node name="InkStand2" parent="." index="5" unique_id=1137657733 instance=ExtResource("2_00w25")]
-position = Vector2(140, -23)
+position = Vector2(132, -157)
 
 [node name="RunesBook" parent="." index="6" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
 position = Vector2(-269, 83)
@@ -49,10 +49,17 @@ position = Vector2(134, 79)
 position = Vector2(236, 77)
 rune_name = 1
 
-[node name="Stamp3" parent="." index="11" unique_id=2122770798 instance=ExtResource("8_edtm0")]
+[node name="Stamp5" parent="." index="11" unique_id=539662780 instance=ExtResource("8_edtm0")]
+position = Vector2(133, -4)
+
+[node name="Stamp6" parent="." index="12" unique_id=798498775 instance=ExtResource("8_edtm0")]
+position = Vector2(235, -6)
+rune_name = 1
+
+[node name="Stamp3" parent="." index="13" unique_id=2122770798 instance=ExtResource("8_edtm0")]
 position = Vector2(132, 165)
 rune_name = 2
 
-[node name="Stamp4" parent="." index="12" unique_id=1582331971 instance=ExtResource("8_edtm0")]
+[node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
 position = Vector2(238, 167)
 rune_name = 3

@@ -15,7 +15,7 @@ texture = ExtResource("2_vpo2k")
 region_enabled = true
 region_rect = Rect2(0, 0, 720, 480)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1443372050]
+[node name="Bg" type="Sprite2D" parent="." unique_id=1443372050]
 z_index = -4000
 texture = ExtResource("2_tbocu")
 
