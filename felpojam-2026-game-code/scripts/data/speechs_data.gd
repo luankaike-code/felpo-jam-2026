@@ -2,6 +2,7 @@ class_name SpeechsData extends Resource
 
 enum names {
 	concubine,
+	get_order_concubine,
 	concubine_result_positive,
 	concubine_result_ok,
 	concubine_result_negative,
@@ -23,6 +24,9 @@ static var speechs: Dictionary[names, Array] = {
 		"me chamo Romã e eu cheguei a pouco tempo,",
 		"mas já estou ansiosa para cumprir com meus deveres com vossa majestade...",
 		"Gostaria de aumentar a minha fertilidade",
+	],
+	names.get_order_concubine: [
+		"vim ver o macaco"
 	],
 	names.concubine_result_positive: [
 		"Esse pergaminho foi muito util !!! amei !!!",

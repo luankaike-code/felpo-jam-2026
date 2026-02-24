@@ -2,9 +2,11 @@ class_name ClientObj extends Resource
 
 var character_name: CharacterData.names
 var order: OrdersData.names
-var speech: SpeechsData.names
+var order_speech: SpeechsData.names
+var get_order_speech: SpeechsData.names
 
-func _init(character_name_: CharacterData.names, speech_: SpeechsData.names, order_: OrdersData.names) -> void:
+func _init(character_name_: CharacterData.names, order_speech_: SpeechsData.names,  get_order_speech_: SpeechsData.names, order_: OrdersData.names) -> void:
 	character_name = character_name_
 	order = order_
-	speech = speech_
+	order_speech = order_speech_
+	get_order_speech = get_order_speech_

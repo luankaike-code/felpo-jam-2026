@@ -13,7 +13,7 @@ func enter(host_) -> void:
 
 func start_dialog():
 	host.character_sprite.entered.disconnect(start_dialog)
-	var speech := SpeechsData.speechs[host.current_client_data.speech]
+	var speech := SpeechsData.speechs[host.current_client_data.order_speech]
 	var speech_bubble := host.speech_bubble_manager.create_speech_bubble(speech)
 	speech_bubble.finish_all_dialogs.connect(to_craft_time)
 

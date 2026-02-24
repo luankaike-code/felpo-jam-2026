@@ -7,24 +7,27 @@ enum names {
 }
 
 static var order: Array[names] = [
+	names.concubine,
 	names.warlord,
 	names.king,
-	names.concubine,
 ]
 
 static var client: Dictionary[names, ClientObj] = {
 	names.concubine: ClientObj.new(
 		CharacterData.names.concubine,
 		SpeechsData.names.concubine,
+		SpeechsData.names.get_order_concubine,
 		OrdersData.names.more_fetility
 	),
 	names.king: ClientObj.new(
 		CharacterData.names.king,
 		SpeechsData.names.king,
+		SpeechsData.names.king,
 		OrdersData.names.infernal_fire
 	),
 	names.warlord: ClientObj.new(
 		CharacterData.names.warlord,
+		SpeechsData.names.warlord,
 		SpeechsData.names.warlord,
 		OrdersData.names.infernal_fire
 	)

@@ -10,7 +10,7 @@ script = ExtResource("1_iwlfa")
 metadata/_custom_type_script = "uid://dha1tdcxb1ucs"
 
 [node name="ClientLocal" parent="." unique_id=564590170 instance=ExtResource("3_xrk1x")]
-bg_texture = ExtResource("3_o78e0")
 
 [node name="CraftLocal" parent="." unique_id=1460891692 instance=ExtResource("4_ln6eb")]
 position = Vector2(720, 0)
+bg_texture = ExtResource("3_o78e0")

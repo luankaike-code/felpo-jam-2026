@@ -13,7 +13,8 @@ func enter(host_) -> void:
 	
 func create_speech_bubble():
 	host.character_sprite.entered.disconnect(create_speech_bubble)
-	var speech := SpeechsData.speechs[host.current_client_data.speech]
+	
+	var speech := SpeechsData.speechs[host.current_client_data.get_order_speech]
 	speech_bubble = host.speech_bubble_manager.create_speech_bubble(speech, order.size())
 	speech_bubble.all_delivery_zones_filled.connect(_on_receive_parchments)
 	
