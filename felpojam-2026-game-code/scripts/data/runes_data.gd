@@ -15,6 +15,8 @@ static var colors: Dictionary[names, Color] = {
 }
 
 static var textures: Dictionary[names, CompressedTexture2D] = {
-	names.fire: preload("res://assets/images/fire rune.png"),
-	names.water: preload("res://assets/images/water rune.png"),
+	names.fire: preload("res://assets/images/runes/fire rune.png"),
+	names.water: preload("res://assets/images/runes/water rune.png"),
+	names.air: preload("res://assets/images/runes/air rune.png"),
+	names.earth: preload("res://assets/images/runes/earth rune.png"),
 }
