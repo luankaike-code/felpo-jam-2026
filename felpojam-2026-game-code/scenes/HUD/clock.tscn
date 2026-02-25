@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c2lsoyy74l602"]
+
+[ext_resource type="Texture2D" uid="uid://brgxh8qdnrruu" path="res://assets/images/clock.png" id="1_6wdof"]
+[ext_resource type="Script" uid="uid://e7ktxmodx042" path="res://scripts/HUD/clock.gd" id="2_7pkpy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0q1m"]
+atlas = ExtResource("1_6wdof")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s2t6"]
+atlas = ExtResource("1_6wdof")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f7h6"]
+atlas = ExtResource("1_6wdof")
+region = Rect2(144, 0, 72, 72)
+
+[node name="ClockHud" type="TextureRect" unique_id=1928162360]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_u0q1m")
+script = ExtResource("2_7pkpy")
+
+[node name="HoursPonter" type="TextureRect" parent="." unique_id=1939480515]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_4s2t6")
+
+[node name="MinutesPonter" type="TextureRect" parent="." unique_id=683161671]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 8
+texture = SubResource("AtlasTexture_3f7h6")
