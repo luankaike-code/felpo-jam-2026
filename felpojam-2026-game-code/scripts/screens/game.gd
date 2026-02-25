@@ -65,6 +65,7 @@ func _pop_mensage(mensage: PopUpMensage):
 	elif mensage is PopUpMensagePause:
 		for local in locals:
 			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT
+			game_hud.visible = !mensage.pause
 
 func _unhandled_input(event: InputEvent) -> void:		
 	if _handle_mouse_wheel(event):

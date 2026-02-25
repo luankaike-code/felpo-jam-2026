@@ -31,9 +31,9 @@ texture = ExtResource("2_c4sub")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1328541034]
 offset_left = -347.0
-offset_top = 92.0
+offset_top = 135.0
 offset_right = 348.0
-offset_bottom = 220.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
