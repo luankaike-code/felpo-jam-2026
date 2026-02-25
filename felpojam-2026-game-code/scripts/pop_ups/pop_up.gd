@@ -8,11 +8,9 @@ func send_pause_mensage(pause: bool):
 	send_mensage.emit(pause_msg)
 
 func send_open_pop_up(pop_up: PopUp):
-	var msg := PopUpMensageOpenPopUp.new()
-	msg.setup(pop_up)
+	var msg := PopUpMensageOpenPopUp.new(pop_up)
 	send_mensage.emit(msg)
 
 func send_change_screen(screen_name: ScreenData.names):
-	var msg := PopUpMensageChangeScreen.new()
-	msg.setup(screen_name)
+	var msg := PopUpMensageChangeScreen.new(screen_name)
 	send_mensage.emit(msg)

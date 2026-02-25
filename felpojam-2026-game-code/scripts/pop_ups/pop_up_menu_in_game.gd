@@ -7,16 +7,27 @@ extends PopUp
 
 
 var packed_pop_up_configs_in_game := load("res://scenes/pop_ups/pop_up_configs_in_game.tscn") as PackedScene
+var packed_pop_up_confirm := load("res://scenes/pop_ups/pop_up_confirm.tscn") as PackedScene
+var packed_pop_up_menu_in_game := load("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 
 func _ready() -> void:
 	send_pause_mensage(true)
 	
 	goto_game_btn.button_up.connect(goto_game)
 	configs_btn.button_up.connect(open_configs_in_game)
-	goto_menu_btn.button_up.connect(goto_menu)
+	goto_menu_btn.button_up.connect(confirm_goto_menu)
 
-func goto_menu():
-	send_change_screen(ScreenData.names.menu)
+func confirm_goto_menu():
+	var buttons: Array[PopUpConfirmButtonObj] = [
+		PopUpConfirmButtonObj.new("Sair", PopUpMensageChangeScreen.new(ScreenData.names.menu)),
+		PopUpConfirmButtonObj.new("Voltar", PopUpMensageOpenPopUp.new(packed_pop_up_menu_in_game.instantiate())),
+	]
+	
+	var pop_up = packed_pop_up_confirm.instantiate() as PopUpConfirm
+	pop_up.setup("deseja mesmo voltar ao menu? todo o seu progresso será perdido", buttons)
+	
+	send_open_pop_up(pop_up)
+	queue_free()
 
 func goto_game():
 	send_pause_mensage(false)
