@@ -16,6 +16,11 @@ enum names {
 	warlord_result_positive,
 	warlord_result_ok,
 	warlord_result_negative,
+	
+	priest,
+	priest_result_positive,
+	priest_result_ok,
+	priest_result_negative,
 }
 
 static var speechs: Dictionary[names, Array] = {
@@ -26,7 +31,7 @@ static var speechs: Dictionary[names, Array] = {
 		"Gostaria de aumentar a minha fertilidade",
 	],
 	names.get_order_concubine: [
-		"vim ver o macaco"
+		"vim ver o macaco",
 	],
 	names.concubine_result_positive: [
 		"Esse pergaminho foi muito util !!! amei !!!",
@@ -65,6 +70,20 @@ static var speechs: Dictionary[names, Array] = {
 		"Esse pergaminho foi ok",
 	],
 	names.warlord_result_negative: [
+		"Esse pergaminho é um lixo",
+		"Seu bosta",
+	],
+	
+	names.priest: [
+		"Sou o padre ********",
+	],
+	names.priest_result_positive: [
+		"Esse pergaminho foi muito bom",
+	],
+	names.priest_result_ok: [
+		"Esse pergaminho foi ok",
+	],
+	names.priest_result_negative: [
 		"Esse pergaminho é um lixo",
 		"Seu bosta",
 	],

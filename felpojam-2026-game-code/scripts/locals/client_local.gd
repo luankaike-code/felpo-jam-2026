@@ -11,6 +11,11 @@ var character_sprite: CharacterSprite
 var current_order: OrderObj
 
 @warning_ignore("unused_signal")
+signal add_dick(dick_text: String)
+@warning_ignore("unused_signal")
+signal remove_dick()
+
+@warning_ignore("unused_signal")
 signal client_wait_order
 @warning_ignore("unused_signal")
 signal exit_client

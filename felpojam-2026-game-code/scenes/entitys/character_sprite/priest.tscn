@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dhgs2mfk1neht"]
+
+[ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_ifecw"]
+[ext_resource type="Texture2D" uid="uid://jdx5cubp7p6y" path="res://assets/images/characters/priest.png" id="2_mqfjh"]
+
+[node name="Priest" unique_id=1678707481 instance=ExtResource("1_ifecw")]
+
+[node name="BubblePos" parent="." index="0" unique_id=2144655565]
+position = Vector2(49, -274)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=551184845]
+position = Vector2(0, -146)
+texture = ExtResource("2_mqfjh")

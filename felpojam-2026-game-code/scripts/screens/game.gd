@@ -22,6 +22,8 @@ func _ready() -> void:
 	
 	client_local.client_wait_order.connect(func(): freeze_all_craft_items(true))
 	client_local.exit_client.connect(func(): freeze_all_craft_items(false))
+	client_local.add_dick.connect(game_hud.add_dick)
+	client_local.exit_client.connect(game_hud.remove_current_dick)
 	
 	game_hud.arrow_pressed.connect(_on_arrow_pressed)
 	
@@ -59,7 +61,3 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("ui_accept") and !has_pop_up():
 		current_local += 1
 		camera.to(locals[current_local])
-	elif Input.is_action_just_pressed("ui_down"):
-		game_hud.add_dick("Em baixo significa em cima")
-	elif Input.is_action_just_pressed("ui_up"):
-		game_hud.remove_current_dick()
