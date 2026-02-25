@@ -21,6 +21,11 @@ enum names {
 	priest_result_positive,
 	priest_result_ok,
 	priest_result_negative,
+	
+	ladys_companion,
+	ladys_companion_result_positive,
+	ladys_companion_result_ok,
+	ladys_companion_result_negative,
 }
 
 static var speechs: Dictionary[names, Array] = {
@@ -87,4 +92,26 @@ static var speechs: Dictionary[names, Array] = {
 		"Esse pergaminho é um lixo",
 		"Seu bosta",
 	],
+	
+	names.ladys_companion: [
+		"Sou a dama de companhia",
+	],
+	names.ladys_companion_result_positive: [
+		"Esse pergaminho foi muito bom",
+	],
+	names.ladys_companion_result_ok: [
+		"Esse pergaminho foi ok",
+	],
+	names.ladys_companion_result_negative: [
+		"Esse pergaminho é um lixo",
+		"Seu bosta",
+	],
+}
+
+static var dicks: Dictionary[SpeechsData.names, String] = {
+	SpeechsData.names.concubine: "Quero aumentar a minha fertilidade",
+	SpeechsData.names.king: "Quero quebrar minha maldição",
+	SpeechsData.names.warlord: "Quero algo ai que esqueci",
+	SpeechsData.names.priest: "Dinheiro eu querer",
+	SpeechsData.names.ladys_companion: "Quero..."
 }

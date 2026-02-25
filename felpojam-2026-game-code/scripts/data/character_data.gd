@@ -4,12 +4,20 @@ enum names {
 	concubine,
 	king,
 	warlord,
-	priest
+	priest,
+	ladys_companion
+}
+
+enum versions {
+	dissatisfied,
+	normal,
+	satisfied
 }
 
 static var packeds: Dictionary[names, PackedScene] = {
-	names.concubine: preload("res://scenes/entitys/character_sprite/concubine.tscn"),
-	names.king: preload("res://scenes/entitys/character_sprite/king.tscn"),
-	names.warlord: preload("res://scenes/entitys/character_sprite/warlord.tscn"),
-	names.priest: preload("res://scenes/entitys/character_sprite/priest.tscn")
+	names.concubine: load("res://scenes/entitys/character_sprite/concubine.tscn"),
+	names.king: load("res://scenes/entitys/character_sprite/king.tscn"),
+	names.warlord: load("res://scenes/entitys/character_sprite/warlord.tscn"),
+	names.priest: load("res://scenes/entitys/character_sprite/priest.tscn"),
+	names.ladys_companion: load("res://scenes/entitys/character_sprite/ladys_companion.tscn")
 }

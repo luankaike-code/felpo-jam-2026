@@ -4,10 +4,12 @@ enum names {
 	warlord,
 	concubine,
 	king,
-	priest
+	priest,
+	ladys_companion
 }
 
 static var order: Array[names] = [
+	names.ladys_companion,
 	names.priest,
 	names.warlord,
 	names.concubine,
@@ -39,6 +41,12 @@ static var client: Dictionary[names, ClientObj] = {
 		SpeechsData.names.priest,
 		OrdersData.names.infernal_fire
 	),
+	names.ladys_companion: ClientObj.new(
+		CharacterData.names.ladys_companion,
+		SpeechsData.names.ladys_companion,
+		SpeechsData.names.ladys_companion,
+		OrdersData.names.infernal_fire
+	)
 }
 
 static var client_result: Dictionary[names, ClientResultPossibility] = {
@@ -95,6 +103,20 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		),
 		ClientResult.new(
 			SpeechsData.names.priest_result_negative, 
+			ClientResultMensageMoney.new(-50.0)
+		)
+	),
+	names.ladys_companion: ClientResultPossibility.new(
+		ClientResult.new(
+			SpeechsData.names.ladys_companion_result_positive, 
+			ClientResultMensageMoney.new(50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.ladys_companion_result_ok, 
+			ClientResultMensageMoney.new(25.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.ladys_companion_result_negative, 
 			ClientResultMensageMoney.new(-50.0)
 		)
 	),

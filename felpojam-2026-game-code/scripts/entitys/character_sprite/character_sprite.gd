@@ -17,7 +17,11 @@ func enter() -> void:
 func get_bubble_position() -> Vector2:
 	return bubble_pos.global_position
 
-func exit():
+func exit() -> void:
 	var tween := get_tree().create_tween()
 	tween.tween_property(self, "modulate", Color(0, 0, 0, 0), 1).set_ease(Tween.EASE_IN)
 	tween.tween_callback(exited.emit)
+
+@warning_ignore("unused_parameter")
+func set_version(versions: CharacterData.versions) -> void:
+	return

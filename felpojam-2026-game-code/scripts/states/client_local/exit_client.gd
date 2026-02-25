@@ -14,10 +14,13 @@ func get_order_result(order_quality: float) -> ClientResult:
 	
 	if order_quality >= 0.8:
 		current_result = results.positive
+		host.character_sprite.set_version(CharacterData.versions.satisfied)
 	elif order_quality >= 0.4:
 		current_result = results.ok
+		host.character_sprite.set_version(CharacterData.versions.normal)
 	else:
 		current_result = results.negative
+		host.character_sprite.set_version(CharacterData.versions.dissatisfied)
 	
 	return current_result
 
