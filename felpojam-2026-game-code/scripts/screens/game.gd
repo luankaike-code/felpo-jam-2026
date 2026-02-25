@@ -9,6 +9,7 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 
 @onready var locals := [client_local, craft_local, $TrashLocal]
 var is_already_wheel := false
+var current_transition_sound: SoundPlayer
 
 var current_local := 0 :
 	set(new):
@@ -41,8 +42,10 @@ func _on_arrow_pressed(arrow: GameHud.arrows):
 	togo_local(1 if arrow == GameHud.arrows.right else -1)
 
 func togo_local(index: int):
+	if !current_transition_sound:
+		current_transition_sound = Sound.play_sound(SoundData.names.transition)
 	current_local += index
-	camera.to(locals[current_local%locals.size()])
+	camera.to(locals[current_local])
 
 func update_arrow_enabled():
 	var left_total := current_local == 0

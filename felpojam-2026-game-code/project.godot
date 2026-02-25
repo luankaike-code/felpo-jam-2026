@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 HelperWindow="*uid://dtvi7hflcucsq"
 Global="*uid://dv0lrskrgc0se"
 Sound="*uid://li0iapgwddw7"
+GlobalTime="*uid://b3esvn7owhkl"
 
 [display]
 

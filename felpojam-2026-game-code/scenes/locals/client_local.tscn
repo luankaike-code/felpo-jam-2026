@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="9_gd4ri"]
 [ext_resource type="Script" uid="uid://bnmi3hseq168p" path="res://scripts/states/client_local/exit_client.gd" id="9_geiil"]
 [ext_resource type="PackedScene" uid="uid://b688mtqgsrte7" path="res://scenes/entitys/table_bell.tscn" id="11_ph3mh"]
+[ext_resource type="PackedScene" uid="uid://bkra4x522utla" path="res://scenes/entitys/window_entity.tscn" id="12_gd4ri"]
 
 [node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
 script = ExtResource("2_qqkxa")
@@ -58,3 +59,6 @@ metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 [node name="ExitClient" type="Node" parent="StateMachine" index="4" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Window" parent="." index="8" unique_id=883367135 instance=ExtResource("12_gd4ri")]
+position = Vector2(134, -41)

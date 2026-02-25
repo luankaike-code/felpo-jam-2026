@@ -32,7 +32,7 @@ static var relation_name_type: Dictionary[names, types] = {
 	names.close_door: types.ambient,
 	names.open_door: types.ambient,
 	names.steps: types.ambient,
-	names.transition: types.ambient,
+	names.transition: types.sound_effect,
 	
 	names.menu_music: types.music,
 	names.shop_music: types.music,
