@@ -14,6 +14,8 @@ var data: ParchmentObj :
 			rune_objs.push_back(rune.data)
 		return ParchmentObj.new(rune_objs)
 
+signal rune_added(paper: Paper)
+
 func _ready() -> void:
 	super()
 	
@@ -32,6 +34,7 @@ func add_rune(rune_name: RunesData.names, rune_global_position: Vector2) -> bool
 	rune_scene.position = to_local(rune_global_position)
 	sprite.add_child(rune_scene)
 	runes.push_front(rune_scene)
+	rune_added.emit(self)
 	return true
 
 func _finish_drag():

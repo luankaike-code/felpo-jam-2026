@@ -18,9 +18,9 @@ signal remove_dick()
 @warning_ignore("unused_signal")
 signal client_wait_order
 @warning_ignore("unused_signal")
-signal exit_client
+signal craft_time
 @warning_ignore("unused_signal")
-signal to_craft_local()
+signal receive_total_parchments
 
 func new_client():
 	var client_name := ClientData.order[current_client_order_index]
@@ -50,6 +50,10 @@ func exit_character():
 		Sound.play_sound(SoundData.names.close_door)
 		Sound.play_sound(SoundData.names.little_bell)
 	)
+
+func handle_client_result_mensage(client_result: ClientResult):
+	if client_result.mensage is ClientResultMensageMoney:
+		Global.money += client_result.mensage.money
 
 @warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:

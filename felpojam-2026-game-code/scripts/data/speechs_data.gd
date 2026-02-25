@@ -1,6 +1,8 @@
 class_name SpeechsData extends Resource
 
 enum names {
+	not_craft_all_parchemnts,
+	
 	concubine,
 	get_order_concubine,
 	concubine_result_positive,
@@ -29,6 +31,14 @@ enum names {
 }
 
 static var speechs: Dictionary[names, Array] = {
+	names.not_craft_all_parchemnts: [
+		"Oi, volta aqui e...",
+		"Comoo assim?...",
+		"Você não conseguiu terminar os 2 pergaminhos ?!?!?!?!!?",
+		"?!?!?!?!!??!?!?!?!!??!?!?!?!!??!?!?!?!!?",
+		"A... tá bom... eles nem eram tão importantes ];",
+	],
+	
 	names.concubine: [
 		"É um prazer conhecê-lo Runista,",
 		"me chamo Romã e eu cheguei a pouco tempo,",

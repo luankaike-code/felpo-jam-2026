@@ -2,9 +2,27 @@ class_name CraftLocal extends Local
 
 @onready var runes_book: RunesBook = $RunesBook
 @onready var stack_papers: StackPapers = $StackPapers
+@onready var trash: Trash = $Trash
+
+var papers_with_runes: Array[Paper]
 
 func _ready() -> void:
 	super()
 	
 	runes_book.open.connect(open_pop_up.emit)
-	stack_papers.spawn_node.connect(func(x): add_child(x))
+	stack_papers.want_spawn_paper.connect(_on_spawn_paper)
+
+func set_enable_trash(value: bool):
+	trash.enable = value
+
+func _on_spawn_paper(paper_to_spawn: Paper) -> void:
+	paper_to_spawn.rune_added.connect(_on_rune_added)
+	add_child(paper_to_spawn)
+
+func _on_rune_added(paper: Paper) -> void:
+	paper.rune_added.disconnect(_on_rune_added)
+	papers_with_runes.push_back(paper)
+
+func get_paper_with_rune_count() -> int:
+	papers_with_runes = papers_with_runes.filter(func(paper): return !!paper)
+	return papers_with_runes.size()

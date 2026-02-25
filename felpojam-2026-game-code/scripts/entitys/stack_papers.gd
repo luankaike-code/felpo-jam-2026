@@ -4,7 +4,7 @@ var packed_paper := preload("res://scenes/entitys/paper.tscn") as PackedScene
 var current_paper: Paper
 var max_distance_to_spaw := 50
 
-signal spawn_node(node: Node2D)
+signal want_spawn_paper(node: Node2D)
 
 func _ready() -> void:
 	call_deferred("spawn_paper")
@@ -15,7 +15,7 @@ func spawn_paper() -> void:
 	paper_scene.position = position
 	
 	current_paper = paper_scene
-	spawn_node.emit(paper_scene)
+	want_spawn_paper.emit(paper_scene)
 	
 func _on_paper_start_drag():
 	if current_paper.position.abs().distance_to(position) < max_distance_to_spaw:

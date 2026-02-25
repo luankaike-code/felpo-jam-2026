@@ -62,6 +62,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		ClientResult.new(
 			SpeechsData.names.concubine_result_negative, 
 			ClientResultMensageMoney.new(-50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.not_craft_all_parchemnts, 
+			ClientResultMensageMoney.new(-50.0)
 		)
 	),
 	names.king: ClientResultPossibility.new(
@@ -75,6 +79,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		),
 		ClientResult.new(
 			SpeechsData.names.king_result_negative, 
+			ClientResultMensageMoney.new(-50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.not_craft_all_parchemnts, 
 			ClientResultMensageMoney.new(-50.0)
 		)
 	),
@@ -90,6 +98,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		ClientResult.new(
 			SpeechsData.names.warlord_result_negative, 
 			ClientResultMensageMoney.new(-50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.not_craft_all_parchemnts, 
+			ClientResultMensageMoney.new(-50.0)
 		)
 	),
 	names.priest: ClientResultPossibility.new(
@@ -104,6 +116,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		ClientResult.new(
 			SpeechsData.names.priest_result_negative, 
 			ClientResultMensageMoney.new(-50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.not_craft_all_parchemnts, 
+			ClientResultMensageMoney.new(-50.0)
 		)
 	),
 	names.ladys_companion: ClientResultPossibility.new(
@@ -117,6 +133,10 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		),
 		ClientResult.new(
 			SpeechsData.names.ladys_companion_result_negative, 
+			ClientResultMensageMoney.new(-50.0)
+		),
+		ClientResult.new(
+			SpeechsData.names.not_craft_all_parchemnts, 
 			ClientResultMensageMoney.new(-50.0)
 		)
 	),

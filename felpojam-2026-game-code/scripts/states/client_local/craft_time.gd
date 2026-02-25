@@ -5,6 +5,7 @@ var host: ClientLocal
 func enter(host_) -> void:
 	host = host_
 	host.exit_character()
+	host.craft_time.emit()
 	
 	var dick_text = SpeechsData.dicks[host.current_client_data.order_speech]
 	host.add_dick.emit(dick_text)
@@ -16,4 +17,3 @@ func to_client_wait_order() -> void:
 
 func exit() -> void:
 	host.remove_dick.emit()
-	print("oi")

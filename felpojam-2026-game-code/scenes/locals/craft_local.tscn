@@ -3,21 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="1_umv4u"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="2_00w25"]
 [ext_resource type="Script" uid="uid://dmpjwybxjx6gl" path="res://scripts/locals/craft_local.gd" id="2_xt3nh"]
+[ext_resource type="Texture2D" uid="uid://1glccdnt0j3n" path="res://assets/images/craft_local_bg.png" id="3_00w25"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="4_t3eoa"]
 [ext_resource type="PackedScene" uid="uid://cj4k5fngr2dev" path="res://scenes/entitys/stack_papers.tscn" id="5_mvwp7"]
 [ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="8_edtm0"]
 [ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="9_umv4u"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="10_00w25"]
-[ext_resource type="Texture2D" uid="uid://b0hsi3ltxhoua" path="res://assets/images/wood.png" id="10_wwimg"]
 [ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="11_wwimg"]
 
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
 script = ExtResource("2_xt3nh")
 
+[node name="Sprite2D2" parent="." index="0" unique_id=33390413]
+position = Vector2(180, 465)
+region_rect = Rect2(0, 0, 1080, 480)
+
 [node name="Bg" parent="." index="1" unique_id=1443372050]
 texture_repeat = 2
-texture = ExtResource("10_wwimg")
-region_enabled = true
+position = Vector2(180, 0)
+texture = ExtResource("3_00w25")
+flip_h = true
 region_rect = Rect2(0, 0, 720, 450)
 
 [node name="Carpet" type="Sprite2D" parent="." index="2" unique_id=1746305780]
@@ -63,3 +68,7 @@ rune_name = 1
 [node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
 position = Vector2(264, 157)
 rune_name = 3
+
+[node name="Sprite2D3" parent="." index="15" unique_id=1015827000]
+position = Vector2(180, -465)
+region_rect = Rect2(0, 0, 1080, 480)
