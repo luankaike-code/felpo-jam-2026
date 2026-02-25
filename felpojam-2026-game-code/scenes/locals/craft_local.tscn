@@ -26,47 +26,47 @@ flip_h = true
 region_rect = Rect2(0, 0, 720, 450)
 
 [node name="Carpet" type="Sprite2D" parent="." index="2" unique_id=1746305780]
-position = Vector2(-69, 50)
+position = Vector2(-101, 63)
 texture = ExtResource("11_wwimg")
 
 [node name="StackPapers" parent="." index="3" unique_id=117007281 instance=ExtResource("5_mvwp7")]
-position = Vector2(-291, 126)
+position = Vector2(-272, 128)
 
 [node name="InkStand" parent="." index="4" unique_id=920137688 instance=ExtResource("2_00w25")]
-position = Vector2(201, -12)
+position = Vector2(191, 102)
 
 [node name="InkStand2" parent="." index="5" unique_id=1137657733 instance=ExtResource("2_00w25")]
-position = Vector2(93, -12)
+position = Vector2(97, 103)
 
 [node name="RunesBook" parent="." index="6" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
 position = Vector2(368, 4)
 
 [node name="Dropper" parent="." index="7" unique_id=392739461 instance=ExtResource("9_umv4u")]
-position = Vector2(-286, -9)
+position = Vector2(-293, 10)
 
 [node name="Trash" parent="." index="8" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(628, 78)
 
 [node name="Stamp5" parent="." index="9" unique_id=539662780 instance=ExtResource("8_edtm0")]
-position = Vector2(-270, -117)
+position = Vector2(-92, -101)
 
 [node name="Stamp" parent="." index="10" unique_id=769955536 instance=ExtResource("8_edtm0")]
-position = Vector2(-166, -113)
+position = Vector2(-3, -98)
 
 [node name="Stamp3" parent="." index="11" unique_id=2122770798 instance=ExtResource("8_edtm0")]
-position = Vector2(-73, -113)
+position = Vector2(89, -93)
 rune_name = 2
 
 [node name="Stamp6" parent="." index="12" unique_id=798498775 instance=ExtResource("8_edtm0")]
-position = Vector2(19, -113)
+position = Vector2(181, -93)
 rune_name = 1
 
 [node name="Stamp2" parent="." index="13" unique_id=1425219931 instance=ExtResource("8_edtm0")]
-position = Vector2(111, -108)
+position = Vector2(91, -1)
 rune_name = 1
 
 [node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
-position = Vector2(206, -111)
+position = Vector2(186, -4)
 rune_name = 3
 
 [node name="Sprite2D3" parent="." index="15" unique_id=1015827000]

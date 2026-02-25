@@ -26,7 +26,6 @@ metadata/_custom_type_script = "uid://b22ark22c86p4"
 
 [node name="Control2" type="Control" parent="HBoxContainer2" unique_id=1717983606]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="ClockHud" parent="HBoxContainer2/Control2" unique_id=1928162360 instance=ExtResource("3_guowm")]
 layout_mode = 1
