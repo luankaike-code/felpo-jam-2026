@@ -5,5 +5,5 @@ class_name ClockHud extends TextureRect
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	minutes_ponter.rotation_degrees = (360.0/60)*GlobalTime.minutes
-	hours_ponter.rotation_degrees = (360.0/12)*GlobalTime.hours
+	minutes_ponter.rotation_degrees = (360.0/60)*GlobalTime.total_minutes
+	hours_ponter.rotation_degrees = (360.0/12)*GlobalTime.total_hours

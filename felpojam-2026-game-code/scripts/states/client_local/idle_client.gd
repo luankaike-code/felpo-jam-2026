@@ -12,8 +12,9 @@ func enter(host_) -> void:
 	host = host_
 	if !is_alredy_connected:
 		host.receive_total_parchments.connect(on_receive_total_parchments)
-		host.character_sprite.entered.connect(create_speech_bubble)
 		is_alredy_connected = true
+		
+	host.character_sprite.entered.connect(create_speech_bubble)
 		
 	host.client_wait_order.emit()
 	
@@ -24,6 +25,7 @@ func on_receive_total_parchments(total: int) -> void:
 	parchment_total = total
 	
 func create_speech_bubble() -> void:
+	print(is_current_state)
 	if !is_current_state:
 		return
 		
