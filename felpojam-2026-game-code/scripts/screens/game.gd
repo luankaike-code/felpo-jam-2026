@@ -82,8 +82,8 @@ func _handle_mouse_wheel(event: InputEvent) -> bool:
 		is_already_wheel = true
 	else:
 		is_already_wheel = false
-		return false
-	return true
+		return true
+	return false
 	
 func _handle_inputs(event: InputEvent) -> void:
 	if has_pop_up() || !event.is_pressed():
