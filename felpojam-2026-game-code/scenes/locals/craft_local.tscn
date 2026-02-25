@@ -28,38 +28,38 @@ texture = ExtResource("11_wwimg")
 position = Vector2(-116, -119)
 
 [node name="InkStand" parent="." index="4" unique_id=920137688 instance=ExtResource("2_00w25")]
-position = Vector2(217, -157)
+position = Vector2(143, -161)
 
 [node name="InkStand2" parent="." index="5" unique_id=1137657733 instance=ExtResource("2_00w25")]
-position = Vector2(132, -157)
+position = Vector2(248, -155)
 
 [node name="RunesBook" parent="." index="6" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
 position = Vector2(-269, 83)
 
 [node name="Dropper" parent="." index="7" unique_id=392739461 instance=ExtResource("9_umv4u")]
-position = Vector2(185, -104)
+position = Vector2(33, -155)
 
 [node name="Trash" parent="." index="8" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(-257, -89)
 
 [node name="Stamp" parent="." index="9" unique_id=769955536 instance=ExtResource("8_edtm0")]
-position = Vector2(134, 79)
+position = Vector2(127, 47)
 
 [node name="Stamp2" parent="." index="10" unique_id=1425219931 instance=ExtResource("8_edtm0")]
-position = Vector2(236, 77)
+position = Vector2(263, 41)
 rune_name = 1
 
 [node name="Stamp5" parent="." index="11" unique_id=539662780 instance=ExtResource("8_edtm0")]
-position = Vector2(133, -4)
+position = Vector2(119, -51)
 
 [node name="Stamp6" parent="." index="12" unique_id=798498775 instance=ExtResource("8_edtm0")]
-position = Vector2(235, -6)
+position = Vector2(264, -54)
 rune_name = 1
 
 [node name="Stamp3" parent="." index="13" unique_id=2122770798 instance=ExtResource("8_edtm0")]
-position = Vector2(132, 165)
+position = Vector2(133, 150)
 rune_name = 2
 
 [node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
-position = Vector2(238, 167)
+position = Vector2(260, 144)
 rune_name = 3

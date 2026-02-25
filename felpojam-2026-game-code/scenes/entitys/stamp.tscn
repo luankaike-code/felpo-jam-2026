@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bn0m5x7vetk18" path="res://scripts/states/animations/animation_position_translate.gd" id="7_bfisn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t5bq3"]
-radius = 18.0
+radius = 38.0
 
 [node name="Stamp" type="Area2D" unique_id=769955536]
 z_as_relative = false
@@ -21,6 +21,7 @@ position = Vector2(0, -3)
 texture = ExtResource("2_0v15b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632221205]
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_t5bq3")
 
 [node name="StateMachine" type="Node" parent="." unique_id=893631172]

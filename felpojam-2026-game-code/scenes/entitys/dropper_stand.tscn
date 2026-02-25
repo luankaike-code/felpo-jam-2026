@@ -12,8 +12,10 @@ metadata/_custom_type_script = "uid://2p33g122efmh"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1600564298]
 modulate = Color(1, 0, 0, 0.2901961)
-scale = Vector2(0.44, 0.44)
+position = Vector2(0, 6)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_shdjh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=72903764]
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_6mdg5")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://da527j4ft7nq0" path="res://scripts/HUD/game_hud.gd" id="1_1geg4"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_c4sub"]
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="2_kixb8"]
+[ext_resource type="Texture2D" uid="uid://453kk0eicspa" path="res://assets/images/arrow.png" id="4_guowm"]
 [ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="4_kixb8"]
 
 [node name="GameHud" type="Node2D" unique_id=1182350756]
@@ -30,9 +31,9 @@ texture = ExtResource("2_c4sub")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1328541034]
 offset_left = -347.0
-offset_top = 72.0
+offset_top = 92.0
 offset_right = 348.0
-offset_bottom = 200.0
+offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
@@ -40,13 +41,16 @@ alignment = 1
 [node name="ArrowLeft" type="TextureRect" parent="HBoxContainer" unique_id=212700544]
 layout_mode = 2
 size_flags_horizontal = 2
-texture = ExtResource("2_c4sub")
+texture = ExtResource("4_guowm")
+stretch_mode = 3
+flip_h = true
 script = ExtResource("4_kixb8")
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
 [node name="ArrowRight" type="TextureRect" parent="HBoxContainer" unique_id=1631663697]
 layout_mode = 2
 size_flags_horizontal = 10
-texture = ExtResource("2_c4sub")
+texture = ExtResource("4_guowm")
+stretch_mode = 3
 script = ExtResource("4_kixb8")
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"

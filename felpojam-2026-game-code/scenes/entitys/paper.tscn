@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="5_nq4it"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4o0a"]
-size = Vector2(76, 78)
+size = Vector2(96, 96)
 
 [node name="Paper" type="Area2D" unique_id=449771312]
 z_index = 400
