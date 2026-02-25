@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2xdf1uampfth"
-path="res://.godot/imported/lady's companion 
-dissatisfied.png-e1c172facffff51486b333c36a09baf0.ctex"
+uid="uid://d4kpoc6ki7owx"
+path="res://.godot/imported/lc.png-826ef224aa880c845b99dfed55914579.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/lady's companion 
-dissatisfied.png"
-dest_files=["res://.godot/imported/lady's companion 
-dissatisfied.png-e1c172facffff51486b333c36a09baf0.ctex"]
+source_file="res://assets/images/characters/lc.png"
+dest_files=["res://.godot/imported/lc.png-826ef224aa880c845b99dfed55914579.ctex"]
 
 [params]
 

@@ -2,11 +2,9 @@ extends CharacterSprite
 
 @onready var sprite: Sprite2D = $Sprite
 
-var texture_satisfied := preload("res://assets/images/characters/ladys companion
- satisfied.png")
-var texture_normal := preload("res://assets/images/characters/lady's companion.png")
-var texture_dissatisfied := preload("res://assets/images/characters/lady's companion 
-dissatisfied.png")
+var texture_satisfied := preload("res://assets/images/characters/lc_satisfied.png")
+var texture_normal := preload("res://assets/images/characters/lc.png")
+var texture_dissatisfied := preload("res://assets/images/characters/lc_dissatisfied.png")
 
 func set_version(versions: CharacterData.versions) -> void:
 	match versions:

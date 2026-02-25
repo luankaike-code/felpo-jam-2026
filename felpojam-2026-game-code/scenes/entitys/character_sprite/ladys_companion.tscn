@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2q06kfa1e2xf"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_5iyc0"]
-[ext_resource type="Texture2D" uid="uid://d4kpoc6ki7owx" path="res://assets/images/characters/lady's companion.png" id="2_emsif"]
+[ext_resource type="Texture2D" uid="uid://d4kpoc6ki7owx" path="res://assets/images/characters/lc.png" id="2_emsif"]
 [ext_resource type="Script" uid="uid://bo7cdi5c110u0" path="res://scripts/entitys/character_sprite/ladys_companion.gd" id="2_ftl2p"]
 
 [node name="LadysCompanion" unique_id=1678707481 instance=ExtResource("1_5iyc0")]
