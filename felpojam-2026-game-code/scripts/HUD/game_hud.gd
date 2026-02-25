@@ -16,8 +16,12 @@ signal arrow_pressed(arrow: arrows)
 
 func _ready() -> void:
 	set_process_input(false)
-	arrow_left.button_up.connect(func(): arrow_pressed.emit(arrows.left))
-	arrow_right.button_up.connect(func(): arrow_pressed.emit(arrows.right))
+	arrow_left.button_up.connect(func(): _on_arrow_pressed(arrows.left))
+	arrow_right.button_up.connect(func(): _on_arrow_pressed(arrows.right))
+
+func _on_arrow_pressed(arrow: arrows):
+	Sound.play_sound(SoundData.names.pressed_button)
+	arrow_pressed.emit(arrow)
 
 func set_arrow_enabled(arrow: arrows, value: bool) -> void:
 	var arrow_node := arrow_left if arrow == arrows.left else arrow_right
