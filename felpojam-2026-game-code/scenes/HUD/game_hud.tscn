@@ -1,25 +1,27 @@
 [gd_scene format=3 uid="uid://dxr7kr6t64oid"]
 
 [ext_resource type="Script" uid="uid://da527j4ft7nq0" path="res://scripts/HUD/game_hud.gd" id="1_1geg4"]
-[ext_resource type="PackedScene" uid="uid://dqgpfoti51p2e" path="res://scenes/HUD/speech_bubble.tscn" id="2_8vgd5"]
 [ext_resource type="Texture2D" uid="uid://n85kss5ltq1u" path="res://icon.svg" id="2_c4sub"]
+[ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="2_kixb8"]
 [ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="4_kixb8"]
 
 [node name="GameHud" type="Node2D" unique_id=1182350756]
 script = ExtResource("1_1geg4")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1493797194]
-offset_left = -360.0
-offset_top = -225.0
-offset_right = 360.0
-offset_bottom = -97.0
+offset_left = -347.0
+offset_top = -200.0
+offset_right = 348.0
+offset_bottom = -72.0
 alignment = 1
 
-[node name="DickBubble" parent="HBoxContainer2" unique_id=1045248266 instance=ExtResource("2_8vgd5")]
+[node name="Control" type="Control" parent="HBoxContainer2" unique_id=1526210694]
 layout_mode = 2
 size_flags_horizontal = 2
-size_flags_vertical = 4
-dialogs = ["A dick é"]
+
+[node name="SpeechBubbleManager" type="Node2D" parent="HBoxContainer2/Control" unique_id=1278935159]
+script = ExtResource("2_kixb8")
+metadata/_custom_type_script = "uid://b22ark22c86p4"
 
 [node name="Clock" type="TextureRect" parent="HBoxContainer2" unique_id=2132065394]
 layout_mode = 2
@@ -27,10 +29,10 @@ size_flags_horizontal = 8
 texture = ExtResource("2_c4sub")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1328541034]
-offset_left = -360.0
-offset_top = 97.0
-offset_right = 360.0
-offset_bottom = 225.0
+offset_left = -347.0
+offset_top = 72.0
+offset_right = 348.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1

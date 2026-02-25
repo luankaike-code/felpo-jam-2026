@@ -10,10 +10,8 @@
 
 [node name="SpeechBubble" type="MarginContainer" unique_id=1045248266]
 anchors_preset = -1
-anchor_right = 0.097
-anchor_bottom = 0.029000001
-offset_right = -72.16
-offset_bottom = 0.11999893
+offset_right = 52.0
+offset_bottom = 21.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_bhfoy")

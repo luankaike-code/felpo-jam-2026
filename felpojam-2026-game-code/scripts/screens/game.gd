@@ -2,7 +2,7 @@ extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 
-@onready var game_hud: Node2D = $GameHud
+@onready var game_hud: GameHud = $GameHud
 
 @onready var client_local: ClientLocal = $ClientLocal
 @onready var craft_local: CraftLocal = $CraftLocal
@@ -59,3 +59,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif Input.is_action_just_pressed("ui_accept") and !has_pop_up():
 		current_local += 1
 		camera.to(locals[current_local])
+	elif Input.is_action_just_pressed("ui_down"):
+		game_hud.add_dick("Em baixo significa em cima")
+	elif Input.is_action_just_pressed("ui_up"):
+		game_hud.remove_current_dick()
