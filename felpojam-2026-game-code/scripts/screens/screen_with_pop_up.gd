@@ -12,5 +12,6 @@ func factory_pop_up(pop_up_scene: PopUp) -> PopUp:
 	add_child(pop_up_scene)
 	return pop_up_scene
 
+@warning_ignore("unused_parameter")
 func _pop_mensage(mensage: PopUpMensage):
 	pass

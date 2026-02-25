@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://dyyob8guvngvg" path="res://scripts/states/speech_bubble/wait_delivery.gd" id="7_ews8o"]
 
 [node name="SpeechBubble" type="MarginContainer" unique_id=1045248266]
-anchors_preset = -1
 offset_right = 52.0
 offset_bottom = 21.0
 size_flags_horizontal = 0

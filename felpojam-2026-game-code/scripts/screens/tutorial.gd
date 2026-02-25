@@ -7,6 +7,7 @@ func _ready() -> void:
 	camera.global_position = locals[current_local_index].global_position
 	disable_nodes($CraftLocal.get_children())
 
+@warning_ignore("unused_parameter")
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		current_local_index += 1

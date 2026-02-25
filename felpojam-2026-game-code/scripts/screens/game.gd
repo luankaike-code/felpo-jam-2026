@@ -20,8 +20,10 @@ func _ready() -> void:
 	
 	camera.add_interface(game_hud)
 	
+	freeze_all_craft_items(true)
 	client_local.client_wait_order.connect(func(): freeze_all_craft_items(true))
 	client_local.exit_client.connect(func(): freeze_all_craft_items(false))
+	
 	client_local.add_dick.connect(game_hud.add_dick)
 	client_local.remove_dick.connect(game_hud.remove_current_dick)
 	

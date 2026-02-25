@@ -19,6 +19,8 @@ signal remove_dick()
 signal client_wait_order
 @warning_ignore("unused_signal")
 signal exit_client
+@warning_ignore("unused_signal")
+signal to_craft_local()
 
 func new_client():
 	var client_name := ClientData.order[current_client_order_index]
