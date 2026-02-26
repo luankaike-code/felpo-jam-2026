@@ -5,6 +5,15 @@ var current_callable := func(): return
 var loop_count := 1
 var events: Array[SoundEvent]
 
+var relative_volume := 1.0 :
+	set(new):
+		relative_volume = new
+		audio_stream_player.volume_linear = volume * relative_volume
+var volume := 1.0 :
+	set(new):
+		volume = new
+		audio_stream_player.volume_linear = volume * relative_volume
+
 var current_sound_name: SoundData.names
 var current_sound_type
 
@@ -42,9 +51,6 @@ func configure(sound_name: SoundData.names) -> void:
 	audio_stream_player.stream = SoundData.streams[current_sound_name]
 	current_sound_type = SoundData.relation_name_type[current_sound_name]
 	reset()
-
-func update_volume(volumes: Dictionary[SoundData.types, float]):
-	audio_stream_player.volume_linear = volumes[current_sound_type]
 
 func play(callable: Callable=func(): return) -> void:
 	if audio_stream_player.finished.is_connected(current_callable):
