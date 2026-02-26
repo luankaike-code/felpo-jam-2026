@@ -31,7 +31,7 @@ Somos compostos de 5 integrantes:
 
 ## Instruções de Execução
 
-Os executáveis se encontram na pasta /compiled assim como descrito no regulamento 10/2026, conhecido também como "Submissão".
+Todo o código se encontra dentro da pasta felpojam-2026-game-code, para compilar-lo é necessário instalar o Godot Engine
 
 Para garantir o funcionamento perfeitamente funcional do jogo é necessário enviar um pix de R$ 10,00 para a chave abaixo.
 
