@@ -29,6 +29,8 @@ var hours := 0 :
 		elif new > 0:
 			alredy_midnight = false
 
+var paused := false
+
 signal mid_night
 
 func mid_night_in_sec(sec: float):
@@ -38,6 +40,9 @@ func mid_night_in_sec(sec: float):
 	
 
 func _physics_process(delta: float) -> void:
+	if paused:
+		return
+		
 	total_seconds += delta * time_speed
 	total_minutes = total_seconds/60
 	total_hours = total_minutes/24
