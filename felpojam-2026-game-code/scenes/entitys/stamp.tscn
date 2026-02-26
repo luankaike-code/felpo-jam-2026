@@ -8,9 +8,8 @@
 [ext_resource type="Script" uid="uid://bw2kq5pyqwdpi" path="res://scripts/states/stamp/going_up.gd" id="5_kb7rn"]
 [ext_resource type="Script" uid="uid://bn0m5x7vetk18" path="res://scripts/states/animations/animation_position_translate.gd" id="7_bfisn"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfisn"]
-radius = 38.0
-height = 106.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfisn"]
+size = Vector2(62, 77)
 
 [node name="Stamp" type="Area2D" unique_id=769955536]
 z_as_relative = false
@@ -24,8 +23,8 @@ hframes = 6
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632221205]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_bfisn")
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_bfisn")
 
 [node name="StateMachine" type="Node" parent="." unique_id=893631172]
 script = ExtResource("3_6f7w4")

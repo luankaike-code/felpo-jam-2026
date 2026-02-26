@@ -22,4 +22,5 @@ func _ready() -> void:
 		var stamp_scene := packed_stamp.instantiate() as Stamp
 		stamp_scene.rune_name = stamps[i]
 		stamp_scene.position.x = (start_x + space * i) - i
+		stamp_scene.spawn_node.connect(add_child)
 		add_child(stamp_scene)

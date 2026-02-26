@@ -24,7 +24,7 @@ func _ready() -> void:
 	
 	camera.add_interface(game_hud)
 	
-	freeze_all_craft_items_and_the_trash(true, false)
+	#freeze_all_craft_items_and_the_trash(true, false)
 	client_local.craft_time.connect(func(): freeze_all_craft_items_and_the_trash(false, false))
 	client_local.client_wait_order.connect(func(): 
 		client_local.receive_total_parchments.emit(craft_local.get_paper_with_rune_count())
