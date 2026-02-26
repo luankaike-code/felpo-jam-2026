@@ -30,7 +30,7 @@ func set_arrow_enabled(arrow: arrows, value: bool) -> void:
 
 func add_dick(dick_text: String) -> void:
 	remove_current_dick()
-	current_speech_bubble = speech_bubble_manager.create_speech_bubble([dick_text])
+	current_speech_bubble = speech_bubble_manager.create_speech_bubble([dick_text], 0, false)
 
 func remove_current_dick() -> void:
 	if current_speech_bubble:
