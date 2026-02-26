@@ -152,11 +152,11 @@ static var speechs: Dictionary[names, Array] = {
 	],
 }
 
-static var dicks: Dictionary[SpeechsData.names, String] = {
-	SpeechsData.names.tutorial_guy: "Faz algo ai",
-	SpeechsData.names.concubine: "Quero aumentar a minha fertilidade",
-	SpeechsData.names.king: "Quero quebrar minha maldição",
-	SpeechsData.names.warlord: "Quero algo ai que esqueci",
-	SpeechsData.names.priest: "Dinheiro eu querer",
-	SpeechsData.names.ladys_companion: "Quero..."
+static var dicks: Dictionary[names, String] = {
+	names.tutorial_guy: "Faz algo ai",
+	names.concubine: "Quero aumentar a minha fertilidade",
+	names.king: "Quero quebrar minha maldição",
+	names.warlord: "Quero algo ai que esqueci",
+	names.priest: "Dinheiro eu querer",
+	names.ladys_companion: "Quero..."
 }
