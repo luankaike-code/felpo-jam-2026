@@ -35,7 +35,6 @@ func mid_night_in_sec(sec: float):
 	var sec_in_hour := 3600
 	var sec_to_midnight := (24-hours)*sec_in_hour
 	time_speed = (float(sec_to_midnight)/(sec+8))/2
-	print(time_speed)
 	
 
 func _physics_process(delta: float) -> void:

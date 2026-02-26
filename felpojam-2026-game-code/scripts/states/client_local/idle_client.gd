@@ -25,7 +25,6 @@ func on_receive_total_parchments(total: int) -> void:
 	parchment_total = total
 	
 func create_speech_bubble() -> void:
-	print(is_current_state)
 	if !is_current_state:
 		return
 		

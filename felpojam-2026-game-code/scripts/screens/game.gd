@@ -10,6 +10,7 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 @onready var locals := [client_local, craft_local, $TrashLocal]
 var is_already_wheel := false
 var current_transition_sound: SoundPlayer
+var paused := false
 
 var current_local := 0 :
 	set(new):
@@ -67,10 +68,14 @@ func _pop_mensage(mensage: PopUpMensage):
 		change_screen.emit(mensage.screen_name)
 	elif mensage is PopUpMensagePause:
 		for local in locals:
+			paused = mensage.pause
 			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT
 			game_hud.visible = !mensage.pause
 
-func _unhandled_input(event: InputEvent) -> void:		
+func _unhandled_input(event: InputEvent) -> void:
+	if paused:
+		return
+		
 	if _handle_mouse_wheel(event):
 		return
 	_handle_inputs(event)
