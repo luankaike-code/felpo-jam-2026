@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://buqfrhj2ry50c"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_glfb4"]
-[ext_resource type="Texture2D" uid="uid://dwdcw1pcxwbjg" path="res://assets/images/characters/warlord body.png" id="2_2jgc8"]
+[ext_resource type="Texture2D" uid="uid://dwdcw1pcxwbjg" path="res://assets/images/characters/warlord normal.png" id="2_2jgc8"]
+[ext_resource type="Script" uid="uid://lb2pqcls4dst" path="res://scripts/entitys/character_sprite/warlord.gd" id="2_qqc5o"]
 [ext_resource type="Texture2D" uid="uid://ddmhaty3e05o0" path="res://assets/images/characters/warlord arm.png" id="3_qqc5o"]
 
 [node name="Warlord" unique_id=1678707481 instance=ExtResource("1_glfb4")]
+script = ExtResource("2_qqc5o")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=2106019050]
 position = Vector2(6, -100)

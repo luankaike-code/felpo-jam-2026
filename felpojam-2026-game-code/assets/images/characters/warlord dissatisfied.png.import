@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwdcw1pcxwbjg"
-path="res://.godot/imported/warlord body.png-4f25531c5ff2236c61b835775ecf8009.ctex"
+uid="uid://0mwv7dt8gxtx"
+path="res://.godot/imported/warlord dissatisfied.png-866c2b73b503f17bdcbe17dca6c3af68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/warlord body.png"
-dest_files=["res://.godot/imported/warlord body.png-4f25531c5ff2236c61b835775ecf8009.ctex"]
+source_file="res://assets/images/characters/warlord dissatisfied.png"
+dest_files=["res://.godot/imported/warlord dissatisfied.png-866c2b73b503f17bdcbe17dca6c3af68.ctex"]
 
 [params]
 
