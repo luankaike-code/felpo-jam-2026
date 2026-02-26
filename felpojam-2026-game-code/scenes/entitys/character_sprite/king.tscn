@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://ccmvsgli14axo"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_0vjgk"]
-[ext_resource type="Texture2D" uid="uid://cj0fv31wmvq3d" path="res://assets/images/characters/king.png" id="2_2ejxu"]
+[ext_resource type="Script" uid="uid://bjsrmjtx8ie0r" path="res://scripts/entitys/character_sprite/king.gd" id="2_2ejxu"]
+[ext_resource type="Texture2D" uid="uid://cqklfqthfnbn8" path="res://assets/images/characters/king satisfied.png" id="3_2ejxu"]
 
 [node name="King" unique_id=1678707481 instance=ExtResource("1_0vjgk")]
+script = ExtResource("2_2ejxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=1305198702]
 position = Vector2(0, -124)
-texture = ExtResource("2_2ejxu")
+texture = ExtResource("3_2ejxu")
 
 [node name="BubblePos" parent="." index="1" unique_id=2144655565]
 position = Vector2(66, -255)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tww13gt4mlxq"
-path="res://.godot/imported/concubine.png-1b14b0490930f6ecbbdf90cdef798840.ctex"
+uid="uid://dlh0blm6mpvjg"
+path="res://.godot/imported/concubine dissatisfied.png-76f95f59cffd5e70e135ac26f16566ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/concubine.png"
-dest_files=["res://.godot/imported/concubine.png-1b14b0490930f6ecbbdf90cdef798840.ctex"]
+source_file="res://assets/images/characters/concubine dissatisfied.png"
+dest_files=["res://.godot/imported/concubine dissatisfied.png-76f95f59cffd5e70e135ac26f16566ba.ctex"]
 
 [params]
 

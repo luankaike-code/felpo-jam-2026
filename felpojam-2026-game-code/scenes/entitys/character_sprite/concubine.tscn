@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c4r2dfj1tp8qc"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_wnxwk"]
-[ext_resource type="Texture2D" uid="uid://tww13gt4mlxq" path="res://assets/images/characters/concubine.png" id="2_6k8aq"]
+[ext_resource type="Script" uid="uid://d35qip6jbg6jr" path="res://scripts/entitys/character_sprite/concubine.gd" id="2_6k8aq"]
 
 [node name="Concubine" unique_id=1678707481 instance=ExtResource("1_wnxwk")]
+script = ExtResource("2_6k8aq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=939621503]
 position = Vector2(0, -146)
-texture = ExtResource("2_6k8aq")
 
 [node name="BubblePos" parent="." index="1" unique_id=2144655565]
 position = Vector2(49, -255)
