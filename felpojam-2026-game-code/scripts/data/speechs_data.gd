@@ -28,9 +28,43 @@ enum names {
 	ladys_companion_result_positive,
 	ladys_companion_result_ok,
 	ladys_companion_result_negative,
+	
+	tutorial_guy,
+	tutorial_guy_result_positive,
+	tutorial_guy_result_ok,
+	tutorial_guy_result_negative,
+	tutorial_guy_not_craft_all_parchemnts
 }
 
 static var speechs: Dictionary[names, Array] = {
+	names.tutorial_guy: [
+		"E ai cabaço?"
+	],
+	names.tutorial_guy_result_positive: [
+		"Parece que você já é muito experiente...",
+		"Nessa caso...",
+		"Tchau, tchau. Você não tem mais nada a aprender",
+	],
+	names.tutorial_guy_result_ok : [
+		"Nada mal para um iniciante...",
+		"Nessa caso...",
+		"Tchau, tchau. Boa sorte agradando a corte",
+	],
+	names.tutorial_guy_result_negative: [
+		"Nossa...",
+		"Como você veio a corte?",
+		"Bom...",
+		"O problema não é mal de qualquer forma",
+		"Adeus... Desejo boa sorte"
+	],
+	names.tutorial_guy_not_craft_all_parchemnts: [
+		"Ai como...",
+		"*suspiro*",
+		"Como cê não conseguiu fazer apenas 3 pergaminhos em um dia?",
+		"Tá... Te recomendo treinar um pouco mais",
+		
+	],
+	
 	names.not_craft_all_parchemnts: [
 		"Oi, volta aqui e...",
 		"Comoo assim?...",
@@ -119,6 +153,7 @@ static var speechs: Dictionary[names, Array] = {
 }
 
 static var dicks: Dictionary[SpeechsData.names, String] = {
+	SpeechsData.names.tutorial_guy: "Faz algo ai",
 	SpeechsData.names.concubine: "Quero aumentar a minha fertilidade",
 	SpeechsData.names.king: "Quero quebrar minha maldição",
 	SpeechsData.names.warlord: "Quero algo ai que esqueci",

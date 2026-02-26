@@ -6,6 +6,7 @@ class_name ClientLocal extends Local
 @onready var table_bell: TableBell = $TableBell
 
 var current_client_order_index: int
+var current_client_name: ClientData.names
 var current_client_data: ClientObj
 var character_sprite: CharacterSprite
 
@@ -32,8 +33,8 @@ func new_client():
 	if state_machine.current_state.name != "Idle":
 		return
 
-	var client_name := ClientData.order[current_client_order_index]
-	current_client_data = ClientData.client[client_name]
+	current_client_name = ClientData.order[current_client_order_index]
+	current_client_data = ClientData.client[current_client_name]
 	
 	state_machine.change_state("NewClient")
 
@@ -61,5 +62,10 @@ func exit_character():
 	)
 
 func handle_client_result_mensage(client_result: ClientResult):
+	print(client_result.mensage, client_result.mensage is ClientResultMensageMoney)
 	if client_result.mensage is ClientResultMensageMoney:
 		Global.money += client_result.mensage.money
+	elif client_result.mensage is ClientResultMensageOpenPop:
+		open_pop_up.emit(client_result.mensage.pop_up)
+	else:
+		assert(false, "%s Not is handle. ClientResult(%s, %s)" % [str(client_result), str(client_result.speech), str(client_result.mensage)])

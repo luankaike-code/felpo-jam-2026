@@ -1,6 +1,7 @@
 class_name CharacterData extends Resource
 
 enum names {
+	tutorial_guy,
 	concubine,
 	king,
 	warlord,
@@ -15,6 +16,7 @@ enum versions {
 }
 
 static var packeds: Dictionary[names, PackedScene] = {
+	names.tutorial_guy: load("res://scenes/entitys/character_sprite/tutorial_guy.tscn"),
 	names.concubine: load("res://scenes/entitys/character_sprite/concubine.tscn"),
 	names.king: load("res://scenes/entitys/character_sprite/king.tscn"),
 	names.warlord: load("res://scenes/entitys/character_sprite/warlord.tscn"),

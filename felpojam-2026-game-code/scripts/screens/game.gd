@@ -1,4 +1,4 @@
-extends ScreenWithPopUp
+class_name ScreenGame extends ScreenWithPopUp
 
 var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tscn") as PackedScene
 
@@ -77,9 +77,12 @@ func _pop_mensage(mensage: PopUpMensage):
 func _unhandled_input(event: InputEvent) -> void:
 	if paused:
 		return
-		
-	if _handle_mouse_wheel(event):
+	
+	if _handle_super_inputs(event):
 		return
+	elif _handle_mouse_wheel(event):
+		return
+	
 	_handle_inputs(event)
 	
 func _handle_mouse_wheel(event: InputEvent) -> bool:
@@ -93,14 +96,21 @@ func _handle_mouse_wheel(event: InputEvent) -> bool:
 		is_already_wheel = true
 	else:
 		is_already_wheel = false
-		return true
-	return false
-	
+		
+	return is_already_wheel
+
+@warning_ignore("unused_parameter")
+func _handle_super_inputs(event: InputEvent) -> bool:
+	if Input.is_action_just_pressed("ui_cancel"):
+		factory_pop_up(packed_menu_in_game.instantiate())
+	else:
+		return false
+	return true
+		
+
 func _handle_inputs(event: InputEvent) -> void:
 	if has_pop_up() || !event.is_pressed():
 		return
-	elif Input.is_action_just_pressed("ui_cancel"):
-		factory_pop_up(packed_menu_in_game.instantiate())
 	elif (Input.is_action_just_pressed("inp_toggle_local") || Input.is_action_just_pressed("inp_next_local")):
 		togo_local(1)
 	elif Input.is_action_just_pressed("inp_previous_local"):

@@ -1,6 +1,7 @@
 class_name ClientData extends Resource
 
 enum names {
+	tutorial_guy,
 	warlord,
 	concubine,
 	king,
@@ -17,6 +18,12 @@ static var order: Array[names] = [
 ]
 
 static var client: Dictionary[names, ClientObj] = {
+	names.tutorial_guy: ClientObj.new(
+		CharacterData.names.tutorial_guy,
+		SpeechsData.names.tutorial_guy,
+		SpeechsData.names.tutorial_guy,
+		OrdersData.names.infernal_fire
+	),
 	names.concubine: ClientObj.new(
 		CharacterData.names.concubine, 
 		SpeechsData.names.concubine,
@@ -138,6 +145,32 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 		ClientResult.new(
 			SpeechsData.names.not_craft_all_parchemnts, 
 			ClientResultMensageMoney.new(-50.0)
+		)
+	),
+	names.tutorial_guy: ClientResultPossibility.new(
+		ClientResult.new(
+			SpeechsData.names.tutorial_guy_result_positive, 
+			ClientResultMensageOpenPop.new(
+				preload("res://scenes/pop_ups/pre_made/pop_up_try_tutorial_again.tscn")
+			)
+		),
+		ClientResult.new(
+			SpeechsData.names.tutorial_guy_result_ok, 
+			ClientResultMensageOpenPop.new(
+				preload("res://scenes/pop_ups/pre_made/pop_up_try_tutorial_again.tscn")
+			)
+		),
+		ClientResult.new(
+			SpeechsData.names.tutorial_guy_result_negative, 
+			ClientResultMensageOpenPop.new(
+				preload("res://scenes/pop_ups/pre_made/pop_up_try_tutorial_again.tscn")
+			)
+		),
+		ClientResult.new(
+			SpeechsData.names.tutorial_guy_not_craft_all_parchemnts, 
+			ClientResultMensageOpenPop.new(
+				preload("res://scenes/pop_ups/pre_made/pop_up_try_tutorial_again.tscn")
+			)
 		)
 	),
 }

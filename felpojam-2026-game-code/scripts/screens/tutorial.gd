@@ -1,25 +1,30 @@
-extends Screen
+extends ScreenGame
 
-@onready var locals := [$ClientLocal, $CraftLocal]
-var current_local_index := 1
+var disable_inputs: bool
+@onready var tutorial_client_local: TutorialClientLocal = $ClientLocal
 
 func _ready() -> void:
-	camera.global_position = locals[current_local_index].global_position
-	disable_nodes($CraftLocal.get_children())
+	super()
+	set_disable_arrows(true)
+	tutorial_client_local.table_bell_click.connect(_on_table_bell_click)
 
-@warning_ignore("unused_parameter")
+func _on_table_bell_click():
+	set_disable_arrows(false)
+
+func set_disable_arrows(value: bool):
+	disable_inputs = value
+	game_hud.set_arrow_enabled(GameHud.arrows.right, !value)
+	game_hud.set_arrow_enabled(GameHud.arrows.left, !value)
+	if !value:
+		update_arrow_enabled()
+
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		current_local_index += 1
-		current_local_index %= locals.size()
-		camera.to(locals[current_local_index])
-
-func disable_nodes(nodes: Array):
-	for node in nodes:
-		if !node is Node2D:
-			return
-
-		if node is Draggable:
-			node.is_draggable = false
-		else:
-			disable_nodes(node.get_children())
+	if paused:
+		return
+	
+	if _handle_super_inputs(event) || disable_inputs:
+		return
+	elif _handle_mouse_wheel(event):
+		return
+	
+	_handle_inputs(event)

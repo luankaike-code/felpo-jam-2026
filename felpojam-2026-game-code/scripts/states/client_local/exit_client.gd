@@ -16,8 +16,7 @@ func enter(host_) -> void:
 
 func get_client_result_obj() -> ClientResultObj:
 	var order_quality :=  get_order_quality()
-	var client_name := ClientData.order[host.current_client_order_index]
-	var results := ClientData.client_result[client_name]
+	var results := ClientData.client_result[host.current_client_name]
 	
 	return HelperData.get_client_result(order_quality, results)
 

@@ -22,3 +22,5 @@ func _ready() -> void:
 		btn_node.button_up.connect(func(): send_mensage.emit(button.pop_up_mensagem))
 		
 		button_conteiner.add_child(btn_node)
+	
+	send_pause_mensage(true)

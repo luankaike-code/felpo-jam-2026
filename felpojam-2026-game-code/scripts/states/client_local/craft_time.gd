@@ -17,7 +17,7 @@ func enter(host_) -> void:
 	var dick_text = SpeechsData.dicks[host.current_client_data.order_speech]
 	host.add_dick.emit(dick_text)
 	
-	GlobalTime.mid_night_in_sec(40)
+	GlobalTime.mid_night_in_sec(5)
 
 func to_client_wait_order() -> void:
 	if !is_current_state:
