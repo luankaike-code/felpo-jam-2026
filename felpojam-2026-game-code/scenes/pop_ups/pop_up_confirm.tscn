@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://brbhg1syjyxlb"]
 
 [ext_resource type="Script" uid="uid://cq7f3k638pxhu" path="res://scripts/pop_ups/pop_up_confim/pop_up_confirm.gd" id="1_nylfh"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_17d2h"]
 [ext_resource type="Texture2D" uid="uid://dgoled4de2qeq" path="res://assets/images/button.png" id="2_guuby"]
 [ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="3_e6sk0"]
 
 [node name="PopUpConfirm" type="Node2D" unique_id=1517802616]
 script = ExtResource("1_nylfh")
 metadata/_custom_type_script = "uid://m741nhr6vpsv"
+
+[node name="Local" parent="." unique_id=1423880516 instance=ExtResource("2_17d2h")]
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=481329879]
 anchors_preset = 15

@@ -68,10 +68,11 @@ func _pop_mensage(mensage: PopUpMensage):
 	elif mensage is PopUpMensageChangeScreen:
 		change_screen.emit(mensage.screen_name)
 	elif mensage is PopUpMensagePause:
+		game_hud.visible = !mensage.pause
+		paused = mensage.pause
 		for local in locals:
-			paused = mensage.pause
 			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT
-			game_hud.visible = !mensage.pause
+			local.visible = !mensage.pause
 
 func _unhandled_input(event: InputEvent) -> void:
 	if paused:
