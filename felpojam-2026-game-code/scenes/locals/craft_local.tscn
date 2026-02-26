@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://1glccdnt0j3n" path="res://assets/images/craft_local_bg.png" id="3_00w25"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="4_t3eoa"]
 [ext_resource type="PackedScene" uid="uid://cj4k5fngr2dev" path="res://scenes/entitys/stack_papers.tscn" id="5_mvwp7"]
-[ext_resource type="PackedScene" uid="uid://ftl38bpii8ag" path="res://scenes/entitys/stamp.tscn" id="8_edtm0"]
 [ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="9_umv4u"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="10_00w25"]
+[ext_resource type="PackedScene" uid="uid://bgqa2qfu810ox" path="res://scenes/entitys/stamps_conjunt.tscn" id="10_wwimg"]
 [ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="11_wwimg"]
 
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
@@ -47,29 +47,9 @@ position = Vector2(-293, 10)
 [node name="Trash" parent="." index="8" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(628, 78)
 
-[node name="Stamp5" parent="." index="9" unique_id=539662780 instance=ExtResource("8_edtm0")]
-position = Vector2(-92, -101)
-
-[node name="Stamp" parent="." index="10" unique_id=769955536 instance=ExtResource("8_edtm0")]
-position = Vector2(-3, -98)
-rune_name = 1
-
-[node name="Stamp3" parent="." index="11" unique_id=2122770798 instance=ExtResource("8_edtm0")]
-position = Vector2(89, -93)
-rune_name = 2
-
-[node name="Stamp6" parent="." index="12" unique_id=798498775 instance=ExtResource("8_edtm0")]
-position = Vector2(181, -93)
-rune_name = 3
-
-[node name="Stamp2" parent="." index="13" unique_id=1425219931 instance=ExtResource("8_edtm0")]
-position = Vector2(91, -1)
-rune_name = 4
-
-[node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
-position = Vector2(186, -4)
-rune_name = 5
-
-[node name="Sprite2D3" parent="." index="15" unique_id=1015827000]
+[node name="Sprite2D3" parent="." index="9" unique_id=1015827000]
 position = Vector2(180, -465)
 region_rect = Rect2(0, 0, 1080, 480)
+
+[node name="StampsConjunt" parent="." index="10" unique_id=1081891180 instance=ExtResource("10_wwimg")]
+position = Vector2(-7, -93)
