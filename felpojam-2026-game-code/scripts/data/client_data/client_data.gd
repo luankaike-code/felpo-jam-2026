@@ -22,37 +22,43 @@ static var client: Dictionary[names, ClientObj] = {
 		CharacterData.names.tutorial_guy,
 		SpeechsData.names.tutorial_guy,
 		SpeechsData.names.tutorial_guy,
-		OrdersData.names.infernal_fire
+		OrdersData.names.infernal_fire,
+		120.0
 	),
 	names.concubine: ClientObj.new(
 		CharacterData.names.concubine, 
 		SpeechsData.names.concubine,
 		SpeechsData.names.get_order_concubine,
-		OrdersData.names.more_fetility
+		OrdersData.names.more_fetility,
+		40.0
 	),
 	names.king: ClientObj.new(
 		CharacterData.names.king,
 		SpeechsData.names.king,
 		SpeechsData.names.king,
-		OrdersData.names.infernal_fire
+		OrdersData.names.infernal_fire,
+		40.0
 	),
 	names.warlord: ClientObj.new(
 		CharacterData.names.warlord,
 		SpeechsData.names.warlord,
 		SpeechsData.names.warlord,
-		OrdersData.names.infernal_fire
+		OrdersData.names.infernal_fire,
+		40.0
 	),
 	names.priest: ClientObj.new(
 		CharacterData.names.priest,
 		SpeechsData.names.priest,
 		SpeechsData.names.priest,
-		OrdersData.names.infernal_fire
+		OrdersData.names.infernal_fire,
+		5.0
 	),
 	names.ladys_companion: ClientObj.new(
 		CharacterData.names.ladys_companion,
 		SpeechsData.names.ladys_companion,
 		SpeechsData.names.ladys_companion,
-		OrdersData.names.infernal_fire
+		OrdersData.names.infernal_fire,
+		40.0
 	)
 }
 
