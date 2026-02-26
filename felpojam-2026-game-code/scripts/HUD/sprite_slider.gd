@@ -46,7 +46,8 @@ func get_slider_icon_pos_using_value() -> float:
 	return step_index * step_value * size.x
 
 func update_bar_actived():
-	bar_actived.size.x = slider_icon.position.x+(slider_icon.size.x/2)
+	var new_size := Vector2(slider_icon.position.x+(slider_icon.size.x/2), bar_actived.size.y)
+	bar_actived.set_deferred("size", new_size)
 
 func get_slider_icon_pos_using_mouse() -> float:
 	var pos_x := get_local_mouse_position().x-(slider_icon.size.x/2)
