@@ -69,7 +69,7 @@ func _pop_mensage(mensage: PopUpMensage):
 		change_screen.emit(mensage.screen_name)
 	elif mensage is PopUpMensagePause:
 		game_hud.visible = !mensage.pause
-		paused = mensage.pause
+		set_deferred("paused", mensage.pause)
 		GlobalTime.paused = mensage.pause
 		for local in locals:
 			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT

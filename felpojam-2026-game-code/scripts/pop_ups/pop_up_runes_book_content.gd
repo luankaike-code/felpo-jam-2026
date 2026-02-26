@@ -1,6 +1,6 @@
 extends PopUp
 
-@onready var tab_container: TabContainer = $CanvasLayer/Control/MarginContainer/TabContainer
+@onready var tab_container: TabContainer = $Control/MarginContainer/TabContainer
 
 func _ready() -> void:
 	Sound.play_sound(SoundData.names.open_book)

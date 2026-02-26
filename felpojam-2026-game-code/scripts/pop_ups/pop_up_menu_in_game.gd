@@ -17,6 +17,11 @@ func _ready() -> void:
 	configs_btn.button_up.connect(open_configs_in_game)
 	goto_menu_btn.button_up.connect(confirm_goto_menu)
 
+@warning_ignore("unused_parameter")
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		goto_game()
+
 func confirm_goto_menu():
 	var buttons: Array[PopUpConfirmButtonObj] = [
 		PopUpConfirmButtonObj.new("Sair", PopUpMensageChangeScreen.new(ScreenData.names.menu)),
