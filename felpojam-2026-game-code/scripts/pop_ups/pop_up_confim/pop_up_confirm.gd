@@ -21,8 +21,7 @@ func _ready() -> void:
 		
 		btn_node.button_up.connect(func(): 
 			send_mensage.emit(button.pop_up_mensagem)
-			if button.pop_up_mensagem is PopUpMensagePause || button.pop_up_mensagem is PopUpMensageOpenPopUp:
-				queue_free()
+			queue_free()
 		)
 		
 		button_conteiner.add_child(btn_node)
