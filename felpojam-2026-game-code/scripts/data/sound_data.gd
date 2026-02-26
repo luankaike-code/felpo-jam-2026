@@ -21,6 +21,10 @@ enum names {
 	stamp_ink,
 	stamp_stand,
 	table_bell,
+	click_book,
+	close_book,
+	open_book,
+	pass_page,
 }
 
 enum types {
@@ -49,7 +53,11 @@ static var relation_name_type: Dictionary[names, types] = {
 	names.pressed_button: types.sound_effect,
 	names.stamp_ink: types.sound_effect,
 	names.stamp_stand: types.sound_effect,
-	names.table_bell: types.sound_effect
+	names.table_bell: types.sound_effect,
+	names.click_book: types.sound_effect,
+	names.close_book: types.sound_effect,
+	names.open_book: types.sound_effect,
+	names.pass_page: types.sound_effect,
 }
 
 static var streams: Dictionary[names, AudioStreamMP3] = {
@@ -72,5 +80,9 @@ static var streams: Dictionary[names, AudioStreamMP3] = {
 	names.pressed_button: preload("res://assets/sounds_effects/pressed_button.mp3"),
 	names.stamp_ink: preload("res://assets/sounds_effects/stamp_ink.mp3"),
 	names.stamp_stand: preload("res://assets/sounds_effects/stamp_stand.mp3"),
-	names.table_bell: preload("res://assets/sounds_effects/table_bell.mp3")
+	names.table_bell: preload("res://assets/sounds_effects/table_bell.mp3"),
+	names.click_book: preload("res://assets/sounds_effects/clik_book.mp3"),
+	names.close_book: preload("res://assets/sounds_effects/close_book.mp3"),
+	names.open_book: preload("res://assets/sounds_effects/open_book.mp3"),
+	names.pass_page: preload("res://assets/sounds_effects/pass_page.mp3"),
 }

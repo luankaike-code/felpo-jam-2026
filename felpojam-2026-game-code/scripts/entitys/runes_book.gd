@@ -8,4 +8,5 @@ signal open(pop_up_scene)
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+			Sound.play_sound(SoundData.names.click_book)
 			open.emit(packed_runes_book_content.instantiate())
