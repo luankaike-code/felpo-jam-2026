@@ -38,12 +38,13 @@ offset_right = 348.0
 offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 0
-mouse_filter = 0
+mouse_filter = 2
 alignment = 1
 
 [node name="ArrowLeft" type="TextureRect" parent="HBoxContainer" unique_id=212700544]
 layout_mode = 2
 size_flags_horizontal = 2
+mouse_filter = 0
 texture = ExtResource("4_guowm")
 stretch_mode = 3
 flip_h = true
@@ -53,6 +54,7 @@ metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 [node name="ArrowRight" type="TextureRect" parent="HBoxContainer" unique_id=1631663697]
 layout_mode = 2
 size_flags_horizontal = 10
+mouse_filter = 0
 texture = ExtResource("4_guowm")
 stretch_mode = 3
 script = ExtResource("4_kixb8")
