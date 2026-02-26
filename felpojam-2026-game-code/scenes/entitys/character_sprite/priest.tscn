@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dhgs2mfk1neht"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_ifecw"]
-[ext_resource type="Texture2D" uid="uid://jdx5cubp7p6y" path="res://assets/images/characters/priest.png" id="2_mqfjh"]
+[ext_resource type="Texture2D" uid="uid://bhdwgra1r1daa" path="res://assets/images/characters/priest normal.png" id="2_mqfjh"]
+[ext_resource type="Script" uid="uid://bb0wcniakln8w" path="res://scripts/entitys/character_sprite/priest.gd" id="2_v86n7"]
 
 [node name="Priest" unique_id=1678707481 instance=ExtResource("1_ifecw")]
+script = ExtResource("2_v86n7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=551184845]
 position = Vector2(0, -146)

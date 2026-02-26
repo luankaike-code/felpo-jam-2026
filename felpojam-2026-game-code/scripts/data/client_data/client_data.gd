@@ -9,8 +9,8 @@ enum names {
 }
 
 static var order: Array[names] = [
-	names.ladys_companion,
 	names.priest,
+	names.ladys_companion,
 	names.warlord,
 	names.concubine,
 	names.king,
