@@ -24,12 +24,13 @@ func _ready() -> void:
 	
 	camera.add_interface(game_hud)
 	
-	freeze_all_craft_items(true)
-	client_local.craft_time.connect(func(): freeze_all_craft_items(false))
+	freeze_all_craft_items_and_the_trash(true, false)
+	client_local.craft_time.connect(func(): freeze_all_craft_items_and_the_trash(false, false))
 	client_local.client_wait_order.connect(func(): 
 		client_local.receive_total_parchments.emit(craft_local.get_paper_with_rune_count())
-		freeze_all_craft_items(true)
+		freeze_all_craft_items_and_the_trash(true, true)
 	)
+	client_local.exit_client.connect(func(): freeze_all_craft_items_and_the_trash(true, false))
 	
 	client_local.add_dick.connect(game_hud.add_dick)
 	client_local.remove_dick.connect(game_hud.remove_current_dick)
@@ -55,11 +56,11 @@ func update_arrow_enabled():
 	game_hud.set_arrow_enabled(GameHud.arrows.right, !right_total)
 	game_hud.set_arrow_enabled(GameHud.arrows.left, !left_total)
 
-func freeze_all_craft_items(value: bool):
-	craft_local.set_enable_trash(!value)
+func freeze_all_craft_items_and_the_trash(craft_items_value: bool, trash_value: bool=):
+	craft_local.set_enable_trash(!trash_value)
 	for draggable in get_tree().get_nodes_in_group("draggables"):
 		if draggable is Stamp || draggable is Dropper:
-			draggable.is_freeze = value
+			draggable.is_freeze = craft_items_value
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:

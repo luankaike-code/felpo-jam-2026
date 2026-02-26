@@ -17,9 +17,11 @@ signal add_dick(dick_text: String)
 signal remove_dick()
 
 @warning_ignore("unused_signal")
+signal craft_time
+@warning_ignore("unused_signal")
 signal client_wait_order
 @warning_ignore("unused_signal")
-signal craft_time
+signal exit_client
 @warning_ignore("unused_signal")
 signal receive_total_parchments
 

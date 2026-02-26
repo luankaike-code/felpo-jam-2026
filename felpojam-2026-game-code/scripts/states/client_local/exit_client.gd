@@ -5,6 +5,7 @@ var client_result_obj: ClientResultObj
 
 func enter(host_) -> void:
 	host = host_
+	host.exit_client.emit()
 	
 	client_result_obj = get_client_result_obj()
 	host.character_sprite.set_version(client_result_obj.character_version)
