@@ -2,7 +2,7 @@ class_name OrdersData extends Resource
 
 enum names {
 	more_fetility,
-	infernal_fire
+	infernal_fire,
 }
 
 static var orders: Dictionary[names, OrderObj] = {

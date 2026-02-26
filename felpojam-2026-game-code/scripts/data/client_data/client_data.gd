@@ -51,7 +51,7 @@ static var client: Dictionary[names, ClientObj] = {
 		SpeechsData.names.priest,
 		SpeechsData.names.priest,
 		OrdersData.names.infernal_fire,
-		5.0
+		40.0
 	),
 	names.ladys_companion: ClientObj.new(
 		CharacterData.names.ladys_companion,
