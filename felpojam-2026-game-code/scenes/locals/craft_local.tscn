@@ -52,6 +52,7 @@ position = Vector2(-92, -101)
 
 [node name="Stamp" parent="." index="10" unique_id=769955536 instance=ExtResource("8_edtm0")]
 position = Vector2(-3, -98)
+rune_name = 1
 
 [node name="Stamp3" parent="." index="11" unique_id=2122770798 instance=ExtResource("8_edtm0")]
 position = Vector2(89, -93)
@@ -59,15 +60,15 @@ rune_name = 2
 
 [node name="Stamp6" parent="." index="12" unique_id=798498775 instance=ExtResource("8_edtm0")]
 position = Vector2(181, -93)
-rune_name = 1
+rune_name = 3
 
 [node name="Stamp2" parent="." index="13" unique_id=1425219931 instance=ExtResource("8_edtm0")]
 position = Vector2(91, -1)
-rune_name = 1
+rune_name = 4
 
 [node name="Stamp4" parent="." index="14" unique_id=1582331971 instance=ExtResource("8_edtm0")]
 position = Vector2(186, -4)
-rune_name = 3
+rune_name = 5
 
 [node name="Sprite2D3" parent="." index="15" unique_id=1015827000]
 position = Vector2(180, -465)

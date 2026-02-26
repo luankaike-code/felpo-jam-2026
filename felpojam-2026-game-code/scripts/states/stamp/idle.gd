@@ -11,6 +11,7 @@ func handle_stand():
 	var res := host.current_stand.place_item(host)
 	if !res:
 		host.default_stand.place_item(host)
+	host.change_sprite_texture(StampData.versions.in_stand)
 
 func enter(host_) -> void:
 	host = host_

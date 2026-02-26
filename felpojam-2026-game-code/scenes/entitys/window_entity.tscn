@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdejvki2ipm0y" path="res://scripts/entitys/window_entity.gd" id="1_eq10c"]
 [ext_resource type="Texture2D" uid="uid://ds5dyif2bkamq" path="res://assets/images/window.png" id="2_chtu3"]
+[ext_resource type="Texture2D" uid="uid://bo0gt58e5xhd7" path="res://assets/images/window_bg.png" id="3_chtu3"]
 
 [node name="Window" type="Node2D" unique_id=883367135]
 script = ExtResource("1_eq10c")
@@ -14,9 +15,7 @@ frame = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D3" unique_id=1812159864]
 position = Vector2(3, 68)
-scale = Vector2(2, 2)
-texture = ExtResource("2_chtu3")
-hframes = 3
+texture = ExtResource("3_chtu3")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=947906866]
 texture = ExtResource("2_chtu3")

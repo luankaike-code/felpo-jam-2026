@@ -16,26 +16,29 @@
 [node name="ClientLocal" unique_id=564590170 instance=ExtResource("1_vig35")]
 script = ExtResource("2_qqkxa")
 
-[node name="CharacterSpritePos" type="Node2D" parent="." index="1" unique_id=355683440]
+[node name="Window" parent="." index="3" unique_id=883367135 instance=ExtResource("12_gd4ri")]
+position = Vector2(134, -41)
+
+[node name="CharacterSpritePos" type="Node2D" parent="." index="4" unique_id=355683440]
 z_index = -1
 position = Vector2(-156, 130)
 
-[node name="Table" type="Sprite2D" parent="." index="2" unique_id=56828278]
+[node name="Table" type="Sprite2D" parent="." index="5" unique_id=56828278]
 position = Vector2(0, 185)
-scale = Vector2(-1, -1)
+rotation = 3.1415927
 texture = ExtResource("3_ph3mh")
 region_enabled = true
 region_rect = Rect2(0, 0, 720, 80)
 
-[node name="SpeechBubbleManager" type="Node2D" parent="." index="3" unique_id=1053634050]
+[node name="SpeechBubbleManager" type="Node2D" parent="." index="6" unique_id=1053634050]
 z_index = 10
 script = ExtResource("5_pp4ci")
 metadata/_custom_type_script = "uid://b22ark22c86p4"
 
-[node name="TableBell" parent="." index="4" unique_id=183704749 instance=ExtResource("11_ph3mh")]
-position = Vector2(236, 145)
+[node name="TableBell" parent="." index="7" unique_id=183704749 instance=ExtResource("11_ph3mh")]
+position = Vector2(129, 150)
 
-[node name="StateMachine" type="Node" parent="." index="5" unique_id=420485562 node_paths=PackedStringArray("current_state")]
+[node name="StateMachine" type="Node" parent="." index="8" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")
 current_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
@@ -59,6 +62,3 @@ metadata/_custom_type_script = "uid://b03mc2du2h6cu"
 [node name="ExitClient" type="Node" parent="StateMachine" index="4" unique_id=1572576924]
 script = ExtResource("9_geiil")
 metadata/_custom_type_script = "uid://b03mc2du2h6cu"
-
-[node name="Window" parent="." index="8" unique_id=883367135 instance=ExtResource("12_gd4ri")]
-position = Vector2(134, -41)

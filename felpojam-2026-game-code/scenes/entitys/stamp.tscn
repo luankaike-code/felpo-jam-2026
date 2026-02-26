@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://ftl38bpii8ag"]
 
 [ext_resource type="Script" uid="uid://wecskt8a2l36" path="res://scripts/entitys/stamp.gd" id="1_f45sb"]
-[ext_resource type="Texture2D" uid="uid://bwv4tb86wvig0" path="res://assets/images/stamp.png" id="2_0v15b"]
+[ext_resource type="Texture2D" uid="uid://ibki7o8d5opg" path="res://assets/images/stamps.png" id="2_bfisn"]
 [ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_6f7w4"]
 [ext_resource type="Script" uid="uid://d0yqb1h5x5d6y" path="res://scripts/states/stamp/idle.gd" id="4_bfisn"]
 [ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="5_0v15b"]
 [ext_resource type="Script" uid="uid://bw2kq5pyqwdpi" path="res://scripts/states/stamp/going_up.gd" id="5_kb7rn"]
 [ext_resource type="Script" uid="uid://bn0m5x7vetk18" path="res://scripts/states/animations/animation_position_translate.gd" id="7_bfisn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t5bq3"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfisn"]
 radius = 38.0
+height = 106.0
 
 [node name="Stamp" type="Area2D" unique_id=769955536]
 z_as_relative = false
@@ -18,11 +19,13 @@ metadata/_custom_type_script = "uid://cofhru7hxcyx6"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=251825953]
 position = Vector2(0, -3)
-texture = ExtResource("2_0v15b")
+texture = ExtResource("2_bfisn")
+hframes = 6
+frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1632221205]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_t5bq3")
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_bfisn")
 
 [node name="StateMachine" type="Node" parent="." unique_id=893631172]
 script = ExtResource("3_6f7w4")

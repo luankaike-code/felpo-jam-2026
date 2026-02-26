@@ -20,6 +20,7 @@ enum names {
 	pressed_button,
 	stamp_ink,
 	stamp_stand,
+	table_bell,
 }
 
 enum types {
@@ -48,6 +49,7 @@ static var relation_name_type: Dictionary[names, types] = {
 	names.pressed_button: types.sound_effect,
 	names.stamp_ink: types.sound_effect,
 	names.stamp_stand: types.sound_effect,
+	names.table_bell: types.sound_effect
 }
 
 static var streams: Dictionary[names, AudioStreamMP3] = {
@@ -70,4 +72,5 @@ static var streams: Dictionary[names, AudioStreamMP3] = {
 	names.pressed_button: preload("res://assets/sounds_effects/pressed_button.mp3"),
 	names.stamp_ink: preload("res://assets/sounds_effects/stamp_ink.mp3"),
 	names.stamp_stand: preload("res://assets/sounds_effects/stamp_stand.mp3"),
+	names.table_bell: preload("res://assets/sounds_effects/table_bell.mp3")
 }
