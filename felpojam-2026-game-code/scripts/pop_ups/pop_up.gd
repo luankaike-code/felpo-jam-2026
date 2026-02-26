@@ -3,8 +3,7 @@ class_name PopUp extends Node2D
 signal send_mensage(mensage: PopUpMensage)
 
 func send_pause_mensage(pause: bool):
-	var pause_msg := PopUpMensagePause.new()
-	pause_msg.setup(pause)
+	var pause_msg := PopUpMensagePause.new(pause)
 	send_mensage.emit(pause_msg)
 
 func send_open_pop_up(pop_up: PopUp):

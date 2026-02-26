@@ -19,7 +19,11 @@ func _ready() -> void:
 		btn_node.text = button.text
 		btn_node.size_flags_horizontal = Control.SIZE_SHRINK_CENTER + Control.SIZE_EXPAND
 		
-		btn_node.button_up.connect(func(): send_mensage.emit(button.pop_up_mensagem))
+		btn_node.button_up.connect(func(): 
+			send_mensage.emit(button.pop_up_mensagem)
+			if button.pop_up_mensagem is PopUpMensagePause || button.pop_up_mensagem is PopUpMensageOpenPopUp:
+				queue_free()
+		)
 		
 		button_conteiner.add_child(btn_node)
 	

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://0h4gbrh42u2a"]
+
+[ext_resource type="PackedScene" uid="uid://brbhg1syjyxlb" path="res://scenes/pop_ups/pop_up_confirm.tscn" id="1_74wmf"]
+[ext_resource type="Script" uid="uid://bhd6046e0quvi" path="res://scripts/pop_ups/pre_made/pop_up_quit_game_1.gd" id="2_vqhyc"]
+
+[node name="PopUpQuitGame1" unique_id=1517802616 instance=ExtResource("1_74wmf")]
+script = ExtResource("2_vqhyc")
