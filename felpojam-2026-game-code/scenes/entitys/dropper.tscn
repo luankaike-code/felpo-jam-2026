@@ -1,19 +1,101 @@
 [gd_scene format=3 uid="uid://bwhvvkj40wdmv"]
 
 [ext_resource type="Script" uid="uid://2e3ws5ntfbvu" path="res://scripts/entitys/dropper.gd" id="1_6pl4n"]
-[ext_resource type="Texture2D" uid="uid://bwv4tb86wvig0" path="res://assets/images/stamp.png" id="2_6pl4n"]
+[ext_resource type="Texture2D" uid="uid://bykcj4tue253y" path="res://assets/images/dropper_item_animation.png" id="2_oxqi2"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_opxqv"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="4_oxqi2"]
+[ext_resource type="Script" uid="uid://dd1k0eyjeo5mb" path="res://scripts/states/dropper/finish_drag.gd" id="5_oxqi2"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6pl4n"]
-radius = 38.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qh1ta"]
+radius = 16.0
+height = 82.0
+
+[sub_resource type="Animation" id="Animation_oxqi2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -14)]
+}
+
+[sub_resource type="Animation" id="Animation_l8sks"]
+resource_name = "dripping"
+length = 1.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 14), Vector2(0, -40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_myv00"]
+_data = {
+&"RESET": SubResource("Animation_oxqi2"),
+&"dripping": SubResource("Animation_l8sks")
+}
 
 [node name="Dropper" type="Area2D" unique_id=392739461]
 script = ExtResource("1_6pl4n")
 metadata/_custom_type_script = "uid://cofhru7hxcyx6"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=581116380]
-modulate = Color(1, 0.20999998, 0.9078332, 1)
-texture = ExtResource("2_6pl4n")
+position = Vector2(1, -14)
+texture = ExtResource("2_oxqi2")
+hframes = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1389712713]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_6pl4n")
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_qh1ta")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=105856120]
+libraries/ = SubResource("AnimationLibrary_myv00")
+
+[node name="StateMachine" type="Node" parent="." unique_id=2036505192 node_paths=PackedStringArray("current_state")]
+script = ExtResource("3_opxqv")
+current_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=711777326]
+script = ExtResource("4_oxqi2")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="FinishDrag" type="Node" parent="StateMachine" unique_id=97988076]
+script = ExtResource("5_oxqi2")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
