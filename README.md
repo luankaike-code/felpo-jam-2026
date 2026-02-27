@@ -1,4 +1,4 @@
-# NOME DO JOGO ( não temos ideia :v )
+# RUNISTIA
 
 ![felpojam 2026](./assets/logo-felpo-jam-2026.png)
 

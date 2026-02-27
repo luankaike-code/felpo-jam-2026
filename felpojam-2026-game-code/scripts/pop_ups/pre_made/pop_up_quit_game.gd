@@ -4,9 +4,9 @@ var packed_pop_up_game_quit_2 := load("res://scenes/pop_ups/pre_made/pop_up_quit
 
 func _ready() -> void:
 	setup(
-		"Dejesa mesmo sair?",
+		"Já deseja deixar Runistia?",
 		[
-			PopUpConfirmButtonObj.new("sim", PopUpMensageOpenPopUp.new(packed_pop_up_game_quit_2.instantiate())),
+			PopUpConfirmButtonObj.new("sim", PopUpMensageQuit.new()),
 			PopUpConfirmButtonObj.new("não", PopUpMensagePause.new(false)),
 		]
 	)

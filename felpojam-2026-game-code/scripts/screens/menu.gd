@@ -1,6 +1,6 @@
 extends ScreenWithPopUp
 
-var packed_pop_up_confirm := load("res://scenes/pop_ups/pre_made/pop_up_quit_game_1.tscn") as PackedScene
+var packed_pop_up_confirm := load("res://scenes/pop_ups/pre_made/pop_up_quit_game.tscn") as PackedScene
 
 @onready var start_btn := $Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/StartBtn as SpriteButton
 @onready var configuration_btn := $Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ConfigurationBtn as SpriteButton

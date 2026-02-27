@@ -1,7 +1,23 @@
 [gd_scene format=3 uid="uid://bifjnaqciaxtb"]
 
 [ext_resource type="PackedScene" uid="uid://brbhg1syjyxlb" path="res://scenes/pop_ups/pop_up_confirm.tscn" id="1_eqkli"]
-[ext_resource type="Script" uid="uid://bduk52m3hh8sj" path="res://scripts/pop_ups/pre_made/pop_up_quit_game_2.gd" id="2_k1mg1"]
+
+[sub_resource type="GDScript" id="GDScript_eqkli"]
+script/source = "class_name PopUpQuitGame2 extends PopUpConfirm
+
+func _ready() -> void:
+	setup(
+		\"Poxa, joga mais um pouco por favor. Eu sei, sei. Você querer sair por um bom motivo. Mas o que custa mais uma run? ou melhor, mais um tutorialzinho? ele leva menos de um minuto :<\",
+		[
+			PopUpConfirmButtonObj.new(\"sim\", PopUpMensageQuit.new()),
+			PopUpConfirmButtonObj.new(\"não\", PopUpMensagePause.new(false)),
+		]
+	)
+	
+	send_pause_mensage(true)
+	
+	super()
+"
 
 [node name="PopUpQuitGame2" unique_id=1517802616 instance=ExtResource("1_eqkli")]
-script = ExtResource("2_k1mg1")
+script = SubResource("GDScript_eqkli")
