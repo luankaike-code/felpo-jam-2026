@@ -5,8 +5,8 @@ enum arrows {
 	right
 }
 
-@onready var clock_hud: ClockHud = $HBoxContainer2/Control2/ClockHud
 @onready var arrow_left: ClickableTexture = $HBoxContainer/ArrowLeft
+@onready var clock_hud: ClockHud = $HBoxContainer2/MarginContainer/ClockHud
 @onready var arrow_right: ClickableTexture = $HBoxContainer/ArrowRight
 @onready var speech_bubble_manager: SpeechBubbleManager = $HBoxContainer2/Control/SpeechBubbleManager
 
