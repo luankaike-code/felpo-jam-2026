@@ -1,18 +1,24 @@
 class_name PopUpConfirm extends PopUp
 
 var packed_sprite_button := preload("res://scenes/HUD/sprite_button.tscn")
+
 @onready var button_conteiner: HBoxContainer = $MarginContainer/MarginContainer/VBoxContainer/ButtonConteiner
 @onready var label: Label = $MarginContainer/MarginContainer/VBoxContainer/MarginContainer/Label
+@onready var local: Local = $Local
 
 var text: String
 var buttons:  Array[PopUpConfirmButtonObj]
+var with_bg := true
 
-func setup(mensage: String, buttons_: Array[PopUpConfirmButtonObj]):
+func setup(mensage: String, buttons_: Array[PopUpConfirmButtonObj], with_bg_ := true):
 	text = mensage
 	buttons = buttons_
+	with_bg = with_bg_
 	
 func _ready() -> void:
 	label.text = text
+	local.visible = with_bg
+	
 	for button in buttons:
 		var btn_node := packed_sprite_button.instantiate() as SpriteButton
 		

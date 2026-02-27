@@ -49,6 +49,8 @@ texture = ExtResource("4_guowm")
 expand_mode = 2
 flip_h = true
 script = ExtResource("4_kixb8")
+use_click_sound = true
+click_sound = 14
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
 [node name="ArrowRight" type="TextureRect" parent="HBoxContainer" unique_id=1631663697]
@@ -58,4 +60,6 @@ mouse_filter = 0
 texture = ExtResource("4_guowm")
 expand_mode = 2
 script = ExtResource("4_kixb8")
+use_click_sound = true
+click_sound = 14
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"

@@ -1,25 +1,34 @@
 [gd_scene format=3 uid="uid://d167n2rwnu5an"]
 
 [ext_resource type="Script" uid="uid://ddhseqxbod6mu" path="res://scripts/screens/menu.gd" id="1_ju8qk"]
-[ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="2_5qq83"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_vkuer"]
+[ext_resource type="Texture2D" uid="uid://dyakty173bk50" path="res://assets/images/menu/menu_bg.png" id="3_opkxt"]
 [ext_resource type="FontFile" uid="uid://bi7lywa6va6oq" path="res://assets/pixeleum-48.ttf" id="3_sh0hy"]
+[ext_resource type="Texture2D" uid="uid://ljv58x070it" path="res://assets/images/menu/menu_bg_1.png" id="5_hrbkl"]
+[ext_resource type="Texture2D" uid="uid://o2bn07g4kydm" path="res://assets/images/menu/menu_start.png" id="6_oytj8"]
+[ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="7_dwmnf"]
+[ext_resource type="Texture2D" uid="uid://cg02xpp3njeyb" path="res://assets/images/menu/menu_config.png" id="8_27rkr"]
+[ext_resource type="Texture2D" uid="uid://c7h8m3a1dc2mp" path="res://assets/images/menu/menu_quit.png" id="9_js71b"]
+[ext_resource type="Texture2D" uid="uid://dxje21rb15ili" path="res://assets/images/menu/menu_tutorial.png" id="10_27rkr"]
 
 [node name="Menu" type="Node2D" unique_id=844590214]
 script = ExtResource("1_ju8qk")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
 [node name="Local" parent="." unique_id=564590170 instance=ExtResource("2_vkuer")]
+bg_texture = ExtResource("3_opkxt")
 
 [node name="Control" type="Control" parent="." unique_id=1775808483]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -323.0
-offset_top = -193.0
-offset_right = 321.0
-offset_bottom = 176.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -225.0
+offset_right = 360.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -32,48 +41,83 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1278935592]
 layout_mode = 2
-size_flags_horizontal = 0
 theme_override_constants/separation = 40
 
-[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer2" unique_id=624105630]
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2" unique_id=1066475132]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=624105630]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("3_sh0hy")
 theme_override_font_sizes/font_size = 20
-text = "Runas Mágicas"
-horizontal_alignment = 1
+text = "RUNISTIA"
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2" unique_id=583437695]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer2" unique_id=1832166616]
 layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=583437695]
+layout_mode = 2
+size_flags_horizontal = 2
 size_flags_vertical = 6
-theme_override_constants/margin_left = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=59511946]
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer" unique_id=1463557720]
+z_index = -2
 layout_mode = 2
+texture = ExtResource("5_hrbkl")
+stretch_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer" unique_id=727273055]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer" unique_id=59511946]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="StartBtn" type="TextureRect" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1571748051]
+layout_mode = 2
+texture = ExtResource("6_oytj8")
+stretch_mode = 3
+script = ExtResource("7_dwmnf")
+use_click_sound = true
+click_sound = 14
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="ConfigurationsBtn" type="TextureRect" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1083374794]
+z_index = -1
+layout_mode = 2
+texture = ExtResource("8_27rkr")
+stretch_mode = 3
+script = ExtResource("7_dwmnf")
+use_click_sound = true
+click_sound = 14
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="QuitBtn" type="TextureRect" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1854223735]
+z_index = -2
+layout_mode = 2
+texture = ExtResource("9_js71b")
+stretch_mode = 3
+script = ExtResource("7_dwmnf")
+use_click_sound = true
+click_sound = 14
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="TutorialBtn" type="TextureRect" parent="Control/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=957013064]
+layout_mode = 2
+size_flags_horizontal = 10
 size_flags_vertical = 8
-theme_override_constants/separation = 20
-
-[node name="StartBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1302535036 instance=ExtResource("2_5qq83")]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Iniciar"
-
-[node name="Tutorial" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1657631145 instance=ExtResource("2_5qq83")]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Tutorial"
-
-[node name="ConfigurationBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=2040748149 instance=ExtResource("2_5qq83")]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Configurações"
-
-[node name="QuitBtn" parent="Control/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=478698652 instance=ExtResource("2_5qq83")]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Sair"
+texture = ExtResource("10_27rkr")
+stretch_mode = 3
+script = ExtResource("7_dwmnf")
+use_click_sound = true
+click_sound = 14
+hover_scale = 1.07
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"

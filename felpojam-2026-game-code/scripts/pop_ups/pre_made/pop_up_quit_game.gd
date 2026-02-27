@@ -6,7 +6,8 @@ func _ready() -> void:
 		[
 			PopUpConfirmButtonObj.new("sim", [PopUpMensageQuit.new(), PopUpMensagePause.new(false)]),
 			PopUpConfirmButtonObj.new("não",[PopUpMensagePause.new(false)]),
-		]
+		],
+		false
 	)
 	
 	send_pause_mensage(true)

@@ -20,7 +20,6 @@ func _ready() -> void:
 	arrow_right.button_up.connect(func(): _on_arrow_pressed(arrows.right))
 
 func _on_arrow_pressed(arrow: arrows):
-	Sound.play_sound(SoundData.names.pressed_button)
 	arrow_pressed.emit(arrow)
 
 func set_arrow_enabled(arrow: arrows, value: bool) -> void:
