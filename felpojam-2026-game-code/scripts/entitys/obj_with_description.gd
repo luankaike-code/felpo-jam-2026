@@ -26,6 +26,7 @@ func _open_description_bubble():
 	current_speech_bubble = packed_speech_bubble.instantiate()
 	current_speech_bubble.setup([description], 0)
 	current_speech_bubble.position = get_local_mouse_position()
+	current_speech_bubble.typing_velocity = 0
 	current_speech_bubble.z_index = 4000
 	add_child(current_speech_bubble)
 

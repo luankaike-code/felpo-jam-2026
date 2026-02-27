@@ -7,6 +7,12 @@ func enter(host_) -> void:
 	set_process_over_input.emit(true)
 	host = host_
 	current_dialog = host.dialogs[host.current_dialog_index]
+	
+	if host.typing_velocity == 0:
+		host.label.text = current_dialog
+		to_idle()
+		return
+		
 	host.label.text = ""
 	
 	var tween := get_tree().create_tween()

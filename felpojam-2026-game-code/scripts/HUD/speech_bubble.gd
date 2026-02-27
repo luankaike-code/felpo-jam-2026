@@ -14,8 +14,10 @@ signal all_delivery_zones_filled(parchments: Array[ParchmentObj])
 
 var current_dialog_index: int
 var typing_velocity := 0.1
+var min_width := 200
 
 func _ready() -> void:
+	label.custom_minimum_size = Vector2(min_width, 0)
 	state_machine.change_state("Typing")
 
 func setup(dialogs_: Array,delivery_zone_count_: int):
