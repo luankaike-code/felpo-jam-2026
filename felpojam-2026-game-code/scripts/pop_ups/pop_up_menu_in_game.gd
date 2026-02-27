@@ -24,8 +24,12 @@ func _input(event: InputEvent) -> void:
 
 func confirm_goto_menu():
 	var buttons: Array[PopUpConfirmButtonObj] = [
-		PopUpConfirmButtonObj.new("Sair", PopUpMensageChangeScreen.new(ScreenData.names.menu)),
-		PopUpConfirmButtonObj.new("Voltar", PopUpMensageOpenPopUp.new(packed_pop_up_menu_in_game.instantiate())),
+		PopUpConfirmButtonObj.new("Sair", 
+			[PopUpMensageChangeScreen.new(ScreenData.names.menu), PopUpMensagePause.new(false)]
+		),
+		PopUpConfirmButtonObj.new("Voltar", 
+			[PopUpMensageOpenPopUp.new(packed_pop_up_menu_in_game.instantiate())]
+		),
 	]
 	
 	var pop_up = packed_pop_up_confirm.instantiate() as PopUpConfirm

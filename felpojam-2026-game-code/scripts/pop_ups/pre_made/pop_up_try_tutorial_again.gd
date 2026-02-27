@@ -6,11 +6,11 @@ func _ready() -> void:
 		[
 			PopUpConfirmButtonObj.new(
 				"Sim", 
-				PopUpMensageChangeScreen.new(ScreenData.names.tutorial)
+				[PopUpMensageChangeScreen.new(ScreenData.names.tutorial)]
 			),
 			PopUpConfirmButtonObj.new(
 				"Não, to de boa", 
-				PopUpMensageChangeScreen.new(ScreenData.names.menu)
+				[PopUpMensageChangeScreen.new(ScreenData.names.menu)]
 			),
 		]
 	)
