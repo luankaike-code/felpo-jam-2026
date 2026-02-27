@@ -19,6 +19,9 @@ func enter(host_: CameraInGame) -> void:
 		config_tween(interface, 0.15, true)
 
 func config_tween(node, duration: float, with_effect := false) -> Tween:
+	if !"global_position" in node:
+		return
+		
 	var tween = get_tree().create_tween()
 	tween.tween_property(node, "global_position", to, duration)
 	

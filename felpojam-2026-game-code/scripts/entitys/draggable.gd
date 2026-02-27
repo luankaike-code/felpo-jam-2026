@@ -28,20 +28,32 @@ func _ready() -> void:
 	add_to_group("draggables")
 	z_index = 200
 	
+	_make_connections()
+
+func _make_connections():
 	input_event.connect(_on_input_event)
 	area_entered.connect(_on_area_entered_base_event)
 	area_exited.connect(_on_area_exited_base_event)
 	
-	start_drag.connect(func():
-		var bigger_z_index: int
-		for draggable in get_tree().get_nodes_in_group("draggables"):
-			if draggable == self:
-				continue
-			draggable.z_index -= 1
-			if bigger_z_index < draggable.z_index:
-				bigger_z_index = draggable.z_index
-		z_index = bigger_z_index+1
-	)
+	start_drag.connect(_update_z_index)
+	Global.cursor_mode_changed.connect(_on_cursor_mode_changed)
+
+func _on_cursor_mode_changed() -> void:
+	if !is_dragging:
+		return
+	
+	if Global.cursor_mode == MouseData.modes.info:
+		is_dragging = false
+ 
+func _update_z_index():
+	var bigger_z_index: int
+	for draggable in get_tree().get_nodes_in_group("draggables"):
+		if draggable == self:
+			continue
+		draggable.z_index -= 1
+		if bigger_z_index < draggable.z_index:
+			bigger_z_index = draggable.z_index
+	z_index = bigger_z_index+1
 
 func _start_drag():
 	pass

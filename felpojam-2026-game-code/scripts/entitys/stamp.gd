@@ -20,7 +20,7 @@ func _ready() -> void:
 	var base_description := DescriptionsData.descriptions[DescriptionsData.names.stamp]
 	description = base_description % [RunesData.string[rune_name]]
 	_set_sprite()
-	_make_connections()
+	_make_stamp_connections()
 	
 	call_deferred("spaw_stand")
 
@@ -29,7 +29,7 @@ func _set_sprite():
 	texture_data = StampData.textures[rune_name]
 	change_sprite_texture(StampData.versions.in_stand)
 
-func _make_connections():
+func _make_stamp_connections():
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
 	state_machine.change_state("Idle")
