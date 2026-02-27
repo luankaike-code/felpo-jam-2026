@@ -55,7 +55,6 @@ func _on_option_button_up(sprite_button: SpriteButton) -> void:
 func _close_options_other_sprite_drop_menu():
 	for sdm in get_tree().get_nodes_in_group("SpriteDropMenu"):
 		if sdm != self && sdm.options_is_open:
-			print(self, " fechei ese zé mané")
 			sdm._close_options()
 
 func  _update_options_conteiner_position():

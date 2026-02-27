@@ -62,7 +62,6 @@ func exit_character():
 	)
 
 func handle_client_result_mensage(client_result: ClientResult):
-	print(client_result.mensage, client_result.mensage is ClientResultMensageMoney)
 	if client_result.mensage is ClientResultMensageMoney:
 		Global.money += client_result.mensage.money
 	elif client_result.mensage is ClientResultMensageOpenPop:

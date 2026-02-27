@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://ebf3wnhbeny"]
 
 [ext_resource type="PackedScene" uid="uid://cs578fyagrqb0" path="res://scenes/entitys/character_sprite/character_sprite.tscn" id="1_vxjws"]
-[ext_resource type="Texture2D" uid="uid://bib8iubsat384" path="res://assets/images/characters/concubine normal.png" id="2_6elff"]
+[ext_resource type="Texture2D" uid="uid://2ftt6x14iaed" path="res://assets/images/characters/tutorial_guy.png" id="2_6elff"]
 
 [node name="TutorialGuy" unique_id=1678707481 instance=ExtResource("1_vxjws")]
 
 [node name="BubblePos" parent="." index="0" unique_id=2144655565]
-position = Vector2(49, -274)
+position = Vector2(72, -95)
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=869554830]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(0, -146)
+z_index = 1
+position = Vector2(0, -22)
 texture = ExtResource("2_6elff")

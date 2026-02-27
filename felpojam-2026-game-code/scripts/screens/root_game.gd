@@ -13,6 +13,7 @@ func _ready() -> void:
 	HelperWindow.call_deferred("set_to_appropriate_resolution")
 	
 	create_defult_screen()
+	
 	transition.exit_transition_finished.connect(toggle_screen)
 
 func create_defult_screen():

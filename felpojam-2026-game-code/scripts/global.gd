@@ -3,6 +3,7 @@ extends Node
 signal money_changed(diference: float)
 signal particle_is_enabled_changed
 signal particle_mode_changed
+signal cursor_mode_changed
 
 var current_resolution: Vector2i
 var drag_mode := ControlData.drag_mode.hold
@@ -11,6 +12,11 @@ var money := 0.0 :
 		var old_money = money
 		money = new
 		money_changed.emit(money - old_money)
+
+var cursor_mode := MouseData.modes.drag : 
+	set(new):
+		cursor_mode = new
+		cursor_mode_changed.emit()
 
 var particle_is_enabled := true :
 	set(new):

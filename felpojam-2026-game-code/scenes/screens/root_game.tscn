@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ddq8efmsvwyac" path="res://scenes/screens/transition.tscn" id="2_1sjs4"]
 [ext_resource type="PackedScene" uid="uid://u8y44k7yvr7j" path="res://scenes/camera_in_game.tscn" id="2_nb4e5"]
 [ext_resource type="Script" uid="uid://cdjtdfhwwipu5" path="res://scripts/music_manager.gd" id="4_iuvr4"]
+[ext_resource type="Script" uid="uid://bs5sf0r41rhve" path="res://scripts/mouse_manager.gd" id="5_pjm7s"]
 
 [node name="RootGame" type="Node" unique_id=659041742]
 script = ExtResource("1_o1fpv")
@@ -16,3 +17,7 @@ zoom = Vector2(2, 2)
 [node name="MusicManager" type="Node" parent="." unique_id=792464844]
 script = ExtResource("4_iuvr4")
 metadata/_custom_type_script = "uid://cdjtdfhwwipu5"
+
+[node name="MouseManager" type="Node" parent="." unique_id=1038670196]
+script = ExtResource("5_pjm7s")
+metadata/_custom_type_script = "uid://bs5sf0r41rhve"
