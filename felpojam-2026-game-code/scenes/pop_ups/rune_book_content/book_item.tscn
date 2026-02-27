@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://6m0dkgn2710k"]
+
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="1_ev828"]
+
+[node name="Label" type="Label" unique_id=617429416]
+custom_minimum_size = Vector2(270, 0)
+size_flags_vertical = 0
+text = "fertilidade: 1 runa de fogo ++ e 1 runa de luz"
+label_settings = ExtResource("1_ev828")
+autowrap_mode = 2

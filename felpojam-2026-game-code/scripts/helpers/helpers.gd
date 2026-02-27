@@ -12,3 +12,14 @@ static func populate_sprite_drop_menu_with_dict(drop_menu: SpriteDropMenu, dict:
 	var items = dict.keys() if use_key else dict.values()
 	for item in items:
 		drop_menu.add_item(item)
+
+static func get_array_range(arr: Array, start: int, end: int=-1) -> Array:
+	var array_range: Array
+	
+	end = arr.size() if end < 0 else end
+	for i in range(start, end):
+		if i >= arr.size():
+			break
+		array_range.push_back(arr[i])
+	
+	return array_range

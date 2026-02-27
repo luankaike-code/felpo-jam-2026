@@ -10,21 +10,25 @@ enum names {
 	concubine_result_negative,
 	
 	king,
+	get_order_king,
 	king_result_positive,
 	king_result_ok,
 	king_result_negative,
 	
 	warlord,
+	get_order_warlord,
 	warlord_result_positive,
 	warlord_result_ok,
 	warlord_result_negative,
 	
 	priest,
+	get_order_priest,
 	priest_result_positive,
 	priest_result_ok,
 	priest_result_negative,
 	
 	ladys_companion,
+	get_order_ladys_companion,
 	ladys_companion_result_positive,
 	ladys_companion_result_ok,
 	ladys_companion_result_negative,
@@ -64,7 +68,7 @@ static var speechs: Dictionary[names, Array] = {
 		"Relaxe que ninguem vai te incomodar até lá. Vo dar o meu jeito para você ter esse dia de 'folga'"
 	],
 	names.tutorial_guy_back: [
-		"Bem, vejamos o que você conseguiu fazer em um dia"
+		"Bem, vejamos o que você conseguiu fazer em um dia",
 	],
 	names.tutorial_guy_result_positive: [
 		"Parece que você tem um belo talento...",
@@ -127,6 +131,9 @@ static var speechs: Dictionary[names, Array] = {
 		"se me libertar das amarras dessa maldição",
 		"e lhe garanto o seu maior desejo"
 	],
+	names.get_order_king: [
+		"a",
+	],
 	names.king_result_positive: [
 		"Esse pergaminho foi muito bom",
 	],
@@ -140,6 +147,9 @@ static var speechs: Dictionary[names, Array] = {
 	
 	names.warlord: [
 		"Sou o chefe de guerra",
+	],
+	names.get_order_warlord: [
+		"a",
 	],
 	names.warlord_result_positive: [
 		"Esse pergaminho foi muito bom",
@@ -155,6 +165,9 @@ static var speechs: Dictionary[names, Array] = {
 	names.priest: [
 		"Sou o padre ********",
 	],
+	names.get_order_priest: [
+		"a",
+	],
 	names.priest_result_positive: [
 		"Esse pergaminho foi muito bom",
 	],
@@ -168,6 +181,9 @@ static var speechs: Dictionary[names, Array] = {
 	
 	names.ladys_companion: [
 		"Sou a dama de companhia",
+	],
+	names.get_order_ladys_companion: [
+		"a",
 	],
 	names.ladys_companion_result_positive: [
 		"Esse pergaminho foi muito bom",

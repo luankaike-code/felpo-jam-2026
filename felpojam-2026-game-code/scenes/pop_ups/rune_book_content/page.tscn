@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://yt3fd26140ea"]
+
+[ext_resource type="Script" uid="uid://bjp6cirgq3nfl" path="res://scripts/pop_ups/rune_book_content/page.gd" id="1_ehrve"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="1_ssxvx"]
+
+[node name="pag 1" type="TabBar" unique_id=1353070601]
+script = ExtResource("1_ehrve")
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1659646040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=588452536]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=919598725]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1487457086]
+layout_mode = 2
+
+[node name="LeftPage" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=855780395]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 15
+
+[node name="RightPage" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=109065880]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=567833915]
+layout_mode = 2
+
+[node name="NumPageLeft" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2040689527]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+label_settings = ExtResource("1_ssxvx")
+
+[node name="NumPageRight" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1859883500]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+label_settings = ExtResource("1_ssxvx")

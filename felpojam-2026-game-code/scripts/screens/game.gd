@@ -107,7 +107,6 @@ func _handle_super_inputs(event: InputEvent) -> bool:
 	else:
 		return false
 	return true
-		
 
 func _handle_inputs(event: InputEvent) -> void:
 	if has_pop_up() || !event.is_pressed():

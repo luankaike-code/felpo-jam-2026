@@ -35,7 +35,7 @@ static var client: Dictionary[names, ClientObj] = {
 	names.king: ClientObj.new(
 		CharacterData.names.king,
 		SpeechsData.names.king,
-		SpeechsData.names.king,
+		SpeechsData.names.get_order_king,
 		OrdersData.names.infernal_fire,
 		40.0
 	),

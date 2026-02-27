@@ -15,7 +15,7 @@ func _ready() -> void:
 	create_defult_screen()
 	
 	transition.exit_transition_finished.connect(toggle_screen)
-
+	
 func create_defult_screen():
 	new_screen = get_scene(default_screen)
 	toggle_screen()
