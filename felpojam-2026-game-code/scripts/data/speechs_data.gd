@@ -63,27 +63,31 @@ static var speechs: Dictionary[names, Array] = {
 		"Relaxe que ninguem vai te incomodar até lá. Vo dar o meu jeito para você ter esse dia de 'folga'"
 	],
 	names.tutorial_guy_result_positive: [
-		"Parece que você já é muito experiente...",
+		"Parece que você tem um belo talento...",
 		"Nessa caso...",
-		"Tchau, tchau. Você não tem mais nada a aprender",
+		"Tchau, tchau. Agora é você e o mundo. Te desejo boa sorte",
 	],
 	names.tutorial_guy_result_ok : [
 		"Nada mal para um iniciante...",
 		"Nessa caso...",
-		"Tchau, tchau. Boa sorte agradando a corte",
+		"Tchau, tchau. Boa sorte",
 	],
 	names.tutorial_guy_result_negative: [
 		"Nossa...",
-		"Como você veio a corte?",
-		"Bom...",
-		"O problema não é mal de qualquer forma",
-		"Adeus... Desejo boa sorte"
+		"Tem certeza que você está pronto para isso?",
+		"Esses pergaminhos estão errados demais para essas pessoas",
+		"Elas não vão gostar muito se você errar os pergaminhos delas nesse nivel",
+		"Mas eu vo deixar passar...",
+		"Afinal você já é um adulto e sabe o que faz"
 	],
 	names.tutorial_guy_not_craft_all_parchemnts: [
-		"Ai como...",
+		"Eia como...",
 		"*suspiro*",
-		"Como cê não conseguiu fazer apenas 3 pergaminhos em um dia?",
-		"Tá... Te recomendo treinar um pouco mais",
+		"Tá, entendo...",
+		"É o seu primeiro dia e você deve estar mutio nervoso",
+		"Por isso você não conseguiu fazer os pergaminhos",
+		"...",
+		"Te recomendo treinar um pouco mais",
 	],
 	
 	names.not_craft_all_parchemnts: [
