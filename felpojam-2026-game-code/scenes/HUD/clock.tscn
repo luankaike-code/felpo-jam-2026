@@ -28,6 +28,8 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 8
 texture = SubResource("AtlasTexture_u0q1m")
+expand_mode = 2
+stretch_mode = 3
 script = ExtResource("2_7pkpy")
 
 [node name="HoursPonter" type="TextureRect" parent="." unique_id=1939480515]
@@ -46,6 +48,8 @@ grow_vertical = 2
 pivot_offset = Vector2(64, 64)
 size_flags_horizontal = 8
 texture = SubResource("AtlasTexture_4s2t6")
+expand_mode = 2
+stretch_mode = 3
 
 [node name="MinutesPonter" type="TextureRect" parent="." unique_id=683161671]
 layout_mode = 1
@@ -63,3 +67,5 @@ grow_vertical = 2
 pivot_offset = Vector2(64, 64)
 size_flags_horizontal = 8
 texture = SubResource("AtlasTexture_3f7h6")
+expand_mode = 2
+stretch_mode = 3

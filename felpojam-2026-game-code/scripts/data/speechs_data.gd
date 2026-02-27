@@ -38,7 +38,29 @@ enum names {
 
 static var speechs: Dictionary[names, Array] = {
 	names.tutorial_guy: [
-		"E ai cabaço?"
+		"Bom, finalmente chegamos ao seu novo lar Aprendiz",
+		"Relaxe que as pessoas desse palácio são muuuuito sensatas e gentis",
+		"Aqui você só precisará fazer todos os pergaminhos que eles pedirem",
+		"...",
+		"Só relembrando para cÊ fazer um pergaminho é necessário...",
+		"Pegar o carimbo, colocar na tinta e depois no papel.",
+		"Ah, e não se esqueça do conta gotas para pontencializar as runas",
+		"Mas só faça isso caso você ache necessário, é claro.",
+		"Bom...",
+		"Te desejo boa sorte e se tiver qualquer duvida você sempre pode mentalizar o P e ver o que cada item faz.",
+		"...",
+		"...",
+		"Vamos te testar? Só... Só pra ver.",
+		"Faça pra mim 3 pergaminhos:",
+		"Um pergaminho de fogo infernal, 2 runa de fogo potencializadas;",
+		"Um pergaminho de tornada, 1 runa de ar potencializada e 1 runa de trevas;",
+		"E um pergaminho de...hum..",
+		"de...",
+		"de fertilidade...",
+		"1 runa de fogo e 1 runa de luz.",
+		"Ah, caso esqueça da receita de algum desses pergaminhos veja o meu livro de receitas.",
+		"Volto aqui amanhã pra ver como você se saiu com essa tarefa.",
+		"Relaxe que ninguem vai te incomodar até lá. Vo dar o meu jeito para você ter esse dia de 'folga'"
 	],
 	names.tutorial_guy_result_positive: [
 		"Parece que você já é muito experiente...",
@@ -62,7 +84,6 @@ static var speechs: Dictionary[names, Array] = {
 		"*suspiro*",
 		"Como cê não conseguiu fazer apenas 3 pergaminhos em um dia?",
 		"Tá... Te recomendo treinar um pouco mais",
-		
 	],
 	
 	names.not_craft_all_parchemnts: [
@@ -153,7 +174,7 @@ static var speechs: Dictionary[names, Array] = {
 }
 
 static var dicks: Dictionary[names, String] = {
-	names.tutorial_guy: "Faz algo ai",
+	names.tutorial_guy: "3 pergaminhos: Fogo infernal, Tornado e fertilidade",
 	names.concubine: "Quero aumentar a minha fertilidade",
 	names.king: "Quero quebrar minha maldição",
 	names.warlord: "Quero algo ai que esqueci",

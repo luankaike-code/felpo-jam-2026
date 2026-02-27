@@ -39,7 +39,7 @@ position = Vector2(191, 102)
 position = Vector2(97, 103)
 
 [node name="RunesBook" parent="." index="6" unique_id=1322508017 instance=ExtResource("4_t3eoa")]
-position = Vector2(368, 4)
+position = Vector2(447, 10)
 
 [node name="Dropper" parent="." index="7" unique_id=392739461 instance=ExtResource("9_umv4u")]
 position = Vector2(-293, 10)
@@ -47,9 +47,9 @@ position = Vector2(-293, 10)
 [node name="Trash" parent="." index="8" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(628, 78)
 
-[node name="Sprite2D3" parent="." index="9" unique_id=1015827000]
+[node name="StampsConjunt" parent="." index="9" unique_id=1081891180 instance=ExtResource("10_wwimg")]
+position = Vector2(105, -94)
+
+[node name="Sprite2D3" parent="." index="10" unique_id=1015827000]
 position = Vector2(180, -465)
 region_rect = Rect2(0, 0, 1080, 480)
-
-[node name="StampsConjunt" parent="." index="10" unique_id=1081891180 instance=ExtResource("10_wwimg")]
-position = Vector2(-7, -93)

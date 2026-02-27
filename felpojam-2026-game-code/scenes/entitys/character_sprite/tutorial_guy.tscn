@@ -6,7 +6,7 @@
 [node name="TutorialGuy" unique_id=1678707481 instance=ExtResource("1_vxjws")]
 
 [node name="BubblePos" parent="." index="0" unique_id=2144655565]
-position = Vector2(72, -95)
+position = Vector2(72, -150)
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=869554830]
 z_index = 1

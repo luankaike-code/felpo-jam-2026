@@ -21,7 +21,7 @@ func to_typing():
 
 @warning_ignore("unused_parameter")
 func handle_over_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_home"):
+	if Input.is_action_just_pressed("inp_pass_dialog"):
 		to_typing()
 
 func to_wait_delivery():

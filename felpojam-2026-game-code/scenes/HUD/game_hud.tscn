@@ -25,11 +25,12 @@ size_flags_horizontal = 2
 script = ExtResource("2_kixb8")
 metadata/_custom_type_script = "uid://b22ark22c86p4"
 
-[node name="Control2" type="Control" parent="HBoxContainer2" unique_id=1717983606]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2" unique_id=3200453]
 layout_mode = 2
+theme_override_constants/margin_bottom = 50
 
-[node name="ClockHud" parent="HBoxContainer2/Control2" unique_id=1928162360 instance=ExtResource("3_guowm")]
-layout_mode = 1
+[node name="ClockHud" parent="HBoxContainer2/MarginContainer" unique_id=1928162360 instance=ExtResource("3_guowm")]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1328541034]
 offset_left = -347.0
