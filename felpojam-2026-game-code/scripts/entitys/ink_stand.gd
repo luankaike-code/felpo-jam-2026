@@ -3,6 +3,10 @@ class_name InkStand extends Stand
 var current_item: Stamp
 
 func _ready() -> void:
+	super()
+	
+	description = DescriptionsData.descriptions[DescriptionsData.names.stand_ink]
+	
 	area_exited.connect(on_area_exited)
 
 func place_item(item: Node2D) -> bool:

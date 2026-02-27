@@ -1,0 +1,17 @@
+class_name DescriptionsData extends Resource
+
+enum names {
+	stamp,
+	paper,
+	stand_ink,
+	dropper,
+	rune_book
+}
+
+static var descriptions: Dictionary[names, String] = {
+	names.stamp: "Um carimbo runico de %s",
+	names.paper: "Coloque um carimbo runico com tinta aqui",
+	names.stand_ink: "Mole o carimbo com tinta aqui",
+	names.dropper: "Use isso numa runa para potencializará",
+	names.rune_book: "Clique direito pra ler o livro runico"
+}

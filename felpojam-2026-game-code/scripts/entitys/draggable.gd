@@ -1,11 +1,9 @@
-class_name Draggable extends Area2D
+class_name Draggable extends ObjWithDescription
 
 signal start_drag()
 signal finish_drag()
 @warning_ignore("unused_signal")
 signal spawn_node(node: Node2D)
-
-var packed_speech_bubble := preload("res://scenes/HUD/speech_bubble.tscn") as PackedScene
 
 var default_stand: Stand
 var current_stand := default_stand
@@ -24,11 +22,9 @@ var is_freeze := false
 var is_draggable := true
 var was_clicked := false
 
-var description: String = "descrição"
-var current_speech_bubble: SpeechBubble
-var mouse_is_hover := false
-
 func _ready() -> void:
+	super()
+	
 	add_to_group("draggables")
 	z_index = 200
 	
@@ -46,32 +42,6 @@ func _ready() -> void:
 				bigger_z_index = draggable.z_index
 		z_index = bigger_z_index+1
 	)
-	
-	mouse_entered.connect(_open_description_bubble)
-	mouse_exited.connect(_close_description_bubble)
-	mouse_entered.connect(func(): mouse_is_hover = true)
-	mouse_exited.connect(func(): mouse_is_hover = false)
-	Global.cursor_mode_changed.connect(_update_description_bubble_visibility)
-
-func _update_description_bubble_visibility():
-	if Global.cursor_mode != MouseData.modes.info:
-		_close_description_bubble()
-	elif mouse_is_hover:
-		_open_description_bubble()
-
-func _open_description_bubble():
-	if Global.cursor_mode != MouseData.modes.info:
-		return
-		
-	current_speech_bubble = packed_speech_bubble.instantiate()
-	current_speech_bubble.setup([description], 0)
-	current_speech_bubble.position = get_local_mouse_position()
-	current_speech_bubble.z_index = 4000
-	add_child(current_speech_bubble)
-
-func _close_description_bubble():
-	if current_speech_bubble:
-		current_speech_bubble.destroy()
 
 func _start_drag():
 	pass

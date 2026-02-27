@@ -9,6 +9,15 @@ enum names {
 	light,
 }
 
+static var string: Dictionary[names, String] = {
+	names.fire: "Fogo",
+	names.water: "Água",
+	names.air: "Ar",
+	names.earth: "Terra",
+	names.dark: "Trevas",
+	names.light: "Luz",
+}
+
 static var colors: Dictionary[names, Color] = {
 	names.fire: Color(1.0, 0.0, 0.0, 1.0),
 	names.water: Color(0.0, 1.0, 1.0, 1.0),

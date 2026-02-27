@@ -4,6 +4,11 @@ var packed_runes_book_content := preload("res://scenes/pop_ups/pop_up_runes_book
 
 signal open(pop_up_scene)
 
+func _ready() -> void:
+	super()
+	
+	description = DescriptionsData.descriptions[DescriptionsData.names.rune_book]
+
 @warning_ignore("unused_parameter")
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:

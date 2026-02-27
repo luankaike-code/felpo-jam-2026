@@ -6,6 +6,8 @@ var current_rune: Rune
 func _ready() -> void:
 	super()
 	
+	description = DescriptionsData.descriptions[DescriptionsData.names.dropper]
+	
 	var dropper_stand := packed_dropper_stand.instantiate() as DropperStand
 	dropper_stand.setup(self)
 	dropper_stand.position = position

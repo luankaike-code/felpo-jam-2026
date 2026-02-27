@@ -17,21 +17,28 @@ var texture_data: StampTextureObj
 func _ready() -> void:
 	super()
 	
+	var base_description := DescriptionsData.descriptions[DescriptionsData.names.stamp]
+	description = base_description % [RunesData.string[rune_name]]
+	_set_sprite()
+	_make_connections()
+	
+	call_deferred("spaw_stand")
+
+func _set_sprite():
 	sprite.hframes = StampData.textures.size()
 	texture_data = StampData.textures[rune_name]
 	change_sprite_texture(StampData.versions.in_stand)
-	
+
+func _make_connections():
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
 	state_machine.change_state("Idle")
-	
+
+func spaw_stand():
 	var stand := packed_stand_stamp.instantiate() as StampStand
 	stand.setup(self)
 	stand.position = position
 	default_stand = stand
-	call_deferred("spaw_stand")
-
-func spaw_stand():
 	spawn_node.emit(default_stand)
 
 func _finish_drag() -> void:	
