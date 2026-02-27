@@ -2,12 +2,10 @@ extends ScreenWithPopUp
 
 var packed_pop_up_confirm := load("res://scenes/pop_ups/pre_made/pop_up_quit_game.tscn") as PackedScene
 
-@onready var start_btn: ClickableTexture = $Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/StartBtn
-@onready var configurations_btn: ClickableTexture = $Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/ConfigurationsBtn
-@onready var quit_btn: ClickableTexture = $Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/QuitBtn
-@onready var tutorial_btn: ClickableTexture = $Control/MarginContainer/VBoxContainer2/HBoxContainer/TutorialBtn
-
-var music: SoundPlayer
+@onready var start_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/StartBtn
+@onready var configurations_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/ConfigurationsBtn
+@onready var quit_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/QuitBtn
+@onready var tutorial_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/TutorialBtn
 
 func _ready() -> void:
 	camera.global_position = global_position

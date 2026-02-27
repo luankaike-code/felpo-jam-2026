@@ -21,8 +21,8 @@ static var client: Dictionary[names, ClientObj] = {
 	names.tutorial_guy: ClientObj.new(
 		CharacterData.names.tutorial_guy,
 		SpeechsData.names.tutorial_guy,
-		SpeechsData.names.tutorial_guy,
-		OrdersData.names.infernal_fire,
+		SpeechsData.names.tutorial_guy_back,
+		OrdersData.names.tutorial,
 		120.0
 	),
 	names.concubine: ClientObj.new(

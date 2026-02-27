@@ -71,7 +71,7 @@ func _open_options():
 	
 	for option in options:
 		options_conteiner.add_child(option)
-		option.size.x = main_sprite_button.size.x
+		option.set_deferred("size", Vector2(main_sprite_button.size.x, option.size.y))
 		
 	options_is_open = true
 	nine_patch_rect.visible = true
