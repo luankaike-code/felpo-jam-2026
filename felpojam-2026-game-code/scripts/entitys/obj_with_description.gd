@@ -26,8 +26,10 @@ func _open_description_bubble():
 	if Global.cursor_mode != MouseData.modes.info || !description:
 		return
 	
-	current_speech_bubble = packed_speech_bubble.instantiate()
+	if current_speech_bubble:
+		current_speech_bubble.destroy()
 	
+	current_speech_bubble = packed_speech_bubble.instantiate()
 	current_speech_bubble.setup([description], 0)
 	current_speech_bubble.position = _get_bubble_position(current_speech_bubble.min_width)
 	current_speech_bubble.typing_velocity = 0

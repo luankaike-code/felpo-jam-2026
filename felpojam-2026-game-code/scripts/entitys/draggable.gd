@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 
 @warning_ignore("unused_parameter")
 func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
-	if !event is InputEventMouseButton || !is_draggable:
+	if !event is InputEventMouseButton || !is_draggable || Global.cursor_mode != MouseData.modes.drag:
 		return
 
 	if !is_dragging:
