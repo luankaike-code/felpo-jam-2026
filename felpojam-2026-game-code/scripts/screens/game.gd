@@ -11,6 +11,7 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 var is_already_wheel := false
 var current_transition_sound: SoundPlayer
 var paused := false
+var visibility := true
 
 var current_local := 0 :
 	set(new):
@@ -24,7 +25,7 @@ func _ready() -> void:
 	
 	camera.add_interface(game_hud)
 	
-	#freeze_all_craft_items_and_the_trash(true, false)
+	freeze_all_craft_items_and_the_trash(true, false)
 	client_local.craft_time.connect(func(): freeze_all_craft_items_and_the_trash(false, false))
 	client_local.client_wait_order.connect(func(): 
 		client_local.receive_total_parchments.emit(craft_local.get_paper_with_rune_count())
@@ -67,16 +68,23 @@ func _pop_mensage(mensage: PopUpMensage):
 		factory_pop_up(mensage.pop_up_scene)
 	elif mensage is PopUpMensageChangeScreen:
 		change_screen.emit(mensage.screen_name)
+	elif mensage is PopUpMensageChangeVisibility:
+		call_deferred("_change_process_and_visibility", true, mensage.visibility)
 	elif mensage is PopUpMensagePause:
 		game_hud.visible = !mensage.pause
-		set_deferred("paused", mensage.pause)
 		GlobalTime.paused = mensage.pause
-		for local in locals:
-			local.process_mode = Node.PROCESS_MODE_DISABLED if mensage.pause else Node.PROCESS_MODE_INHERIT
-			local.visible = !mensage.pause
+		set_deferred("paused", mensage.pause)
+		call_deferred("_change_process_and_visibility", !mensage.pause, !mensage.pause)
+
+func _change_process_and_visibility(process: bool, visibility_: bool):
+	visibility = visibility_
+	game_hud.visible = visibility
+	for local in locals:
+			local.process_mode = Node.PROCESS_MODE_INHERIT if process else Node.PROCESS_MODE_DISABLED
+			local.visible = visibility
 
 func _unhandled_input(event: InputEvent) -> void:
-	if paused:
+	if paused || !visibility:
 		return
 	
 	if _handle_super_inputs(event):

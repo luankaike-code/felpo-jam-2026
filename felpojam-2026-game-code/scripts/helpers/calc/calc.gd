@@ -3,10 +3,10 @@ class_name Calc extends Resource
 static func calc_order_obj_proximity(order1: OrderObj, order2: OrderObj) -> float:	
 	var result := 0.0
 	
-	for i in order1.parchments.size():
-		var parchment1 := order1.parchments[i]
-		var parchment2 := order2.parchments[i]
-		result += calc_parchment_obj_proximity(parchment1, parchment2)
+	for parchment2 in order2.parchments:
+		var best_result := get_best_parchment_obj_proximity(order1, parchment2)
+		order1.parchments.pop_at(order1.parchments.find(best_result.parchment1))
+		result += best_result.result
 
 	result /= order1.parchments.size()
 	var size_difference := abs(order1.parchments.size() - order2.parchments.size()) as int
@@ -14,6 +14,20 @@ static func calc_order_obj_proximity(order1: OrderObj, order2: OrderObj) -> floa
 		result /= 1.2*size_difference
 	
 	return result
+
+static func get_best_parchment_obj_proximity(order1: OrderObj, parchment2: ParchmentObj) -> BestParchmentObjProximityObj:
+	var results: Array[BestParchmentObjProximityObj]
+	
+	for o in order1.parchments:
+		var result = calc_parchment_obj_proximity(o, parchment2)
+		results.push_back(BestParchmentObjProximityObj.new(o, result))
+	
+	var bester: BestParchmentObjProximityObj = null
+	for obj in results:
+		if !bester ||  obj.result > bester.result:
+			bester = obj
+	
+	return bester
 
 static func calc_parchment_obj_proximity(parchment1: ParchmentObj, parchment2: ParchmentObj) -> float:
 	var rune_result := 0.0

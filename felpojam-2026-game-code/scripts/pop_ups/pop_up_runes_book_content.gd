@@ -1,14 +1,20 @@
 extends PopUp
 
 var packed_page := preload("res://scenes/pop_ups/rune_book_content/page.tscn")
+
 @onready var tab_container: TabContainer = $Control/MarginContainer/TabContainer
+@onready var old_relative_time_speed := GlobalTime.relative_time_speed
+@onready var new_relative_time_speed := 0.7
+
 var is_already_wheel := false
 var page_count: int
 
+
 func _ready() -> void:
+	GlobalTime.relative_time_speed = new_relative_time_speed
 	Sound.play_sound(SoundData.names.open_book)
 	tab_container.tab_changed.connect(_on_pass_page)
-	send_pause_mensage(true)
+	send_change_visibility(false)
 	populate_book()
 
 func populate_book():
@@ -45,7 +51,6 @@ func togo_page(index: int) -> void:
 		
 	tab_container.current_tab = new_tab_index
 	
-	
 func _handle_mouse_wheel(event: InputEvent) -> bool:
 	if !event is InputEventMouseButton:
 		is_already_wheel = false
@@ -63,9 +68,7 @@ func _handle_mouse_wheel(event: InputEvent) -> bool:
 @warning_ignore("unused_parameter")
 func _handle_super_inputs(event: InputEvent) -> bool:
 	if Input.is_action_just_pressed("ui_cancel"):
-		Sound.play_sound(SoundData.names.close_book)
-		send_pause_mensage(false)
-		queue_free()
+		close()
 	else:
 		return false
 	return true
@@ -77,3 +80,9 @@ func _handle_inputs(event: InputEvent) -> void:
 		togo_page(1)
 	elif Input.is_action_just_pressed("inp_previous_local"):
 		togo_page(-1)
+
+func close():
+	GlobalTime.relative_time_speed = old_relative_time_speed
+	Sound.play_sound(SoundData.names.close_book)
+	send_change_visibility(true)
+	queue_free()

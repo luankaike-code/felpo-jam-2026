@@ -2,6 +2,7 @@ extends Node
 
 
 var time_speed := 1.0
+var relative_time_speed := 1.0
 var total_seconds := 0.0 :
 	set(new):
 		total_seconds = new
@@ -43,6 +44,6 @@ func _physics_process(delta: float) -> void:
 	if paused:
 		return
 		
-	total_seconds += delta * time_speed
+	total_seconds += delta * time_speed * relative_time_speed
 	total_minutes = total_seconds/60
 	total_hours = total_minutes/24

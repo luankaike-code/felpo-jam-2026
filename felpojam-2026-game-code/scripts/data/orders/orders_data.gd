@@ -8,7 +8,9 @@ enum names {
 
 static var orders: Dictionary[names, OrderObj] = {
 	names.tutorial: OrderObj.new([
-		ParchmentData.parchments[ParchmentData.names.infernal_fire]
+		ParchmentData.parchments[ParchmentData.names.infernal_fire],
+		ParchmentData.parchments[ParchmentData.names.tornado],
+		ParchmentData.parchments[ParchmentData.names.fertility]
 	]),
 	names.more_fetility: OrderObj.new([
 		ParchmentData.parchments[ParchmentData.names.fertility],
