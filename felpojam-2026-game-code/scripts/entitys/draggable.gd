@@ -94,12 +94,12 @@ func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> v
 func get_overlapping_stand() -> Stand:
 	var areas := get_overlapping_areas()
 	for area in areas:
-		if area is Stand:
+		if area is Stand && area.is_item_available(self):
 			return area
 	return
 
 func _on_area_entered_base_event(body: Area2D) -> void:
-	if body is Stand:
+	if body is Stand && body.is_item_available(self):
 		current_stand = body
 
 func _on_area_exited_base_event(body: Area2D) -> void:

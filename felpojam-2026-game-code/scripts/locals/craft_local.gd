@@ -34,5 +34,4 @@ func set_enable_craft_items(value: bool) -> void:
 		var dad = draggable.get_parent() 
 		var is_child = dad == self || dad in children
 		if is_craft_item and is_child:
-			print(value)
 			draggable.is_freeze = !value

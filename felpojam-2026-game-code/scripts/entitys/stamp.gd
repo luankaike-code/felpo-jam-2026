@@ -70,15 +70,3 @@ func change_sprite_texture(version: StampData.versions):
 	sprite.texture = texture
 	sprite.frame = texture_data.frame
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
