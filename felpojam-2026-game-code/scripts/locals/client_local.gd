@@ -27,6 +27,8 @@ signal exit_client
 signal receive_total_parchments
 
 func _ready() -> void:
+	super()
+	
 	table_bell.pressed.connect(new_client)
 
 func new_client():

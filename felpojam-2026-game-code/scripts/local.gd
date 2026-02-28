@@ -10,4 +10,4 @@ func _ready() -> void:
 	for child in get_children():
 		if child is Draggable:
 			child.spawn_node.connect(add_child)
-	bg.texture = bg_texture
+	bg.texture = bg_texture if !bg.texture else bg.texture

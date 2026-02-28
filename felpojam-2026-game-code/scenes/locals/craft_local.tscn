@@ -3,13 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="1_umv4u"]
 [ext_resource type="PackedScene" uid="uid://cccp0nbwda3rg" path="res://scenes/entitys/ink_stand.tscn" id="2_00w25"]
 [ext_resource type="Script" uid="uid://dmpjwybxjx6gl" path="res://scripts/locals/craft_local.gd" id="2_xt3nh"]
-[ext_resource type="Texture2D" uid="uid://1glccdnt0j3n" path="res://assets/images/craft_local_bg.png" id="3_00w25"]
+[ext_resource type="Texture2D" uid="uid://bdapaqpfithr1" path="res://assets/images/craft_bg.png" id="3_00w25"]
 [ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="4_t3eoa"]
 [ext_resource type="PackedScene" uid="uid://cj4k5fngr2dev" path="res://scenes/entitys/stack_papers.tscn" id="5_mvwp7"]
 [ext_resource type="PackedScene" uid="uid://bwhvvkj40wdmv" path="res://scenes/entitys/dropper.tscn" id="9_umv4u"]
 [ext_resource type="PackedScene" uid="uid://bir3pakybp2iq" path="res://scenes/entitys/trash.tscn" id="10_00w25"]
 [ext_resource type="PackedScene" uid="uid://bgqa2qfu810ox" path="res://scenes/entitys/stamps_conjunt.tscn" id="10_wwimg"]
 [ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="11_wwimg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00w25"]
+radius = 61.0
+height = 278.0
 
 [node name="CraftLocal" unique_id=564590170 instance=ExtResource("1_umv4u")]
 script = ExtResource("2_xt3nh")
@@ -46,6 +50,10 @@ position = Vector2(-293, 10)
 
 [node name="Trash" parent="." index="8" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(628, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trash" index="0" unique_id=608003628]
+position = Vector2(-2, -13)
+shape = SubResource("CapsuleShape2D_00w25")
 
 [node name="StampsConjunt" parent="." index="9" unique_id=1081891180 instance=ExtResource("10_wwimg")]
 position = Vector2(105, -94)
