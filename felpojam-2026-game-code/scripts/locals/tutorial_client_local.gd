@@ -6,7 +6,6 @@ func _ready() -> void:
 	super()
 	
 	table_bell.modulate = Color(1.0, 1.0, 0.0, 1.0)
-	table_bell.pressed.connect(new_client)
 
 func new_client():
 	table_bell.modulate = Color(1.0, 1.0, 1.0, 1.0)
