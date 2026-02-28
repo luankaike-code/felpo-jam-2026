@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://da527j4ft7nq0" path="res://scripts/HUD/game_hud.gd" id="1_1geg4"]
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="2_kixb8"]
 [ext_resource type="PackedScene" uid="uid://c2lsoyy74l602" path="res://scenes/HUD/clock.tscn" id="3_guowm"]
+[ext_resource type="Texture2D" uid="uid://dif7gwpc2q4xt" path="res://assets/images/coin.png" id="3_u0q1m"]
 [ext_resource type="Texture2D" uid="uid://453kk0eicspa" path="res://assets/images/arrow.png" id="4_guowm"]
 [ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="4_kixb8"]
 
@@ -14,8 +15,6 @@ offset_left = -347.0
 offset_top = -200.0
 offset_right = 348.0
 offset_bottom = -72.0
-mouse_behavior_recursive = 1
-alignment = 1
 
 [node name="Control" type="Control" parent="HBoxContainer2" unique_id=1526210694]
 layout_mode = 2
@@ -27,9 +26,26 @@ metadata/_custom_type_script = "uid://b22ark22c86p4"
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2" unique_id=3200453]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_bottom = 50
 
-[node name="ClockHud" parent="HBoxContainer2/MarginContainer" unique_id=1928162360 instance=ExtResource("3_guowm")]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/MarginContainer" unique_id=1117682966]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="InfoBtn" type="TextureRect" parent="HBoxContainer2/MarginContainer/HBoxContainer" unique_id=1627854348]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+texture = ExtResource("3_u0q1m")
+stretch_mode = 3
+script = ExtResource("4_kixb8")
+use_click_sound = true
+click_sound = 14
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="ClockHud" parent="HBoxContainer2/MarginContainer/HBoxContainer" unique_id=1928162360 instance=ExtResource("3_guowm")]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1328541034]
