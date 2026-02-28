@@ -6,7 +6,8 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 
 @onready var client_local: ClientLocal = $ClientLocal
 @onready var craft_local: CraftLocal = $CraftLocal
-@onready var paper_stand: Stand = $AvailableStandArea
+@onready var available_stand_area: Stand = $AvailableStandArea
+@onready var runes_book: RunesBook = $RunesBook
 
 @onready var locals := [client_local, craft_local, $TrashLocal]
 var is_already_wheel := false
@@ -24,7 +25,9 @@ func _ready() -> void:
 		if local is Local:
 			local.open_pop_up.connect(factory_pop_up)
 			local.spawn_node.connect(spawn_node)
-			
+	
+	runes_book.open.connect(factory_pop_up)
+	available_stand_area.place_item(runes_book)
 	camera.add_interface(game_hud)
 	
 	freeze_all_craft_items_and_the_trash(true, false)
@@ -44,8 +47,8 @@ func _ready() -> void:
 	game_hud.set_arrow_enabled(GameHud.arrows.left, false)
 
 func spawn_node(node: Node2D) -> void:
-	if paper_stand.is_item_available(node):
-		paper_stand.place_item(node)
+	if available_stand_area.is_item_available(node):
+		available_stand_area.place_item(node)
 	add_child(node)
 
 func _on_arrow_pressed(arrow: GameHud.arrows):

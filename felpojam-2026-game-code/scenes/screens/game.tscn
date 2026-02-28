@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dnvx87pnj4fgh" path="res://scenes/locals/craft_local.tscn" id="4_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://ba3rys7soq27p" path="res://scenes/entitys/available_stand_area.tscn" id="5_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://dxr7kr6t64oid" path="res://scenes/HUD/game_hud.tscn" id="5_ln6eb"]
+[ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="6_4ji0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ji0l"]
 size = Vector2(1800, 450)
@@ -23,6 +24,9 @@ position = Vector2(1080, 0)
 
 [node name="GameHud" parent="." unique_id=1329675360 instance=ExtResource("5_ln6eb")]
 z_index = 3800
+
+[node name="RunesBook" parent="." unique_id=1322508017 instance=ExtResource("6_4ji0l")]
+position = Vector2(1166, 5)
 
 [node name="AvailableStandArea" parent="." unique_id=1989630847 instance=ExtResource("5_4ji0l")]
 position = Vector2(546, -9)

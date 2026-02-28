@@ -18,7 +18,7 @@ func place_item(item: Node2D) -> bool:
 		
 	return cond
 
-func is_paper_into_collision(paper: Paper) -> bool:
+func is_paper_into_collision(node: Node2D) -> bool:
 	var ids = get_shape_owners()
 	var into_collision := false
 	
@@ -26,9 +26,10 @@ func is_paper_into_collision(paper: Paper) -> bool:
 		var collision: CollisionShape2D = shape_owner_get_owner(id)
 		if collision.disabled:
 			continue
+		
 		var rect_local := collision.shape.get_rect()
-		into_collision = rect_local.has_point(to_local(paper.global_position))
-		print(id, " ", rect_local, " ", to_local(paper.global_position), " ", into_collision)
+		into_collision = rect_local.has_point(to_local(node.global_position))
+		
 		if into_collision:
 			break
 	
@@ -36,4 +37,4 @@ func is_paper_into_collision(paper: Paper) -> bool:
 	
 
 func is_item_available(item: Node2D) -> bool:
-	return item is Paper
+	return item is Paper || item is RunesBook
