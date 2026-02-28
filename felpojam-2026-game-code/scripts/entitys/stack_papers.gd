@@ -12,7 +12,7 @@ func _ready() -> void:
 func spawn_paper() -> void:
 	var paper_scene = packed_paper.instantiate() as Paper
 	paper_scene.start_drag.connect(_on_paper_start_drag)
-	paper_scene.position = position
+	paper_scene.global_position = global_position
 	
 	current_paper = paper_scene
 	want_spawn_paper.emit(paper_scene)

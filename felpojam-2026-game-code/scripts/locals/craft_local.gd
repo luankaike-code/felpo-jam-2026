@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _on_spawn_paper(paper_to_spawn: Paper) -> void:
 	paper_to_spawn.rune_added.connect(_on_rune_added)
-	add_child(paper_to_spawn)
+	spawn_node.emit(paper_to_spawn)
 
 func _on_rune_added(paper: Paper) -> void:
 	paper.rune_added.disconnect(_on_rune_added)
