@@ -12,9 +12,6 @@ func _ready() -> void:
 	runes_book.open.connect(open_pop_up.emit)
 	stack_papers.want_spawn_paper.connect(_on_spawn_paper)
 
-func set_enable_trash(value: bool):
-	trash.enable = value
-
 func _on_spawn_paper(paper_to_spawn: Paper) -> void:
 	paper_to_spawn.rune_added.connect(_on_rune_added)
 	add_child(paper_to_spawn)
@@ -26,3 +23,12 @@ func _on_rune_added(paper: Paper) -> void:
 func get_paper_with_rune_count() -> int:
 	papers_with_runes = papers_with_runes.filter(func(paper): return !!paper)
 	return papers_with_runes.size()
+
+func set_enable_trash(value: bool):
+	trash.enable = value
+
+func set_enable_craft_items(value: bool) -> void:
+	for draggable in get_tree().get_nodes_in_group("draggables"):
+		var is_craft_item := draggable is Stamp || draggable is Dropper
+		if is_craft_item and draggable.get_parent() == self:
+			draggable.is_freeze = !value

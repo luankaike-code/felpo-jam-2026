@@ -59,9 +59,7 @@ func update_arrow_enabled():
 
 func freeze_all_craft_items_and_the_trash(craft_items_value: bool, trash_value: bool=):
 	craft_local.set_enable_trash(!trash_value)
-	for draggable in get_tree().get_nodes_in_group("draggables"):
-		if draggable is Stamp || draggable is Dropper:
-			draggable.is_freeze = craft_items_value
+	craft_local.set_enable_craft_items(!craft_items_value)
 
 func _pop_mensage(mensage: PopUpMensage):
 	if mensage is PopUpMensageOpenPopUp:
