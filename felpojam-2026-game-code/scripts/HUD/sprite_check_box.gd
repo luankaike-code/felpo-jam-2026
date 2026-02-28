@@ -2,6 +2,9 @@ class_name SpriteCheckBox extends MarginContainer
 
 @onready var texture_rect: TextureRect = $TextureRect
 
+@onready var region_uncheck := Rect2(79.0, 79.0, 16.0, 16.0)
+@onready var region_check := Rect2(111.0, 79.0, 16.0, 16.0)
+
 var texture: AtlasTexture
 var frame_size: Vector2
 var value: bool :
@@ -14,6 +17,7 @@ signal changed
 func _ready() -> void:
 	texture = texture_rect.texture
 	frame_size = texture.region.size
+	_update_value()
 
 @warning_ignore("unused_parameter")
 func _gui_input(event: InputEvent) -> void:
@@ -22,6 +26,5 @@ func _gui_input(event: InputEvent) -> void:
 			value = !value
 
 func _update_value():
-	var pos_x := frame_size.x if value else 0.0
-	texture.region.position.x = pos_x
+	texture.region = region_check if value else region_uncheck
 	changed.emit(value)

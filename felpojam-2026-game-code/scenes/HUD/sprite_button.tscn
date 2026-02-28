@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kjus0yv14v1r"]
 
-[ext_resource type="Texture2D" uid="uid://dgoled4de2qeq" path="res://assets/images/button.png" id="1_6s3wx"]
 [ext_resource type="Script" uid="uid://dd84rauav7tdk" path="res://scripts/HUD/sprite_button.gd" id="1_jtmg5"]
+[ext_resource type="Texture2D" uid="uid://xtwffb3isucm" path="res://assets/images/btns_spritesheet.png" id="2_jtmg5"]
 [ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="4_nh7yj"]
 
 [node name="SpriteButton" type="MarginContainer" unique_id=1657631145]
@@ -15,11 +15,12 @@ script = ExtResource("1_jtmg5")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1667858348]
 layout_mode = 2
-texture = ExtResource("1_6s3wx")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
+texture = ExtResource("2_jtmg5")
+region_rect = Rect2(239, 95, 32, 16)
+patch_margin_left = 4
+patch_margin_top = 1
+patch_margin_right = 4
+patch_margin_bottom = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1413164778]
 layout_mode = 2

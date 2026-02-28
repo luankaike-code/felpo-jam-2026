@@ -1,7 +1,7 @@
 class_name SpriteSlider extends Control
 
 @onready var slider_icon: TextureRect = $SliderIcon
-@onready var bar_actived: NinePatchRect = $NinePatchRect2
+@onready var bar_actived: NinePatchRect = $NinePatchRect
 
 signal value_changed(value :float)
 
