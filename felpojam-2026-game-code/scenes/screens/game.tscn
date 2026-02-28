@@ -6,11 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ba3rys7soq27p" path="res://scenes/entitys/paper_stand.tscn" id="5_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://dxr7kr6t64oid" path="res://scenes/HUD/game_hud.tscn" id="5_ln6eb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q6jn"]
-size = Vector2(722, 443)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln6eb"]
-size = Vector2(1075, 449.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ji0l"]
+size = Vector2(1800, 450)
 
 [node name="Game" type="Node2D" unique_id=1475156608]
 script = ExtResource("1_iwlfa")
@@ -28,11 +25,8 @@ position = Vector2(1080, 0)
 z_index = 3800
 
 [node name="PaperStand" parent="." unique_id=1989630847 instance=ExtResource("5_4ji0l")]
+position = Vector2(546, -9)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStand" unique_id=1428246803]
-position = Vector2(1, 0.5)
-shape = SubResource("RectangleShape2D_0q6jn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="PaperStand" unique_id=2073259270]
-position = Vector2(901.5, 1.75)
-shape = SubResource("RectangleShape2D_ln6eb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperStand" unique_id=1913622898]
+position = Vector2(-6, 9)
+shape = SubResource("RectangleShape2D_4ji0l")

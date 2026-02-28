@@ -24,10 +24,11 @@ func is_paper_into_collision(paper: Paper) -> bool:
 	
 	for id in ids:
 		var collision: CollisionShape2D = shape_owner_get_owner(id)
-		var rect := collision.shape.get_rect()
-		print(id, " ", rect)
-		into_collision = rect.has_point(paper.position)
-		print(into_collision)
+		if collision.disabled:
+			continue
+		var rect_local := collision.shape.get_rect()
+		into_collision = rect_local.has_point(to_local(paper.global_position))
+		print(id, " ", rect_local, " ", to_local(paper.global_position), " ", into_collision)
 		if into_collision:
 			break
 	
