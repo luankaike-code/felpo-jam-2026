@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://c0pn04hbi2puj"]
+
+[ext_resource type="Script" uid="uid://1b1ji5eiq7il" path="res://scripts/screens/you_survived.gd" id="1_fvu3r"]
+[ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_5uepp"]
+[ext_resource type="Texture2D" uid="uid://dyakty173bk50" path="res://assets/images/menu/menu_bg.png" id="3_llc02"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="4_llc02"]
+[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="4_x4x8e"]
+[ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="6_lxumd"]
+
+[node name="you_survived" type="Node2D" unique_id=1269613533]
+script = ExtResource("1_fvu3r")
+metadata/_custom_type_script = "uid://d0vm1uhnct55o"
+
+[node name="Local" parent="." unique_id=1423880516 instance=ExtResource("2_5uepp")]
+bg_texture = ExtResource("3_llc02")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=176551058]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -225.0
+offset_right = 360.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=292141899]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1263676484]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1943575697]
+layout_mode = 2
+texture = ExtResource("4_x4x8e")
+region_rect = Rect2(0, 0, 96, 96)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 7
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1410252770]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=1691987918]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=235397941]
+layout_mode = 2
+text = "VOCÊ SOBREVIVEU"
+label_settings = ExtResource("4_llc02")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1759403444]
+layout_mode = 2
+text = "parabéns"
+label_settings = ExtResource("4_llc02")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=2053959449]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1876768312]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=2048612583]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1454936789]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Pelo visto não foi muito bom esse trabalho né? Que bom finalmente o período minímo de trabalho era apenas de 5 dias"
+label_settings = ExtResource("4_llc02")
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=531923381]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="GotoMuneBtn" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1657631145 instance=ExtResource("6_lxumd")]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Voltar para o menu"
