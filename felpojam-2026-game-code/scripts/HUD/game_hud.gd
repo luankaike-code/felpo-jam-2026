@@ -6,7 +6,8 @@ enum arrows {
 }
 
 @onready var arrow_left: ClickableTexture = $HBoxContainer/ArrowLeft
-@onready var info_btn: ClickableTexture = $HBoxContainer2/MarginContainer/HBoxContainer/InfoBtn
+@onready var info_btn: ClickableTexture = $HBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer/InfoBtn
+@onready var speed_btn: ClickableTexture = $HBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer/SpeedBtn
 @onready var arrow_right: ClickableTexture = $HBoxContainer/ArrowRight
 @onready var speech_bubble_manager: SpeechBubbleManager = $HBoxContainer2/Control/SpeechBubbleManager
 
@@ -19,6 +20,9 @@ func _ready() -> void:
 	arrow_left.button_up.connect(func(): _on_arrow_pressed(arrows.left))
 	arrow_right.button_up.connect(func(): _on_arrow_pressed(arrows.right))
 	info_btn.button_up.connect(func(): Global.cursor_mode = MouseData.modes.info)
+	
+	speed_btn.button_down.connect(func(): GlobalTime.time_speed *= 20)
+	speed_btn.button_up.connect(func(): GlobalTime.time_speed /= 20)
 
 func _on_arrow_pressed(arrow: arrows):
 	arrow_pressed.emit(arrow)

@@ -34,7 +34,22 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 20
 
-[node name="InfoBtn" type="TextureRect" parent="HBoxContainer2/MarginContainer/HBoxContainer" unique_id=1627854348]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2/MarginContainer/HBoxContainer" unique_id=1008668394]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="SpeedBtn" type="TextureRect" parent="HBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1277545184]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+texture = ExtResource("3_u0q1m")
+stretch_mode = 3
+script = ExtResource("4_kixb8")
+use_click_sound = true
+click_sound = 14
+metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
+
+[node name="InfoBtn" type="TextureRect" parent="HBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1627854348]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 8

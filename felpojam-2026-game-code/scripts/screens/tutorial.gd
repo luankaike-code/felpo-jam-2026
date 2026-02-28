@@ -19,7 +19,7 @@ func set_disable_arrows(value: bool):
 		update_arrow_enabled()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if paused:
+	if paused || !visibility:
 		return
 	
 	if _handle_super_inputs(event) || disable_inputs:

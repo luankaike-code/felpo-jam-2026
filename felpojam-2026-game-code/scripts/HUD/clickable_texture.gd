@@ -1,6 +1,7 @@
 class_name ClickableTexture extends TextureRect
 
 signal button_up
+signal button_down
 
 var _is_button_down := false
 var enabled := true
@@ -40,6 +41,7 @@ func _button_down() -> void:
 		
 	_is_button_down = true
 	_scale_to(button_down_scale)
+	button_down.emit()
 
 func _button_up() -> void:
 	_is_button_down = false
