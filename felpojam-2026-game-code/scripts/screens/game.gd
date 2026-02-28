@@ -6,7 +6,7 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 
 @onready var client_local: ClientLocal = $ClientLocal
 @onready var craft_local: CraftLocal = $CraftLocal
-@onready var paper_stand: Stand = $PaperStand
+@onready var paper_stand: Stand = $AvailableStandArea
 
 @onready var locals := [client_local, craft_local, $TrashLocal]
 var is_already_wheel := false

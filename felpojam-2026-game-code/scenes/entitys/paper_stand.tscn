@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://ba3rys7soq27p"]
-
-[ext_resource type="Script" uid="uid://hux7vtn0up8u" path="res://scripts/entitys/paper_stand.gd" id="1_eefod"]
-
-[node name="PaperStand" type="Area2D" unique_id=1989630847]
-script = ExtResource("1_eefod")
-metadata/_custom_type_script = "uid://2p33g122efmh"

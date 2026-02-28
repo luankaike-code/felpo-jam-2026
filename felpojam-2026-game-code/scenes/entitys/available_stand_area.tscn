@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ba3rys7soq27p"]
+
+[ext_resource type="Script" uid="uid://hux7vtn0up8u" path="res://scripts/entitys/available_stand_area.gd" id="1_ony3p"]
+
+[node name="AvailableStandArea" type="Area2D" unique_id=1989630847]
+script = ExtResource("1_ony3p")
+metadata/_custom_type_script = "uid://2p33g122efmh"
