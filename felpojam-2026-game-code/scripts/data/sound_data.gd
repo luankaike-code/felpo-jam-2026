@@ -6,6 +6,7 @@ enum names {
 	steps,
 	transition,
 	
+	dead_screen_music,
 	menu_music,
 	shop_music,
 	
@@ -39,6 +40,7 @@ static var relation_name_type: Dictionary[names, types] = {
 	names.steps: types.ambient,
 	names.transition: types.sound_effect,
 	
+	names.dead_screen_music: types.music,
 	names.menu_music: types.music,
 	names.shop_music: types.music,
 	
@@ -66,6 +68,7 @@ static var streams: Dictionary[names, AudioStreamMP3] = {
 	names.steps: preload("res://assets/ambient_sounds/steps.mp3"),
 	names.transition: preload("res://assets/ambient_sounds/transition.mp3"),
 	
+	names.dead_screen_music: preload("res://assets/music/dead_screen_music.mp3"),
 	names.menu_music: preload("res://assets/music/menu_music.mp3"),
 	names.shop_music: preload("res://assets/music/shop_music.mp3"),
 	

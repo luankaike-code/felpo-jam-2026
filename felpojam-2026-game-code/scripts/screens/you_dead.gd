@@ -6,7 +6,7 @@ extends Screen
 
 func _ready() -> void:
 	sprite_button.button_up.connect(func(): change_screen.emit(ScreenData.names.menu))
-	
+	play_music.emit(SoundData.names.dead_screen_music)
 	animate_title(true)
 	enter_character()
 	
