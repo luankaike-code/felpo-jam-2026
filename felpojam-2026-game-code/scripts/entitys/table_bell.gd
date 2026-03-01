@@ -1,8 +1,13 @@
-class_name TableBell extends Area2D
+class_name TableBell extends ObjWithDescription
 
 var can_emit_sound := true
 var enable := true
 signal pressed
+
+func _ready() -> void:
+	super()
+	
+	description = DescriptionsData.descriptions[DescriptionsData.names.table_bell]
 
 @warning_ignore("unused_parameter")
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
