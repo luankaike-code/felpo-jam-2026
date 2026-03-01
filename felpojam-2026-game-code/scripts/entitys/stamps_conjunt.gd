@@ -16,11 +16,14 @@ var stamps: Array[RunesData.names] = [
 func _ready() -> void:
 	var stand_size := sprite_2d.texture.get_size()
 	var space := (stand_size.x/stamps.size())
-	var start_x = stand_size.x/-2 + 39
+	print(space)
+	var start_x = stand_size.x/-2 + 38
+	var pos_y := -4
 	
 	for i in range(stamps.size()):
 		var stamp_scene := packed_stamp.instantiate() as Stamp
 		stamp_scene.rune_name = stamps[i]
 		stamp_scene.position.x = (start_x + space * i) - i
+		stamp_scene.position.y = pos_y
 		stamp_scene.spawn_node.connect(add_child)
 		add_child(stamp_scene)

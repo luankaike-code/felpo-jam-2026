@@ -9,6 +9,7 @@ enum names {
 	light,
 	
 	order,
+	chaos,
 }
 
 static var string: Dictionary[names, String] = {
@@ -19,7 +20,8 @@ static var string: Dictionary[names, String] = {
 	names.dark: "Trevas",
 	names.light: "Luz",
 	
-	names.order: "Ordem"
+	names.order: "Ordem",
+	names.chaos: "Caos"
 }
 
 static var colors: Dictionary[names, Color] = {
@@ -31,6 +33,7 @@ static var colors: Dictionary[names, Color] = {
 	names.light: Color(1.0, 0.776, 0.051, 1.0),
 	
 	names.order: Color(1.0, 0.663, 1.0, 1.0),
+	names.chaos: Color(0.155, 0.0, 0.161, 1.0),
 }
 
 static var textures: Dictionary[names, CompressedTexture2D] = {
@@ -42,17 +45,19 @@ static var textures: Dictionary[names, CompressedTexture2D] = {
 	names.light: preload("res://assets/images/runes/runes.png"),
 	
 	names.order: preload("res://assets/images/runes/runes.png"),
+	names.chaos: preload("res://assets/images/runes/runes.png"),
 }
 
 static var frames_count: Dictionary[names, Vector2i] = {
-	names.fire: Vector2(4, 1),
-	names.water: Vector2(4, 1),
-	names.air: Vector2(4, 1),
-	names.earth: Vector2(4, 1),
-	names.dark: Vector2(4, 1),
-	names.light: Vector2(4, 1),
+	names.fire: Vector2(8, 1),
+	names.water: Vector2(8, 1),
+	names.air: Vector2(8, 1),
+	names.earth: Vector2(8, 1),
+	names.dark: Vector2(8, 1),
+	names.light: Vector2(8, 1),
 	
-	names.order: Vector2(4, 1),
+	names.order: Vector2(8, 1),
+	names.chaos: Vector2(8, 1),
 }
 
 static var frame: Dictionary[names, int] = {
@@ -60,8 +65,9 @@ static var frame: Dictionary[names, int] = {
 	names.water: 0,
 	names.air: 1,
 	names.earth: 3,
-	names.dark: 1,
-	names.light: 1,
+	names.dark: 5,
+	names.light: 4,
 	
-	names.order: 3,
+	names.order: 6,
+	names.chaos: 7,
 }

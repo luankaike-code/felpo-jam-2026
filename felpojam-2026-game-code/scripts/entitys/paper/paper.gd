@@ -26,9 +26,6 @@ func play_paper_drag_sound():
 	Sound.play_sound(variants.pick_random())
 
 func add_rune(rune_name: RunesData.names, rune_global_position: Vector2) -> bool:
-	if runes.size() >= 2:
-		return false
-	
 	var rune_scene := packed_rune.instantiate() as Rune
 	rune_scene.setup(rune_name)
 	rune_scene.position = to_local(rune_global_position)

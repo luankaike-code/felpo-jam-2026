@@ -206,4 +206,4 @@ texture = ExtResource("3_drsl1")
 position = Vector2(0, -34)
 
 [node name="InkStand2" parent="." unique_id=655861238 instance=ExtResource("4_sfka0")]
-position = Vector2(0, 27)
+position = Vector2(0, 25)

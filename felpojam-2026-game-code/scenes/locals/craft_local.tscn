@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bgqa2qfu810ox" path="res://scenes/entitys/stamps_conjunt.tscn" id="10_wwimg"]
 [ext_resource type="PackedScene" uid="uid://do3ltkvux01g" path="res://scenes/entitys/order_stamp.tscn" id="11_t3eoa"]
 [ext_resource type="Texture2D" uid="uid://clqd6hl8bsjwy" path="res://assets/images/carpet.png" id="11_wwimg"]
+[ext_resource type="PackedScene" uid="uid://hr5h17eodi1f" path="res://scenes/entitys/chaos_stamp.tscn" id="12_t3eoa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00w25"]
 size = Vector2(114, 262)
@@ -60,4 +61,7 @@ position = Vector2(180, -465)
 region_rect = Rect2(0, 0, 1080, 480)
 
 [node name="OrderStamp" parent="." index="9" unique_id=451533335 instance=ExtResource("11_t3eoa")]
-position = Vector2(-23, 7)
+position = Vector2(-43, 7)
+
+[node name="ChaosStamp" parent="." index="10" unique_id=385545106 instance=ExtResource("12_t3eoa")]
+position = Vector2(30, 7)

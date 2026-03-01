@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://hr5h17eodi1f"]
+
+[ext_resource type="Script" uid="uid://w3h2hi4mxnpg" path="res://scripts/entitys/chaos_stamp.gd" id="1_4xtk7"]
+[ext_resource type="Texture2D" uid="uid://cwo0dalbm8som" path="res://assets/images/chaos_stamp.png" id="2_4xtk7"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="3_em1tg"]
+[ext_resource type="Script" uid="uid://d0yqb1h5x5d6y" path="res://scripts/states/stamp/idle.gd" id="4_ae0ep"]
+[ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="5_m868x"]
+[ext_resource type="Script" uid="uid://bw2kq5pyqwdpi" path="res://scripts/states/stamp/going_up.gd" id="6_2tapg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lldye"]
+size = Vector2(64, 71)
+
+[node name="ChaosStamp" type="Area2D" unique_id=385545106]
+script = ExtResource("1_4xtk7")
+metadata/_custom_type_script = "uid://wecskt8a2l36"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1669499350]
+position = Vector2(0, -10)
+texture = ExtResource("2_4xtk7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=612503396]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_lldye")
+
+[node name="StateMachine" type="Node" parent="." unique_id=153503963]
+script = ExtResource("3_em1tg")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=753563513]
+script = ExtResource("4_ae0ep")
+metadata/_custom_type_script = "uid://d0yqb1h5x5d6y"
+
+[node name="Dropping" type="Node" parent="StateMachine" unique_id=543471603]
+script = ExtResource("5_m868x")
+metadata/_custom_type_script = "uid://rfn8t4olhbwe"
+
+[node name="GoingUp" type="Node" parent="StateMachine" unique_id=2078879423]
+script = ExtResource("6_2tapg")
+metadata/_custom_type_script = "uid://bw2kq5pyqwdpi"
