@@ -63,9 +63,9 @@ static var speechs: Dictionary[names, Array] = {
 		"de...",
 		"de fertilidade...",
 		"1 runa de fogo e 1 runa de luz.",
-		"Ah, caso esqueça da receita de algum desses pergaminhos veja o meu livro de receitas.",
+		"Ah, caso esqueça da receita de algum desses pergaminhos veja o meu livro de receitas com o botão clique esquerdo.",
 		"Volto aqui amanhã pra ver como você se saiu com essa tarefa.",
-		"Relaxe que ninguem vai te incomodar até lá. Vou dar o meu jeito para você ter esse dia de 'folga'"
+		"Relaxe que ninguem vai te incomodar até lá. Vou dar o meu jeito para você ter esse dia de 'folga'",
 	],
 	names.tutorial_guy_back: [
 		"Bem, vejamos o que você conseguiu fazer em um dia",
