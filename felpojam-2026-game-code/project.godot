@@ -13,6 +13,8 @@ config_version=5
 config/name="felpojam 2026 game code"
 run/main_scene="uid://cfhwbdh08sm3b"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/stretch_mode=2
+boot_splash/image="uid://dyakty173bk50"
 config/icon="res://icon.svg"
 
 [autoload]
