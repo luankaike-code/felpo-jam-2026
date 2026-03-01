@@ -7,7 +7,9 @@ enum names {
 	vitality,
 	weakness,
 	dark,
-	light
+	light,
+	banho,
+	o
 }
 
 static var parchments_arr: Array[names] = [
@@ -18,6 +20,8 @@ static var parchments_arr: Array[names] = [
 	names.weakness,
 	names.dark,
 	names.light,
+	names.banho,
+	names.o
 ]
 
 static var parchments_names: Dictionary[names, String] = {
@@ -28,8 +32,10 @@ static var parchments_names: Dictionary[names, String] = {
 	names.weakness: "Fraqueça",
 	names.dark: "Escuridão",
 	names.light: "Iluminação",
+	names.banho: "Água quente",
+	names.o: "Purificação"
 }
-
+#Luz e Trevas
 static var parchments: Dictionary[names, ParchmentObj] = {
 	names.fertility: ParchmentObj.new([
 		RuneObj.new(RunesData.names.fire, 0),
@@ -44,12 +50,14 @@ static var parchments: Dictionary[names, ParchmentObj] = {
 		RuneObj.new(RunesData.names.dark, 1),
 	]),
 	names.vitality: ParchmentObj.new([
-		RuneObj.new(RunesData.names.earth, 0),
 		RuneObj.new(RunesData.names.light, 0),
+		RuneObj.new(RunesData.names.earth, 0),
+		RuneObj.new(RunesData.names.order, 0),
 	]),
 	names.weakness: ParchmentObj.new([
-		RuneObj.new(RunesData.names.earth, 0),
 		RuneObj.new(RunesData.names.dark, 0),
+		RuneObj.new(RunesData.names.earth, 0),
+		RuneObj.new(RunesData.names.chaos, 0),
 	]),
 	names.dark: ParchmentObj.new([
 		RuneObj.new(RunesData.names.dark, 1),
@@ -57,6 +65,16 @@ static var parchments: Dictionary[names, ParchmentObj] = {
 	]),
 	names.light: ParchmentObj.new([
 		RuneObj.new(RunesData.names.light, 1),
-		RuneObj.new(RunesData.names.light, 1),
+		RuneObj.new(RunesData.names.order, 1),
+	]),
+	names.banho: ParchmentObj.new([
+		RuneObj.new(RunesData.names.fire, 1),
+		RuneObj.new(RunesData.names.water, 1),
+		RuneObj.new(RunesData.names.order, 1),
+	]),
+	names.o: ParchmentObj.new([
+		RuneObj.new(RunesData.names.fire, 1),
+		RuneObj.new(RunesData.names.water, 1),
+		RuneObj.new(RunesData.names.order, 1),
 	]),
 }

@@ -107,22 +107,20 @@ static var speechs: Dictionary[names, Array] = {
 	],
 	
 	names.concubine: [
-		"É um prazer conhecê-lo Runista,",
-		"me chamo Romã e eu cheguei a pouco tempo,",
-		"mas já estou ansiosa para cumprir com meus deveres com vossa majestade...",
-		"Gostaria de aumentar a minha fertilidade",
+		"É um prazer conhecê-lo, feiticeiro, cheguei há pouco tempo",
+		"gostaria de tomar um banho quentinho"
 	],
 	names.get_order_concubine: [
-		"vim ver o macaco",
+		"Então como está o meu pergaminho?",
 	],
 	names.concubine_result_positive: [
-		"Esse pergaminho foi muito util !!! amei !!!",
+		"Muito Agradecida",
 	],
 	names.concubine_result_ok: [
-		"Obrigada pelo pergaminho",
+		"Obrigado",
 	],
 	names.concubine_result_negative: [
-		"Horrivel !!! Meu utero doeu muito >:[ !!!",
+		"Vossa Majestade não gostará disso",
 	],
 	
 	names.king: [
@@ -132,17 +130,16 @@ static var speechs: Dictionary[names, Array] = {
 		"e lhe garanto o seu maior desejo"
 	],
 	names.get_order_king: [
-		"a",
+		"Como está?",
 	],
 	names.king_result_positive: [
-		"Esse pergaminho foi muito bom",
+		"Finalmente poderei voltar a viver",
 	],
 	names.king_result_ok: [
-		"Esse pergaminho foi ok",
+		"Obrigado",
 	],
 	names.king_result_negative: [
-		"Esse pergaminho é um lixo",
-		"Guardas o matem"
+		"AARRRGRGRHGRGR",
 	],
 	
 	names.warlord: [
@@ -172,43 +169,47 @@ static var speechs: Dictionary[names, Array] = {
 		"Te recomendo melhorar... e torcer para eu não perda a batalha...",
 	],
 	names.warlord_result_negative: [
-		"Ahm, isso só pode ser piada né?",
-		"Ai, ai... pelo visto será eu e meu exercito mesmo",
-		"Bom... Avisarei o rei sobre isso",
+		"Todos Morreremos"
 	],
 	
 	names.priest: [
-		"Sou o padre ********",
+		"Olha querida ovelha, sabe, meus fieis têm se perdido ultimamente...",
+		"Gostaria que houvesse um pergaminho que trouxesse a luz de volta a eles",
 	],
 	names.get_order_priest: [
-		"a",
+		"Olá",
 	],
 	names.priest_result_positive: [
-		"Esse pergaminho foi muito bom",
+		"Que Felicidade",
 	],
 	names.priest_result_ok: [
-		"Esse pergaminho foi ok",
+		"Obrigado",
 	],
 	names.priest_result_negative: [
-		"Esse pergaminho é um lixo",
-		"Seu bosta",
+		"Ah...",
 	],
 	
 	names.ladys_companion: [
-		"Sou a dama de companhia",
+		"Olá, Runista...",
+		"você já deve ter conhecido a nova dama que vossa majestade trouxe para a corte",
+		"ele fez dela sua concubina... ",
+		"A nossa Rainha está em prantos com medo de perder sua posição agora que o Rei favorece outra.",
+		"Eu gostaria de um pergaminho cujo efeito fosse sombrio.",
+		"Por favor. Não conte para ninguém"
 	],
 	names.get_order_ladys_companion: [
-		"a",
+		"Voltei aqui para pegar...",
+		"Aquilo"
 	],
 	names.ladys_companion_result_positive: [
-		"Esse pergaminho foi muito bom",
+		"Serei eternamente grata",
 	],
 	names.ladys_companion_result_ok: [
-		"Esse pergaminho foi ok",
+		"Obrigada...",
+		"Até mais"
 	],
 	names.ladys_companion_result_negative: [
-		"Esse pergaminho é um lixo",
-		"Seu bosta",
+		"Obrigada por nada"
 	],
 }
 

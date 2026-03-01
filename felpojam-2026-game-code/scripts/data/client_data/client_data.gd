@@ -10,10 +10,10 @@ enum names {
 }
 
 static var order: Array[names] = [
-	names.priest,
-	names.ladys_companion,
 	names.warlord,
 	names.concubine,
+	names.ladys_companion,
+	names.priest,
 	names.king,
 ]
 
@@ -29,35 +29,35 @@ static var client: Dictionary[names, ClientObj] = {
 		CharacterData.names.concubine, 
 		SpeechsData.names.concubine,
 		SpeechsData.names.get_order_concubine,
-		OrdersData.names.more_fetility,
+		OrdersData.names.banho,
 		40.0
 	),
 	names.king: ClientObj.new(
 		CharacterData.names.king,
 		SpeechsData.names.king,
 		SpeechsData.names.get_order_king,
-		OrdersData.names.infernal_fire,
+		OrdersData.names.pureza,
 		40.0
 	),
 	names.warlord: ClientObj.new(
 		CharacterData.names.warlord,
 		SpeechsData.names.warlord,
-		SpeechsData.names.warlord,
-		OrdersData.names.infernal_fire,
+		SpeechsData.names.get_order_warlord,
+		OrdersData.names.warlord,
 		40.0
 	),
 	names.priest: ClientObj.new(
 		CharacterData.names.priest,
 		SpeechsData.names.priest,
-		SpeechsData.names.priest,
-		OrdersData.names.infernal_fire,
+		SpeechsData.names.get_order_priest,
+		OrdersData.names.light,
 		40.0
 	),
 	names.ladys_companion: ClientObj.new(
 		CharacterData.names.ladys_companion,
 		SpeechsData.names.ladys_companion,
 		SpeechsData.names.ladys_companion,
-		OrdersData.names.infernal_fire,
+		OrdersData.names.dark,
 		40.0
 	)
 }
