@@ -2,6 +2,7 @@ class_name CraftLocal extends Local
 
 @onready var stack_papers: StackPapers = $StackPapers
 @onready var trash: Trash = $Trash
+@onready var runes_book: RunesBook = $RunesBook
 
 var papers_with_runes: Array[Paper]
 
@@ -9,6 +10,7 @@ func _ready() -> void:
 	super()
 	
 	stack_papers.want_spawn_paper.connect(_on_spawn_paper)
+	runes_book.open.connect(open_pop_up.emit)
 
 func _on_spawn_paper(paper_to_spawn: Paper) -> void:
 	paper_to_spawn.rune_added.connect(_on_rune_added)

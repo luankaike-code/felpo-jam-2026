@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c2liuyeax0kjk" path="res://scenes/locals/client_local.tscn" id="3_xrk1x"]
 [ext_resource type="PackedScene" uid="uid://dnvx87pnj4fgh" path="res://scenes/locals/craft_local.tscn" id="4_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://dxr7kr6t64oid" path="res://scenes/HUD/game_hud.tscn" id="5_ln6eb"]
-[ext_resource type="PackedScene" uid="uid://c3lqkcqrxakfj" path="res://scenes/entitys/runes_book.tscn" id="6_4ji0l"]
 [ext_resource type="PackedScene" uid="uid://6euiloaerot" path="res://scenes/entitys/paper_teleporter/paper_teleporter_right.tscn" id="7_kauht"]
 [ext_resource type="PackedScene" uid="uid://mhe0btiefa31" path="res://scenes/entitys/paper_teleporter/paper_teleporter_up.tscn" id="8_yruvw"]
 
@@ -22,9 +21,6 @@ position = Vector2(1080, 0)
 
 [node name="GameHud" parent="." unique_id=1329675360 instance=ExtResource("5_ln6eb")]
 z_index = 3800
-
-[node name="RunesBook" parent="." unique_id=1322508017 instance=ExtResource("6_4ji0l")]
-position = Vector2(1166, 5)
 
 [node name="Teleporter" type="Node2D" parent="." unique_id=2140136630]
 

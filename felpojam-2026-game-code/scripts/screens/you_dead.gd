@@ -20,6 +20,6 @@ func enter_character() -> void:
 func animate_title(to_up: bool):
 	var tween = get_tree().create_tween()
 	var mult := -1 if to_up else 1
-	var to := title.position + Vector2(0, 30) * mult
-	tween.tween_property(title, "position", to, 0.7)
+	var to := title.position + Vector2(0, 20) * mult
+	tween.tween_property(title, "position", to, 1.5)
 	tween.tween_callback(func(): animate_title(!to_up))

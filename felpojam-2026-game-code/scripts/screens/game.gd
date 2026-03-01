@@ -6,7 +6,6 @@ var packed_menu_in_game := preload("res://scenes/pop_ups/pop_up_menu_in_game.tsc
 
 @onready var client_local: ClientLocal = $ClientLocal
 @onready var craft_local: CraftLocal = $CraftLocal
-@onready var runes_book: RunesBook = $RunesBook
 
 @onready var locals := [client_local, craft_local, $TrashLocal]
 var is_already_wheel := false
@@ -25,8 +24,7 @@ func _ready() -> void:
 			local.open_pop_up.connect(factory_pop_up)
 			local.spawn_node.connect(spawn_node)
 			local.change_screen.connect(change_screen.emit)
-	
-	runes_book.open.connect(factory_pop_up)
+
 	camera.add_interface(game_hud)
 	
 	freeze_all_craft_items_and_the_trash(true, false)
@@ -84,9 +82,11 @@ func _pop_mensage(mensage: PopUpMensage):
 func _change_process_and_visibility(process: bool, visibility_: bool):
 	visibility = visibility_
 	game_hud.visible = visibility
-	for local in locals:
-			local.process_mode = Node.PROCESS_MODE_INHERIT if process else Node.PROCESS_MODE_DISABLED
-			local.visible = visibility
+	for local in locals + get_children():
+		if local is PopUp:
+			continue
+		local.process_mode = Node.PROCESS_MODE_INHERIT if process else Node.PROCESS_MODE_DISABLED
+		local.visible = visibility
 
 func _unhandled_input(event: InputEvent) -> void:
 	if paused || !visibility:
