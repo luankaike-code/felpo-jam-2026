@@ -213,9 +213,9 @@ static var speechs: Dictionary[names, Array] = {
 
 static var dicks: Dictionary[names, String] = {
 	names.tutorial_guy: "3 pergaminhos: Fogo infernal, Tornado e fertilidade",
-	names.concubine: "Quero aumentar a minha fertilidade",
+	names.concubine: "Quero me banhar",
 	names.king: "Quero quebrar minha maldição",
-	names.warlord: "Quero algo ai que esqueci",
-	names.priest: "Dinheiro eu querer",
-	names.ladys_companion: "Quero..."
+	names.warlord: "Quero fortalecer e enfraquecer",
+	names.priest: "Quero mais iluminação",
+	names.ladys_companion: "Algo sombrio"
 }
