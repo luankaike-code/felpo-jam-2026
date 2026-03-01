@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6euiloaerot"]
+
+[ext_resource type="Script" uid="uid://bv2i3d2jleaat" path="res://scripts/entitys/paper_teleporter.gd" id="1_4syjv"]
+[ext_resource type="Texture2D" uid="uid://be4us250yw8x3" path="res://assets/images/teleporter.png" id="2_mie15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o0tp"]
+size = Vector2(125, 162)
+
+[node name="PaperTeleporterRight" type="Area2D" unique_id=1830674698]
+script = ExtResource("1_4syjv")
+metadata/_custom_type_script = "uid://bv2i3d2jleaat"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1144581794]
+position = Vector2(-10, 4)
+texture = ExtResource("2_mie15")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108123832]
+position = Vector2(-9.5, 5)
+shape = SubResource("RectangleShape2D_2o0tp")

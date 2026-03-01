@@ -29,20 +29,20 @@ flip_h = true
 region_rect = Rect2(0, 0, 720, 450)
 
 [node name="Carpet" type="Sprite2D" parent="." index="2" unique_id=1746305780]
-position = Vector2(-101, 63)
+position = Vector2(120, 63)
 texture = ExtResource("11_wwimg")
 
 [node name="StackPapers" parent="." index="3" unique_id=117007281 instance=ExtResource("5_mvwp7")]
-position = Vector2(-272, 128)
+position = Vector2(-61, 68)
 
 [node name="InkStand" parent="." index="4" unique_id=920137688 instance=ExtResource("2_00w25")]
-position = Vector2(191, 102)
+position = Vector2(281, 103)
 
 [node name="InkStand2" parent="." index="5" unique_id=1137657733 instance=ExtResource("2_00w25")]
-position = Vector2(97, 103)
+position = Vector2(283, 19)
 
 [node name="Dropper" parent="." index="6" unique_id=392739461 instance=ExtResource("9_umv4u")]
-position = Vector2(-293, 10)
+position = Vector2(-159, 60)
 
 [node name="Trash" parent="." index="7" unique_id=220787020 instance=ExtResource("10_00w25")]
 position = Vector2(628, 78)

@@ -16,7 +16,12 @@ func teleporter_paper(paper: Paper):
 	paper.global_position = global_position
 
 func place_item(item: Node2D) -> bool:
-	if item is Paper and linked_teleporter and item != teleported_paper:
+	var cond := is_item_available(item)
+	
+	if cond:
 		linked_teleporter.teleporter_paper(item)
-		return true
-	return false
+		
+	return cond
+	
+func is_item_available(item: Node2D) -> bool:
+	return item is Paper and linked_teleporter and item != teleported_paper
