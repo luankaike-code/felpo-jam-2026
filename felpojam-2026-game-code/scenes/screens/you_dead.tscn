@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://0b4fkrolp8xf" path="res://scripts/screens/you_dead.gd" id="1_7w6l0"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_bqwin"]
-[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="3_6tlgi"]
-[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="4_ss25a"]
+[ext_resource type="Texture2D" uid="uid://dcsbcgr1la5c8" path="res://assets/images/dead_screen/dead_screen_bg.png" id="3_pm3a0"]
+[ext_resource type="Texture2D" uid="uid://bmk4x2cvhpupk" path="res://assets/images/dead_screen/dead_screen_floor.png" id="4_qit4m"]
+[ext_resource type="Texture2D" uid="uid://mvwk4u883bv4" path="res://assets/images/dead_screen/dead_screen_paper.png" id="5_djs66"]
 [ext_resource type="PackedScene" uid="uid://kjus0yv14v1r" path="res://scenes/HUD/sprite_button.tscn" id="5_ss25a"]
+[ext_resource type="Texture2D" uid="uid://coq2r5747jhwv" path="res://assets/images/dead_screen/dead_screen_character.png" id="6_0qme7"]
+[ext_resource type="Texture2D" uid="uid://dvmft8lcapse3" path="res://assets/images/dead_screen/dead_screen_title.png" id="7_cqu3y"]
 
 [node name="YouDead" type="Node2D" unique_id=643856943]
 script = ExtResource("1_7w6l0")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
 [node name="Local" parent="." unique_id=1423880516 instance=ExtResource("2_bqwin")]
+bg_texture = ExtResource("3_pm3a0")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2002605984]
 anchors_preset = 8
@@ -24,68 +28,51 @@ offset_right = 360.0
 offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=2067521972]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer" unique_id=525051214]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer/MarginContainer" unique_id=1683406797]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=543417248]
-layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=235528695]
-layout_mode = 2
-texture = ExtResource("3_6tlgi")
-patch_margin_left = 6
-patch_margin_top = 7
-patch_margin_right = 6
-patch_margin_bottom = 7
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1332608269]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/MarginContainer/MarginContainer" unique_id=1745571142]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/MarginContainer/MarginContainer/VBoxContainer" unique_id=981126540]
-custom_minimum_size = Vector2(200, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=34760254]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "VOCÊ MORREU"
-label_settings = ExtResource("4_ss25a")
-horizontal_alignment = 1
-autowrap_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 150
 
-[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/MarginContainer/MarginContainer/VBoxContainer" unique_id=2060673761]
-custom_minimum_size = Vector2(200, 0)
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1686246404]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Pelo visto não é uma boa ideia desagradar as pessoas desse plácio"
-label_settings = ExtResource("4_ss25a")
-autowrap_mode = 2
+texture = ExtResource("7_cqu3y")
+expand_mode = 2
+stretch_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2" unique_id=1298002435]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1698267217]
 layout_mode = 2
-size_flags_vertical = 10
+theme_override_constants/separation = 50
 
-[node name="GotoMenuBtn" parent="MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=1657631145 instance=ExtResource("5_ss25a")]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=2032513083]
+z_index = 30
 layout_mode = 2
-size_flags_horizontal = 6
-text = "Voltar para o menu"
+texture = ExtResource("6_0qme7")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=2040339705]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=1656922267]
+layout_mode = 2
+texture = ExtResource("4_qit4m")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=1068471455]
+layout_mode = 2
+texture = ExtResource("5_djs66")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="SpriteButton" parent="MarginContainer" unique_id=1657631145 instance=ExtResource("5_ss25a")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Continuar"

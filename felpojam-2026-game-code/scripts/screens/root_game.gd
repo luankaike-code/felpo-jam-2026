@@ -6,7 +6,7 @@ extends Node
 
 var new_screen: Screen
 var current_screen: Screen
-var default_screen = ScreenData.names.menu
+var default_screen = ScreenData.names.you_dead
 
 func _ready() -> void:
 	HelperWindow.set_window_mode(Window.MODE_WINDOWED)

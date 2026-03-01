@@ -1,6 +1,6 @@
 extends Screen
 
-@onready var goto_menu_btn: SpriteButton = $MarginContainer/MarginContainer/MarginContainer/VBoxContainer2/HBoxContainer/GotoMenuBtn
+@onready var sprite_button: SpriteButton = $MarginContainer/SpriteButton
 
 func _ready() -> void:
-	goto_menu_btn.button_up.connect(func(): change_screen.emit(ScreenData.names.menu))
+	sprite_button.button_up.connect(func(): change_screen.emit(ScreenData.names.menu))
