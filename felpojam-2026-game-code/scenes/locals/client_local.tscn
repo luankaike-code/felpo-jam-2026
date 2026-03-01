@@ -32,7 +32,7 @@ metadata/_custom_type_script = "uid://b22ark22c86p4"
 texture = ExtResource("6_c2w7w")
 
 [node name="TableBell" parent="." index="6" unique_id=183704749 instance=ExtResource("11_ph3mh")]
-position = Vector2(129, 150)
+position = Vector2(194, 176)
 
 [node name="StateMachine" type="Node" parent="." index="7" unique_id=420485562 node_paths=PackedStringArray("current_state")]
 script = ExtResource("6_6kv1h")

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b688mtqgsrte7"]
 
 [ext_resource type="Script" uid="uid://do5eknv2q2foj" path="res://scripts/entitys/table_bell.gd" id="1_1dckw"]
-[ext_resource type="Texture2D" uid="uid://bwv4tb86wvig0" path="res://assets/images/stamp.png" id="2_6usmf"]
+[ext_resource type="Texture2D" uid="uid://csb28thtxt74s" path="res://assets/images/table_bell.png" id="2_6usmf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_egh44"]
-size = Vector2(68, 80)
+[sub_resource type="CircleShape2D" id="CircleShape2D_egh44"]
+radius = 38.052597
 
 [node name="TableBell" type="Area2D" unique_id=183704749]
 script = ExtResource("1_1dckw")
@@ -13,4 +13,4 @@ script = ExtResource("1_1dckw")
 texture = ExtResource("2_6usmf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1129339252]
-shape = SubResource("RectangleShape2D_egh44")
+shape = SubResource("CircleShape2D_egh44")
