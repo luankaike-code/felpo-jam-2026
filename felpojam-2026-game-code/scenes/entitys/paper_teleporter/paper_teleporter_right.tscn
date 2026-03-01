@@ -11,10 +11,10 @@ script = ExtResource("1_4syjv")
 metadata/_custom_type_script = "uid://bv2i3d2jleaat"
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1144581794]
-position = Vector2(-10, 4)
+position = Vector2(10, 4)
 texture = ExtResource("2_mie15")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108123832]
-position = Vector2(-9.5, 5)
+position = Vector2(10, 4)
 shape = SubResource("RectangleShape2D_2o0tp")

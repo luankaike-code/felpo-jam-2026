@@ -5,6 +5,9 @@ class_name PaperTeleporter extends Stand
 var teleported_paper: Paper
 
 func _ready() -> void:
+	super()
+	
+	description = DescriptionsData.descriptions[DescriptionsData.names.teleporter]
 	area_exited.connect(deslinked_teleported_paper)
 
 func deslinked_teleported_paper(area: Area2D):
