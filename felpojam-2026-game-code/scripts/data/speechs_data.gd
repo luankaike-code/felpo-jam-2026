@@ -43,16 +43,16 @@ enum names {
 
 static var speechs: Dictionary[names, Array] = {
 	names.tutorial_guy: [
-		"Bom, finalmente chegamos ao seu novo lar Aprendiz",
-		"Relaxe que as pessoas desse palácio são muuuuito sensatas e gentis",
+		"Bom, finalmente chegamos ao seu novo lar, Aprendiz",
+		"Relaxe..." ,
+		"as pessoas desse palácio são muuuuito sensatas e gentis",
 		"Aqui você só precisará fazer todos os pergaminhos que eles pedirem",
 		"...",
-		"Só relembrando para cÊ fazer um pergaminho é necessário...",
+		"Só relembrando para cê fazer um pergaminho é necessário...",
 		"Pegar o carimbo, colocar na tinta e depois no papel.",
-		"Ah, e não se esqueça do conta gotas para pontencializar as runas",
-		"Mas só faça isso caso você ache necessário, é claro.",
+		"Ah, e não se esqueça do conta gotas para pontencializar as runas que precisam.",
 		"Bom...",
-		"Te desejo boa sorte e se tiver qualquer duvida você sempre pode mentalizar o P e ver o que cada item faz.",
+		"Te desejo boa sorte e se tiver qualquer duvida você sempre pode mentalizar o P ou scroll e ver o que cada item faz.",
 		"...",
 		"...",
 		"Vamos te testar? Só... Só pra ver.",
@@ -65,7 +65,7 @@ static var speechs: Dictionary[names, Array] = {
 		"1 runa de fogo e 1 runa de luz.",
 		"Ah, caso esqueça da receita de algum desses pergaminhos veja o meu livro de receitas.",
 		"Volto aqui amanhã pra ver como você se saiu com essa tarefa.",
-		"Relaxe que ninguem vai te incomodar até lá. Vo dar o meu jeito para você ter esse dia de 'folga'"
+		"Relaxe que ninguem vai te incomodar até lá. Vou dar o meu jeito para você ter esse dia de 'folga'"
 	],
 	names.tutorial_guy_back: [
 		"Bem, vejamos o que você conseguiu fazer em um dia",
@@ -146,20 +146,35 @@ static var speechs: Dictionary[names, Array] = {
 	],
 	
 	names.warlord: [
-		"Sou o chefe de guerra",
+		"Então você novo runista hum...",
+		"Tomara que você seja mais esperto que o anterior...",
+		"Bom, to querendo dois pergaminhos: uma para fortalecer o meu exército e outro para enfrequecer o exército inimigo",
+		"É que amanhão eu irei para uma grande batalha...",
+		"Uma batalha muito importante para vossa majestade...",
+		"Uma batalha que definirá a sobrevivencia desse pálecio...",
+		"Espero que você consiga faze-los a tempo.",
+		"Volto amanhã"
 	],
 	names.get_order_warlord: [
-		"a",
+		"Olá, to supresa que...",
+		"O que? acho que fosse um homem? tcs",
+		"...",
+		"Tar os pergmainhos ai vai"
 	],
 	names.warlord_result_positive: [
-		"Esse pergaminho foi muito bom",
+		"Legal, era exatamente isso que eu queria...",
+		"Cê tem o meu respeito",
+		"Até mais maguinho",
+		"Me dejese boa sorte"
 	],
 	names.warlord_result_ok: [
-		"Esse pergaminho foi ok",
+		"Acho que eles teve servir...",
+		"Te recomendo melhorar... e torcer para eu não perda a batalha...",
 	],
 	names.warlord_result_negative: [
-		"Esse pergaminho é um lixo",
-		"Seu bosta",
+		"Ahm, isso só pode ser piada né?",
+		"Ai, ai... pelo visto será eu e meu exercito mesmo",
+		"Bom... Avisarei o rei sobre isso",
 	],
 	
 	names.priest: [
