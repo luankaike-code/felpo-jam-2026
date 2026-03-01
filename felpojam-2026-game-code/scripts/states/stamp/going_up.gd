@@ -1,4 +1,4 @@
-extends State
+class_name StampGoingUp extends State
 
 var host: Stamp	
 

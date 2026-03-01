@@ -1,5 +1,6 @@
 class_name InkStand extends Stand
 
+signal stamp_placed
 var current_item: Stamp
 
 func _ready() -> void:
@@ -16,6 +17,7 @@ func place_item(item: Node2D) -> bool:
 		item.has_ink = true
 		item.global_position = global_position
 		current_item = item
+		stamp_placed.emit()
 		
 	return cond
 

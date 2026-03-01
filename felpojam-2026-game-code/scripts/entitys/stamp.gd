@@ -65,8 +65,7 @@ func on_area_exited(body: Area2D) -> void:
 		var paper = get_overlapping_paper()
 		current_paper = paper if paper else null
 
-func change_sprite_texture(version: StampData.versions):
+func change_sprite_texture(version: StampData.versions) -> void:
 	var texture = texture_data.normal_texture if version == StampData.versions.normal else texture_data.texture_into_stand
 	sprite.texture = texture
 	sprite.frame = texture_data.frame
-	

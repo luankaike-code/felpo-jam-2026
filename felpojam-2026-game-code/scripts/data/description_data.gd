@@ -8,7 +8,8 @@ enum names {
 	rune_book,
 	trash,
 	teleporter,
-	table_bell
+	table_bell,
+	super_stamp
 }
 
 static var descriptions: Dictionary[names, String] = {
@@ -20,4 +21,5 @@ static var descriptions: Dictionary[names, String] = {
 	names.trash: "Joguei seus erros aqui",
 	names.teleporter: "Use isso para enviar seus pergaminhos para a outra tela",
 	names.table_bell: "Clique direito para chamar um novo cliente",
+	names.super_stamp: "Um poderossimo carimbo runico %s"
 }

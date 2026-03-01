@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://do3ltkvux01g"]
+
+[ext_resource type="Script" uid="uid://b07c7c2fwx0rb" path="res://scripts/entitys/order_stamp.gd" id="1_uhln4"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="2_46piw"]
+[ext_resource type="Texture2D" uid="uid://0sm15demppa4" path="res://assets/images/order_stamp.png" id="2_rmi2l"]
+[ext_resource type="Script" uid="uid://d0yqb1h5x5d6y" path="res://scripts/states/stamp/idle.gd" id="3_nr0yh"]
+[ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="4_rmi2l"]
+[ext_resource type="Script" uid="uid://bw2kq5pyqwdpi" path="res://scripts/states/stamp/going_up.gd" id="5_5uaht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uaht"]
+size = Vector2(67, 76)
+
+[node name="OrderStamp" type="Area2D" unique_id=451533335]
+script = ExtResource("1_uhln4")
+metadata/_custom_type_script = "uid://wecskt8a2l36"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1886969367]
+texture = ExtResource("2_rmi2l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1817964011]
+position = Vector2(-0.5, 12)
+shape = SubResource("RectangleShape2D_5uaht")
+
+[node name="StateMachine" type="Node" parent="." unique_id=808125279]
+script = ExtResource("2_46piw")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1671682554]
+script = ExtResource("3_nr0yh")
+metadata/_custom_type_script = "uid://d0yqb1h5x5d6y"
+
+[node name="Dropping" type="Node" parent="StateMachine" unique_id=1280518229]
+script = ExtResource("4_rmi2l")
+metadata/_custom_type_script = "uid://rfn8t4olhbwe"
+
+[node name="GoingUp" type="Node" parent="StateMachine" unique_id=220521327]
+script = ExtResource("5_5uaht")
+metadata/_custom_type_script = "uid://bw2kq5pyqwdpi"

@@ -14,6 +14,11 @@ func _ready() -> void:
 	data = RuneObj.new(rune_name, 0)
 	sprite.texture = RunesData.textures[rune_name]
 	
+	var frames := RunesData.frames_count[rune_name]
+	sprite.hframes = frames.x
+	sprite.vframes = frames.y
+	sprite.frame = RunesData.frame[rune_name]
+	
 	particle_rune.set_radius(30)
 	particle_rune.set_color(RunesData.colors[rune_name])
 	
