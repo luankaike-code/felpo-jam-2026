@@ -9,7 +9,7 @@ func _ready() -> void:
 	play_music.emit(SoundData.names.dead_screen_music)
 	animate_title(true)
 	enter_character()
-	
+
 func enter_character() -> void:
 	var tween = get_tree().create_tween()
 	

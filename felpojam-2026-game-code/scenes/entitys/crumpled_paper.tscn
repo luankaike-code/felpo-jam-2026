@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bcn2opvt36tk5"]
+
+[ext_resource type="Texture2D" uid="uid://oecwrfcn263h" path="res://assets/images/crumpled_paper.png" id="1_6130c"]
+[ext_resource type="Script" uid="uid://dvyprktqyt7s" path="res://scripts/entitys/crumpled_paper.gd" id="2_0xnd2"]
+
+[node name="CrumpledPaper" type="Sprite2D" unique_id=2046979017]
+texture = ExtResource("1_6130c")
+hframes = 2
+script = ExtResource("2_0xnd2")
