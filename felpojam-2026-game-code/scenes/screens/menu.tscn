@@ -2,22 +2,26 @@
 
 [ext_resource type="Script" uid="uid://ddhseqxbod6mu" path="res://scripts/screens/menu.gd" id="1_ju8qk"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_vkuer"]
-[ext_resource type="Texture2D" uid="uid://dyakty173bk50" path="res://assets/images/menu/menu_bg.png" id="3_opkxt"]
+[ext_resource type="Texture2D" uid="uid://pmgkabiw76if" path="res://assets/images/runes/image5.png" id="3_js71b"]
 [ext_resource type="Texture2D" uid="uid://d4a7d3bn184ph" path="res://assets/images/bg_teste.png" id="4_js71b"]
+[ext_resource type="Texture2D" uid="uid://brynfg656m2c5" path="res://assets/images/image4.png" id="5_bjtxa"]
 [ext_resource type="Texture2D" uid="uid://ljv58x070it" path="res://assets/images/menu/menu_bg_1.png" id="5_hrbkl"]
-[ext_resource type="Texture2D" uid="uid://cqdch6nxhy4bc" path="res://assets/images/menu/title.png" id="5_js71b"]
 [ext_resource type="Texture2D" uid="uid://o2bn07g4kydm" path="res://assets/images/menu/menu_start.png" id="6_oytj8"]
 [ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="7_dwmnf"]
 [ext_resource type="Texture2D" uid="uid://cg02xpp3njeyb" path="res://assets/images/menu/menu_config.png" id="8_27rkr"]
 [ext_resource type="Texture2D" uid="uid://c7h8m3a1dc2mp" path="res://assets/images/menu/menu_quit.png" id="9_js71b"]
-[ext_resource type="Texture2D" uid="uid://dxje21rb15ili" path="res://assets/images/menu/menu_tutorial.png" id="10_27rkr"]
+[ext_resource type="Texture2D" uid="uid://ci5y831wo80gb" path="res://assets/images/anão.png" id="11_75fs2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gi6c4"]
+atlas = ExtResource("5_bjtxa")
+region = Rect2(388, 73, 249, 122)
 
 [node name="Menu" type="Node2D" unique_id=844590214]
 script = ExtResource("1_ju8qk")
 metadata/_custom_type_script = "uid://d0vm1uhnct55o"
 
 [node name="Local" parent="." unique_id=564590170 instance=ExtResource("2_vkuer")]
-bg_texture = ExtResource("3_opkxt")
+bg_texture = ExtResource("3_js71b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1872859228]
 clip_children = 1
@@ -57,7 +61,7 @@ theme_override_constants/margin_top = 30
 [node name="Title" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1851146144]
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("5_js71b")
+texture = SubResource("AtlasTexture_gi6c4")
 stretch_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2" unique_id=1832166616]
@@ -119,7 +123,7 @@ metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 8
-texture = ExtResource("10_27rkr")
+texture = ExtResource("11_75fs2")
 stretch_mode = 3
 script = ExtResource("7_dwmnf")
 use_click_sound = true
