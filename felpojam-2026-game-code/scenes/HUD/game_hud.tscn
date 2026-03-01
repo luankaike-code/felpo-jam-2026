@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://da527j4ft7nq0" path="res://scripts/HUD/game_hud.gd" id="1_1geg4"]
 [ext_resource type="Script" uid="uid://b22ark22c86p4" path="res://scripts/speech_bubble_manager.gd" id="2_kixb8"]
+[ext_resource type="Texture2D" uid="uid://bo2hoi1uwr7ws" path="res://assets/images/speed_icon.png" id="3_4s2t6"]
 [ext_resource type="PackedScene" uid="uid://c2lsoyy74l602" path="res://scenes/HUD/clock.tscn" id="3_guowm"]
-[ext_resource type="Texture2D" uid="uid://dif7gwpc2q4xt" path="res://assets/images/coin.png" id="3_u0q1m"]
 [ext_resource type="Texture2D" uid="uid://453kk0eicspa" path="res://assets/images/arrow.png" id="4_guowm"]
 [ext_resource type="Script" uid="uid://bllfk2h5dgh8p" path="res://scripts/HUD/clickable_texture.gd" id="4_kixb8"]
+[ext_resource type="Texture2D" uid="uid://calimmtuocgwb" path="res://assets/images/info_cursor.png" id="5_4s2t6"]
 
 [node name="GameHud" type="Node2D" unique_id=1182350756]
 script = ExtResource("1_1geg4")
@@ -42,7 +43,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 8
-texture = ExtResource("3_u0q1m")
+texture = ExtResource("3_4s2t6")
 stretch_mode = 3
 script = ExtResource("4_kixb8")
 use_click_sound = true
@@ -53,7 +54,7 @@ metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 8
-texture = ExtResource("3_u0q1m")
+texture = ExtResource("5_4s2t6")
 stretch_mode = 3
 script = ExtResource("4_kixb8")
 use_click_sound = true

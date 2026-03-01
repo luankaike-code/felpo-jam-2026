@@ -11,6 +11,8 @@ var current_tween: Tween
 @export var click_sound: SoundData.names
 @export var hover_scale := 1.2
 @export var button_down_scale := 0.9
+@export var unpressed_color := Color.WHITE
+@export var pressed_color := Color.WHITE
 
 @onready var default_z_index := z_index
 

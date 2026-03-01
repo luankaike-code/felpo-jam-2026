@@ -68,5 +68,7 @@ func handle_client_result_mensage(client_result: ClientResult):
 		Global.money += client_result.mensage.money
 	elif client_result.mensage is ClientResultMensageOpenPop:
 		open_pop_up.emit(client_result.mensage.pop_up)
+	elif client_result.mensage is ClientResultMensageChangeScreen:
+		change_screen.emit(client_result.mensage.screen_name)
 	else:
 		assert(false, "%s Not is handle. ClientResult(%s, %s)" % [str(client_result), str(client_result.speech), str(client_result.mensage)])

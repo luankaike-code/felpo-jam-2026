@@ -24,6 +24,7 @@ func _ready() -> void:
 		if local is Local:
 			local.open_pop_up.connect(factory_pop_up)
 			local.spawn_node.connect(spawn_node)
+			local.change_screen.connect(change_screen.emit)
 	
 	runes_book.open.connect(factory_pop_up)
 	camera.add_interface(game_hud)
