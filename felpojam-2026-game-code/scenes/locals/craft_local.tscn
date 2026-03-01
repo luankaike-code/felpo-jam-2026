@@ -34,7 +34,7 @@ position = Vector2(160, 64)
 texture = ExtResource("11_wwimg")
 
 [node name="StackPapers" parent="." index="3" unique_id=117007281 instance=ExtResource("5_mvwp7")]
-position = Vector2(-9, 53)
+position = Vector2(-273, 12)
 
 [node name="StampsConjunt" parent="." index="4" unique_id=1081891180 instance=ExtResource("10_wwimg")]
 position = Vector2(133, -99)
@@ -60,4 +60,4 @@ position = Vector2(180, -465)
 region_rect = Rect2(0, 0, 1080, 480)
 
 [node name="OrderStamp" parent="." index="9" unique_id=451533335 instance=ExtResource("11_t3eoa")]
-position = Vector2(-234, 12)
+position = Vector2(-23, 7)

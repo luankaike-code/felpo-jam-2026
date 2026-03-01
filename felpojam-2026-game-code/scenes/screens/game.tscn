@@ -25,7 +25,7 @@ z_index = 3800
 [node name="Teleporter" type="Node2D" parent="." unique_id=2140136630]
 
 [node name="PaperTeleporterRight" parent="Teleporter" unique_id=1105482110 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("7_kauht")]
-position = Vector2(414, 139)
+position = Vector2(414, 138)
 linked_teleporter = NodePath("../PaperTeleporterUp")
 
 [node name="PaperTeleporterUp" parent="Teleporter" unique_id=1952687597 node_paths=PackedStringArray("linked_teleporter") instance=ExtResource("8_yruvw")]

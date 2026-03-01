@@ -62,5 +62,6 @@ static var frame: Dictionary[names, int] = {
 	names.earth: 3,
 	names.dark: 1,
 	names.light: 1,
+	
 	names.order: 3,
 }
