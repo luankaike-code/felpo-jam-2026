@@ -40,3 +40,9 @@ func _finish_drag():
 		if current_stand is DeliveryZone && !result:
 			Sound.play_sound(SoundData.names.error)
 			state_machine.change_state("AnimationShaking")
+
+func Burn():
+	if data2.level == 1:
+		particle_rune.set_emitting(true)
+		await get_tree().create_timer(5).timeout
+		queue_free()
