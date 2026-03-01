@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bir3pakybp2iq"]
 
 [ext_resource type="Script" uid="uid://c0jfhxkl04x56" path="res://scripts/entitys/trash.gd" id="1_71v7v"]
+[ext_resource type="PackedScene" uid="uid://0dcjs35jf8f5" path="res://scenes/paticles/particle_trash.tscn" id="2_71v7v"]
 
 [node name="Trash" type="Area2D" unique_id=220787020]
 script = ExtResource("1_71v7v")
 metadata/_custom_type_script = "uid://2p33g122efmh"
+
+[node name="ParticleTrash" parent="." unique_id=1001929762 instance=ExtResource("2_71v7v")]

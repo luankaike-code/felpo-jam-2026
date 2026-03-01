@@ -2,9 +2,9 @@ extends ScreenWithPopUp
 
 var packed_pop_up_confirm := load("res://scenes/pop_ups/pre_made/pop_up_quit_game.tscn") as PackedScene
 
-@onready var start_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/StartBtn
-@onready var configurations_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/ConfigurationsBtn
-@onready var quit_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/QuitBtn
+@onready var start_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer/StartBtn
+@onready var configurations_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer/ConfigurationsBtn
+@onready var quit_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer/QuitBtn
 @onready var tutorial_btn: ClickableTexture = $Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/TutorialBtn
 
 func _ready() -> void:
@@ -16,7 +16,7 @@ func _ready() -> void:
 	tutorial_btn.button_up.connect(to_tutorial)
 	
 	play_music.emit(SoundData.names.menu_music)
-
+	
 func to_tutorial():
 	change_screen.emit(ScreenData.names.tutorial)
 

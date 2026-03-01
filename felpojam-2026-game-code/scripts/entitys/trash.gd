@@ -1,6 +1,7 @@
 class_name Trash extends Stand
 
 var packed_crumpled_paper := preload("res://scenes/entitys/crumpled_paper.tscn") as PackedScene
+@onready var particle_trash: Particle = $ParticleTrash
 
 var enable := true
 
@@ -24,8 +25,9 @@ func _knead_paper_to_trash_animation_play(pos: Vector2, has_rune: bool):
 	
 	tween.tween_property(crumpled_paper, "position", crumpled_paper.position+Vector2(0, -70), 0.2)
 	tween.tween_property(crumpled_paper, "position", crumpled_paper.position+Vector2(0, -70), 0.2)
-	tween.tween_property(crumpled_paper, "position", crumpled_paper.position+Vector2(0, 50), 0.2)
+	tween.tween_property(crumpled_paper, "position", crumpled_paper.position+Vector2(0, 0), 0.2)
 	tween.tween_callback(crumpled_paper.queue_free)
+	#tween.tween_callback(func(): particle_trash.set_emitting(true))
 	
 func _create_and_config_crumpled_paper(pos: Vector2, has_rune: bool) -> CrumpledPaper:
 	var crumpled_paper := packed_crumpled_paper.instantiate() as CrumpledPaper

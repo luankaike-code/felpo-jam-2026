@@ -54,7 +54,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 30
 
-[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1851146144]
+[node name="Title" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1851146144]
 layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("5_js71b")
@@ -64,13 +64,13 @@ stretch_mode = 3
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=583437695]
+[node name="Plate" type="MarginContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=583437695]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 6
 theme_override_constants/margin_left = 20
 
-[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer" unique_id=1463557720]
+[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate" unique_id=1463557720]
 z_index = -2
 layout_mode = 2
 size_flags_horizontal = 4
@@ -78,41 +78,41 @@ size_flags_vertical = 4
 texture = ExtResource("5_hrbkl")
 stretch_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer" unique_id=727273055]
+[node name="MarginContainer" type="MarginContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate" unique_id=727273055]
 layout_mode = 2
 theme_override_constants/margin_top = 40
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer" unique_id=59511946]
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer" unique_id=59511946]
 layout_mode = 2
 theme_override_constants/separation = -17
 
-[node name="StartBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1571748051]
+[node name="StartBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer" unique_id=1587961336]
 layout_mode = 2
 texture = ExtResource("6_oytj8")
 stretch_mode = 3
 script = ExtResource("7_dwmnf")
 use_click_sound = true
-click_sound = 14
+click_sound = 15
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
-[node name="ConfigurationsBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1083374794]
+[node name="ConfigurationsBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer" unique_id=1083374794]
 z_index = -1
 layout_mode = 2
 texture = ExtResource("8_27rkr")
 stretch_mode = 3
 script = ExtResource("7_dwmnf")
 use_click_sound = true
-click_sound = 14
+click_sound = 15
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
-[node name="QuitBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer" unique_id=1854223735]
+[node name="QuitBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer/Plate/MarginContainer/VBoxContainer" unique_id=1854223735]
 z_index = -2
 layout_mode = 2
 texture = ExtResource("9_js71b")
 stretch_mode = 3
 script = ExtResource("7_dwmnf")
 use_click_sound = true
-click_sound = 14
+click_sound = 15
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
 [node name="TutorialBtn" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/HBoxContainer" unique_id=957013064]
@@ -123,6 +123,6 @@ texture = ExtResource("10_27rkr")
 stretch_mode = 3
 script = ExtResource("7_dwmnf")
 use_click_sound = true
-click_sound = 14
+click_sound = 15
 hover_scale = 1.07
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://0dcjs35jf8f5"]
+
+[ext_resource type="Script" uid="uid://d0xu6hvynwqek" path="res://scripts/particles/particle.gd" id="1_v0lqs"]
+
+[sub_resource type="Curve" id="Curve_v0lqs"]
+_data = [Vector2(0, 1), 0.0, -0.027702289, 0, 0, Vector2(1, 0.11235964), -2.7148395, 0.06301123, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_qjaxr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.281), -5.73, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_pltab"]
+curve = SubResource("Curve_qjaxr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_70f36"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(8, 0, 0)
+direction = Vector3(0, -1, 0)
+spread = 40.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, -100, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_pltab")
+
+[node name="ParticleTrash" type="Node2D" unique_id=1001929762]
+script = ExtResource("1_v0lqs")
+metadata/_custom_type_script = "uid://d0xu6hvynwqek"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1181903028]
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.27
+use_fixed_seed = true
+fixed_fps = 30
+emission_shape = 3
+emission_rect_extents = Vector2(8, 0)
+direction = Vector2(0, -5)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 100.0
+scale_amount_min = 3.0
+scale_amount_max = 12.0
+scale_amount_curve = SubResource("Curve_v0lqs")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2078999168]
+emitting = false
+amount = 80
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_70f36")
