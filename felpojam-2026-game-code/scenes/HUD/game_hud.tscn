@@ -48,6 +48,7 @@ stretch_mode = 3
 script = ExtResource("4_kixb8")
 use_click_sound = true
 click_sound = 14
+button_down_color = Color(1, 1, 0, 1)
 metadata/_custom_type_script = "uid://bllfk2h5dgh8p"
 
 [node name="InfoBtn" type="TextureRect" parent="HBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1627854348]
