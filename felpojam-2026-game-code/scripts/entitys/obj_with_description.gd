@@ -31,7 +31,8 @@ func _open_description_bubble():
 	
 	current_speech_bubble = packed_speech_bubble.instantiate()
 	current_speech_bubble.setup([description], 0)
-	current_speech_bubble.position = _get_bubble_position(current_speech_bubble.min_width)
+	var min_size := Vector2(current_speech_bubble.min_width, 200)
+	current_speech_bubble.position = _get_bubble_position(min_size)
 	current_speech_bubble.typing_velocity = 0
 	current_speech_bubble.z_index = 4000
 	
@@ -41,20 +42,21 @@ func _close_description_bubble():
 	if current_speech_bubble:
 		current_speech_bubble.destroy()
 
-func _get_viewport_left_border_x() -> float:
-	var viewport_rect_size := camera.get_viewport_rect().size/camera.zoom.x
-	var viewport_size_x := viewport_rect_size.x
-	var viewport_pos_x := camera.position.x - viewport_size_x/2
-	var viewport_x := viewport_size_x + viewport_pos_x
-	return viewport_x
-
-func _get_bubble_position(min_width: float) -> Vector2:
+func _get_bubble_position(min_size: Vector2) -> Vector2:
 	var pos := get_global_mouse_position()
-	var gap := 75
-	var bubble_x := pos.x + min_width + gap
-	var viewport_x := _get_viewport_left_border_x()
+	var gap := Vector2(75, 75)
+	var bubble_limit := pos + min_size + gap
+	var viewport_limit := _get_viewport_limit_vector()
 	
-	var diference_x := viewport_x - bubble_x
+	var diference := viewport_limit - bubble_limit
 	
-	pos.x += diference_x-gap if diference_x < 0 else 0.0
+	pos.x += diference.x-gap.x if diference.x < 0 else 0.0
+	pos.y += diference.y-gap.y if diference.y < 0 else 0.0
 	return to_local(pos)
+
+func _get_viewport_limit_vector() -> Vector2:
+	var viewport_rect := camera.get_viewport_rect()
+	var size = viewport_rect.size/camera.zoom
+	var pos = camera.global_position-(size/2)
+	
+	return pos + size
