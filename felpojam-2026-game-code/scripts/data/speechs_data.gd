@@ -99,11 +99,9 @@ static var speechs: Dictionary[names, Array] = {
 	],
 	
 	names.not_craft_all_parchemnts: [
-		"Oi, volta aqui e...",
+		"Oi, voltei aqui e...",
 		"Comoo assim?...",
-		"Você não conseguiu terminar os 2 pergaminhos ?!?!?!?!!?",
-		"?!?!?!?!!??!?!?!?!!??!?!?!?!!??!?!?!?!!?",
-		"A... tá bom... eles nem eram tão importantes ];",
+		"VOCÊ NÃO ACABOU??",
 	],
 	
 	names.concubine: [

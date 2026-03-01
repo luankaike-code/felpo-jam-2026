@@ -84,11 +84,11 @@ static var client_result: Dictionary[names, ClientResultPossibility] = {
 	names.king: ClientResultPossibility.new(
 		ClientResult.new(
 			SpeechsData.names.king_result_positive, 
-			ClientResultMensageMoney.new(50.0)
+			ClientResultMensageChangeScreen.new(ScreenData.names.you_survived)
 		),
 		ClientResult.new(
 			SpeechsData.names.king_result_ok, 
-			ClientResultMensageMoney.new(25.0)
+			ClientResultMensageChangeScreen.new(ScreenData.names.you_survived)
 		),
 		ClientResult.new(
 			SpeechsData.names.king_result_negative, 
