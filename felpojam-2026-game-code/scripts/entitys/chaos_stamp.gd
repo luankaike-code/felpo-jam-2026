@@ -6,6 +6,7 @@ func _ready() -> void:
 	
 	var base_description := DescriptionsData.descriptions[DescriptionsData.names.super_stamp]
 	description = base_description % ["do caos"]
+	modulate = Color.WHITE
 
 func _set_sprite() -> void:
 	pass

@@ -1,8 +1,8 @@
 class_name StampStand extends Stand
 
-@export var linked_stamp: Stamp
+@export var linked_stamp: StampBase
 
-func setup(stamp: Stamp):
+func setup(stamp: StampBase):
 	linked_stamp = stamp
 
 func place_item(item: Node2D) -> bool:

@@ -30,7 +30,7 @@ func set_enable_trash(value: bool):
 func set_enable_craft_items(value: bool) -> void:
 	var children = get_children()
 	for draggable in get_tree().get_nodes_in_group("draggables"):
-		var is_craft_item := draggable is Stamp || draggable is Dropper
+		var is_craft_item := draggable is Stamp || draggable is Dropper || draggable is NewSuperStamp
 		var dad = draggable.get_parent() 
 		var is_child = dad == self || dad in children
 		if is_craft_item and is_child:

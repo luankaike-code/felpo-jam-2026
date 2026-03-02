@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://i63ncq8uuk0g"]
+
+[ext_resource type="Script" uid="uid://dg622nvujmg5p" path="res://scripts/entitys/stamp_base.gd" id="1_yykx5"]
+[ext_resource type="Script" uid="uid://c8bo8naw8qjrt" path="res://scripts/state_machine/state_machine.gd" id="2_8chhi"]
+[ext_resource type="Script" uid="uid://b03mc2du2h6cu" path="res://scripts/state_machine/state.gd" id="3_ihccj"]
+
+[node name="StampBase" type="Area2D" unique_id=1371239472]
+script = ExtResource("1_yykx5")
+metadata/_custom_type_script = "uid://cofhru7hxcyx6"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=962524552]
+
+[node name="StateMachine" type="Node" parent="." unique_id=306257746]
+script = ExtResource("2_8chhi")
+metadata/_custom_type_script = "uid://c8bo8naw8qjrt"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1250235797]
+script = ExtResource("3_ihccj")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="Dropping" type="Node" parent="StateMachine" unique_id=1431776476]
+script = ExtResource("3_ihccj")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"
+
+[node name="GoingUp" type="Node" parent="StateMachine" unique_id=1282862775]
+script = ExtResource("3_ihccj")
+metadata/_custom_type_script = "uid://b03mc2du2h6cu"

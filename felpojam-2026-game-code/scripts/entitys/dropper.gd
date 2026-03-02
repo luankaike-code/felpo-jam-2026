@@ -30,6 +30,12 @@ func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
 	update_sprite()
+	is_freeze_change.connect(_on_is_freeze)
+
+func _on_is_freeze():
+	var color = ColorsData.disabled if is_freeze else Color.WHITE
+	sprite_2d.modulate = color
+	default_stand.modulate = color
 
 @warning_ignore("unused_parameter")
 func _reset_sprite_frame(anim_name: String):

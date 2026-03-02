@@ -1,4 +1,4 @@
-class_name StampIdle extends State
+extends State
 
 var host: Stamp
 

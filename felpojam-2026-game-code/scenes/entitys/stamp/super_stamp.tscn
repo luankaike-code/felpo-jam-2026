@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://75o2jwwlehtu"]
+
+[ext_resource type="PackedScene" uid="uid://i63ncq8uuk0g" path="res://scenes/entitys/stamp/stamp_base.tscn" id="1_4ftxq"]
+[ext_resource type="Script" uid="uid://dnkcavsjmq8pm" path="res://scripts/entitys/super_stamp.gd" id="2_t0wgn"]
+[ext_resource type="Texture2D" uid="uid://cwo0dalbm8som" path="res://assets/images/chaos_stamp.png" id="3_42a1v"]
+[ext_resource type="Script" uid="uid://dalfgkv560vmq" path="res://scenes/entitys/super_stamp/idle.gd" id="4_mdahe"]
+[ext_resource type="Script" uid="uid://77fntwrxece6" path="res://scenes/entitys/super_stamp/dropping.gd" id="5_ol7wt"]
+[ext_resource type="Script" uid="uid://dxtiiwivoh38u" path="res://scenes/entitys/super_stamp/going_up.gd" id="6_ouivp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdahe"]
+size = Vector2(67, 71)
+
+[node name="SuperStamp" unique_id=1371239472 instance=ExtResource("1_4ftxq")]
+script = ExtResource("2_t0wgn")
+super_rune_name = 0
+
+[node name="Sprite2D" parent="." index="0" unique_id=962524552]
+texture = ExtResource("3_42a1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=686527686]
+position = Vector2(-1.5, 13.5)
+shape = SubResource("RectangleShape2D_mdahe")
+
+[node name="Idle" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="0" unique_id=1250235797]
+script = ExtResource("4_mdahe")
+
+[node name="Dropping" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="1" unique_id=1431776476]
+script = ExtResource("5_ol7wt")
+
+[node name="GoingUp" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="2" unique_id=1282862775]
+script = ExtResource("6_ouivp")

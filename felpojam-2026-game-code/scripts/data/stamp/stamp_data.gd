@@ -5,7 +5,7 @@ enum versions {
 	in_stand
 }
 
-static var textures: Dictionary[RunesData.names, StampTextureObj] = {
+static var stamp_textures: Dictionary[RunesData.names, StampTextureObj] = {
 	RunesData.names.dark: StampTextureObj.new(
 		preload("res://assets/images/stamps.png"), 
 		preload("res://assets/images/stamps_into_stand.png"),
@@ -36,4 +36,9 @@ static var textures: Dictionary[RunesData.names, StampTextureObj] = {
 		preload("res://assets/images/stamps_into_stand.png"),
 		5
 	),
+}
+
+static var super_stamp_textures: Dictionary[RunesData.names, CompressedTexture2D] = {
+	RunesData.names.chaos: preload("res://assets/images/chaos_stamp.png"),
+	RunesData.names.order: preload("res://assets/images/chaos_stamp.png"),
 }

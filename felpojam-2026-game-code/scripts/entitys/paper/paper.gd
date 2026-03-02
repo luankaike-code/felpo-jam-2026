@@ -19,6 +19,7 @@ signal rune_added(paper: Paper)
 func _ready() -> void:
 	super()
 	
+	description = DescriptionsData.descriptions[DescriptionsData.names.paper]
 	start_drag.connect(play_paper_drag_sound)
 
 func play_paper_drag_sound():

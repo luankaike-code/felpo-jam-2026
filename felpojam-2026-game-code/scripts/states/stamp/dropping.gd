@@ -1,4 +1,4 @@
-class_name StampDropping extends State
+extends State
 
 var host: Stamp
 

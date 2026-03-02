@@ -20,8 +20,8 @@ static var string: Dictionary[names, String] = {
 	names.dark: "Trevas",
 	names.light: "Luz",
 	
-	names.order: "Ordem",
-	names.chaos: "Caos"
+	names.order: "da Ordem",
+	names.chaos: "do Caos"
 }
 
 static var colors: Dictionary[names, Color] = {

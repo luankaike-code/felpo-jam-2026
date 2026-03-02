@@ -4,10 +4,10 @@ signal start_drag()
 signal finish_drag()
 @warning_ignore("unused_signal")
 signal spawn_node(node: Node2D)
+signal is_freeze_change
 
 var default_stand: Stand
 var current_stand := default_stand
-
 var is_dragging := false :
 	set(new):
 		is_dragging = new
@@ -17,7 +17,10 @@ var is_dragging := false :
 		else: 
 			finish_drag.emit()
 			_finish_drag()
-var is_freeze := false
+var is_freeze := false :
+	set(new):
+		is_freeze = new
+		is_freeze_change.emit()
 
 var is_draggable := true
 var was_clicked := false
@@ -37,6 +40,13 @@ func _make_connections():
 	
 	start_drag.connect(_update_z_index)
 	Global.cursor_mode_changed.connect(_on_cursor_mode_changed)
+	
+	is_freeze_change.connect(_update_description_to_disable)
+
+func _update_description_to_disable():
+	var disable_descritipn_name := DescriptionsData.names.draggable_disable
+	var disable_descritipn := DescriptionsData.descriptions[disable_descritipn_name]
+	sub_description = disable_descritipn if is_freeze else ""
 
 func _on_cursor_mode_changed() -> void:
 	if !is_dragging:
@@ -69,7 +79,7 @@ func _physics_process(delta: float) -> void:
 
 @warning_ignore("unused_parameter")
 func _on_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
-	if !event is InputEventMouseButton || !is_draggable || Global.cursor_mode != MouseData.modes.drag:
+	if !event is InputEventMouseButton || !is_draggable || is_freeze || Global.cursor_mode != MouseData.modes.drag:
 		return
 
 	if !is_dragging:

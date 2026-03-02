@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://7or2qgggty3y"]
+
+[ext_resource type="Script" uid="uid://ous0yorua6vk" path="res://scripts/entitys/stamp.gd" id="1_amand"]
+[ext_resource type="PackedScene" uid="uid://i63ncq8uuk0g" path="res://scenes/entitys/stamp/stamp_base.tscn" id="1_vr5ia"]
+[ext_resource type="Texture2D" uid="uid://ibki7o8d5opg" path="res://assets/images/stamps.png" id="2_he8ds"]
+[ext_resource type="Script" uid="uid://d0yqb1h5x5d6y" path="res://scripts/states/stamp/idle.gd" id="4_dw3pk"]
+[ext_resource type="Script" uid="uid://rfn8t4olhbwe" path="res://scripts/states/stamp/dropping.gd" id="6_pok1m"]
+[ext_resource type="Script" uid="uid://bw2kq5pyqwdpi" path="res://scripts/states/stamp/going_up.gd" id="7_b88nq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfuql"]
+size = Vector2(61, 78)
+
+[node name="Stamp" unique_id=1371239472 instance=ExtResource("1_vr5ia")]
+script = ExtResource("1_amand")
+_rune_name = 0
+
+[node name="Sprite2D" parent="." index="0" unique_id=962524552]
+position = Vector2(0, -3)
+texture = ExtResource("2_he8ds")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=685089839]
+position = Vector2(0.5, 9)
+shape = SubResource("RectangleShape2D_rfuql")
+
+[node name="Idle" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="0" unique_id=1250235797]
+script = ExtResource("4_dw3pk")
+
+[node name="Dropping" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="1" unique_id=1431776476]
+script = ExtResource("6_pok1m")
+
+[node name="GoingUp" parent="StateMachine" parent_id_path=PackedInt32Array(306257746) index="2" unique_id=1282862775]
+script = ExtResource("7_b88nq")

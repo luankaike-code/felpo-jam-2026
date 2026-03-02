@@ -1,6 +1,6 @@
 extends Node2D
 
-var packed_stamp := preload("res://scenes/entitys/stamp.tscn") as PackedScene
+var packed_stamp := preload("res://scenes/entitys/stamp/stamp.tscn") as PackedScene
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
@@ -16,7 +16,6 @@ var stamps: Array[RunesData.names] = [
 func _ready() -> void:
 	var stand_size := sprite_2d.texture.get_size()
 	var space := (stand_size.x/stamps.size())
-	print(space)
 	var start_x = stand_size.x/-2 + 38
 	var pos_y := -4
 	

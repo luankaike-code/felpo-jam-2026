@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bgqa2qfu810ox"]
+
+[ext_resource type="Script" uid="uid://dyy3w37imixva" path="res://scripts/entitys/stamps_conjunt.gd" id="1_0tc10"]
+[ext_resource type="Texture2D" uid="uid://dgs6qfgm1rb0d" path="res://assets/images/stamp_stands.png" id="1_uh35q"]
+
+[node name="StampsConjunt" type="Node2D" unique_id=1081891180]
+script = ExtResource("1_0tc10")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1544431482]
+position = Vector2(0, 19)
+texture = ExtResource("1_uh35q")
