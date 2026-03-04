@@ -29,14 +29,14 @@ static var client: Dictionary[names, ClientObj] = {
 		CharacterData.names.concubine, 
 		SpeechsData.names.concubine,
 		SpeechsData.names.get_order_concubine,
-		OrdersData.names.banho,
+		OrdersData.names.calming_water,
 		40.0
 	),
 	names.king: ClientObj.new(
 		CharacterData.names.king,
 		SpeechsData.names.king,
 		SpeechsData.names.get_order_king,
-		OrdersData.names.pureza,
+		OrdersData.names.purification,
 		40.0
 	),
 	names.warlord: ClientObj.new(

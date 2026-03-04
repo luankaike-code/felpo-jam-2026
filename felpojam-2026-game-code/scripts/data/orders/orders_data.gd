@@ -4,9 +4,9 @@ enum names {
 	fetility,
 	infernal_fire,
 	tutorial,
-	banho,
+	calming_water,
 	dark,
-	pureza,
+	purification,
 	warlord,
 	light
 }
@@ -27,14 +27,14 @@ static var orders: Dictionary[names, OrderObj] = {
 		ParchmentData.parchments[ParchmentData.names.vitality],
 		ParchmentData.parchments[ParchmentData.names.weakness]
 	]),
-	names.banho: OrderObj.new([
-		ParchmentData.parchments[ParchmentData.names.banho]
+	names.calming_water: OrderObj.new([
+		ParchmentData.parchments[ParchmentData.names.calming_water]
 	]),
 	names.dark: OrderObj.new([
 		ParchmentData.parchments[ParchmentData.names.dark]
 	]),
-	names.pureza: OrderObj.new([
-		ParchmentData.parchments[ParchmentData.names.o]
+	names.purification: OrderObj.new([
+		ParchmentData.parchments[ParchmentData.names.purification]
 	]),
 	names.light: OrderObj.new([
 		ParchmentData.parchments[ParchmentData.names.light]

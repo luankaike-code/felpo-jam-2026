@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dqsvu55ag0nog"]
+
+[ext_resource type="Script" uid="uid://bcapybmel0sfk" path="res://scripts/HUD/opened_rune_book/opened_rune_book.gd" id="1_61ucq"]
+[ext_resource type="Texture2D" uid="uid://x825aqrw2ck3" path="res://assets/images/opened_rune_book.png" id="1_sie28"]
+[ext_resource type="Shader" uid="uid://cmqo1a3bdrnpc" path="res://shader/opened_rune_book.gdshader" id="2_ci84x"]
+[ext_resource type="Material" uid="uid://bpd27cnnbtkl1" path="res://material/rune_book_text.tres" id="3_ql2w3"]
+[ext_resource type="PackedScene" uid="uid://cslxf1gkn66kx" path="res://scenes/HUD/opened_rune_book/rune_book_page.tscn" id="4_dtcm8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dtcm8"]
+shader = ExtResource("2_ci84x")
+shader_parameter/start = 30.0
+shader_parameter/start_w = 40.0
+shader_parameter/fraquence = 230.0
+shader_parameter/amplitude = 30.0
+shader_parameter/size = 292.0
+shader_parameter/relative_pos = 0.0
+shader_parameter/flip_h = true
+
+[node name="opened_rune_book" type="Control" unique_id=465665940]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.5
+offset_top = -207.5
+offset_right = 318.5
+offset_bottom = 207.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_61ucq")
+
+[node name="BookTexture" type="TextureRect" parent="." unique_id=639224840]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -318.5
+offset_right = 318.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sie28")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BookTexture" unique_id=1703187632]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Page1" type="MarginContainer" parent="BookTexture/HBoxContainer" unique_id=1365276876]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 23
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 50
+
+[node name="RuneBookPageLeft" parent="BookTexture/HBoxContainer/Page1" unique_id=1772165036 instance=ExtResource("4_dtcm8")]
+material = SubResource("ShaderMaterial_dtcm8")
+layout_mode = 2
+h_flip = true
+
+[node name="Page2" type="MarginContainer" parent="BookTexture/HBoxContainer" unique_id=416475625]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 23
+theme_override_constants/margin_bottom = 50
+
+[node name="RuneBookPageRight" parent="BookTexture/HBoxContainer/Page2" unique_id=378958262 instance=ExtResource("4_dtcm8")]
+material = ExtResource("3_ql2w3")
+layout_mode = 2

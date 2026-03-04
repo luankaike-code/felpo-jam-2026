@@ -105,8 +105,8 @@ static var speechs: Dictionary[names, Array] = {
 	],
 	
 	names.concubine: [
-		"É um prazer conhecê-lo, feiticeiro, cheguei há pouco tempo",
-		"gostaria de tomar um banho quentinho"
+		"É um prazer conhecê-lo, feiticeiro, cheguei há pouco tempo.",
+		"Gostaria de um pergaminho tornar o meu banho melhor"
 	],
 	names.get_order_concubine: [
 		"Então como está o meu pergaminho?",

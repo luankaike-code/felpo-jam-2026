@@ -2,14 +2,7 @@
 
 [ext_resource type="Script" uid="uid://j1f2povy54b7" path="res://scripts/pop_ups/pop_up_runes_book_content.gd" id="1_mneh7"]
 [ext_resource type="PackedScene" uid="uid://d05in2yrkn5mk" path="res://scenes/locals/local.tscn" id="2_vi3xw"]
-[ext_resource type="Texture2D" uid="uid://di80gb0d2s6mt" path="res://assets/images/paper.png" id="3_xv6uf"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cqdx"]
-texture = ExtResource("3_xv6uf")
-texture_margin_left = 6.0
-texture_margin_top = 7.0
-texture_margin_right = 5.0
-texture_margin_bottom = 7.0
+[ext_resource type="PackedScene" uid="uid://dqsvu55ag0nog" path="res://scenes/HUD/opened_rune_book/opened_rune_book.tscn" id="3_wp0fo"]
 
 [node name="PopUpRunesBookContent" type="Node2D" unique_id=1903235367]
 script = ExtResource("1_mneh7")
@@ -17,33 +10,6 @@ metadata/_custom_type_script = "uid://m741nhr6vpsv"
 
 [node name="Local" parent="." unique_id=1423880516 instance=ExtResource("2_vi3xw")]
 
-[node name="Control" type="Control" parent="." unique_id=588388932]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -225.0
-offset_right = 360.0
-offset_bottom = 225.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=108109897]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="TabContainer" type="TabContainer" parent="Control/MarginContainer" unique_id=1448091430]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_4cqdx")
-tabs_visible = false
+[node name="opened_rune_book" parent="." unique_id=465665940 instance=ExtResource("3_wp0fo")]
+size_flags_vertical = 3
+start_page = 46

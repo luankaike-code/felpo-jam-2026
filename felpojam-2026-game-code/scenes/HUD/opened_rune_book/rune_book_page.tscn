@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cslxf1gkn66kx"]
+
+[ext_resource type="Script" uid="uid://8o8txu23rg1g" path="res://scripts/HUD/opened_rune_book/rune_book_page.gd" id="1_cjh5a"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="2_cjh5a"]
+[ext_resource type="PackedScene" uid="uid://dcml74t7fd2ah" path="res://scenes/HUD/opened_rune_book/rune_book_items.tscn" id="5_cjh5a"]
+
+[node name="RuneBookPage" type="VBoxContainer" unique_id=1772165036]
+size_flags_vertical = 3
+script = ExtResource("1_cjh5a")
+
+[node name="Title" type="Label" parent="." unique_id=373411824]
+use_parent_material = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Titulo"
+label_settings = ExtResource("2_cjh5a")
+horizontal_alignment = 1
+
+[node name="Image" type="TextureRect" parent="." unique_id=1598181325]
+use_parent_material = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Description" type="Label" parent="." unique_id=407469043]
+use_parent_material = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Mini descrição desse pergaminho pra fazer volume"
+label_settings = ExtResource("2_cjh5a")
+autowrap_mode = 2
+
+[node name="RuneBookItems" parent="." unique_id=1063808656 instance=ExtResource("5_cjh5a")]
+layout_mode = 2
+
+[node name="PageNumber" type="Label" parent="." unique_id=1268232774]
+use_parent_material = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+label_settings = ExtResource("2_cjh5a")
+horizontal_alignment = 2
+autowrap_mode = 2

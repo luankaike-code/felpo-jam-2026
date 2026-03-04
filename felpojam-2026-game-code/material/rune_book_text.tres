@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bpd27cnnbtkl1"]
+
+[ext_resource type="Shader" uid="uid://cmqo1a3bdrnpc" path="res://shader/opened_rune_book.gdshader" id="1_4d0ty"]
+
+[resource]
+shader = ExtResource("1_4d0ty")
+shader_parameter/start = 30.0
+shader_parameter/start_w = 30.0
+shader_parameter/fraquence = 140.0
+shader_parameter/amplitude = 30.0
+shader_parameter/size = 288.0
+shader_parameter/s = 0.0
+shader_parameter/flip_h = false

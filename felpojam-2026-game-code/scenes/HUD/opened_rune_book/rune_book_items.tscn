@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dcml74t7fd2ah"]
+
+[ext_resource type="Script" uid="uid://btlxm4706yvpa" path="res://scripts/HUD/opened_rune_book/rune_book_items.gd" id="1_8hc2x"]
+[ext_resource type="LabelSettings" uid="uid://ckpsmscigpqim" path="res://styles/label.tres" id="2_vem3q"]
+
+[node name="RuneBookItems" type="VBoxContainer" unique_id=1063808656]
+use_parent_material = true
+script = ExtResource("1_8hc2x")
+
+[node name="ItemsTitle" type="Label" parent="." unique_id=474502415]
+use_parent_material = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Items Title"
+label_settings = ExtResource("2_vem3q")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ItemsContentMargin" type="MarginContainer" parent="." unique_id=73828700]
+use_parent_material = true
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ItemsContent" type="HBoxContainer" parent="ItemsContentMargin" unique_id=1814794724]
+use_parent_material = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ItemsContentColumnLeft" type="VBoxContainer" parent="ItemsContentMargin/ItemsContent" unique_id=1857278495]
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemsContentColumnRight" type="VBoxContainer" parent="ItemsContentMargin/ItemsContent" unique_id=1784931393]
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 10
