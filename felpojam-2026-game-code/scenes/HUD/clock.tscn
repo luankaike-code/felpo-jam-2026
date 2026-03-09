@@ -5,15 +5,15 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0q1m"]
 atlas = ExtResource("1_6wdof")
-region = Rect2(0, 0, 72, 72)
+region = Rect2(23, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4s2t6"]
 atlas = ExtResource("1_6wdof")
-region = Rect2(72, 0, 72, 72)
+region = Rect2(7, 25, 2, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3f7h6"]
 atlas = ExtResource("1_6wdof")
-region = Rect2(144, 0, 72, 72)
+region = Rect2(0, 30, 2, 30)
 
 [node name="ClockHud" type="TextureRect" unique_id=1928162360]
 anchors_preset = 6

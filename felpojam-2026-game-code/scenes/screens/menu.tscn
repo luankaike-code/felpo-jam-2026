@@ -51,12 +51,12 @@ theme_override_constants/margin_bottom = 0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Sprite2D/Control/MarginContainer" unique_id=1278935592]
 layout_mode = 2
-theme_override_constants/separation = -30
+theme_override_constants/separation = -50
 
 [node name="MarginContainer" type="MarginContainer" parent="Sprite2D/Control/MarginContainer/VBoxContainer2" unique_id=1066475132]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 30
 
 [node name="Title" type="TextureRect" parent="Sprite2D/Control/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1851146144]
 layout_mode = 2
