@@ -31,13 +31,10 @@ Somos compostos de 5 integrantes:
 
 ## Instruções de Execução
 
-Todo o código se encontra dentro da pasta felpojam-2026-game-code, para compilar-lo é necessário instalar o Godot Engine
+Apenas instale o executável através do [releases](https://github.com/luankaike-code/felpo-jam-2026/releases) mais recente.
 
-Para garantir o funcionamento perfeitamente funcional do jogo é necessário enviar um pix de R$ 10,00 para a chave abaixo.
+Caso queira compila-lo, saiba que todo o código se encontra dentro da pasta felpojam-2026-game-code e que utilizamos o ambiente e compilador provido pelo Godot Engine 4.x para criar-lo.
 
-```PIX
-fi-45ff8sll83a-aj912rgwpxufgd
-```
 
 ## Instruções de gameplay
 
