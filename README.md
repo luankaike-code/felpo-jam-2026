@@ -16,6 +16,13 @@
 
 </div>
 
+## Captura de tela
+
+![Menu](assets/screenshot_menu.png)
+![Cliente](assets/screenshot_client.png)
+![DBancada de trabalho ativada](assets/screenshot_actived_workbench.png)
+![Descrição da imagem](assets/screenshot_desatived_workbench.png)
+
 ## EquiPEI
 
 Somos uma equipe séria, organizada e 100% funcional.
